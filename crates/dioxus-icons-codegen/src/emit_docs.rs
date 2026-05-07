@@ -1,6 +1,9 @@
 use crate::fetch::LUCIDE_VERSION;
 use crate::parse::{Icon, SvgElement};
 
+use base64::Engine as _;
+use base64::engine::general_purpose::STANDARD;
+
 pub fn emit_static_picker(icons: &[Icon]) -> String {
     let mut output = String::new();
     output.push_str(
@@ -50,7 +53,7 @@ pub fn emit_lucide_docs_header() -> String {
 }
 
 pub fn widget_container(icon: &Icon) -> String {
-    let default_svg = preview_svg(icon, 24);
+    let default_preview = preview_img(icon, 24);
     let data_svg = html_attr(&preview_svg(icon, 24));
     format!(
         "<div class=\"dioxus-icons-widget\" data-icon-name=\"{name}\" data-svg=\"{svg}\" data-size=\"24\" data-color=\"currentColor\" data-stroke=\"2\">\
@@ -70,8 +73,17 @@ pub fn widget_container(icon: &Icon) -> String {
         name = html_attr(&icon.component),
         svg = data_svg,
         label = html_attr(&icon.component),
-        preview = default_svg,
+        preview = default_preview,
         text = html_text(&icon.component)
+    )
+}
+
+pub fn preview_img(icon: &Icon, size: u32) -> String {
+    let svg = preview_svg(icon, size);
+    format!(
+        "<img src=\"{}\" alt=\"{} icon\">",
+        html_attr(&svg_data_uri(&svg)),
+        html_attr(&icon.component)
     )
 }
 
@@ -87,6 +99,10 @@ pub fn preview_svg(icon: &Icon, size: u32) -> String {
 
     svg.push_str("</svg>");
     svg
+}
+
+fn svg_data_uri(svg: &str) -> String {
+    format!("data:image/svg+xml;base64,{}", STANDARD.encode(svg))
 }
 
 fn push_svg_element(output: &mut String, element: &SvgElement) {

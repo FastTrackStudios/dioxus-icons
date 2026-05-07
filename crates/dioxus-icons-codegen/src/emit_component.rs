@@ -1,7 +1,7 @@
 use crate::fetch::{LUCIDE_COMMIT, LUCIDE_VERSION};
 use crate::parse::{Icon, SvgElement};
 
-use crate::emit_docs::{preview_svg, widget_container};
+use crate::emit_docs::{preview_img, widget_container};
 
 pub fn emit_component(icon: &Icon) -> String {
     let mut output = String::new();
@@ -15,7 +15,7 @@ pub fn emit_component(icon: &Icon) -> String {
 
     let props_name = format!("{}Props", icon.component);
 
-    output.push_str(&format!("/// Props for [`{}`].\n", icon.component));
+    output.push_str(&format!("/// Props for [`{}()`].\n", icon.component));
     output.push_str("#[derive(Clone, PartialEq, Props)]\n");
     output.push_str(&format!("pub struct {props_name} {{\n"));
     output.push_str("    /// SVG width and height in pixels.\n");
@@ -79,16 +79,16 @@ fn push_doc_comment(output: &mut String, icon: &Icon) {
     output.push_str(&format!("/// # {}\n", icon.component));
     output.push_str("///\n");
     output.push_str("/// ");
-    output.push_str(&preview_svg(icon, 48));
+    output.push_str(&preview_img(icon, 48));
     output.push('\n');
     output.push_str("///\n");
     output.push_str("/// ## Sizes\n");
     output.push_str("/// ");
-    output.push_str(&preview_svg(icon, 16));
+    output.push_str(&preview_img(icon, 16));
     output.push(' ');
-    output.push_str(&preview_svg(icon, 24));
+    output.push_str(&preview_img(icon, 24));
     output.push(' ');
-    output.push_str(&preview_svg(icon, 32));
+    output.push_str(&preview_img(icon, 32));
     output.push('\n');
     output.push_str("///\n");
     output.push_str("/// ## Tags\n");

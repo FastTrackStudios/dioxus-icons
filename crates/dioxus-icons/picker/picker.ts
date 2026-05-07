@@ -56,12 +56,12 @@ const ROW_GAP = 4;
     if (!query) return 0;
     if (lower(icon.name).indexOf(query) !== -1) return 0;
     const tags = icon.tags ?? [];
-    for (let i = 0; i < tags.length; i += 1) {
-      if (lower(tags[i]).indexOf(query) !== -1) return 1;
+    for (const tag of tags) {
+      if (lower(tag).indexOf(query) !== -1) return 1;
     }
     const categories = icon.categories ?? [];
-    for (let i = 0; i < categories.length; i += 1) {
-      if (lower(categories[i]).indexOf(query) !== -1) return 2;
+    for (const category of categories) {
+      if (lower(category).indexOf(query) !== -1) return 2;
     }
     return 9;
   }
@@ -186,7 +186,7 @@ const ROW_GAP = 4;
     topSpacer!.style.height = startRow * rowHeight + "px";
     bottomSpacer!.style.height = Math.max(0, (totalRows - endRow) * rowHeight) + "px";
 
-    for (let i = start; i < end; i += 1) {
+    for (let i = start; i !== end; i += 1) {
       appendCell(filtered[i], i);
     }
   }

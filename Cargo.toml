@@ -13,6 +13,7 @@ version = "0.1.0"
 
 [workspace.dependencies]
 anyhow = "1.0.100"
+base64 = "0.22.1"
 dioxus = { version = "0.7.7", default-features = false, features = ["html", "macro"] }
 dioxus-signals = "0.7.7"
 lazy-js-bundle = "0.7.7"
