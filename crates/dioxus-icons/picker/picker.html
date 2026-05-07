@@ -50,12 +50,12 @@
 }
 .dxi-picker-clear:hover { opacity: 1; }
 .dxi-picker-scroll {
-  max-height: 360px;
+  max-height: min(420px, 60vh);
   overflow: auto;
   padding-top: 8px;
   scrollbar-width: thin;
+  scroll-padding: 4px;
 }
-.dxi-picker-spacer { height: 0; }
 .dxi-picker-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
@@ -149,9 +149,7 @@
 <input class="dxi-picker-input" data-dxi-input type="search" placeholder="Search icons by name, tag, or category" aria-label="Search icons" autocomplete="off" spellcheck="false">
 <button class="dxi-picker-clear" data-dxi-clear type="button" aria-label="Clear search" hidden>×</button>
 </div>
-<div class="dxi-picker-scroll" data-dxi-scroll tabindex="0">
-<div data-dxi-top class="dxi-picker-spacer"></div>
+<div class="dxi-picker-scroll" data-dxi-scroll tabindex="-1">
 <div class="dxi-picker-grid" data-dxi-grid></div>
-<div data-dxi-bottom class="dxi-picker-spacer"></div>
 </div>
 </section>
