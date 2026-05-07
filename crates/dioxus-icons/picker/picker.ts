@@ -204,6 +204,64 @@ const ROW_GAP = 4;
     if (active) active.focus({ preventScroll: true });
   }
 
+  function handleNavigation(event: KeyboardEvent): void {
+    const target = event.target;
+    if (
+      target !== input &&
+      target !== scroller &&
+      (!(target instanceof Node) || !grid!.contains(target))
+    ) {
+      return;
+    }
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+
+    let nextIndex = activeIndex;
+    if (event.key === "ArrowDown") {
+      nextIndex += columns;
+    } else if (event.key === "ArrowRight") {
+      nextIndex += 1;
+    } else if (event.key === "ArrowUp") {
+      nextIndex -= columns;
+    } else if (event.key === "ArrowLeft") {
+      nextIndex -= 1;
+    } else if (event.key === "Enter") {
+      const activeCell =
+        target instanceof HTMLElement
+          ? target.closest<HTMLAnchorElement>(".dxi-picker-cell")
+          : null;
+      const cellIndex = activeCell ? Number(activeCell.dataset.index) : NaN;
+      const icon =
+        Number.isInteger(cellIndex) && filtered[cellIndex]
+          ? filtered[cellIndex]
+          : filtered[activeIndex];
+
+      if (icon) {
+        event.preventDefault();
+        window.location.href = hrefFor(icon);
+      }
+      return;
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      if (input!.value) {
+        input!.value = "";
+        filter();
+      } else if (target === input) {
+        input!.blur();
+      } else {
+        input!.focus();
+        input!.select();
+      }
+      return;
+    } else {
+      return;
+    }
+
+    event.preventDefault();
+    if (!filtered.length) return;
+    activeIndex = Math.max(0, Math.min(filtered.length - 1, nextIndex));
+    ensureActiveVisible();
+  }
+
   function isTyping(target: EventTarget | null): boolean {
     if (!target || !(target instanceof HTMLElement)) return false;
     const tag = target.tagName;
@@ -211,40 +269,7 @@ const ROW_GAP = 4;
   }
 
   input.addEventListener("input", filter);
-  input.addEventListener("keydown", (event: KeyboardEvent) => {
-    if (
-      event.key === "ArrowDown" ||
-      event.key === "ArrowRight" ||
-      event.key === "ArrowUp" ||
-      event.key === "ArrowLeft" ||
-      event.key === "Enter" ||
-      event.key === "Escape"
-    ) {
-      event.preventDefault();
-    }
-    if (event.key === "ArrowDown") {
-      activeIndex = Math.min(filtered.length - 1, activeIndex + columns);
-      ensureActiveVisible();
-    } else if (event.key === "ArrowRight") {
-      activeIndex = Math.min(filtered.length - 1, activeIndex + 1);
-      ensureActiveVisible();
-    } else if (event.key === "ArrowUp") {
-      activeIndex = Math.max(0, activeIndex - columns);
-      ensureActiveVisible();
-    } else if (event.key === "ArrowLeft") {
-      activeIndex = Math.max(0, activeIndex - 1);
-      ensureActiveVisible();
-    } else if (event.key === "Enter" && filtered[activeIndex]) {
-      window.location.href = hrefFor(filtered[activeIndex]);
-    } else if (event.key === "Escape") {
-      if (input.value) {
-        input.value = "";
-        filter();
-      } else {
-        input.blur();
-      }
-    }
-  });
+  picker.addEventListener("keydown", handleNavigation);
 
   if (clearBtn) {
     clearBtn.addEventListener("click", () => {

@@ -56,12 +56,12 @@ pub fn widget_container(icon: &Icon) -> String {
     let default_preview = preview_img(icon, 24);
     let data_svg = html_attr(&preview_svg(icon, 24));
     format!(
-        "<div class=\"dioxus-icons-widget\" data-icon-name=\"{name}\" data-svg=\"{svg}\" data-size=\"24\" data-color=\"currentColor\" data-stroke=\"2\">\
+        "<div class=\"dioxus-icons-widget\" data-icon-name=\"{name}\" data-svg=\"{svg}\" data-size=\"24\" data-color=\"#000000\" data-stroke=\"2\">\
 <div class=\"dioxus-icons-widget-header\">\
 <div class=\"dioxus-icons-widget-preview\" data-di-preview=\"true\" aria-label=\"{label} preview\">{preview}</div>\
 <div class=\"dioxus-icons-widget-controls\">\
 <label><span class=\"dioxus-icons-widget-label\">Size</span><input data-di-size=\"true\" type=\"number\" min=\"1\" max=\"256\" value=\"24\"></label>\
-<label><span class=\"dioxus-icons-widget-label\">Color</span><input data-di-color=\"true\" type=\"text\" value=\"currentColor\"></label>\
+<label><span class=\"dioxus-icons-widget-label\">Color</span><input data-di-color=\"true\" type=\"color\" value=\"#000000\"></label>\
 <label><span class=\"dioxus-icons-widget-label\">Stroke</span><input data-di-stroke=\"true\" type=\"number\" min=\"1\" max=\"12\" value=\"2\"></label>\
 </div>\
 </div>\

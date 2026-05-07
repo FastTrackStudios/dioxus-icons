@@ -99,6 +99,25 @@ test.describe("docs homepage picker", () => {
     expect(firstHref).toMatch(/lucide\/fn\.[A-Za-z0-9_]*[Tt]rash[A-Za-z0-9_]*\.html/);
   });
 
+  test("Enter on the clear button clears the search", async ({ page }) => {
+    await page.goto(DOC_URL);
+    await waitForInteractivePicker(page);
+
+    const input = page.locator("#dxi-picker-input");
+    const count = page.locator("#dxi-picker-count strong");
+    const total = Number(await count.innerText());
+
+    await input.fill("trash");
+    await expect
+      .poll(async () => Number(await count.innerText()))
+      .toBeLessThan(total);
+
+    await page.locator("#dxi-picker-clear").focus();
+    await page.keyboard.press("Enter");
+    await expect(input).toHaveValue("");
+    await expect.poll(async () => Number(await count.innerText())).toBe(total);
+  });
+
   test("'/' keystroke focuses the search input", async ({ page }) => {
     await page.goto(DOC_URL);
     await waitForInteractivePicker(page);
@@ -122,6 +141,68 @@ test.describe("docs homepage picker", () => {
       .locator('#dxi-picker-grid [data-active="true"]')
       .getAttribute("data-index");
     expect(activeIndex).toBe("1");
+  });
+
+  test("Enter opens the active icon from the search input", async ({ page }) => {
+    await page.goto(DOC_URL);
+    await waitForInteractivePicker(page);
+
+    const input = page.locator("#dxi-picker-input");
+    await input.fill("trash");
+
+    const activeHref = await page
+      .locator('#dxi-picker-grid [data-active="true"]')
+      .getAttribute("href");
+    const expectedUrl = new URL(activeHref!, DOC_URL).href;
+
+    await page.keyboard.press("Enter");
+    await expect(page).toHaveURL(expectedUrl);
+  });
+
+  test("arrow keys keep moving after focus enters the grid", async ({ page }) => {
+    await page.goto(DOC_URL);
+    await waitForInteractivePicker(page);
+
+    const input = page.locator("#dxi-picker-input");
+    const grid = page.locator("#dxi-picker-grid");
+    const trackCount = await grid.evaluate(
+      (el) =>
+        getComputedStyle(el)
+          .gridTemplateColumns.split(" ")
+          .filter((token) => token.length > 0).length,
+    );
+
+    await input.focus();
+    await page.keyboard.press("ArrowRight");
+    await expect(grid.locator('[data-index="1"]')).toBeFocused();
+
+    await page.keyboard.press("ArrowRight");
+    await expect(grid.locator('[data-index="2"]')).toBeFocused();
+
+    await page.keyboard.press("ArrowDown");
+    const activeIndex = await grid
+      .locator('[data-active="true"]')
+      .getAttribute("data-index");
+    expect(activeIndex).toBe(String(trackCount + 2));
+  });
+
+  test("Enter opens the focused icon from the grid", async ({ page }) => {
+    await page.goto(DOC_URL);
+    await waitForInteractivePicker(page);
+
+    const input = page.locator("#dxi-picker-input");
+    const grid = page.locator("#dxi-picker-grid");
+
+    await input.focus();
+    await page.keyboard.press("ArrowRight");
+
+    const focusedHref = await grid
+      .locator('[data-index="1"]')
+      .getAttribute("href");
+    const expectedUrl = new URL(focusedHref!, DOC_URL).href;
+
+    await page.keyboard.press("Enter");
+    await expect(page).toHaveURL(expectedUrl);
   });
 
   test("each cell links to its lucide function page", async ({ page }) => {

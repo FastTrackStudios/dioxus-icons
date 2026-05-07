@@ -11,6 +11,7 @@ name = "dioxus_icons"
 
 [dependencies]
 dioxus.workspace = true
+# Required by `rsx!` macro expansion in generated icon components.
 dioxus-signals.workspace = true
 
 [build-dependencies]
