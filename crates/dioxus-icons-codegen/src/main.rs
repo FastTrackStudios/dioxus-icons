@@ -170,3 +170,70 @@ fn rustfmt_generated(generated_dir: &Path, lucide_dir: &Path, icons: &[Icon]) ->
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn fixture_codegen_covers_parser_naming_manifest_docs_and_component_emission() {
+        let icons = read_icons(&fixture_icons_dir()).expect("reading fixture icons");
+
+        assert_eq!(
+            icons
+                .iter()
+                .map(|icon| format!(
+                    "{}:{}:{}",
+                    icon.source_name, icon.module_ref, icon.component
+                ))
+                .collect::<Vec<_>>(),
+            [
+                "1-circle:circle_1:Circle1",
+                "box:r#box:Box",
+                "trash-2:trash_2:Trash2"
+            ]
+        );
+        assert_eq!(icons[0].view_box, "0 0 24 24");
+        assert_eq!(icons[0].elements[0].tag, "circle");
+        assert_eq!(icons[0].tags, ["number", "status"]);
+        assert_eq!(icons[0].categories, ["shapes"]);
+
+        let manifest_json = emit_manifest(&icons).expect("emitting manifest");
+        assert!(manifest_json.contains("\\u003csvg"));
+        assert!(!manifest_json.contains("<svg"));
+
+        let manifest: serde_json::Value =
+            serde_json::from_str(&manifest_json).expect("parsing manifest");
+        assert_eq!(manifest["version"], LUCIDE_VERSION);
+        assert_eq!(manifest["source"], "lucide");
+        assert_eq!(manifest["icons"].as_array().unwrap().len(), 3);
+        assert_eq!(manifest["icons"][0]["name"], "Circle1");
+        assert_eq!(manifest["icons"][0]["module"], "circle_1");
+        assert_eq!(manifest["icons"][0]["tags"][0], "number");
+        assert_eq!(manifest["icons"][1]["name"], "Box");
+        assert_eq!(manifest["icons"][2]["categories"][0], "actions");
+
+        let docs = emit_static_picker(&icons);
+        assert!(docs.contains("href=\"lucide/fn.Circle1.html\""));
+        assert!(docs.contains("title=\"Circle1 number status shapes\""));
+        assert!(docs.contains("<span>Trash2</span>"));
+
+        let lucide_mod = emit_lucide_mod(&icons);
+        assert!(lucide_mod.contains("pub mod circle_1;"));
+        assert!(lucide_mod.contains("pub mod r#box;"));
+        assert!(lucide_mod.contains("pub use circle_1::Circle1;"));
+        assert!(lucide_mod.contains("pub use r#box::Box;"));
+
+        let component = emit_component(&icons[0], &[&icons[1]]);
+        assert!(component.contains("pub struct Circle1Props"));
+        assert!(component.contains("pub fn Circle1(props: Circle1Props) -> Element"));
+        assert!(component.contains("use dioxus_icons::lucide::Circle1;"));
+        assert!(component.contains("circle {"));
+        assert!(component.contains("cx: \"12\""));
+        assert!(component.contains("href=\"fn.Box.html\""));
+    }
+
+    fn fixture_icons_dir() -> PathBuf {
+        PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("fixtures/lucide-mini/icons")
+    }
+}

@@ -1,6 +1,7 @@
 //! # dioxus-icons
 //!
 //! Lucide icons for Dioxus, one component per icon.
+#![warn(missing_docs)]
 #![doc = include_str!("../STATIC_PICKER.html")]
 #![doc = concat!(
     "<script type=\"application/json\" id=\"__icon_manifest__\">",
@@ -16,6 +17,7 @@
 //!
 #![doc = include_str!("../README_FRAGMENT.md")]
 
+#[allow(missing_docs)]
 mod generated;
 
 /// Lucide icons.

@@ -1,14 +1,16 @@
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 
 use anyhow::{Context, Result, bail};
 use serde::Deserialize;
 
-use crate::fetch::LUCIDE_VERSION;
+use crate::fetch::{LUCIDE_COMMIT, LUCIDE_VERSION};
 use crate::parse::Icon;
 
 const RELATED_FILE: &str = "data/lucide-related-siglip2-base-patch16-224.json";
+const RELATED_MODEL: &str = "google/siglip2-base-patch16-224";
+const RELATED_OUTPUT_SCHEMA_VERSION: u32 = 1;
 
 #[derive(Debug)]
 pub struct RelatedIcons {
@@ -17,9 +19,12 @@ pub struct RelatedIcons {
 
 #[derive(Debug, Deserialize)]
 struct RelatedFile {
+    output_schema_version: u32,
     model: String,
     icon_set: String,
     icon_set_version: String,
+    icon_set_commit: String,
+    input_icon_count: usize,
     related_count: usize,
     items: Vec<RelatedItem>,
 }
@@ -71,7 +76,16 @@ impl RelatedIcons {
     }
 }
 
-fn validate_related_file(file: &RelatedFile, icons: &[Icon], path: &PathBuf) -> Result<()> {
+fn validate_related_file(file: &RelatedFile, icons: &[Icon], path: &Path) -> Result<()> {
+    if file.output_schema_version != RELATED_OUTPUT_SCHEMA_VERSION {
+        bail!(
+            "{} uses related-icon schema v{}, expected v{}",
+            path.display(),
+            file.output_schema_version,
+            RELATED_OUTPUT_SCHEMA_VERSION
+        );
+    }
+
     if file.icon_set != "lucide" {
         bail!(
             "{} was generated for icon set `{}`, expected `lucide`",
@@ -89,11 +103,30 @@ fn validate_related_file(file: &RelatedFile, icons: &[Icon], path: &PathBuf) -> 
         );
     }
 
-    if !file.model.starts_with("google/siglip2-") {
+    if file.icon_set_commit != LUCIDE_COMMIT {
         bail!(
-            "{} was generated with `{}`, expected a google/siglip2 model",
+            "{} was generated from Lucide commit {}, expected {}",
             path.display(),
-            file.model
+            file.icon_set_commit,
+            LUCIDE_COMMIT
+        );
+    }
+
+    if file.model != RELATED_MODEL {
+        bail!(
+            "{} was generated with `{}`, expected `{}`",
+            path.display(),
+            file.model,
+            RELATED_MODEL
+        );
+    }
+
+    if file.input_icon_count != icons.len() {
+        bail!(
+            "{} was generated from {} input icons, expected {}",
+            path.display(),
+            file.input_icon_count,
+            icons.len()
         );
     }
 
@@ -166,4 +199,25 @@ fn validate_related_file(file: &RelatedFile, icons: &[Icon], path: &PathBuf) -> 
 
 fn related_file_path() -> PathBuf {
     PathBuf::from(env!("CARGO_MANIFEST_DIR")).join(RELATED_FILE)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn bundled_related_sidecar_declares_current_provenance() {
+        let path = related_file_path();
+        let contents =
+            fs::read_to_string(&path).unwrap_or_else(|err| panic!("reading {path:?}: {err}"));
+        let file: RelatedFile =
+            serde_json::from_str(&contents).unwrap_or_else(|err| panic!("parsing {path:?}: {err}"));
+
+        assert_eq!(file.output_schema_version, RELATED_OUTPUT_SCHEMA_VERSION);
+        assert_eq!(file.model, RELATED_MODEL);
+        assert_eq!(file.icon_set, "lucide");
+        assert_eq!(file.icon_set_version, LUCIDE_VERSION);
+        assert_eq!(file.icon_set_commit, LUCIDE_COMMIT);
+        assert_eq!(file.input_icon_count, file.items.len());
+    }
 }

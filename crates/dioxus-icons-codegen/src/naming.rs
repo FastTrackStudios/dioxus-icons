@@ -126,9 +126,11 @@ fn component_to_module(component: &str) -> String {
 
 fn override_component_name(stem: &str) -> Option<&'static str> {
     // Kept explicit so Lucide-React divergences can be audited and pinned here.
-    match stem {
-        _ => None,
-    }
+    const OVERRIDES: &[(&str, &str)] = &[];
+
+    OVERRIDES
+        .iter()
+        .find_map(|(source, component)| (*source == stem).then_some(*component))
 }
 
 fn is_valid_rust_ident(ident: &str) -> bool {

@@ -7,6 +7,62 @@ use base64::engine::general_purpose::STANDARD;
 pub fn emit_static_picker(icons: &[Icon]) -> String {
     let mut output = String::new();
     output.push_str(
+        "<style>
+.dioxus-icons-static-picker {
+  margin: 24px 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.dioxus-icons-static-picker p {
+  color: var(--right-side-color, #888);
+}
+.dioxus-icons-static-picker h3 {
+  margin: 22px 0 10px;
+}
+.dioxus-icons-static-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 4px;
+}
+.dioxus-icons-static-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-height: 92px;
+  padding: 8px 4px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+.dioxus-icons-static-cell:hover {
+  color: var(--link-color, #3873ad);
+  text-decoration: none;
+}
+.dioxus-icons-static-cell svg {
+  width: 24px;
+  height: 24px;
+  flex: none;
+}
+.dioxus-icons-static-cell span {
+  width: 100%;
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--right-side-color, #888);
+  overflow-wrap: anywhere;
+}
+.dioxus-icons-static-cell:hover span {
+  color: var(--link-color, inherit);
+}
+@media (max-width: 640px) {
+  .dioxus-icons-static-grid { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
+}
+</style>
+",
+    );
+    output.push_str(
         "<section id=\"dioxus-icons-static-picker\" class=\"dioxus-icons-static-picker\">\n",
     );
     output.push_str("<h2>Icon Index</h2>\n");

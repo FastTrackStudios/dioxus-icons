@@ -59,6 +59,7 @@ function isTyping(target: EventTarget | null): boolean {
 function bindPicker(root: HTMLElement, icons: IconEntry[]): void {
   const input = root.querySelector<HTMLInputElement>("[data-dxi-input]");
   const clearBtn = root.querySelector<HTMLButtonElement>("[data-dxi-clear]");
+  const count = root.querySelector<HTMLElement>("[data-dxi-count] strong");
   const grid = root.querySelector<HTMLElement>("[data-dxi-grid]");
   const scroller = root.querySelector<HTMLElement>("[data-dxi-scroll]");
   if (!input || !grid || !scroller) return;
@@ -127,6 +128,7 @@ function bindPicker(root: HTMLElement, icons: IconEntry[]): void {
 
   function render(): void {
     grid!.textContent = "";
+    if (count) count.textContent = String(filtered.length);
     if (!filtered.length) {
       renderEmpty();
       return;

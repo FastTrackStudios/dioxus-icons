@@ -1,9 +1,12 @@
 {
+  "output_schema_version": 1,
   "model": "google/siglip2-base-patch16-224",
   "model_collection": "https://huggingface.co/collections/google/siglip2",
   "embedding": "image_text_score_fusion",
   "icon_set": "lucide",
   "icon_set_version": "1.14.0",
+  "icon_set_commit": "56e49f12166312f04af4cfd862621c93cf583979",
+  "input_icon_count": 1703,
   "related_count": 6,
   "render_size": 224,
   "image_weight": 0.65,

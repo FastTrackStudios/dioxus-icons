@@ -2,11 +2,10 @@ use dioxus::prelude::*;
 use dioxus_icons::lucide::{Heart, HeartOff};
 
 fn main() {
-    // Add your preferred Dioxus renderer launch here, such as web or desktop.
-    let _app: fn() -> Element = App;
+    dioxus::launch(App);
 }
 
-#[allow(non_snake_case)]
+#[component]
 fn App() -> Element {
     let mut liked = use_signal(|| false);
 

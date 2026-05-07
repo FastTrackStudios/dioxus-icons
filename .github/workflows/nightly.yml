@@ -1,0 +1,41 @@
+name: Nightly
+
+on:
+  schedule:
+    - cron: "21 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    uses: ealmloff/dioxus-ci/.github/workflows/check.yml@main
+    with:
+      toolchain: nightly
+      all-features: false
+      all-targets: true
+
+  test:
+    uses: ealmloff/dioxus-ci/.github/workflows/test.yml@main
+    with:
+      toolchain: nightly
+
+  clippy:
+    uses: ealmloff/dioxus-ci/.github/workflows/clippy.yml@main
+    with:
+      toolchain: nightly
+      all-features: false
+
+  docs:
+    uses: ealmloff/dioxus-ci/.github/workflows/docs.yml@main
+    with:
+      toolchain: nightly
+      workspace: false
+      package: dioxus-icons
+      all-features: false
+      document-private-items: false
