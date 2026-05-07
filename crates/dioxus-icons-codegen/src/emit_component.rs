@@ -82,6 +82,12 @@ fn push_doc_comment(output: &mut String, icon: &Icon, related_icons: &[&Icon]) {
     output.push_str(&preview_img(icon, 48));
     output.push('\n');
     output.push_str("///\n");
+    output.push_str("/// ## Tweak\n");
+    output.push_str("///\n");
+    output.push_str("/// ");
+    output.push_str(&widget_container(icon));
+    output.push('\n');
+    output.push_str("///\n");
     output.push_str("/// ## Sizes\n");
     output.push_str("/// ");
     output.push_str(&preview_img(icon, 16));
@@ -124,13 +130,6 @@ fn push_doc_comment(output: &mut String, icon: &Icon, related_icons: &[&Icon]) {
     output.push_str("///     }\n");
     output.push_str("/// }\n");
     output.push_str("/// ```\n");
-    output.push_str("///\n");
-    output.push_str("/// ## Tweak\n");
-    output.push_str("///\n");
-    output.push_str("/// ");
-    output.push_str(&widget_container(icon));
-    output.push('\n');
-
     if !related_icons.is_empty() {
         output.push_str("///\n");
         output.push_str("/// ## Related Icons\n");
