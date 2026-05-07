@@ -27,6 +27,7 @@ The public API is deliberately flat and component-first:
 
 Generated sources are committed under `crates/dioxus-icons/src/generated/`.
 The hand-run generator lives in `crates/dioxus-icons-codegen/` and fetches the pinned Lucide release into the gitignored `vendor/` cache when needed.
+Per-icon related links are backed by `crates/dioxus-icons-codegen/data/`, generated with Google SigLIP2 image/text score fusion over Lucide icons only.
 
 ## Regenerate Icons
 
@@ -34,6 +35,17 @@ The hand-run generator lives in `crates/dioxus-icons-codegen/` and fetches the p
 cargo run -p dioxus-icons-codegen
 ```
 
+When the Lucide version changes, regenerate the related-icon sidecar before running the Rust generator:
+
+```sh
+python3 crates/dioxus-icons-codegen/scripts/generate_related_icons.py \
+  --icons-dir vendor/lucide-1.14.0/icons \
+  --output crates/dioxus-icons-codegen/data/lucide-related-siglip2-base-patch16-224.json \
+  --icon-set-version 1.14.0
+cargo run -p dioxus-icons-codegen
+```
+
+The SigLIP2 sidecar script requires `rsvg-convert`, `torch`, `transformers`, and `Pillow`.
 Generated output is deterministic. CI should run the generator and then check that `git diff --exit-code` is clean.
 
 ## Examples

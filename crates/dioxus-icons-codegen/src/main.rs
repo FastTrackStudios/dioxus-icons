@@ -4,8 +4,9 @@ mod emit_manifest;
 mod fetch;
 mod naming;
 mod parse;
+mod related;
 
-use std::collections::BTreeSet;
+use std::collections::{BTreeMap, BTreeSet};
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::Command;
@@ -18,6 +19,7 @@ use crate::emit_manifest::emit_manifest;
 use crate::fetch::{LUCIDE_VERSION, ensure_lucide};
 use crate::naming::icon_names;
 use crate::parse::{Icon, parse_icon};
+use crate::related::RelatedIcons;
 
 fn main() -> Result<()> {
     if std::env::args().any(|arg| arg == "--check-lucide-updates") {
@@ -27,6 +29,11 @@ fn main() -> Result<()> {
     let workspace_root = workspace_root()?;
     let icons_dir = ensure_lucide(&workspace_root)?;
     let icons = read_icons(&icons_dir)?;
+    let related_icons = RelatedIcons::load_lucide(&icons)?;
+    let icons_by_source_name = icons
+        .iter()
+        .map(|icon| (icon.source_name.as_str(), icon))
+        .collect::<BTreeMap<_, _>>();
 
     let generated_dir = workspace_root.join("crates/dioxus-icons/src/generated");
     let lucide_dir = generated_dir.join("lucide");
@@ -34,7 +41,8 @@ fn main() -> Result<()> {
 
     for icon in &icons {
         let component_path = lucide_dir.join(format!("{}.rs", icon.module));
-        fs::write(&component_path, emit_component(icon))
+        let related = related_icons.for_icon(icon, &icons_by_source_name)?;
+        fs::write(&component_path, emit_component(icon, &related))
             .with_context(|| format!("writing {}", component_path.display()))?;
     }
 

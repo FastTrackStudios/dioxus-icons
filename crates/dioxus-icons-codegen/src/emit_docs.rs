@@ -78,6 +78,26 @@ pub fn widget_container(icon: &Icon) -> String {
     )
 }
 
+pub fn related_icon_links(icons: &[&Icon]) -> String {
+    let mut output = String::new();
+    output.push_str("<div class=\"dioxus-icons-related\">");
+
+    for icon in icons {
+        output.push_str(&format!(
+            "<a class=\"dioxus-icons-related-link\" href=\"fn.{}.html\" title=\"{}\">",
+            html_attr(&icon.component),
+            html_attr(&icon.component)
+        ));
+        output.push_str(&preview_img(icon, 20));
+        output.push_str("<span>");
+        output.push_str(&html_text(&icon.component));
+        output.push_str("</span></a>");
+    }
+
+    output.push_str("</div>");
+    output
+}
+
 pub fn preview_img(icon: &Icon, size: u32) -> String {
     let svg = preview_svg(icon, size);
     format!(

@@ -1,9 +1,9 @@
 use crate::fetch::{LUCIDE_COMMIT, LUCIDE_VERSION};
 use crate::parse::{Icon, SvgElement};
 
-use crate::emit_docs::{preview_img, widget_container};
+use crate::emit_docs::{preview_img, related_icon_links, widget_container};
 
-pub fn emit_component(icon: &Icon) -> String {
+pub fn emit_component(icon: &Icon, related_icons: &[&Icon]) -> String {
     let mut output = String::new();
 
     output.push_str(&format!(
@@ -38,7 +38,7 @@ pub fn emit_component(icon: &Icon) -> String {
     output.push_str("    pub class: std::borrow::Cow<'static, str>,\n");
     output.push_str("}\n\n");
 
-    push_doc_comment(&mut output, icon);
+    push_doc_comment(&mut output, icon, related_icons);
     output.push_str("#[doc = include_str!(\"../../../rustdoc-header.html\")]\n");
     output.push_str("#[allow(non_snake_case)]\n");
     output.push_str("#[allow(clippy::too_many_lines)]\n");
@@ -75,7 +75,7 @@ pub fn emit_component(icon: &Icon) -> String {
     output
 }
 
-fn push_doc_comment(output: &mut String, icon: &Icon) {
+fn push_doc_comment(output: &mut String, icon: &Icon, related_icons: &[&Icon]) {
     output.push_str(&format!("/// # {}\n", icon.component));
     output.push_str("///\n");
     output.push_str("/// ");
@@ -130,6 +130,15 @@ fn push_doc_comment(output: &mut String, icon: &Icon) {
     output.push_str("/// ");
     output.push_str(&widget_container(icon));
     output.push('\n');
+
+    if !related_icons.is_empty() {
+        output.push_str("///\n");
+        output.push_str("/// ## Related Icons\n");
+        output.push_str("///\n");
+        output.push_str("/// ");
+        output.push_str(&related_icon_links(related_icons));
+        output.push('\n');
+    }
 }
 
 fn push_rsx_element(output: &mut String, element: &SvgElement) {
