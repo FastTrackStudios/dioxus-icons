@@ -1,0 +1,20 @@
+[package]
+name = "dioxus-icons"
+description = "Lucide icons for Dioxus, one component per icon."
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[lib]
+name = "dioxus_icons"
+
+[dependencies]
+dioxus.workspace = true
+dioxus-signals.workspace = true
+
+[build-dependencies]
+lazy-js-bundle.workspace = true
+
+[dev-dependencies]
+dioxus = { workspace = true, features = ["lib"] }

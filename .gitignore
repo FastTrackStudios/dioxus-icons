@@ -1,0 +1,6 @@
+/target
+/vendor
+.DS_Store
+tests/playwright/node_modules
+tests/playwright/test-results
+tests/playwright/playwright-report

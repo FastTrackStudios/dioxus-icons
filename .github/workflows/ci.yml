@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Test codegen crate
+        run: cargo test -p dioxus-icons-codegen
+
+      - name: Verify generated output is current
+        run: ci/verify_codegen.sh
+
+      - name: Build examples
+        run: cargo build -p dioxus-icons --examples
+
+      - name: Build docs with warnings denied
+        run: RUSTDOCFLAGS="-D warnings" cargo doc --no-deps -p dioxus-icons
