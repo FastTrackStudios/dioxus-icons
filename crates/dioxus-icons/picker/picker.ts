@@ -17,8 +17,7 @@ const ROW_GAP = 4;
 
 (function init(): void {
   const manifestNode = document.getElementById("__icon_manifest__");
-  const picker = document.getElementById("dxi-picker");
-  if (!manifestNode || !picker) return;
+  if (!manifestNode) return;
 
   let manifest: IconManifest;
   try {
@@ -28,20 +27,55 @@ const ROW_GAP = 4;
   }
   const icons: IconEntry[] = Array.isArray(manifest.icons) ? manifest.icons : [];
 
+  const roots = Array.from(
+    document.querySelectorAll<HTMLElement>("[data-dxi-picker]"),
+  );
+  if (!roots.length) return;
+
   const fallback = document.getElementById("dioxus-icons-static-picker");
-  const input = document.getElementById("dxi-picker-input") as HTMLInputElement | null;
-  const clearBtn = document.getElementById("dxi-picker-clear") as HTMLButtonElement | null;
-  const kbd = document.getElementById("dxi-picker-kbd");
-  const count = document.getElementById("dxi-picker-count");
-  const scroller = document.getElementById("dxi-picker-scroll");
-  const grid = document.getElementById("dxi-picker-grid");
-  const topSpacer = document.getElementById("dxi-picker-top");
-  const bottomSpacer = document.getElementById("dxi-picker-bottom");
+  if (fallback) (fallback as HTMLElement).style.display = "none";
 
-  if (!input || !count || !scroller || !grid || !topSpacer || !bottomSpacer) return;
+  roots.forEach((root) => {
+    root.hidden = false;
+    bindPicker(root, icons);
+  });
 
-  if (fallback) fallback.style.display = "none";
-  picker.hidden = false;
+  document.addEventListener("keydown", (event: KeyboardEvent) => {
+    if (event.key !== "/" || isTyping(event.target)) return;
+    const visible = findVisibleInput(roots);
+    if (!visible) return;
+    event.preventDefault();
+    visible.focus();
+    visible.select();
+  });
+})();
+
+function findVisibleInput(roots: HTMLElement[]): HTMLInputElement | null {
+  for (const root of roots) {
+    if (root.offsetParent === null && root.getClientRects().length === 0) continue;
+    const input = root.querySelector<HTMLInputElement>("[data-dxi-input]");
+    if (input && input.offsetParent !== null) return input;
+  }
+  return null;
+}
+
+function isTyping(target: EventTarget | null): boolean {
+  if (!target || !(target instanceof HTMLElement)) return false;
+  const tag = target.tagName;
+  return tag === "INPUT" || tag === "TEXTAREA" || target.isContentEditable;
+}
+
+function bindPicker(root: HTMLElement, icons: IconEntry[]): void {
+  const input = root.querySelector<HTMLInputElement>("[data-dxi-input]");
+  const clearBtn = root.querySelector<HTMLButtonElement>("[data-dxi-clear]");
+  const kbd = root.querySelector<HTMLElement>("[data-dxi-kbd]");
+  const count = root.querySelector<HTMLElement>("[data-dxi-count]");
+  const scroller = root.querySelector<HTMLElement>("[data-dxi-scroll]");
+  const grid = root.querySelector<HTMLElement>("[data-dxi-grid]");
+  const topSpacer = root.querySelector<HTMLElement>("[data-dxi-top]");
+  const bottomSpacer = root.querySelector<HTMLElement>("[data-dxi-bottom]");
+
+  if (!input || !scroller || !grid || !topSpacer || !bottomSpacer) return;
 
   let filtered: IconEntry[] = icons.slice();
   let activeIndex = 0;
@@ -77,13 +111,9 @@ const ROW_GAP = 4;
       .map((item) => item.icon);
     activeIndex = 0;
     scroller!.scrollTop = 0;
-    updateAffordances(query.length > 0);
+    if (clearBtn) clearBtn.hidden = !query.length;
+    if (kbd) kbd.hidden = query.length > 0;
     render();
-  }
-
-  function updateAffordances(hasQuery: boolean): void {
-    if (clearBtn) clearBtn.hidden = !hasQuery;
-    if (kbd) kbd.hidden = hasQuery;
   }
 
   function measure(): void {
@@ -163,10 +193,12 @@ const ROW_GAP = 4;
   function render(): void {
     measure();
     const total = filtered.length;
-    count!.innerHTML =
-      total === icons.length
-        ? "<strong>" + total + "</strong> icons"
-        : "<strong>" + total + "</strong> of " + icons.length;
+    if (count) {
+      count.innerHTML =
+        total === icons.length
+          ? "<strong>" + total + "</strong> icons"
+          : "<strong>" + total + "</strong> of " + icons.length;
+    }
     grid!.textContent = "";
 
     if (!total) {
@@ -262,14 +294,8 @@ const ROW_GAP = 4;
     ensureActiveVisible();
   }
 
-  function isTyping(target: EventTarget | null): boolean {
-    if (!target || !(target instanceof HTMLElement)) return false;
-    const tag = target.tagName;
-    return tag === "INPUT" || tag === "TEXTAREA" || target.isContentEditable;
-  }
-
   input.addEventListener("input", filter);
-  picker.addEventListener("keydown", handleNavigation);
+  root.addEventListener("keydown", handleNavigation);
 
   if (clearBtn) {
     clearBtn.addEventListener("click", () => {
@@ -278,14 +304,6 @@ const ROW_GAP = 4;
       input.focus();
     });
   }
-
-  document.addEventListener("keydown", (event: KeyboardEvent) => {
-    if (event.key === "/" && !isTyping(event.target)) {
-      event.preventDefault();
-      input.focus();
-      input.select();
-    }
-  });
 
   scroller.addEventListener("scroll", () => {
     window.requestAnimationFrame(render);
@@ -306,6 +324,12 @@ const ROW_GAP = 4;
     observer.observe(bottomSpacer);
   }
 
+  if ("ResizeObserver" in window) {
+    const ro = new ResizeObserver(() => {
+      window.requestAnimationFrame(render);
+    });
+    ro.observe(scroller);
+  }
+
   filter();
-  setTimeout(() => input.focus(), 0);
-})();
+}
