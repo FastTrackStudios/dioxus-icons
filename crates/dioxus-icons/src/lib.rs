@@ -11,7 +11,7 @@
 #![doc = include_str!("../picker/picker.html")]
 #![doc = concat!(
     "<script>",
-    include_str!(concat!(env!("OUT_DIR"), "/picker.js")),
+    include_str!("./js/picker.js"),
     "</script>"
 )]
 //!
