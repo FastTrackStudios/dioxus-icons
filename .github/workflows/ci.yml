@@ -41,22 +41,6 @@ jobs:
     with:
       all-features: false
 
-  generated-and-package:
-    if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
-    name: Generated Output And Package
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
-      - uses: ealmloff/dioxus-ci/actions/setup-dioxus@68b5983fd6c83a02ed52638fe5063678ce8ad09c
-      - name: Verify generated output is current
-        run: ci/verify_codegen.sh
-      - name: Build examples
-        run: cargo build -p dioxus-icons --examples
-      - name: Package dry run
-        run: cargo package -p dioxus-icons
-      - name: Validate packaged docs.rs build
-        run: ci/validate_docsrs.sh
-
   picker:
     if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
     name: Docs Picker

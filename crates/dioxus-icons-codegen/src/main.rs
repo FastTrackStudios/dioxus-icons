@@ -2,6 +2,7 @@ mod emit_component;
 mod emit_docs;
 mod emit_manifest;
 mod fetch;
+mod inputs;
 mod naming;
 mod parse;
 mod related;
@@ -55,6 +56,11 @@ fn main() -> Result<()> {
     )?;
 
     rustfmt_generated(&generated_dir, &lucide_dir, &icons)?;
+
+    fs::write(
+        generated_dir.join("inputs_hash.txt"),
+        format!("{}\n", inputs::compute_inputs_hash()?),
+    )?;
 
     println!(
         "generated {} Lucide v{} icons into {}",
