@@ -417,7 +417,7 @@ test.describe("per-icon docs pages", () => {
     const code = widget.locator("[data-di-code]");
     const copy = widget.locator("[data-di-copy]");
     const expectedSnippet =
-      'Trash { size: 32, color: "#ff0000", stroke_width: 3 }';
+      'Trash { size: 32, stroke: "#ff0000", stroke_width: 3 }';
 
     await expect(widget).toBeVisible();
     await expect(widget.locator("pre[data-language='rust']")).toHaveClass(
@@ -426,7 +426,7 @@ test.describe("per-icon docs pages", () => {
     await expect(code.locator(".a-t")).toHaveText("Trash");
     await expect(code.locator(".a-s")).toHaveText('"#000000"');
     await expect(code).toHaveText(
-      'Trash { size: 24, color: "#000000", stroke_width: 2 }',
+      'Trash { size: 24, stroke: "#000000", stroke_width: 2 }',
     );
 
     await widget.locator("[data-di-size]").fill("32");
