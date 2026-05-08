@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="VolumeX" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;22&quot; x2=&quot;16&quot; y1=&quot;9&quot; y2=&quot;15&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;16&quot; x2=&quot;22&quot; y1=&quot;9&quot; y2=&quot;15&quot;&gt;&lt;/line&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="VolumeX preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMSA0LjcwMmEuNzA1LjcwNSAwIDAgMC0xLjIwMy0uNDk4TDYuNDEzIDcuNTg3QTEuNCAxLjQgMCAwIDEgNS40MTYgOEgzYTEgMSAwIDAgMC0xIDF2NmExIDEgMCAwIDAgMSAxaDIuNDE2YTEuNCAxLjQgMCAwIDEgLjk5Ny40MTNsMy4zODMgMy4zODRBLjcwNS43MDUgMCAwIDAgMTEgMTkuMjk4eiI+PC9wYXRoPjxsaW5lIHgxPSIyMiIgeDI9IjE2IiB5MT0iOSIgeTI9IjE1Ij48L2xpbmU+PGxpbmUgeDE9IjE2IiB4Mj0iMjIiIHkxPSI5IiB5Mj0iMTUiPjwvbGluZT48L3N2Zz4=" alt="VolumeX icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">VolumeX</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-music, sound, mute, speaker
-
-## Categories
-connectivity, communication, multimedia
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/volume-x)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+music, sound, mute, speaker
+
+## Categories
+connectivity, communication, multimedia
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/volume-x)
 
 ## Related Icons
 

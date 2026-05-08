@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="Dog" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M11.25 16.25h1.5L12 17z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M16 14v.5&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8 14v.5&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="Dog preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMS4yNSAxNi4yNWgxLjVMMTIgMTd6Ij48L3BhdGg+PHBhdGggZD0iTTE2IDE0di41Ij48L3BhdGg+PHBhdGggZD0iTTQuNDIgMTEuMjQ3QTEzLjE1MiAxMy4xNTIgMCAwIDAgNCAxNC41NTZDNCAxOC43MjggNy41ODIgMjEgMTIgMjFzOC0yLjI3MiA4LTYuNDQ0YTExLjcwMiAxMS43MDIgMCAwIDAtLjQ5My0zLjMwOSI+PC9wYXRoPjxwYXRoIGQ9Ik04IDE0di41Ij48L3BhdGg+PHBhdGggZD0iTTguNSA4LjVjLS4zODQgMS4wNS0xLjA4MyAyLjAyOC0yLjM0NCAyLjUtMS45MzEuNzIyLTMuNTc2LS4yOTctMy42NTYtMS0uMTEzLS45OTQgMS4xNzctNi41MyA0LTcgMS45MjMtLjMyMSAzLjY1MS44NDUgMy42NTEgMi4yMzVBNy40OTcgNy40OTcgMCAwIDEgMTQgNS4yNzdjMC0xLjM5IDEuODQ0LTIuNTk4IDMuNzY3LTIuMjc3IDIuODIzLjQ3IDQuMTEzIDYuMDA2IDQgNy0uMDguNzAzLTEuNzI1IDEuNzIyLTMuNjU2IDEtMS4yNjEtLjQ3Mi0xLjg1NS0xLjQ1LTIuMjM5LTIuNSI+PC9wYXRoPjwvc3ZnPg==" alt="Dog icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">Dog</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-animal, pet, puppy, hound, canine
-
-## Categories
-animals
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/dog)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+animal, pet, puppy, hound, canine
+
+## Categories
+animals
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/dog)
 
 ## Related Icons
 

@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="TriangleDashed" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10.17 4.193a2 2 0 0 1 3.666.013&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 21h2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m15.874 7.743 1 1.732&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m18.849 12.952 1 1.732&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M21.824 18.18a2 2 0 0 1-1.835 2.824&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M4.024 21a2 2 0 0 1-1.839-2.839&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m5.136 12.952-1 1.732&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8 21h2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m8.102 7.743-1 1.732&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="TriangleDashed preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMC4xNyA0LjE5M2EyIDIgMCAwIDEgMy42NjYuMDEzIj48L3BhdGg+PHBhdGggZD0iTTE0IDIxaDIiPjwvcGF0aD48cGF0aCBkPSJtMTUuODc0IDcuNzQzIDEgMS43MzIiPjwvcGF0aD48cGF0aCBkPSJtMTguODQ5IDEyLjk1MiAxIDEuNzMyIj48L3BhdGg+PHBhdGggZD0iTTIxLjgyNCAxOC4xOGEyIDIgMCAwIDEtMS44MzUgMi44MjQiPjwvcGF0aD48cGF0aCBkPSJNNC4wMjQgMjFhMiAyIDAgMCAxLTEuODM5LTIuODM5Ij48L3BhdGg+PHBhdGggZD0ibTUuMTM2IDEyLjk1Mi0xIDEuNzMyIj48L3BhdGg+PHBhdGggZD0iTTggMjFoMiI+PC9wYXRoPjxwYXRoIGQ9Im04LjEwMiA3Ljc0My0xIDEuNzMyIj48L3BhdGg+PC9zdmc+" alt="TriangleDashed icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">TriangleDashed</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-equilateral, delta, shape, pyramid, hierarchy, dashed
-
-## Categories
-shapes
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/triangle-dashed)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+equilateral, delta, shape, pyramid, hierarchy, dashed
+
+## Categories
+shapes
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/triangle-dashed)
 
 ## Related Icons
 

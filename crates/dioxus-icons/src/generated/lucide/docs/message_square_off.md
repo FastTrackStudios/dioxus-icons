@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="MessageSquareOff" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M19 19H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.7.7 0 0 1 2 21.286V5a2 2 0 0 1 1.184-1.826&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m2 2 20 20&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8.656 3H20a2 2 0 0 1 2 2v11.344&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="MessageSquareOff preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xOSAxOUg2LjgyOGEyIDIgMCAwIDAtMS40MTQuNTg2bC0yLjIwMiAyLjIwMkEuNy43IDAgMCAxIDIgMjEuMjg2VjVhMiAyIDAgMCAxIDEuMTg0LTEuODI2Ij48L3BhdGg+PHBhdGggZD0ibTIgMiAyMCAyMCI+PC9wYXRoPjxwYXRoIGQ9Ik04LjY1NiAzSDIwYTIgMiAwIDAgMSAyIDJ2MTEuMzQ0Ij48L3BhdGg+PC9zdmc+" alt="MessageSquareOff icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">MessageSquareOff</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-comment, chat, conversation, dialog, feedback, speech bubble, clear, close, delete, remove, cancel, silence, mute, moderate
-
-## Categories
-social
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/message-square-off)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+comment, chat, conversation, dialog, feedback, speech bubble, clear, close, delete, remove, cancel, silence, mute, moderate
+
+## Categories
+social
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/message-square-off)
 
 ## Related Icons
 

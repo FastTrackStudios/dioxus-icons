@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="WineOff" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8 22h8&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M7 10h3m7 0h-1.343&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 15v7&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M7.307 7.307A12.33 12.33 0 0 0 7 10a5 5 0 0 0 7.391 4.391M8.638 2.981C8.75 2.668 8.872 2.34 9 2h6c1.5 4 2 6 2 8 0 .407-.05.809-.145 1.198&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;2&quot; x2=&quot;22&quot; y1=&quot;2&quot; y2=&quot;22&quot;&gt;&lt;/line&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="WineOff preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik04IDIyaDgiPjwvcGF0aD48cGF0aCBkPSJNNyAxMGgzbTcgMGgtMS4zNDMiPjwvcGF0aD48cGF0aCBkPSJNMTIgMTV2NyI+PC9wYXRoPjxwYXRoIGQ9Ik03LjMwNyA3LjMwN0ExMi4zMyAxMi4zMyAwIDAgMCA3IDEwYTUgNSAwIDAgMCA3LjM5MSA0LjM5MU04LjYzOCAyLjk4MUM4Ljc1IDIuNjY4IDguODcyIDIuMzQgOSAyaDZjMS41IDQgMiA2IDIgOCAwIC40MDctLjA1LjgwOS0uMTQ1IDEuMTk4Ij48L3BhdGg+PGxpbmUgeDE9IjIiIHgyPSIyMiIgeTE9IjIiIHkyPSIyMiI+PC9saW5lPjwvc3ZnPg==" alt="WineOff icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">WineOff</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-alcohol, beverage, drink, glass, alcohol free, abstinence, abstaining, teetotalism, allergy, intolerance
-
-## Categories
-food-beverage
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/wine-off)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+alcohol, beverage, drink, glass, alcohol free, abstinence, abstaining, teetotalism, allergy, intolerance
+
+## Categories
+food-beverage
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/wine-off)
 
 ## Related Icons
 

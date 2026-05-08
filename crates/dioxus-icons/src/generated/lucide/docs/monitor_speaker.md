@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="MonitorSpeaker" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M5.5 20H8&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M17 9h.01&quot;&gt;&lt;/path&gt;&lt;rect height=&quot;16&quot; rx=&quot;2&quot; width=&quot;10&quot; x=&quot;12&quot; y=&quot;4&quot;&gt;&lt;/rect&gt;&lt;path d=&quot;M8 6H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;17&quot; cy=&quot;15&quot; r=&quot;1&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="MonitorSpeaker preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik01LjUgMjBIOCI+PC9wYXRoPjxwYXRoIGQ9Ik0xNyA5aC4wMSI+PC9wYXRoPjxyZWN0IGhlaWdodD0iMTYiIHJ4PSIyIiB3aWR0aD0iMTAiIHg9IjEyIiB5PSI0Ij48L3JlY3Q+PHBhdGggZD0iTTggNkg0YTIgMiAwIDAgMC0yIDJ2NmEyIDIgMCAwIDAgMiAyaDQiPjwvcGF0aD48Y2lyY2xlIGN4PSIxNyIgY3k9IjE1IiByPSIxIj48L2NpcmNsZT48L3N2Zz4=" alt="MonitorSpeaker icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">MonitorSpeaker</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-devices, connect, cast
-
-## Categories
-connectivity, devices
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/monitor-speaker)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+devices, connect, cast
+
+## Categories
+connectivity, devices
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/monitor-speaker)
 
 ## Related Icons
 

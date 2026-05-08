@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="Salad" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M7 21h10&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m13 12 4-4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="Salad preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik03IDIxaDEwIj48L3BhdGg+PHBhdGggZD0iTTEyIDIxYTkgOSAwIDAgMCA5LTlIM2E5IDkgMCAwIDAgOSA5WiI+PC9wYXRoPjxwYXRoIGQ9Ik0xMS4zOCAxMmEyLjQgMi40IDAgMCAxLS40LTQuNzcgMi40IDIuNCAwIDAgMSAzLjItMi43NyAyLjQgMi40IDAgMCAxIDMuNDctLjYzIDIuNCAyLjQgMCAwIDEgMy4zNyAzLjM3IDIuNCAyLjQgMCAwIDEtMS4xIDMuNyAyLjUxIDIuNTEgMCAwIDEgLjAzIDEuMSI+PC9wYXRoPjxwYXRoIGQ9Im0xMyAxMiA0LTQiPjwvcGF0aD48cGF0aCBkPSJNMTAuOSA3LjI1QTMuOTkgMy45OSAwIDAgMCA0IDEwYzAgLjczLjIgMS40MS41NCAyIj48L3BhdGg+PC9zdmc+" alt="Salad icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">Salad</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-food, vegetarian, dish, restaurant, course, meal, side, vegetables, health
-
-## Categories
-food-beverage, emoji
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/salad)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+food, vegetarian, dish, restaurant, course, meal, side, vegetables, health
+
+## Categories
+food-beverage, emoji
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/salad)
 
 ## Related Icons
 

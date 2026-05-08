@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="WheatOff" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m2 22 10-10&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m16 8-1.17 1.17&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m8 8-.53.53a3.5 3.5 0 0 0 0 4.94L9 15l1.53-1.53c.55-.55.88-1.25.98-1.97&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M10.91 5.26c.15-.26.34-.51.56-.73L13 3l1.53 1.53a3.5 3.5 0 0 1 .28 4.62&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m16 16-.53.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.49 3.49 0 0 1 1.97-.98&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M18.74 13.09c.26-.15.51-.34.73-.56L21 11l-1.53-1.53a3.5 3.5 0 0 0-4.62-.28&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;2&quot; x2=&quot;22&quot; y1=&quot;2&quot; y2=&quot;22&quot;&gt;&lt;/line&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="WheatOff preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Im0yIDIyIDEwLTEwIj48L3BhdGg+PHBhdGggZD0ibTE2IDgtMS4xNyAxLjE3Ij48L3BhdGg+PHBhdGggZD0iTTMuNDcgMTIuNTMgNSAxMWwxLjUzIDEuNTNhMy41IDMuNSAwIDAgMSAwIDQuOTRMNSAxOWwtMS41My0xLjUzYTMuNSAzLjUgMCAwIDEgMC00Ljk0WiI+PC9wYXRoPjxwYXRoIGQ9Im04IDgtLjUzLjUzYTMuNSAzLjUgMCAwIDAgMCA0Ljk0TDkgMTVsMS41My0xLjUzYy41NS0uNTUuODgtMS4yNS45OC0xLjk3Ij48L3BhdGg+PHBhdGggZD0iTTEwLjkxIDUuMjZjLjE1LS4yNi4zNC0uNTEuNTYtLjczTDEzIDNsMS41MyAxLjUzYTMuNSAzLjUgMCAwIDEgLjI4IDQuNjIiPjwvcGF0aD48cGF0aCBkPSJNMjAgMmgydjJhNCA0IDAgMCAxLTQgNGgtMlY2YTQgNCAwIDAgMSA0LTRaIj48L3BhdGg+PHBhdGggZD0iTTExLjQ3IDE3LjQ3IDEzIDE5bC0xLjUzIDEuNTNhMy41IDMuNSAwIDAgMS00Ljk0IDBMNSAxOWwxLjUzLTEuNTNhMy41IDMuNSAwIDAgMSA0Ljk0IDBaIj48L3BhdGg+PHBhdGggZD0ibTE2IDE2LS41My41M2EzLjUgMy41IDAgMCAxLTQuOTQgMEw5IDE1bDEuNTMtMS41M2EzLjQ5IDMuNDkgMCAwIDEgMS45Ny0uOTgiPjwvcGF0aD48cGF0aCBkPSJNMTguNzQgMTMuMDljLjI2LS4xNS41MS0uMzQuNzMtLjU2TDIxIDExbC0xLjUzLTEuNTNhMy41IDMuNSAwIDAgMC00LjYyLS4yOCI+PC9wYXRoPjxsaW5lIHgxPSIyIiB4Mj0iMjIiIHkxPSIyIiB5Mj0iMjIiPjwvbGluZT48L3N2Zz4=" alt="WheatOff icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">WheatOff</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-corn, cereal, grain, gluten free, allergy, intolerance, diet
-
-## Categories
-food-beverage
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/wheat-off)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+corn, cereal, grain, gluten free, allergy, intolerance, diet
+
+## Categories
+food-beverage
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/wheat-off)
 
 ## Related Icons
 

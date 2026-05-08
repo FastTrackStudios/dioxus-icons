@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="Drama" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M10 11h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 6h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M18 6h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M6.5 13.1h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M17.4 9.9c-.8.8-2 .8-2.8 0&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="Drama preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMCAxMWguMDEiPjwvcGF0aD48cGF0aCBkPSJNMTQgNmguMDEiPjwvcGF0aD48cGF0aCBkPSJNMTggNmguMDEiPjwvcGF0aD48cGF0aCBkPSJNNi41IDEzLjFoLjAxIj48L3BhdGg+PHBhdGggZD0iTTIyIDVjMCA5LTQgMTItNiAxMnMtNi0zLTYtMTJjMC0yIDItMyA2LTNzNiAxIDYgMyI+PC9wYXRoPjxwYXRoIGQ9Ik0xNy40IDkuOWMtLjguOC0yIC44LTIuOCAwIj48L3BhdGg+PHBhdGggZD0iTTEwLjEgNy4xQzkgNy4yIDcuNyA3LjcgNiA4LjZjLTMuNSAyLTQuNyAzLjktMy43IDUuNiA0LjUgNy44IDkuNSA4LjQgMTEuMiA3LjQuOS0uNSAxLjktMi4xIDEuOS00LjciPjwvcGF0aD48cGF0aCBkPSJNOS4xIDE2LjVjLjMtMS4xIDEuNC0xLjcgMi40LTEuNCI+PC9wYXRoPjwvc3ZnPg==" alt="Drama icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">Drama</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-drama, masks, theater, theatre, entertainment, show
-
-## Categories
-multimedia
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/drama)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+drama, masks, theater, theatre, entertainment, show
+
+## Categories
+multimedia
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/drama)
 
 ## Related Icons
 

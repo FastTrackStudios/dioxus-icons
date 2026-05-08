@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="BrainCircuit" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M9 13a4.5 4.5 0 0 0 3-4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M6.003 5.125A3 3 0 0 0 6.401 6.5&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M3.477 10.896a4 4 0 0 1 .585-.396&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M6 18a4 4 0 0 1-1.967-.516&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 13h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 18h6a2 2 0 0 1 2 2v1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 8h8&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M16 8V5a2 2 0 0 1 2-2&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;16&quot; cy=&quot;13&quot; r=&quot;.5&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;18&quot; cy=&quot;3&quot; r=&quot;.5&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;20&quot; cy=&quot;21&quot; r=&quot;.5&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;20&quot; cy=&quot;8&quot; r=&quot;.5&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="BrainCircuit preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA1YTMgMyAwIDEgMC01Ljk5Ny4xMjUgNCA0IDAgMCAwLTIuNTI2IDUuNzcgNCA0IDAgMCAwIC41NTYgNi41ODhBNCA0IDAgMSAwIDEyIDE4WiI+PC9wYXRoPjxwYXRoIGQ9Ik05IDEzYTQuNSA0LjUgMCAwIDAgMy00Ij48L3BhdGg+PHBhdGggZD0iTTYuMDAzIDUuMTI1QTMgMyAwIDAgMCA2LjQwMSA2LjUiPjwvcGF0aD48cGF0aCBkPSJNMy40NzcgMTAuODk2YTQgNCAwIDAgMSAuNTg1LS4zOTYiPjwvcGF0aD48cGF0aCBkPSJNNiAxOGE0IDQgMCAwIDEtMS45NjctLjUxNiI+PC9wYXRoPjxwYXRoIGQ9Ik0xMiAxM2g0Ij48L3BhdGg+PHBhdGggZD0iTTEyIDE4aDZhMiAyIDAgMCAxIDIgMnYxIj48L3BhdGg+PHBhdGggZD0iTTEyIDhoOCI+PC9wYXRoPjxwYXRoIGQ9Ik0xNiA4VjVhMiAyIDAgMCAxIDItMiI+PC9wYXRoPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTMiIHI9Ii41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSIxOCIgY3k9IjMiIHI9Ii41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSIyMCIgY3k9IjIxIiByPSIuNSI+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSI4IiByPSIuNSI+PC9jaXJjbGU+PC9zdmc+" alt="BrainCircuit icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">BrainCircuit</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-mind, intellect, artificial intelligence, ai, deep learning, machine learning, computing
-
-## Categories
-science, development
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/brain-circuit)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+mind, intellect, artificial intelligence, ai, deep learning, machine learning, computing
+
+## Categories
+science, development
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/brain-circuit)
 
 ## Related Icons
 

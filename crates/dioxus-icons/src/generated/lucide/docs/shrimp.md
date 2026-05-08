@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="Shrimp" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M11 12h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M13 22c.5-.5 1.12-1 2.5-1-1.38 0-2-.5-2.5-1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 2a3.28 3.28 0 0 1-3.227 1.798l-6.17-.561A2.387 2.387 0 1 0 4.387 8H15.5a1 1 0 0 1 0 13 1 1 0 0 0 0-5H12a7 7 0 0 1-7-7V8&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 8a8.5 8.5 0 0 1 0 8&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M16 16c2 0 4.5-4 4-6&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="Shrimp preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMSAxMmguMDEiPjwvcGF0aD48cGF0aCBkPSJNMTMgMjJjLjUtLjUgMS4xMi0xIDIuNS0xLTEuMzggMC0yLS41LTIuNS0xIj48L3BhdGg+PHBhdGggZD0iTTE0IDJhMy4yOCAzLjI4IDAgMCAxLTMuMjI3IDEuNzk4bC02LjE3LS41NjFBMi4zODcgMi4zODcgMCAxIDAgNC4zODcgOEgxNS41YTEgMSAwIDAgMSAwIDEzIDEgMSAwIDAgMCAwLTVIMTJhNyA3IDAgMCAxLTctN1Y4Ij48L3BhdGg+PHBhdGggZD0iTTE0IDhhOC41IDguNSAwIDAgMSAwIDgiPjwvcGF0aD48cGF0aCBkPSJNMTYgMTZjMiAwIDQuNS00IDQtNiI+PC9wYXRoPjwvc3ZnPg==" alt="Shrimp icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">Shrimp</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-seafood, shellfish, crustacean, prawn, scallop, whelk, arthropod, littleneck, quahog, cherrystone
-
-## Categories
-animals
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/shrimp)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+seafood, shellfish, crustacean, prawn, scallop, whelk, arthropod, littleneck, quahog, cherrystone
+
+## Categories
+animals
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/shrimp)
 
 ## Related Icons
 

@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="WandSparkles" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m14 7 3 3&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5 6v4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M19 14v4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M10 2v2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M7 8H3&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M21 16h-4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M11 3H9&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="WandSparkles preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Im0yMS42NCAzLjY0LTEuMjgtMS4yOGExLjIxIDEuMjEgMCAwIDAtMS43MiAwTDIuMzYgMTguNjRhMS4yMSAxLjIxIDAgMCAwIDAgMS43MmwxLjI4IDEuMjhhMS4yIDEuMiAwIDAgMCAxLjcyIDBMMjEuNjQgNS4zNmExLjIgMS4yIDAgMCAwIDAtMS43MiI+PC9wYXRoPjxwYXRoIGQ9Im0xNCA3IDMgMyI+PC9wYXRoPjxwYXRoIGQ9Ik01IDZ2NCI+PC9wYXRoPjxwYXRoIGQ9Ik0xOSAxNHY0Ij48L3BhdGg+PHBhdGggZD0iTTEwIDJ2MiI+PC9wYXRoPjxwYXRoIGQ9Ik03IDhIMyI+PC9wYXRoPjxwYXRoIGQ9Ik0yMSAxNmgtNCI+PC9wYXRoPjxwYXRoIGQ9Ik0xMSAzSDkiPjwvcGF0aD48L3N2Zz4=" alt="WandSparkles icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">WandSparkles</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-magic, wizard, magician
-
-## Categories
-design, gaming, cursors, photography
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/wand-sparkles)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+magic, wizard, magician
+
+## Categories
+design, gaming, cursors, photography
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/wand-sparkles)
 
 ## Related Icons
 

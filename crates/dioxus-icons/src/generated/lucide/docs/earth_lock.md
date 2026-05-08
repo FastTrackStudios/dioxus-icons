@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="EarthLock" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M7 3.34V5a3 3 0 0 0 3 3&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M11 21.95V18a2 2 0 0 0-2-2 2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M21.54 15H17a2 2 0 0 0-2 2v4.54&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 2a10 10 0 1 0 9.54 13&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M20 6V4a2 2 0 1 0-4 0v2&quot;&gt;&lt;/path&gt;&lt;rect height=&quot;5&quot; rx=&quot;1&quot; width=&quot;8&quot; x=&quot;14&quot; y=&quot;6&quot;&gt;&lt;/rect&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="EarthLock preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik03IDMuMzRWNWEzIDMgMCAwIDAgMyAzIj48L3BhdGg+PHBhdGggZD0iTTExIDIxLjk1VjE4YTIgMiAwIDAgMC0yLTIgMiAyIDAgMCAxLTItMnYtMWEyIDIgMCAwIDAtMi0ySDIuMDUiPjwvcGF0aD48cGF0aCBkPSJNMjEuNTQgMTVIMTdhMiAyIDAgMCAwLTIgMnY0LjU0Ij48L3BhdGg+PHBhdGggZD0iTTEyIDJhMTAgMTAgMCAxIDAgOS41NCAxMyI+PC9wYXRoPjxwYXRoIGQ9Ik0yMCA2VjRhMiAyIDAgMSAwLTQgMHYyIj48L3BhdGg+PHJlY3QgaGVpZ2h0PSI1IiByeD0iMSIgd2lkdGg9IjgiIHg9IjE0IiB5PSI2Ij48L3JlY3Q+PC9zdmc+" alt="EarthLock icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">EarthLock</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-vpn, private, privacy, network, world, browser, security, encryption, protection, connection
-
-## Categories
-security, development, devices
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/earth-lock)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+vpn, private, privacy, network, world, browser, security, encryption, protection, connection
+
+## Categories
+security, development, devices
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/earth-lock)
 
 ## Related Icons
 

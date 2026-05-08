@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="UtensilsCrossed" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m2.1 21.8 6.4-6.3&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m19 5-7 7&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="UtensilsCrossed preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Im0xNiAyLTIuMyAyLjNhMyAzIDAgMCAwIDAgNC4ybDEuOCAxLjhhMyAzIDAgMCAwIDQuMiAwTDIyIDgiPjwvcGF0aD48cGF0aCBkPSJNMTUgMTUgMy4zIDMuM2E0LjIgNC4yIDAgMCAwIDAgNmw3LjMgNy4zYy43LjcgMiAuNyAyLjggMEwxNSAxNVptMCAwIDcgNyI+PC9wYXRoPjxwYXRoIGQ9Im0yLjEgMjEuOCA2LjQtNi4zIj48L3BhdGg+PHBhdGggZD0ibTE5IDUtNyA3Ij48L3BhdGg+PC9zdmc+" alt="UtensilsCrossed icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">UtensilsCrossed</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-fork, knife, cutlery, flatware, tableware, silverware, food, restaurant, meal, breakfast, dinner, supper
-
-## Categories
-food-beverage, travel, navigation
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/utensils-crossed)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+fork, knife, cutlery, flatware, tableware, silverware, food, restaurant, meal, breakfast, dinner, supper
+
+## Categories
+food-beverage, travel, navigation
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/utensils-crossed)
 
 ## Related Icons
 

@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="SunMoon" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M12 2v2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M16 12a4 4 0 0 0-4-4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m19 5-1.256 1.256&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M20 12h2&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="SunMoon preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiAydjIiPjwvcGF0aD48cGF0aCBkPSJNMTQuODM3IDE2LjM4NWE2IDYgMCAxIDEtNy4yMjMtNy4yMjJjLjYyNC0uMTQ3Ljk3LjY2LjcxNSAxLjI0OGE0IDQgMCAwIDAgNS4yNiA1LjI1OWMuNTg5LS4yNTUgMS4zOTYuMDkgMS4yNDguNzE1Ij48L3BhdGg+PHBhdGggZD0iTTE2IDEyYTQgNCAwIDAgMC00LTQiPjwvcGF0aD48cGF0aCBkPSJtMTkgNS0xLjI1NiAxLjI1NiI+PC9wYXRoPjxwYXRoIGQ9Ik0yMCAxMmgyIj48L3BhdGg+PC9zdmc+" alt="SunMoon icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">SunMoon</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-dark, light, moon, sun, brightness, theme, auto theme, system theme, appearance
-
-## Categories
-accessibility
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/sun-moon)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+dark, light, moon, sun, brightness, theme, auto theme, system theme, appearance
+
+## Categories
+accessibility
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/sun-moon)
 
 ## Related Icons
 

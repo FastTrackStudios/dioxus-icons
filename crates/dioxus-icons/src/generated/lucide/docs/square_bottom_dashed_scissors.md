@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="SquareBottomDashedScissors" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;5&quot; x2=&quot;19&quot; y1=&quot;3&quot; y2=&quot;3&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; x2=&quot;3&quot; y1=&quot;5&quot; y2=&quot;19&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;21&quot; x2=&quot;21&quot; y1=&quot;5&quot; y2=&quot;19&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;9&quot; x2=&quot;10&quot; y1=&quot;21&quot; y2=&quot;21&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;14&quot; x2=&quot;15&quot; y1=&quot;21&quot; y2=&quot;21&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M 3 5 A2 2 0 0 1 5 3&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M 19 3 A2 2 0 0 1 21 5&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M 5 21 A2 2 0 0 1 3 19&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M 21 19 A2 2 0 0 1 19 21&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;8.5&quot; cy=&quot;8.5&quot; r=&quot;1.5&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;9.56066&quot; x2=&quot;12&quot; y1=&quot;9.56066&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;17&quot; x2=&quot;14.82&quot; y1=&quot;17&quot; y2=&quot;14.82&quot;&gt;&lt;/line&gt;&lt;circle cx=&quot;8.5&quot; cy=&quot;15.5&quot; r=&quot;1.5&quot;&gt;&lt;/circle&gt;&lt;line x1=&quot;9.56066&quot; x2=&quot;17&quot; y1=&quot;14.43934&quot; y2=&quot;7&quot;&gt;&lt;/line&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="SquareBottomDashedScissors preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxsaW5lIHgxPSI1IiB4Mj0iMTkiIHkxPSIzIiB5Mj0iMyI+PC9saW5lPjxsaW5lIHgxPSIzIiB4Mj0iMyIgeTE9IjUiIHkyPSIxOSI+PC9saW5lPjxsaW5lIHgxPSIyMSIgeDI9IjIxIiB5MT0iNSIgeTI9IjE5Ij48L2xpbmU+PGxpbmUgeDE9IjkiIHgyPSIxMCIgeTE9IjIxIiB5Mj0iMjEiPjwvbGluZT48bGluZSB4MT0iMTQiIHgyPSIxNSIgeTE9IjIxIiB5Mj0iMjEiPjwvbGluZT48cGF0aCBkPSJNIDMgNSBBMiAyIDAgMCAxIDUgMyI+PC9wYXRoPjxwYXRoIGQ9Ik0gMTkgMyBBMiAyIDAgMCAxIDIxIDUiPjwvcGF0aD48cGF0aCBkPSJNIDUgMjEgQTIgMiAwIDAgMSAzIDE5Ij48L3BhdGg+PHBhdGggZD0iTSAyMSAxOSBBMiAyIDAgMCAxIDE5IDIxIj48L3BhdGg+PGNpcmNsZSBjeD0iOC41IiBjeT0iOC41IiByPSIxLjUiPjwvY2lyY2xlPjxsaW5lIHgxPSI5LjU2MDY2IiB4Mj0iMTIiIHkxPSI5LjU2MDY2IiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMTciIHgyPSIxNC44MiIgeTE9IjE3IiB5Mj0iMTQuODIiPjwvbGluZT48Y2lyY2xlIGN4PSI4LjUiIGN5PSIxNS41IiByPSIxLjUiPjwvY2lyY2xlPjxsaW5lIHgxPSI5LjU2MDY2IiB4Mj0iMTciIHkxPSIxNC40MzkzNCIgeTI9IjciPjwvbGluZT48L3N2Zz4=" alt="SquareBottomDashedScissors icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">SquareBottomDashedScissors</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-cut, snippet, chop, stationery, crafts
-
-## Categories
-text, design, tools, files, development
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/square-bottom-dashed-scissors)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+cut, snippet, chop, stationery, crafts
+
+## Categories
+text, design, tools, files, development
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/square-bottom-dashed-scissors)
 
 ## Related Icons
 

@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="WifiOff" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M12 20h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8.5 16.429a5 5 0 0 1 7 0&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5 12.859a10 10 0 0 1 5.17-2.69&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M19 12.859a10 10 0 0 0-2.007-1.523&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M2 8.82a15 15 0 0 1 4.177-2.643&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M22 8.82a15 15 0 0 0-11.288-3.764&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m2 2 20 20&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="WifiOff preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiAyMGguMDEiPjwvcGF0aD48cGF0aCBkPSJNOC41IDE2LjQyOWE1IDUgMCAwIDEgNyAwIj48L3BhdGg+PHBhdGggZD0iTTUgMTIuODU5YTEwIDEwIDAgMCAxIDUuMTctMi42OSI+PC9wYXRoPjxwYXRoIGQ9Ik0xOSAxMi44NTlhMTAgMTAgMCAwIDAtMi4wMDctMS41MjMiPjwvcGF0aD48cGF0aCBkPSJNMiA4LjgyYTE1IDE1IDAgMCAxIDQuMTc3LTIuNjQzIj48L3BhdGg+PHBhdGggZD0iTTIyIDguODJhMTUgMTUgMCAwIDAtMTEuMjg4LTMuNzY0Ij48L3BhdGg+PHBhdGggZD0ibTIgMiAyMCAyMCI+PC9wYXRoPjwvc3ZnPg==" alt="WifiOff icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">WifiOff</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-disabled
-
-## Categories
-connectivity, devices
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/wifi-off)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+disabled
+
+## Categories
+connectivity, devices
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/wifi-off)
 
 ## Related Icons
 

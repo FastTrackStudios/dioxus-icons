@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="Palette" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;13.5&quot; cy=&quot;6.5&quot; fill=&quot;currentColor&quot; r=&quot;.5&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;17.5&quot; cy=&quot;10.5&quot; fill=&quot;currentColor&quot; r=&quot;.5&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;6.5&quot; cy=&quot;12.5&quot; fill=&quot;currentColor&quot; r=&quot;.5&quot;&gt;&lt;/circle&gt;&lt;circle cx=&quot;8.5&quot; cy=&quot;7.5&quot; fill=&quot;currentColor&quot; r=&quot;.5&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="Palette preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiAyMmExIDEgMCAwIDEgMC0yMCAxMCA5IDAgMCAxIDEwIDkgNSA1IDAgMCAxLTUgNWgtMi4yNWExLjc1IDEuNzUgMCAwIDAtMS40IDIuOGwuMy40YTEuNzUgMS43NSAwIDAgMS0xLjQgMi44eiI+PC9wYXRoPjxjaXJjbGUgY3g9IjEzLjUiIGN5PSI2LjUiIGZpbGw9ImN1cnJlbnRDb2xvciIgcj0iLjUiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjE3LjUiIGN5PSIxMC41IiBmaWxsPSJjdXJyZW50Q29sb3IiIHI9Ii41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSI2LjUiIGN5PSIxMi41IiBmaWxsPSJjdXJyZW50Q29sb3IiIHI9Ii41Ij48L2NpcmNsZT48Y2lyY2xlIGN4PSI4LjUiIGN5PSI3LjUiIGZpbGw9ImN1cnJlbnRDb2xvciIgcj0iLjUiPjwvY2lyY2xlPjwvc3ZnPg==" alt="Palette icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">Palette</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-colors, colours, theme, scheme, paint, watercolor, watercolour, artist
-
-## Categories
-text, design, photography
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/palette)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+colors, colours, theme, scheme, paint, watercolor, watercolour, artist
+
+## Categories
+text, design, photography
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/palette)
 
 ## Related Icons
 

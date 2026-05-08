@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="MicOff" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M12 19v3&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M15 9.34V5a3 3 0 0 0-5.68-1.33&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M16.95 16.95A7 7 0 0 1 5 12v-2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M18.89 13.23A7 7 0 0 0 19 12v-2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m2 2 20 20&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M9 9v3a3 3 0 0 0 5.12 2.12&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="MicOff preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiAxOXYzIj48L3BhdGg+PHBhdGggZD0iTTE1IDkuMzRWNWEzIDMgMCAwIDAtNS42OC0xLjMzIj48L3BhdGg+PHBhdGggZD0iTTE2Ljk1IDE2Ljk1QTcgNyAwIDAgMSA1IDEydi0yIj48L3BhdGg+PHBhdGggZD0iTTE4Ljg5IDEzLjIzQTcgNyAwIDAgMCAxOSAxMnYtMiI+PC9wYXRoPjxwYXRoIGQ9Im0yIDIgMjAgMjAiPjwvcGF0aD48cGF0aCBkPSJNOSA5djNhMyAzIDAgMCAwIDUuMTIgMi4xMiI+PC9wYXRoPjwvc3ZnPg==" alt="MicOff icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">MicOff</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-record, sound, mute, microphone
-
-## Categories
-devices, communication, connectivity, multimedia
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/mic-off)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+record, sound, mute, microphone
+
+## Categories
+devices, communication, connectivity, multimedia
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/mic-off)
 
 ## Related Icons
 

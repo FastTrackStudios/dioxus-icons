@@ -1,21 +1,39 @@
-# dioxus-icons
+<div align="center">
+  <h1>dioxus-icons</h1>
+  <p><strong>Dioxus components for every Lucide icon.</strong></p>
+</div>
 
-[![Crates.io](https://img.shields.io/crates/v/dioxus-icons.svg)](https://crates.io/crates/dioxus-icons)
-[![Downloads](https://img.shields.io/crates/d/dioxus-icons.svg)](https://crates.io/crates/dioxus-icons)
-[![docs.rs](https://img.shields.io/docsrs/dioxus-icons.svg)](https://docs.rs/dioxus-icons)
-[![Lucide](https://img.shields.io/badge/Lucide-1.14.0-2da44e)](https://lucide.dev)
-[![Dioxus](https://img.shields.io/badge/Dioxus-0.7.7-0a7ea4)](https://dioxuslabs.com)
+<div align="center">
+  <a href="https://crates.io/crates/dioxus-icons">
+    <img src="https://img.shields.io/crates/v/dioxus-icons.svg?style=flat-square" alt="Crates.io version" />
+  </a>
+  <a href="https://crates.io/crates/dioxus-icons">
+    <img src="https://img.shields.io/crates/d/dioxus-icons.svg?style=flat-square" alt="Downloads" />
+  </a>
+  <a href="https://docs.rs/dioxus-icons">
+    <img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square" alt="docs.rs" />
+  </a>
+  <a href="https://lucide.dev">
+    <img src="https://img.shields.io/badge/Lucide-1.14.0-2da44e?style=flat-square" alt="Lucide 1.14.0" />
+  </a>
+</div>
 
-Lucide icons for Dioxus, generated as one component per icon.
+---
 
-```sh
-cargo add dioxus-icons
+The full Lucide set — 1,700+ icons — exposed as Dioxus components. Each icon is its own component, so the linker keeps only the ones you import.
+
+## Quick start
+
+```toml
+[dependencies]
+dioxus-icons = "0.0"
 ```
 
 ```rust
 use dioxus::prelude::*;
 use dioxus_icons::lucide::Trash;
 
+#[component]
 fn DeleteButton() -> Element {
     rsx! {
         button {
@@ -26,51 +44,60 @@ fn DeleteButton() -> Element {
 }
 ```
 
-## Dioxus Compatibility
+Every icon lives under [`dioxus_icons::lucide`] and accepts the shared [`IconProps`].
 
-`dioxus-icons` supports Dioxus `0.7.x` starting at `0.7.7` (`>=0.7.7, <0.8.0`).
-The library enables Dioxus `html` and `macro` for RSX/SVG components.
-Choose renderer features such as `web`, `desktop`, `mobile`, `server`, or
-`fullstack` in your application crate.
+## Customization
 
-## Regenerate Icons
+| prop | default | maps to |
+|---|---|---|
+| `size` | `24` | SVG `width` / `height` |
+| `color` | `"currentColor"` | SVG `stroke` (not `fill`) |
+| `stroke_width` | `2` | SVG `stroke-width` |
+| `stroke_linecap` | `"round"` | SVG `stroke-linecap` |
+| `stroke_linejoin` | `"round"` | SVG `stroke-linejoin` |
+| `class` | `""` | root SVG `class` |
 
-```sh
-cargo run -p dioxus-icons-codegen
+```rust
+# use dioxus::prelude::*;
+use dioxus_icons::lucide::Bell;
+
+# let _ = rsx! {
+Bell { size: 20, color: "red", stroke_width: 3 }
+# };
 ```
 
-Generated Rust sources are committed under `crates/dioxus-icons/src/generated/`.
-The generator uses the pinned Lucide release and related-icon sidecar under
-`crates/dioxus-icons-codegen/data/`.
+Because `color` defaults to `currentColor`, icons inherit the surrounding text color — so Tailwind's `text-*` utilities (or any CSS framework) work out of the box on either the icon or its parent:
 
-When the Lucide version changes, regenerate the related-icon sidecar before running the Rust generator:
+```rust
+# use dioxus::prelude::*;
+use dioxus_icons::lucide::{Bell, Menu};
 
-```sh
-python3 crates/dioxus-icons-codegen/scripts/generate_related_icons.py \
-  --icons-dir vendor/lucide-1.14.0/icons \
-  --output crates/dioxus-icons-codegen/data/lucide-related-siglip2-base-patch16-224.json \
-  --icon-set-version 1.14.0
-cargo run -p dioxus-icons-codegen
+# let _ = rsx! {
+nav { class: "flex items-center gap-3 text-slate-900",
+    Menu { size: 20 }
+    Bell { size: 18, class: "text-amber-600" }
+}
+# };
 ```
 
-The SigLIP2 sidecar script requires `rsvg-convert`, `torch`, `transformers`, and `Pillow`.
-Generated output is deterministic; regenerate after codegen input changes and review the generated diff.
+## Dioxus compatibility
+
+Targets the Dioxus `0.7.x` line starting at `0.7.7`. Pick your renderer features (`web`, `desktop`, `mobile`, `server`, `fullstack`) in your application crate.
 
 ## Examples
 
-Examples live under `crates/dioxus-icons/examples/`.
-
-```sh
-cargo build -p dioxus-icons --examples
-```
+Examples live under [`crates/dioxus-icons/examples`](https://github.com/dioxuslabs/dioxus-icons/tree/main/crates/dioxus-icons/examples):
 
 ```sh
 cargo run -p dioxus-icons --example basic
+cargo run -p dioxus-icons --example navbar
+cargo run -p dioxus-icons --example tailwind
+cargo run -p dioxus-icons --example stateful_button
 ```
 
-## Licensing
+## License
 
-The crate code is MIT licensed under `LICENSE`. Generated icon data comes from
-Lucide and is covered by `LICENSE-LUCIDE`, which includes the upstream ISC
-notice and the Feather-derived MIT icon notice. The published crate therefore
-uses the SPDX expression `MIT AND ISC`.
+Crate code is MIT (`LICENSE`). Generated icon data comes from Lucide and is covered by `LICENSE-LUCIDE` (upstream ISC plus the Feather-derived MIT notice). The published crate is `MIT AND ISC`.
+
+[`dioxus_icons::lucide`]: https://docs.rs/dioxus-icons/latest/dioxus_icons/lucide/index.html
+[`IconProps`]: https://docs.rs/dioxus-icons/latest/dioxus_icons/struct.IconProps.html

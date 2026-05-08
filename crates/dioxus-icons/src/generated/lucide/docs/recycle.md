@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="Recycle" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m14 16-3 3 3 3&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8.293 13.596 7.196 9.5 3.1 10.598&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m13.378 9.633 4.096 1.098 1.097-4.096&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="Recycle preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik03IDE5SDQuODE1YTEuODMgMS44MyAwIDAgMS0xLjU3LS44ODEgMS43ODUgMS43ODUgMCAwIDEtLjAwNC0xLjc4NEw3LjE5NiA5LjUiPjwvcGF0aD48cGF0aCBkPSJNMTEgMTloOC4yMDNhMS44MyAxLjgzIDAgMCAwIDEuNTU2LS44OSAxLjc4NCAxLjc4NCAwIDAgMCAwLTEuNzc1bC0xLjIyNi0yLjEyIj48L3BhdGg+PHBhdGggZD0ibTE0IDE2LTMgMyAzIDMiPjwvcGF0aD48cGF0aCBkPSJNOC4yOTMgMTMuNTk2IDcuMTk2IDkuNSAzLjEgMTAuNTk4Ij48L3BhdGg+PHBhdGggZD0ibTkuMzQ0IDUuODExIDEuMDkzLTEuODkyQTEuODMgMS44MyAwIDAgMSAxMS45ODUgM2ExLjc4NCAxLjc4NCAwIDAgMSAxLjU0Ni44ODhsMy45NDMgNi44NDMiPjwvcGF0aD48cGF0aCBkPSJtMTMuMzc4IDkuNjMzIDQuMDk2IDEuMDk4IDEuMDk3LTQuMDk2Ij48L3BhdGg+PC9zdmc+" alt="Recycle icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">Recycle</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-sustainability, salvage, arrows
-
-## Categories
-sustainability
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/recycle)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+sustainability, salvage, arrows
+
+## Categories
+sustainability
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/recycle)
 
 ## Related Icons
 

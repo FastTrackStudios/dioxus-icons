@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="Piano" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M18.5 8c-1.4 0-2.6-.8-3.2-2A6.87 6.87 0 0 0 2 9v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8.5C22 9.6 20.4 8 18.5 8&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M2 14h20&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M6 14v4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M10 14v4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14 14v4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M18 14v4&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="Piano preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xOC41IDhjLTEuNCAwLTIuNi0uOC0zLjItMkE2Ljg3IDYuODcgMCAwIDAgMiA5djExYTIgMiAwIDAgMCAyIDJoMTZhMiAyIDAgMCAwIDItMnYtOC41QzIyIDkuNiAyMC40IDggMTguNSA4Ij48L3BhdGg+PHBhdGggZD0iTTIgMTRoMjAiPjwvcGF0aD48cGF0aCBkPSJNNiAxNHY0Ij48L3BhdGg+PHBhdGggZD0iTTEwIDE0djQiPjwvcGF0aD48cGF0aCBkPSJNMTQgMTR2NCI+PC9wYXRoPjxwYXRoIGQ9Ik0xOCAxNHY0Ij48L3BhdGg+PC9zdmc+" alt="Piano icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">Piano</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-music, audio, sound, noise, notes, chord, keys, octave, acoustic, instrument, play, pianist, performance, concert
-
-## Categories
-multimedia, devices
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/piano)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+music, audio, sound, noise, notes, chord, keys, octave, acoustic, instrument, play, pianist, performance, concert
+
+## Categories
+multimedia, devices
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/piano)
 
 ## Related Icons
 

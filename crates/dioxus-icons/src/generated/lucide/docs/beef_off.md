@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="BeefOff" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M11.771 6.109a2.5 2.5 0 0 1 3.12 3.12&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M17.852 12.185a6.5 6.5 0 0 0-9.035-9.04&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M18.013 18.013C15.029 20.349 10.831 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m18.5 6 2.19 4.5a6.48 6.48 0 0 1-.139 4.393&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m2 2 20 20&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M6.355 6.37a7 7 0 0 0-.075.23c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c3.356 0 6.993-1.267 9.85-3.151&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="BeefOff preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMS43NzEgNi4xMDlhMi41IDIuNSAwIDAgMSAzLjEyIDMuMTIiPjwvcGF0aD48cGF0aCBkPSJNMTcuODUyIDEyLjE4NWE2LjUgNi41IDAgMCAwLTkuMDM1LTkuMDQiPjwvcGF0aD48cGF0aCBkPSJNMTguMDEzIDE4LjAxM0MxNS4wMjkgMjAuMzQ5IDEwLjgzMSAyMiA3IDIyYTMgMyAwIDAgMS0yLjY4LTEuNjZMMi40IDE2LjUiPjwvcGF0aD48cGF0aCBkPSJtMTguNSA2IDIuMTkgNC41YTYuNDggNi40OCAwIDAgMS0uMTM5IDQuMzkzIj48L3BhdGg+PHBhdGggZD0ibTIgMiAyMCAyMCI+PC9wYXRoPjxwYXRoIGQ9Ik02LjM1NSA2LjM3YTcgNyAwIDAgMC0uMDc1LjIzYy0xLjEgMy4xMy0uNzggMy45LTMuMTggNi4wOEEzIDMgMCAwIDAgNSAxOGMzLjM1NiAwIDYuOTkzLTEuMjY3IDkuODUtMy4xNTEiPjwvcGF0aD48L3N2Zz4=" alt="BeefOff icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">BeefOff</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-food, dish, restaurant, course, meal, meat, bbq, steak, vegetarian
-
-## Categories
-food-beverage
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/beef-off)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+food, dish, restaurant, course, meal, meat, bbq, steak, vegetarian
+
+## Categories
+food-beverage
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/beef-off)
 
 ## Related Icons
 

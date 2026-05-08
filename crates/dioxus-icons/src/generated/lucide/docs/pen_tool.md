@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="PenTool" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m2.3 2.3 7.286 7.286&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;2&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="PenTool preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xNS43MDcgMjEuMjkzYTEgMSAwIDAgMS0xLjQxNCAwbC0xLjU4Ni0xLjU4NmExIDEgMCAwIDEgMC0xLjQxNGw1LjU4Ni01LjU4NmExIDEgMCAwIDEgMS40MTQgMGwxLjU4NiAxLjU4NmExIDEgMCAwIDEgMCAxLjQxNHoiPjwvcGF0aD48cGF0aCBkPSJtMTggMTMtMS4zNzUtNi44NzRhMSAxIDAgMCAwLS43NDYtLjc3NkwzLjIzNSAyLjAyOGExIDEgMCAwIDAtMS4yMDcgMS4yMDdMNS4zNSAxNS44NzlhMSAxIDAgMCAwIC43NzYuNzQ2TDEzIDE4Ij48L3BhdGg+PHBhdGggZD0ibTIuMyAyLjMgNy4yODYgNy4yODYiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMSIgY3k9IjExIiByPSIyIj48L2NpcmNsZT48L3N2Zz4=" alt="PenTool icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">PenTool</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-vector, drawing, path
-
-## Categories
-text, design, cursors
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/pen-tool)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+vector, drawing, path
+
+## Categories
+text, design, cursors
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/pen-tool)
 
 ## Related Icons
 

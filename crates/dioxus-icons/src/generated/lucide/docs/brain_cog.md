@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="BrainCog" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m10.852 14.772-.383.923&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m10.852 9.228-.383-.923&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m13.148 14.772.382.924&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m13.531 8.305-.383.923&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m14.772 10.852.923-.383&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m14.772 13.148.923.383&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M17.998 5.125a4 4 0 0 1 2.525 5.771&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M19.505 10.294a4 4 0 0 1-1.5 7.706&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M4.5 10.291A4 4 0 0 0 6 18&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M6.002 5.125a3 3 0 0 0 .4 1.375&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m9.228 10.852-.923-.383&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m9.228 13.148-.923.383&quot;&gt;&lt;/path&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;3&quot;&gt;&lt;/circle&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="BrainCog preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Im0xMC44NTIgMTQuNzcyLS4zODMuOTIzIj48L3BhdGg+PHBhdGggZD0ibTEwLjg1MiA5LjIyOC0uMzgzLS45MjMiPjwvcGF0aD48cGF0aCBkPSJtMTMuMTQ4IDE0Ljc3Mi4zODIuOTI0Ij48L3BhdGg+PHBhdGggZD0ibTEzLjUzMSA4LjMwNS0uMzgzLjkyMyI+PC9wYXRoPjxwYXRoIGQ9Im0xNC43NzIgMTAuODUyLjkyMy0uMzgzIj48L3BhdGg+PHBhdGggZD0ibTE0Ljc3MiAxMy4xNDguOTIzLjM4MyI+PC9wYXRoPjxwYXRoIGQ9Ik0xNy41OTggNi41QTMgMyAwIDEgMCAxMiA1YTMgMyAwIDAgMC01LjYzLTEuNDQ2IDMgMyAwIDAgMC0uMzY4IDEuNTcxIDQgNCAwIDAgMC0yLjUyNSA1Ljc3MSI+PC9wYXRoPjxwYXRoIGQ9Ik0xNy45OTggNS4xMjVhNCA0IDAgMCAxIDIuNTI1IDUuNzcxIj48L3BhdGg+PHBhdGggZD0iTTE5LjUwNSAxMC4yOTRhNCA0IDAgMCAxLTEuNSA3LjcwNiI+PC9wYXRoPjxwYXRoIGQ9Ik00LjAzMiAxNy40ODNBNCA0IDAgMCAwIDExLjQ2NCAyMGMuMTgtLjMxMS44OTItLjMxMSAxLjA3MiAwYTQgNCAwIDAgMCA3LjQzMi0yLjUxNiI+PC9wYXRoPjxwYXRoIGQ9Ik00LjUgMTAuMjkxQTQgNCAwIDAgMCA2IDE4Ij48L3BhdGg+PHBhdGggZD0iTTYuMDAyIDUuMTI1YTMgMyAwIDAgMCAuNCAxLjM3NSI+PC9wYXRoPjxwYXRoIGQ9Im05LjIyOCAxMC44NTItLjkyMy0uMzgzIj48L3BhdGg+PHBhdGggZD0ibTkuMjI4IDEzLjE0OC0uOTIzLjM4MyI+PC9wYXRoPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiPjwvY2lyY2xlPjwvc3ZnPg==" alt="BrainCog icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">BrainCog</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-mind, intellect, artificial intelligence, ai, deep learning, machine learning, computing
-
-## Categories
-science, development
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/brain-cog)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+mind, intellect, artificial intelligence, ai, deep learning, machine learning, computing
+
+## Categories
+science, development
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/brain-cog)
 
 ## Related Icons
 

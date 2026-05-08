@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="SquareStar" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M11.035 7.69a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.866l-1.156-1.153a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z&quot;&gt;&lt;/path&gt;&lt;rect height=&quot;18&quot; rx=&quot;2&quot; width=&quot;18&quot; x=&quot;3&quot; y=&quot;3&quot;&gt;&lt;/rect&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="SquareStar preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMS4wMzUgNy42OWExIDEgMCAwIDEgMS45MDkuMDI0bC43MzcgMS40NTJhMSAxIDAgMCAwIC43MzcuNTM1bDEuNjM0LjI1NmExIDEgMCAwIDEgLjU4OCAxLjgwNmwtMS4xNzIgMS4xNjhhMSAxIDAgMCAwLS4yODIuODY2bC4yNTkgMS42MTNhMSAxIDAgMCAxLTEuNTQxIDEuMTM0bC0xLjQ2NS0uNzVhMSAxIDAgMCAwLS45MTIgMGwtMS40NjUuNzVhMSAxIDAgMCAxLTEuNTM5LTEuMTMzbC4yNTgtMS42MTNhMSAxIDAgMCAwLS4yODItLjg2NmwtMS4xNTYtMS4xNTNhMSAxIDAgMCAxIC41NzItMS44MjJsMS42MzMtLjI1NmExIDEgMCAwIDAgLjczNy0uNTM1eiI+PC9wYXRoPjxyZWN0IGhlaWdodD0iMTgiIHJ4PSIyIiB3aWR0aD0iMTgiIHg9IjMiIHk9IjMiPjwvcmVjdD48L3N2Zz4=" alt="SquareStar icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">SquareStar</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-badge, medal, honour, decoration, order, pin, laurel, trophy, medallion, insignia, bronze, silver, gold
-
-## Categories
-sports, gaming
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/square-star)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+badge, medal, honour, decoration, order, pin, laurel, trophy, medallion, insignia, bronze, silver, gold
+
+## Categories
+sports, gaming
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/square-star)
 
 ## Related Icons
 

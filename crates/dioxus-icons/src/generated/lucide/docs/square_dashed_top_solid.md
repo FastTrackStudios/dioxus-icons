@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="SquareDashedTopSolid" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M14 21h1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M21 14v1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M21 19a2 2 0 0 1-2 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M21 9v1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M3 14v1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M3 9v1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5 21a2 2 0 0 1-2-2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M9 21h1&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="SquareDashedTopSolid preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xNCAyMWgxIj48L3BhdGg+PHBhdGggZD0iTTIxIDE0djEiPjwvcGF0aD48cGF0aCBkPSJNMjEgMTlhMiAyIDAgMCAxLTIgMiI+PC9wYXRoPjxwYXRoIGQ9Ik0yMSA5djEiPjwvcGF0aD48cGF0aCBkPSJNMyAxNHYxIj48L3BhdGg+PHBhdGggZD0iTTMgNWEyIDIgMCAwIDEgMi0yaDE0YTIgMiAwIDAgMSAyIDIiPjwvcGF0aD48cGF0aCBkPSJNMyA5djEiPjwvcGF0aD48cGF0aCBkPSJNNSAyMWEyIDIgMCAwIDEtMi0yIj48L3BhdGg+PHBhdGggZD0iTTkgMjFoMSI+PC9wYXRoPjwvc3ZnPg==" alt="SquareDashedTopSolid icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">SquareDashedTopSolid</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-square, border, width, layout, style, design, rectangular, marquee, dashed, box, rectangle, aspect ratio, 1:1
-
-## Categories
-design, development, layout
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/square-dashed-top-solid)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+square, border, width, layout, style, design, rectangular, marquee, dashed, box, rectangle, aspect ratio, 1:1
+
+## Categories
+design, development, layout
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/square-dashed-top-solid)
 
 ## Related Icons
 

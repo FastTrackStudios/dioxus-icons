@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="Angry" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;&gt;&lt;/circle&gt;&lt;path d=&quot;M16 16s-1.5-2-4-2-4 2-4 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M7.5 8 10 9&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m14 9 2.5-1&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M9 10h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M15 10h.01&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="Angry preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIj48L2NpcmNsZT48cGF0aCBkPSJNMTYgMTZzLTEuNS0yLTQtMi00IDItNCAyIj48L3BhdGg+PHBhdGggZD0iTTcuNSA4IDEwIDkiPjwvcGF0aD48cGF0aCBkPSJtMTQgOSAyLjUtMSI+PC9wYXRoPjxwYXRoIGQ9Ik05IDEwaC4wMSI+PC9wYXRoPjxwYXRoIGQ9Ik0xNSAxMGguMDEiPjwvcGF0aD48L3N2Zz4=" alt="Angry icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">Angry</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-emoji, anger, face, emotion
-
-## Categories
-emoji
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/angry)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+emoji, anger, face, emotion
+
+## Categories
+emoji
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/angry)
 
 ## Related Icons
 

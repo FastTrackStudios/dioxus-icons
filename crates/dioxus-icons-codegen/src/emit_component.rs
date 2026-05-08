@@ -86,16 +86,7 @@ pub fn emit_component_docs(icon: &Icon, related_icons: &[&Icon]) -> String {
     output.push_str(&preview_img(icon, 48));
     output.push_str("\n\n");
     output.push_str(&widget_container(icon));
-    output.push_str("\n\n## Tags\n");
-    output.push_str(&join_or_dash(&icon.tags));
-    output.push_str("\n\n## Categories\n");
-    output.push_str(&join_or_dash(&icon.categories));
-    output.push_str("\n\n## Source\n");
-    output.push_str(&format!(
-        "[Lucide v{LUCIDE_VERSION}](https://lucide.dev/icons/{})\n",
-        icon.source_name
-    ));
-    output.push_str("\n## Example\n");
+    output.push_str("\n\n## Example\n");
     output.push_str("```rust\n");
     output.push_str("use dioxus::prelude::*;\n");
     output.push_str(&format!(
@@ -111,6 +102,15 @@ pub fn emit_component_docs(icon: &Icon, related_icons: &[&Icon]) -> String {
     output.push_str("    }\n");
     output.push_str("}\n");
     output.push_str("```\n");
+    output.push_str("\n## Tags\n");
+    output.push_str(&join_or_dash(&icon.tags));
+    output.push_str("\n\n## Categories\n");
+    output.push_str(&join_or_dash(&icon.categories));
+    output.push_str("\n\n## Source\n");
+    output.push_str(&format!(
+        "[Lucide v{LUCIDE_VERSION}](https://lucide.dev/icons/{})\n",
+        icon.source_name
+    ));
     if !related_icons.is_empty() {
         output.push_str("\n## Related Icons\n\n");
         output.push_str(&related_icon_links(related_icons));

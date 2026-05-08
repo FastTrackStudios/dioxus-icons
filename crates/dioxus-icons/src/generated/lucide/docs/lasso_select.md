@@ -4,15 +4,6 @@
 
 <div class="dioxus-icons-widget" data-icon-name="LassoSelect" data-svg="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M7 22a5 5 0 0 1-2-4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M7 16.93c.96.43 1.96.74 2.99.91&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M3.34 14A6.8 6.8 0 0 1 2 10c0-4.42 4.48-8 10-8s10 3.58 10 8a7.19 7.19 0 0 1-.33 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14.33 22h-.09a.35.35 0 0 1-.24-.32v-10a.34.34 0 0 1 .33-.34c.08 0 .15.03.21.08l7.34 6a.33.33 0 0 1-.21.59h-4.49l-2.57 3.85a.35.35 0 0 1-.28.14z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;" data-size="24" data-color="#000000" data-stroke="2"><div class="dioxus-icons-widget-header"><div class="dioxus-icons-widget-preview" data-di-preview="true" aria-label="LassoSelect preview"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik03IDIyYTUgNSAwIDAgMS0yLTQiPjwvcGF0aD48cGF0aCBkPSJNNyAxNi45M2MuOTYuNDMgMS45Ni43NCAyLjk5LjkxIj48L3BhdGg+PHBhdGggZD0iTTMuMzQgMTRBNi44IDYuOCAwIDAgMSAyIDEwYzAtNC40MiA0LjQ4LTggMTAtOHMxMCAzLjU4IDEwIDhhNy4xOSA3LjE5IDAgMCAxLS4zMyAyIj48L3BhdGg+PHBhdGggZD0iTTUgMThhMiAyIDAgMSAwIDAtNCAyIDIgMCAwIDAgMCA0eiI+PC9wYXRoPjxwYXRoIGQ9Ik0xNC4zMyAyMmgtLjA5YS4zNS4zNSAwIDAgMS0uMjQtLjMydi0xMGEuMzQuMzQgMCAwIDEgLjMzLS4zNGMuMDggMCAuMTUuMDMuMjEuMDhsNy4zNCA2YS4zMy4zMyAwIDAgMS0uMjEuNTloLTQuNDlsLTIuNTcgMy44NWEuMzUuMzUgMCAwIDEtLjI4LjE0eiI+PC9wYXRoPjwvc3ZnPg==" alt="LassoSelect icon"></div><div class="dioxus-icons-widget-controls"><label><span class="dioxus-icons-widget-label">Size</span><input data-di-size="true" type="number" min="1" max="256" value="24"></label><label><span class="dioxus-icons-widget-label">Color</span><input data-di-color="true" type="color" value="#000000"></label><label><span class="dioxus-icons-widget-label">Stroke</span><input data-di-stroke="true" type="number" min="1" max="12" value="2"></label></div></div><div class="dioxus-icons-widget-output"><pre class="dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark" data-language="rust"><code data-di-code="true"><span class="a-t">LassoSelect</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">24</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;#000000&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">2</span><span> </span><span class="a-p">}</span></code></pre><button type="button" class="dioxus-icons-widget-copy" data-di-copy="true" aria-label="Copy RSX snippet"><span data-di-copy-icon="true"></span><span data-di-copy-label="true">Copy RSX</span></button></div></div>
 
-## Tags
-select, cursor
-
-## Categories
-arrows, design, cursors
-
-## Source
-[Lucide v1.14.0](https://lucide.dev/icons/lasso-select)
-
 ## Example
 ```rust
 use dioxus::prelude::*;
@@ -24,6 +15,15 @@ fn app() -> Element {
     }
 }
 ```
+
+## Tags
+select, cursor
+
+## Categories
+arrows, design, cursors
+
+## Source
+[Lucide v1.14.0](https://lucide.dev/icons/lasso-select)
 
 ## Related Icons
 
