@@ -14,5 +14,5 @@ pub fn Mountain(props: IconProps) -> Element {
         &[svg(&[path(&[attr("d", "m8 3 4 8 5-5 5 15H2L8 3z")])])];
     static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);
 
-    icon_element(TEMPLATE, props)
+    icon_element(TEMPLATE, "0 0 24 24", props)
 }

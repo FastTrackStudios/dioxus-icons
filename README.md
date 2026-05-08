@@ -48,25 +48,28 @@ Every icon lives under [`dioxus_icons::lucide`] and accepts the shared [`IconPro
 
 ## Customization
 
-| prop | default | maps to |
+`IconProps` keeps a `size` convenience prop and extends Dioxus SVG attributes on the root SVG.
+
+| prop / attr | default | maps to |
 |---|---|---|
-| `size` | `24` | SVG `width` / `height` |
-| `color` | `"currentColor"` | SVG `stroke` (not `fill`) |
+| `size` | `24` | SVG `width` / `height` when those attrs are not set; accepts numbers or CSS lengths |
+| `stroke` | `"currentColor"` | SVG `stroke` |
+| `fill` | `"none"` | SVG `fill` |
 | `stroke_width` | `2` | SVG `stroke-width` |
 | `stroke_linecap` | `"round"` | SVG `stroke-linecap` |
 | `stroke_linejoin` | `"round"` | SVG `stroke-linejoin` |
-| `class` | `""` | root SVG `class` |
+| SVG attrs | inherited | root SVG attributes |
 
 ```rust
 # use dioxus::prelude::*;
 use dioxus_icons::lucide::Bell;
 
 # let _ = rsx! {
-Bell { size: 20, color: "red", stroke_width: 3 }
+Bell { size: 20, stroke: "red", stroke_width: 3 }
 # };
 ```
 
-Because `color` defaults to `currentColor`, icons inherit the surrounding text color — so Tailwind's `text-*` utilities (or any CSS framework) work out of the box on either the icon or its parent:
+Because `stroke` defaults to `currentColor`, icons inherit the surrounding text color — so Tailwind's `text-*` utilities (or any CSS framework) work out of the box on either the icon or its parent:
 
 ```rust
 # use dioxus::prelude::*;

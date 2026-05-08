@@ -14,5 +14,5 @@ pub fn LoaderCircle(props: IconProps) -> Element {
         &[svg(&[path(&[attr("d", "M21 12a9 9 0 1 1-6.219-8.56")])])];
     static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);
 
-    icon_element(TEMPLATE, props)
+    icon_element(TEMPLATE, "0 0 24 24", props)
 }

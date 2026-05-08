@@ -13,5 +13,5 @@ pub fn Minus(props: IconProps) -> Element {
     static TEMPLATE_ROOTS: &[TemplateNode] = &[svg(&[path(&[attr("d", "M5 12h14")])])];
     static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);
 
-    icon_element(TEMPLATE, props)
+    icon_element(TEMPLATE, "0 0 24 24", props)
 }

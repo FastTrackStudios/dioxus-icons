@@ -8,16 +8,18 @@ use crate::IconProps;
 type AttributeDescription = (&'static str, Option<&'static str>, bool);
 const SVG_NAMESPACE: Option<&'static str> = Some("http://www.w3.org/2000/svg");
 const EMPTY_CHILDREN: &[TemplateNode] = &[];
-const ICON_ATTR_PATHS: &[&[u8]] = &[&[0u8], &[0u8], &[0u8], &[0u8], &[0u8], &[0u8], &[0u8]];
-static DEFAULT_SVG_ATTRS: [TemplateAttribute; 10] = svg_attrs("0 0 24 24");
+const ICON_ATTR_PATHS: &[&[u8]] = &[&[0u8]];
+static DEFAULT_SVG_ATTRS: [TemplateAttribute; 1] = svg_attrs();
 
+const XMLNS: AttributeDescription = ("xmlns", None, false);
 const WIDTH: AttributeDescription = ("width", None, false);
 const HEIGHT: AttributeDescription = ("height", None, false);
+const VIEW_BOX: AttributeDescription = ("viewBox", None, false);
+const FILL: AttributeDescription = ("fill", None, false);
 const STROKE: AttributeDescription = ("stroke", None, false);
 const STROKE_WIDTH: AttributeDescription = ("stroke-width", None, false);
 const STROKE_LINECAP: AttributeDescription = ("stroke-linecap", None, false);
 const STROKE_LINEJOIN: AttributeDescription = ("stroke-linejoin", None, false);
-const CLASS: AttributeDescription = ("class", None, false);
 
 #[inline]
 pub(crate) const fn icon_template(roots: &'static [TemplateNode]) -> Template {
@@ -29,19 +31,8 @@ pub(crate) const fn icon_template(roots: &'static [TemplateNode]) -> Template {
 }
 
 #[inline]
-pub(crate) const fn svg_attrs(view_box: &'static str) -> [TemplateAttribute; 10] {
-    [
-        attr("xmlns", "http://www.w3.org/2000/svg"),
-        dynamic_attr(0),
-        dynamic_attr(1),
-        attr("viewBox", view_box),
-        attr("fill", "none"),
-        dynamic_attr(2),
-        dynamic_attr(3),
-        dynamic_attr(4),
-        dynamic_attr(5),
-        dynamic_attr(6),
-    ]
+pub(crate) const fn svg_attrs() -> [TemplateAttribute; 1] {
+    [dynamic_attr(0)]
 }
 
 #[inline]
@@ -135,44 +126,73 @@ fn icon_attr(
 }
 
 #[inline]
-pub(crate) fn icon_element(template: Template, props: IconProps) -> Element {
-    let IconProps {
-        size,
-        color,
-        stroke_width,
-        stroke_linecap,
-        stroke_linejoin,
-        class,
-    } = props;
+pub(crate) fn icon_element(
+    template: Template,
+    view_box: &'static str,
+    props: IconProps,
+) -> Element {
+    let IconProps { size, attributes } = props;
+    let size = size.into_value();
 
-    let class_value = if class.is_empty() {
-        AttributeValue::None
-    } else {
-        AttributeValue::Text(class.into_owned())
-    };
-    let dynamic_attributes: [Box<[Attribute]>; 7] = [
-        Box::new([icon_attr(WIDTH, AttributeValue::Text(size.to_string()))]),
-        Box::new([icon_attr(HEIGHT, AttributeValue::Text(size.to_string()))]),
-        Box::new([icon_attr(STROKE, AttributeValue::Text(color.into_owned()))]),
-        Box::new([icon_attr(
-            STROKE_WIDTH,
-            AttributeValue::Text(stroke_width.to_string()),
-        )]),
-        Box::new([icon_attr(
-            STROKE_LINECAP,
-            AttributeValue::Text(stroke_linecap.into_owned()),
-        )]),
-        Box::new([icon_attr(
-            STROKE_LINEJOIN,
-            AttributeValue::Text(stroke_linejoin.into_owned()),
-        )]),
-        Box::new([icon_attr(CLASS, class_value)]),
-    ];
+    let mut root_attributes = Vec::with_capacity(attributes.len() + 9);
+    push_default_attr(
+        &mut root_attributes,
+        &attributes,
+        XMLNS,
+        "http://www.w3.org/2000/svg",
+    );
+    push_default_attr_value(&mut root_attributes, &attributes, WIDTH, size.clone());
+    push_default_attr_value(&mut root_attributes, &attributes, HEIGHT, size);
+    push_default_attr(&mut root_attributes, &attributes, VIEW_BOX, view_box);
+    push_default_attr(&mut root_attributes, &attributes, FILL, "none");
+    push_default_attr(&mut root_attributes, &attributes, STROKE, "currentColor");
+    push_default_attr(&mut root_attributes, &attributes, STROKE_WIDTH, "2");
+    push_default_attr(&mut root_attributes, &attributes, STROKE_LINECAP, "round");
+    push_default_attr(&mut root_attributes, &attributes, STROKE_LINEJOIN, "round");
+    root_attributes.extend(attributes);
+
+    let dynamic_attributes = Box::new([root_attributes.into_boxed_slice()]);
     let dynamic_nodes: Box<[DynamicNode]> = Box::new([]);
     Ok(VNode::new(
         None,
         template,
         dynamic_nodes,
-        Box::new(dynamic_attributes),
+        dynamic_attributes,
     ))
+}
+
+#[inline]
+fn push_default_attr(
+    output: &mut Vec<Attribute>,
+    attributes: &[Attribute],
+    description: AttributeDescription,
+    value: &str,
+) {
+    if !has_attr(attributes, description) {
+        push_default_attr_value(
+            output,
+            attributes,
+            description,
+            AttributeValue::Text(value.to_owned()),
+        );
+    }
+}
+
+#[inline]
+fn push_default_attr_value(
+    output: &mut Vec<Attribute>,
+    attributes: &[Attribute],
+    description: AttributeDescription,
+    value: AttributeValue,
+) {
+    if !has_attr(attributes, description) {
+        output.push(icon_attr(description, value));
+    }
+}
+
+#[inline]
+fn has_attr(attributes: &[Attribute], (name, namespace, _): AttributeDescription) -> bool {
+    attributes
+        .iter()
+        .any(|attribute| attribute.name == name && attribute.namespace == namespace)
 }

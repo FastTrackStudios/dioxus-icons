@@ -39,10 +39,7 @@ pub fn emit_component(icon: &Icon) -> Result<String> {
     if has_default_view_box(icon) {
         output.push_str("    static TEMPLATE_ROOTS: &[TemplateNode] = &[svg(&[\n");
     } else {
-        output.push_str(&format!(
-            "    static SVG_ATTRS: [TemplateAttribute; 10] = svg_attrs({});\n",
-            rust_str(&icon.view_box)
-        ));
+        output.push_str("    static SVG_ATTRS: [TemplateAttribute; 1] = svg_attrs();\n");
         output.push_str(
             "    static TEMPLATE_ROOTS: &[TemplateNode] = &[svg_with_attrs(&SVG_ATTRS, &[\n",
         );
@@ -52,7 +49,10 @@ pub fn emit_component(icon: &Icon) -> Result<String> {
     }
     output.push_str("    ])];\n");
     output.push_str("    static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);\n\n");
-    output.push_str("    icon_element(TEMPLATE, props)\n");
+    output.push_str(&format!(
+        "    icon_element(TEMPLATE, {}, props)\n",
+        rust_str(&icon.view_box)
+    ));
     output.push_str("}\n");
 
     Ok(output)
@@ -96,7 +96,7 @@ pub fn emit_component_docs(icon: &Icon, related_icons: &[&Icon]) -> String {
     output.push_str("fn app() -> Element {\n");
     output.push_str("    rsx! {\n");
     output.push_str(&format!(
-        "        {} {{ size: 20, color: \"red\" }}\n",
+        "        {} {{ size: 20, stroke: \"red\" }}\n",
         icon.component
     ));
     output.push_str("    }\n");

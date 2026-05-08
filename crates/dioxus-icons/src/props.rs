@@ -1,26 +1,38 @@
+use dioxus::core::{AttributeValue, IntoAttributeValue};
 use dioxus::prelude::*;
+
+/// Convenience size for SVG width and height.
+#[derive(Clone, PartialEq)]
+pub struct IconSize(AttributeValue);
+
+impl IconSize {
+    pub(crate) fn into_value(self) -> AttributeValue {
+        self.0
+    }
+}
+
+impl Default for IconSize {
+    fn default() -> Self {
+        Self(AttributeValue::Int(24))
+    }
+}
+
+impl<T> From<T> for IconSize
+where
+    T: IntoAttributeValue,
+{
+    fn from(value: T) -> Self {
+        Self(value.into_value())
+    }
+}
 
 /// Properties shared by every Lucide icon component.
 #[derive(Clone, PartialEq, Props)]
 pub struct IconProps {
-    /// SVG width and height in CSS pixels.
-    #[props(default = 24)]
-    pub size: u32,
-    /// SVG stroke color.
-    ///
-    /// This maps to the root SVG `stroke` attribute, not `fill`.
-    #[props(into, default = "currentColor")]
-    pub color: std::borrow::Cow<'static, str>,
-    /// SVG stroke width.
-    #[props(default = 2)]
-    pub stroke_width: u32,
-    /// SVG stroke linecap.
-    #[props(into, default = "round")]
-    pub stroke_linecap: std::borrow::Cow<'static, str>,
-    /// SVG stroke linejoin.
-    #[props(into, default = "round")]
-    pub stroke_linejoin: std::borrow::Cow<'static, str>,
-    /// Class passed to the root SVG.
-    #[props(into, default = "")]
-    pub class: std::borrow::Cow<'static, str>,
+    /// Convenience size for SVG width and height when those attributes are not set directly.
+    #[props(into, default = IconSize::default())]
+    pub size: IconSize,
+    /// Attributes passed to the root SVG.
+    #[props(extends = SvgAttributes, extends = GlobalAttributes)]
+    pub attributes: Vec<Attribute>,
 }

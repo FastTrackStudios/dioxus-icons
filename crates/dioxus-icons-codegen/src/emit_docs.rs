@@ -136,13 +136,13 @@ pub fn widget_container(icon: &Icon) -> String {
 }
 
 pub fn rsx_snippet(component: &str, size: &str, color: &str, stroke: &str) -> String {
-    format!("{component} {{ size: {size}, color: \"{color}\", stroke_width: {stroke} }}")
+    format!("{component} {{ size: {size}, stroke: \"{color}\", stroke_width: {stroke} }}")
 }
 
 fn highlighted_rsx_snippet(component: &str, size: &str, color: &str, stroke: &str) -> String {
     let snippet = rsx_snippet(component, size, color, stroke);
     let expected =
-        format!("{component} {{ size: {size}, color: \"{color}\", stroke_width: {stroke} }}");
+        format!("{component} {{ size: {size}, stroke: \"{color}\", stroke_width: {stroke} }}");
     debug_assert_eq!(snippet, expected);
 
     format!(
@@ -158,7 +158,7 @@ fn highlighted_rsx_snippet_tokens(
     stroke: &str,
 ) -> String {
     format!(
-        "<span class=\"a-t\">{component}</span><span> </span><span class=\"a-p\">{{</span><span> </span><span class=\"a-pr\">size</span><span class=\"a-p\">:</span><span> </span><span class=\"a-co\">{size}</span><span class=\"a-p\">,</span><span> </span><span class=\"a-pr\">color</span><span class=\"a-p\">:</span><span> </span><span class=\"a-s\">&quot;{color}&quot;</span><span class=\"a-p\">,</span><span> </span><span class=\"a-pr\">stroke_width</span><span class=\"a-p\">:</span><span> </span><span class=\"a-co\">{stroke}</span><span> </span><span class=\"a-p\">}}</span>",
+        "<span class=\"a-t\">{component}</span><span> </span><span class=\"a-p\">{{</span><span> </span><span class=\"a-pr\">size</span><span class=\"a-p\">:</span><span> </span><span class=\"a-co\">{size}</span><span class=\"a-p\">,</span><span> </span><span class=\"a-pr\">stroke</span><span class=\"a-p\">:</span><span> </span><span class=\"a-s\">&quot;{color}&quot;</span><span class=\"a-p\">,</span><span> </span><span class=\"a-pr\">stroke_width</span><span class=\"a-p\">:</span><span> </span><span class=\"a-co\">{stroke}</span><span> </span><span class=\"a-p\">}}</span>",
         component = html_text(component),
         size = html_text(size),
         color = html_text(color),

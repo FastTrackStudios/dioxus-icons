@@ -13,5 +13,5 @@ pub fn ChevronRight(props: IconProps) -> Element {
     static TEMPLATE_ROOTS: &[TemplateNode] = &[svg(&[path(&[attr("d", "m9 18 6-6-6-6")])])];
     static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);
 
-    icon_element(TEMPLATE, props)
+    icon_element(TEMPLATE, "0 0 24 24", props)
 }

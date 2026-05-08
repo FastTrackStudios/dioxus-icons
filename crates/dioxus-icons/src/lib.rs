@@ -30,7 +30,7 @@ mod vdom;
 #[allow(missing_docs)]
 mod generated;
 
-pub use props::IconProps;
+pub use props::{IconProps, IconSize};
 
 /// Lucide icons.
 pub use crate::generated::lucide;

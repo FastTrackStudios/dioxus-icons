@@ -18,5 +18,5 @@ pub fn ClockAlert(props: IconProps) -> Element {
     ])];
     static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);
 
-    icon_element(TEMPLATE, props)
+    icon_element(TEMPLATE, "0 0 24 24", props)
 }

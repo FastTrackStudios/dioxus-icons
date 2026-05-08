@@ -14,5 +14,5 @@ pub fn FishSymbol(props: IconProps) -> Element {
         &[svg(&[path(&[attr("d", "M2 16s9-15 20-4C11 23 2 8 2 8")])])];
     static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);
 
-    icon_element(TEMPLATE, props)
+    icon_element(TEMPLATE, "0 0 24 24", props)
 }

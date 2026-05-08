@@ -246,7 +246,7 @@ mod tests {
         assert!(component.contains("circle(&["));
         assert!(component.contains("attr(\"cx\", \"12\")"));
         assert!(component.contains("static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);"));
-        assert!(component.contains("icon_element(TEMPLATE, props)"));
+        assert!(component.contains("icon_element(TEMPLATE, \"0 0 24 24\", props)"));
         assert!(!component.contains("dynamic_attributes"));
         assert!(!component.contains("render_lucide_icon"));
 
@@ -255,8 +255,10 @@ mod tests {
         let non_default_component =
             emit_component(&non_default_view_box).expect("emitting non-default viewBox component");
         assert!(non_default_component.contains("TemplateAttribute"));
-        assert!(non_default_component.contains("svg_attrs(\"0 0 16 16\")"));
+        assert!(non_default_component.contains("TemplateAttribute; 1"));
+        assert!(non_default_component.contains("svg_attrs()"));
         assert!(non_default_component.contains("svg_with_attrs(&SVG_ATTRS"));
+        assert!(non_default_component.contains("icon_element(TEMPLATE, \"0 0 16 16\", props)"));
 
         let component_docs = emit_component_docs(&icons[0], &[&icons[1]]);
         assert!(component_docs.contains("use dioxus_icons::lucide::Circle1;"));
@@ -269,7 +271,7 @@ mod tests {
 
         assert_eq!(
             crate::emit_docs::rsx_snippet("Trash", "24", "#000000", "2"),
-            "Trash { size: 24, color: \"#000000\", stroke_width: 2 }"
+            "Trash { size: 24, stroke: \"#000000\", stroke_width: 2 }"
         );
     }
 

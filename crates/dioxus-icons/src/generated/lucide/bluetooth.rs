@@ -14,5 +14,5 @@ pub fn Bluetooth(props: IconProps) -> Element {
         &[svg(&[path(&[attr("d", "m7 7 10 10-5 5V2l5 5L7 17")])])];
     static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);
 
-    icon_element(TEMPLATE, props)
+    icon_element(TEMPLATE, "0 0 24 24", props)
 }
