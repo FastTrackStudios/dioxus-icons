@@ -33,6 +33,6 @@ pub struct IconProps {
     #[props(into, default = IconSize::default())]
     pub size: IconSize,
     /// Attributes passed to the root SVG.
-    #[props(extends = SvgAttributes, extends = GlobalAttributes)]
+    #[props(extends = SvgAttributes)]
     pub attributes: Vec<Attribute>,
 }
