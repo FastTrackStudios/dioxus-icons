@@ -26,29 +26,12 @@ fn DeleteButton() -> Element {
 }
 ```
 
-The public API is deliberately flat and component-first:
-
-| Item | Notes |
-| --- | --- |
-| Import path | Import each icon from `dioxus_icons::lucide`, for example `use dioxus_icons::lucide::Trash;`. |
-| Component usage | Render icon components directly, for example `rsx! { Trash { size: 16 } }`. |
-| `size` | Uses one value for SVG `width` and `height`. |
-| `color` | Sets the stroke color for Lucide's line icons; defaults to `currentColor`. |
-| `stroke_width`, `stroke_linecap`, `stroke_linejoin` | Forwarded to the matching SVG stroke attributes. |
-| `class` | Passed to the root SVG for CSS or Tailwind classes. |
-
-docs.rs includes a tag-driven picker backed by Lucide's upstream tags and categories.
-
-## Dependency And Feature Policy
+## Dioxus Compatibility
 
 `dioxus-icons` supports Dioxus `0.7.x` starting at `0.7.7` (`>=0.7.7, <0.8.0`).
-The published library enables Dioxus `html` and `macro` for RSX/SVG components.
+The library enables Dioxus `html` and `macro` for RSX/SVG components.
 Choose renderer features such as `web`, `desktop`, `mobile`, `server`, or
 `fullstack` in your application crate.
-
-`dioxus-signals` stays a normal dependency because generated Dioxus props and
-RSX expansion rely on Dioxus' signal-compatible prop machinery. The docs.rs
-picker/widgets are part of the published docs surface.
 
 ## Regenerate Icons
 

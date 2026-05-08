@@ -23,34 +23,11 @@ fn DeleteButton() -> Element {
 Icons are available under the Lucide-specific module at
 `dioxus_icons::lucide::*`.
 
-## API Shape
-
-Import one component per icon and render that component directly:
-
-```rust
-use dioxus::prelude::*;
-use dioxus_icons::lucide::Trash;
-
-let _ = rsx! {
-    Trash { size: 16, color: "red" }
-};
-```
-
-| Prop | SVG mapping |
-| --- | --- |
-| `size` | Uses one value for `width` and `height`. |
-| `color` | Sets the stroke color for Lucide's line icons; defaults to `currentColor`. |
-| `stroke_width`, `stroke_linecap`, `stroke_linejoin` | Forwarded to the matching SVG stroke attributes. |
-| `class` | Passed to the root SVG for CSS or Tailwind classes. |
-
-## Dependency Surface
+## Dioxus Compatibility
 
 `dioxus-icons` supports Dioxus `0.7.x` starting at `0.7.7` (`>=0.7.7, <0.8.0`).
-The published library enables Dioxus `html` and `macro` for RSX/SVG components.
+The library enables Dioxus `html` and `macro` for RSX/SVG components.
 Choose renderer features such as `web` or `desktop` in your application crate.
-
-`dioxus-signals` is a normal dependency because generated Dioxus props and RSX
-expansion rely on Dioxus' signal-compatible prop machinery.
 
 ## Examples
 
