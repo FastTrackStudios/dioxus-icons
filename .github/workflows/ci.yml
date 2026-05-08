@@ -16,19 +16,19 @@ concurrency:
 
 jobs:
   check:
-    uses: ealmloff/dioxus-ci/.github/workflows/check.yml@68b5983fd6c83a02ed52638fe5063678ce8ad09c
+    uses: dioxuslabs/dioxus-ci/.github/workflows/check.yml@v0.1.0
     with:
       all-features: false
       all-targets: true
 
   test:
-    uses: ealmloff/dioxus-ci/.github/workflows/test.yml@68b5983fd6c83a02ed52638fe5063678ce8ad09c
+    uses: dioxuslabs/dioxus-ci/.github/workflows/test.yml@v0.1.0
 
   fmt:
-    uses: ealmloff/dioxus-ci/.github/workflows/fmt.yml@68b5983fd6c83a02ed52638fe5063678ce8ad09c
+    uses: dioxuslabs/dioxus-ci/.github/workflows/fmt.yml@v0.1.0
 
   docs:
-    uses: ealmloff/dioxus-ci/.github/workflows/docs.yml@68b5983fd6c83a02ed52638fe5063678ce8ad09c
+    uses: dioxuslabs/dioxus-ci/.github/workflows/docs.yml@v0.1.0
     with:
       toolchain: stable
       workspace: false
@@ -37,7 +37,7 @@ jobs:
       document-private-items: false
 
   clippy:
-    uses: ealmloff/dioxus-ci/.github/workflows/clippy.yml@68b5983fd6c83a02ed52638fe5063678ce8ad09c
+    uses: dioxuslabs/dioxus-ci/.github/workflows/clippy.yml@v0.1.0
     with:
       all-features: false
 
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
-      - uses: ealmloff/dioxus-ci/actions/setup-dioxus@68b5983fd6c83a02ed52638fe5063678ce8ad09c
+      - uses: dioxuslabs/dioxus-ci/actions/setup-dioxus@v0.1.0
       - name: Build docs with warnings denied
         run: RUSTDOCFLAGS="-D warnings" cargo doc --no-deps -p dioxus-icons
       - name: Install picker test dependencies
