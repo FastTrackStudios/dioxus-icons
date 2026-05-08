@@ -16,10 +16,14 @@ fn main() {
     // Split the workspace README at its `---` divider so the docs.rs landing
     // can render: header (title + badges) → icon picker → body. The picker
     // replaces the divider's visual role.
-    let readme = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-        .join("../../README.md")
-        .canonicalize()
-        .expect("workspace README.md");
+    let manifest_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    let readme = [
+        manifest_dir.join("../../README.md"),
+        manifest_dir.join("README.md"),
+    ]
+    .into_iter()
+    .find_map(|path| path.canonicalize().ok())
+    .expect("workspace or package README.md");
     println!("cargo:rerun-if-changed={}", readme.display());
 
     let full = fs::read_to_string(&readme).expect("read README.md");
