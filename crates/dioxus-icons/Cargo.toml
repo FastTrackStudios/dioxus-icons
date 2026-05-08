@@ -31,5 +31,5 @@ dioxus-signals.workspace = true
 lazy-js-bundle.workspace = true
 
 [dev-dependencies]
-dioxus = { workspace = true, features = ["launch", "lib", "server"] }
+dioxus = { workspace = true, features = ["launch"] }
 serde_json.workspace = true
