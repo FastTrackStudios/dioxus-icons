@@ -979,7 +979,7 @@ dependencies = [
 
 [[package]]
 name = "dioxus-icons"
-version = "0.0.1"
+version = "0.1.0"
 dependencies = [
  "dioxus",
  "dioxus-signals",
@@ -989,7 +989,7 @@ dependencies = [
 
 [[package]]
 name = "dioxus-icons-codegen"
-version = "0.0.1"
+version = "0.1.0"
 dependencies = [
  "anyhow",
  "base64",
