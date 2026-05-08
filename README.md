@@ -26,7 +26,7 @@ The full Lucide set — 1,700+ icons — exposed as Dioxus components. Each icon
 
 ```toml
 [dependencies]
-dioxus-icons = "0.0"
+dioxus-icons = "0.1"
 ```
 
 ```rust
