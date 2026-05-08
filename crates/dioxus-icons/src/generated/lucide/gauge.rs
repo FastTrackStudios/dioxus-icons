@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Gauge()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GaugeProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Gauge(props: GaugeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m12 14 4-4",
-            }
-            path {
-                d: "M3.34 19a10 10 0 1 1 17.32 0",
-            }
+            path { d: "m12 14 4-4" }
+            path { d: "M3.34 19a10 10 0 1 1 17.32 0" }
         }
     }
 }

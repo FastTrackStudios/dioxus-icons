@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignEndVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignEndVerticalProps {
     /// SVG width and height in pixels.
@@ -100,9 +101,7 @@ pub fn AlignEndVertical(props: AlignEndVerticalProps) -> Element {
                 x: "9",
                 y: "14",
             }
-            path {
-                d: "M22 22V2",
-            }
+            path { d: "M22 22V2" }
         }
     }
 }

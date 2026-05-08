@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Barrel()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BarrelProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn Barrel(props: BarrelProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 3a41 41 0 0 0 0 18",
-            }
-            path {
-                d: "M14 3a41 41 0 0 1 0 18",
-            }
-            path {
-                d: "M17 3a2 2 0 0 1 1.68.92 15.25 15.25 0 0 1 0 16.16A2 2 0 0 1 17 21H7a2 2 0 0 1-1.68-.92 15.25 15.25 0 0 1 0-16.16A2 2 0 0 1 7 3z",
-            }
-            path {
-                d: "M3.84 17h16.32",
-            }
-            path {
-                d: "M3.84 7h16.32",
-            }
+            path { d: "M10 3a41 41 0 0 0 0 18" }
+            path { d: "M14 3a41 41 0 0 1 0 18" }
+            path { d: "M17 3a2 2 0 0 1 1.68.92 15.25 15.25 0 0 1 0 16.16A2 2 0 0 1 17 21H7a2 2 0 0 1-1.68-.92 15.25 15.25 0 0 1 0-16.16A2 2 0 0 1 7 3z" }
+            path { d: "M3.84 17h16.32" }
+            path { d: "M3.84 7h16.32" }
         }
     }
 }

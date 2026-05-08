@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Mic()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MicProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Mic(props: MicProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 19v3",
-            }
-            path {
-                d: "M19 10v2a7 7 0 0 1-14 0v-2",
-            }
+            path { d: "M12 19v3" }
+            path { d: "M19 10v2a7 7 0 0 1-14 0v-2" }
             rect {
                 height: "13",
                 rx: "3",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Antenna()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AntennaProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,12 @@ pub fn Antenna(props: AntennaProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 12 7 2",
-            }
-            path {
-                d: "m7 12 5-10",
-            }
-            path {
-                d: "m12 12 5-10",
-            }
-            path {
-                d: "m17 12 5-10",
-            }
-            path {
-                d: "M4.5 7h15",
-            }
-            path {
-                d: "M12 16v6",
-            }
+            path { d: "M2 12 7 2" }
+            path { d: "m7 12 5-10" }
+            path { d: "m12 12 5-10" }
+            path { d: "m17 12 5-10" }
+            path { d: "M4.5 7h15" }
+            path { d: "M12 16v6" }
         }
     }
 }

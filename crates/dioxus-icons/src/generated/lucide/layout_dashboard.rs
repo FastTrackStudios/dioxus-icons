@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LayoutDashboard()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LayoutDashboardProps {
     /// SVG width and height in pixels.

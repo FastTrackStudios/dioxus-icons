@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Server()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ServerProps {
     /// SVG width and height in pixels.

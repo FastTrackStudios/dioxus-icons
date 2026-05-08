@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Currency()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CurrencyProps {
     /// SVG width and height in pixels.
@@ -86,11 +87,7 @@ pub fn Currency(props: CurrencyProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "8",
-            }
+            circle { cx: "12", cy: "12", r: "8" }
             line {
                 x1: "3",
                 x2: "6",

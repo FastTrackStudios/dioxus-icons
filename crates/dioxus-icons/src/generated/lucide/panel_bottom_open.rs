@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelBottomOpen()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelBottomOpenProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn PanelBottomOpen(props: PanelBottomOpenProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M3 15h18",
-            }
-            path {
-                d: "m9 10 3-3 3 3",
-            }
+            path { d: "M3 15h18" }
+            path { d: "m9 10 3-3 3 3" }
         }
     }
 }

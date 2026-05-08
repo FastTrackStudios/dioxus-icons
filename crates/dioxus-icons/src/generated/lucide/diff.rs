@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Diff()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DiffProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Diff(props: DiffProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 3v14",
-            }
-            path {
-                d: "M5 10h14",
-            }
-            path {
-                d: "M5 21h14",
-            }
+            path { d: "M12 3v14" }
+            path { d: "M5 10h14" }
+            path { d: "M5 21h14" }
         }
     }
 }

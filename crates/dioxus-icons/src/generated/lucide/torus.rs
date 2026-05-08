@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Torus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TorusProps {
     /// SVG width and height in pixels.

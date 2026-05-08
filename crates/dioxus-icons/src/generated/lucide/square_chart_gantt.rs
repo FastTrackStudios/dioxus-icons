@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareChartGantt()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareChartGanttProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn SquareChartGantt(props: SquareChartGanttProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M9 8h7",
-            }
-            path {
-                d: "M8 12h6",
-            }
-            path {
-                d: "M11 16h5",
-            }
+            path { d: "M9 8h7" }
+            path { d: "M8 12h6" }
+            path { d: "M11 16h5" }
         }
     }
 }

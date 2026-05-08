@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Compass()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CompassProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn Compass(props: CompassProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" }
         }
     }
 }

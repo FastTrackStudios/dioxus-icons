@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Videotape()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct VideotapeProps {
     /// SVG width and height in pixels.
@@ -93,22 +94,10 @@ pub fn Videotape(props: VideotapeProps) -> Element {
                 x: "2",
                 y: "4",
             }
-            path {
-                d: "M2 8h20",
-            }
-            circle {
-                cx: "8",
-                cy: "14",
-                r: "2",
-            }
-            path {
-                d: "M8 12h8",
-            }
-            circle {
-                cx: "16",
-                cy: "14",
-                r: "2",
-            }
+            path { d: "M2 8h20" }
+            circle { cx: "8", cy: "14", r: "2" }
+            path { d: "M8 12h8" }
+            circle { cx: "16", cy: "14", r: "2" }
         }
     }
 }

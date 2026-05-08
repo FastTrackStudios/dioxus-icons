@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BluetoothConnected()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BluetoothConnectedProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn BluetoothConnected(props: BluetoothConnectedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m7 7 10 10-5 5V2l5 5L7 17",
-            }
+            path { d: "m7 7 10 10-5 5V2l5 5L7 17" }
             line {
                 x1: "18",
                 x2: "21",

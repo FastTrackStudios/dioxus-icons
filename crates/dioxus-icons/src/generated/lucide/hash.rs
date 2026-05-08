@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Hash()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HashProps {
     /// SVG width and height in pixels.

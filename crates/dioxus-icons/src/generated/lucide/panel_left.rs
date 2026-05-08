@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelLeft()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelLeftProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn PanelLeft(props: PanelLeftProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M9 3v18",
-            }
+            path { d: "M9 3v18" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Film()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FilmProps {
     /// SVG width and height in pixels.
@@ -93,27 +94,13 @@ pub fn Film(props: FilmProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M7 3v18",
-            }
-            path {
-                d: "M3 7.5h4",
-            }
-            path {
-                d: "M3 12h18",
-            }
-            path {
-                d: "M3 16.5h4",
-            }
-            path {
-                d: "M17 3v18",
-            }
-            path {
-                d: "M17 7.5h4",
-            }
-            path {
-                d: "M17 16.5h4",
-            }
+            path { d: "M7 3v18" }
+            path { d: "M3 7.5h4" }
+            path { d: "M3 12h18" }
+            path { d: "M3 16.5h4" }
+            path { d: "M17 3v18" }
+            path { d: "M17 7.5h4" }
+            path { d: "M17 16.5h4" }
         }
     }
 }

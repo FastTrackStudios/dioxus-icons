@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RemoveFormatting()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RemoveFormattingProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn RemoveFormatting(props: RemoveFormattingProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 7V4h16v3",
-            }
-            path {
-                d: "M5 20h6",
-            }
-            path {
-                d: "M13 4 8 20",
-            }
-            path {
-                d: "m15 15 5 5",
-            }
-            path {
-                d: "m20 15-5 5",
-            }
+            path { d: "M4 7V4h16v3" }
+            path { d: "M5 20h6" }
+            path { d: "M13 4 8 20" }
+            path { d: "m15 15 5 5" }
+            path { d: "m20 15-5 5" }
         }
     }
 }

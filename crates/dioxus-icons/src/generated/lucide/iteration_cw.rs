@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`IterationCw()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct IterationCwProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn IterationCw(props: IterationCwProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 10a8 8 0 1 1 8 8H4",
-            }
-            path {
-                d: "m8 22-4-4 4-4",
-            }
+            path { d: "M4 10a8 8 0 1 1 8 8H4" }
+            path { d: "m8 22-4-4 4-4" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RulerDimensionLine()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RulerDimensionLineProps {
     /// SVG width and height in pixels.
@@ -86,27 +87,13 @@ pub fn RulerDimensionLine(props: RulerDimensionLineProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 15v-3",
-            }
-            path {
-                d: "M14 15v-3",
-            }
-            path {
-                d: "M18 15v-3",
-            }
-            path {
-                d: "M2 8V4",
-            }
-            path {
-                d: "M22 6H2",
-            }
-            path {
-                d: "M22 8V4",
-            }
-            path {
-                d: "M6 15v-3",
-            }
+            path { d: "M10 15v-3" }
+            path { d: "M14 15v-3" }
+            path { d: "M18 15v-3" }
+            path { d: "M2 8V4" }
+            path { d: "M22 6H2" }
+            path { d: "M22 8V4" }
+            path { d: "M6 15v-3" }
             rect {
                 height: "8",
                 rx: "2",

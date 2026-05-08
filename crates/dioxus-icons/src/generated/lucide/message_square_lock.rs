@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MessageSquareLock()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MessageSquareLockProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn MessageSquareLock(props: MessageSquareLockProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M22 8.5V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16.286a.71.71 0 0 0 1.212.502l2.202-2.202A2 2 0 0 1 6.828 19H10",
-            }
-            path {
-                d: "M20 15v-2a2 2 0 0 0-4 0v2",
-            }
+            path { d: "M22 8.5V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16.286a.71.71 0 0 0 1.212.502l2.202-2.202A2 2 0 0 1 6.828 19H10" }
+            path { d: "M20 15v-2a2 2 0 0 0-4 0v2" }
             rect {
                 height: "5",
                 rx: "1",

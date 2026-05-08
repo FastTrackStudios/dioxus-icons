@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Variable()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct VariableProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Variable(props: VariableProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M8 21s-4-3-4-9 4-9 4-9",
-            }
-            path {
-                d: "M16 3s4 3 4 9-4 9-4 9",
-            }
+            path { d: "M8 21s-4-3-4-9 4-9 4-9" }
+            path { d: "M16 3s4 3 4 9-4 9-4 9" }
             line {
                 x1: "15",
                 x2: "9",

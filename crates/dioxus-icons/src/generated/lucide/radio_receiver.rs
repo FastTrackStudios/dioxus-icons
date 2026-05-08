@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RadioReceiver()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RadioReceiverProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn RadioReceiver(props: RadioReceiverProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 16v2",
-            }
-            path {
-                d: "M19 16v2",
-            }
+            path { d: "M5 16v2" }
+            path { d: "M19 16v2" }
             rect {
                 height: "8",
                 rx: "2",
@@ -99,9 +96,7 @@ pub fn RadioReceiver(props: RadioReceiverProps) -> Element {
                 x: "2",
                 y: "8",
             }
-            path {
-                d: "M18 12h.01",
-            }
+            path { d: "M18 12h.01" }
         }
     }
 }

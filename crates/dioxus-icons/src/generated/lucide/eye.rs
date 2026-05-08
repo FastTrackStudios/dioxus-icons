@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Eye()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct EyeProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn Eye(props: EyeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "3",
-            }
+            path { d: "M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" }
+            circle { cx: "12", cy: "12", r: "3" }
         }
     }
 }

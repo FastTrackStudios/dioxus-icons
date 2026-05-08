@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MemoryStick()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MemoryStickProps {
     /// SVG width and height in pixels.
@@ -86,36 +87,16 @@ pub fn MemoryStick(props: MemoryStickProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 12v-2",
-            }
-            path {
-                d: "M12 18v-2",
-            }
-            path {
-                d: "M16 12v-2",
-            }
-            path {
-                d: "M16 18v-2",
-            }
-            path {
-                d: "M2 11h1.5",
-            }
-            path {
-                d: "M20 18v-2",
-            }
-            path {
-                d: "M20.5 11H22",
-            }
-            path {
-                d: "M4 18v-2",
-            }
-            path {
-                d: "M8 12v-2",
-            }
-            path {
-                d: "M8 18v-2",
-            }
+            path { d: "M12 12v-2" }
+            path { d: "M12 18v-2" }
+            path { d: "M16 12v-2" }
+            path { d: "M16 18v-2" }
+            path { d: "M2 11h1.5" }
+            path { d: "M20 18v-2" }
+            path { d: "M20.5 11H22" }
+            path { d: "M4 18v-2" }
+            path { d: "M8 12v-2" }
+            path { d: "M8 18v-2" }
             rect {
                 height: "10",
                 rx: "2",

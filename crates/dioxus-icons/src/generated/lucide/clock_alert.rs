@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ClockAlert()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ClockAlertProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn ClockAlert(props: ClockAlertProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 6v6l4 2",
-            }
-            path {
-                d: "M20 12v5",
-            }
-            path {
-                d: "M20 21h.01",
-            }
-            path {
-                d: "M21.25 8.2A10 10 0 1 0 16 21.16",
-            }
+            path { d: "M12 6v6l4 2" }
+            path { d: "M20 12v5" }
+            path { d: "M20 21h.01" }
+            path { d: "M21.25 8.2A10 10 0 1 0 16 21.16" }
         }
     }
 }

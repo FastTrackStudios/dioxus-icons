@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CableCar()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CableCarProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn CableCar(props: CableCarProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 3h.01",
-            }
-            path {
-                d: "M14 2h.01",
-            }
-            path {
-                d: "m2 9 20-5",
-            }
-            path {
-                d: "M12 12V6.5",
-            }
+            path { d: "M10 3h.01" }
+            path { d: "M14 2h.01" }
+            path { d: "m2 9 20-5" }
+            path { d: "M12 12V6.5" }
             rect {
                 height: "10",
                 rx: "3",
@@ -105,15 +98,9 @@ pub fn CableCar(props: CableCarProps) -> Element {
                 x: "4",
                 y: "12",
             }
-            path {
-                d: "M9 12v5",
-            }
-            path {
-                d: "M15 12v5",
-            }
-            path {
-                d: "M4 17h16",
-            }
+            path { d: "M9 12v5" }
+            path { d: "M15 12v5" }
+            path { d: "M4 17h16" }
         }
     }
 }

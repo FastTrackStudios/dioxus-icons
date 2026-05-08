@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareUserRound()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareUserRoundProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn SquareUserRound(props: SquareUserRoundProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M18 21a6 6 0 0 0-12 0",
-            }
-            circle {
-                cx: "12",
-                cy: "11",
-                r: "4",
-            }
+            path { d: "M18 21a6 6 0 0 0-12 0" }
+            circle { cx: "12", cy: "11", r: "4" }
             rect {
                 height: "18",
                 rx: "2",

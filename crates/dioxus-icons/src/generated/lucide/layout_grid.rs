@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LayoutGrid()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LayoutGridProps {
     /// SVG width and height in pixels.

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CirclePercent()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CirclePercentProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn CirclePercent(props: CirclePercentProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "m15 9-6 6",
-            }
-            path {
-                d: "M9 9h.01",
-            }
-            path {
-                d: "M15 15h.01",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "m15 9-6 6" }
+            path { d: "M9 9h.01" }
+            path { d: "M15 15h.01" }
         }
     }
 }

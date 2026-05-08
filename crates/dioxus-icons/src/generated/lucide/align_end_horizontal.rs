@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignEndHorizontal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignEndHorizontalProps {
     /// SVG width and height in pixels.
@@ -100,9 +101,7 @@ pub fn AlignEndHorizontal(props: AlignEndHorizontalProps) -> Element {
                 x: "14",
                 y: "9",
             }
-            path {
-                d: "M22 22H2",
-            }
+            path { d: "M22 22H2" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PaintbrushVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PaintbrushVerticalProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn PaintbrushVertical(props: PaintbrushVerticalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 2v2",
-            }
-            path {
-                d: "M14 2v4",
-            }
-            path {
-                d: "M17 2a1 1 0 0 1 1 1v9H6V3a1 1 0 0 1 1-1z",
-            }
-            path {
-                d: "M6 12a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2h2a1 1 0 0 1 1 1v2.9a2 2 0 1 0 4 0V17a1 1 0 0 1 1-1h2a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1",
-            }
+            path { d: "M10 2v2" }
+            path { d: "M14 2v4" }
+            path { d: "M17 2a1 1 0 0 1 1 1v9H6V3a1 1 0 0 1 1-1z" }
+            path { d: "M6 12a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2h2a1 1 0 0 1 1 1v2.9a2 2 0 1 0 4 0V17a1 1 0 0 1 1-1h2a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1" }
         }
     }
 }

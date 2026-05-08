@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MoveDownRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MoveDownRightProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn MoveDownRight(props: MoveDownRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M19 13V19H13",
-            }
-            path {
-                d: "M5 5L19 19",
-            }
+            path { d: "M19 13V19H13" }
+            path { d: "M5 5L19 19" }
         }
     }
 }

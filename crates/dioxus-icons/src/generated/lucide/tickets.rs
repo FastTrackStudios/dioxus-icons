@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Tickets()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TicketsProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Tickets(props: TicketsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8",
-            }
-            path {
-                d: "M6 10V8",
-            }
-            path {
-                d: "M6 14v1",
-            }
-            path {
-                d: "M6 19v2",
-            }
+            path { d: "m3.173 8.18 11-5a2 2 0 0 1 2.647.993L18.56 8" }
+            path { d: "M6 10V8" }
+            path { d: "M6 14v1" }
+            path { d: "M6 19v2" }
             rect {
                 height: "13",
                 rx: "2",

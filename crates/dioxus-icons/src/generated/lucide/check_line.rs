@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CheckLine()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CheckLineProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn CheckLine(props: CheckLineProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M20 4L9 15",
-            }
-            path {
-                d: "M21 19L3 19",
-            }
-            path {
-                d: "M9 15L4 10",
-            }
+            path { d: "M20 4L9 15" }
+            path { d: "M21 19L3 19" }
+            path { d: "M9 15L4 10" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareCheck()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareCheckProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn SquareCheck(props: SquareCheckProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "m9 12 2 2 4-4",
-            }
+            path { d: "m9 12 2 2 4-4" }
         }
     }
 }

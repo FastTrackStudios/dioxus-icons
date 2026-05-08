@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Presentation()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PresentationProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Presentation(props: PresentationProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 3h20",
-            }
-            path {
-                d: "M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3",
-            }
-            path {
-                d: "m7 21 5-5 5 5",
-            }
+            path { d: "M2 3h20" }
+            path { d: "M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" }
+            path { d: "m7 21 5-5 5 5" }
         }
     }
 }

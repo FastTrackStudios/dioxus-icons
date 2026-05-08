@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Lectern()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LecternProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Lectern(props: LecternProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 12h3a2 2 0 0 0 1.902-1.38l1.056-3.333A1 1 0 0 0 21 6H3a1 1 0 0 0-.958 1.287l1.056 3.334A2 2 0 0 0 5 12h3",
-            }
-            path {
-                d: "M18 6V3a1 1 0 0 0-1-1h-3",
-            }
+            path { d: "M16 12h3a2 2 0 0 0 1.902-1.38l1.056-3.333A1 1 0 0 0 21 6H3a1 1 0 0 0-.958 1.287l1.056 3.334A2 2 0 0 0 5 12h3" }
+            path { d: "M18 6V3a1 1 0 0 0-1-1h-3" }
             rect {
                 height: "12",
                 rx: "1",

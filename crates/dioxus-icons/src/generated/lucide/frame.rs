@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Frame()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FrameProps {
     /// SVG width and height in pixels.

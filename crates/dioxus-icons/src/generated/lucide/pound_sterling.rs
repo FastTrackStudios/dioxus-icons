@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PoundSterling()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PoundSterlingProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn PoundSterling(props: PoundSterlingProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M18 7c0-5.333-8-5.333-8 0",
-            }
-            path {
-                d: "M10 7v14",
-            }
-            path {
-                d: "M6 21h12",
-            }
-            path {
-                d: "M6 13h10",
-            }
+            path { d: "M18 7c0-5.333-8-5.333-8 0" }
+            path { d: "M10 7v14" }
+            path { d: "M6 21h12" }
+            path { d: "M6 13h10" }
         }
     }
 }

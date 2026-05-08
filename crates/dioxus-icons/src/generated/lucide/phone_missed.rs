@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PhoneMissed()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PhoneMissedProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn PhoneMissed(props: PhoneMissedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m16 2 6 6",
-            }
-            path {
-                d: "m22 2-6 6",
-            }
-            path {
-                d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
-            }
+            path { d: "m16 2 6 6" }
+            path { d: "m22 2-6 6" }
+            path { d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" }
         }
     }
 }

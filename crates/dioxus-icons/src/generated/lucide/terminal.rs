@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Terminal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TerminalProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Terminal(props: TerminalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 19h8",
-            }
-            path {
-                d: "m4 17 6-6-6-6",
-            }
+            path { d: "M12 19h8" }
+            path { d: "m4 17 6-6-6-6" }
         }
     }
 }

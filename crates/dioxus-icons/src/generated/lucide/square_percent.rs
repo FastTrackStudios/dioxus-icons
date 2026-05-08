@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquarePercent()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquarePercentProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn SquarePercent(props: SquarePercentProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "m15 9-6 6",
-            }
-            path {
-                d: "M9 9h.01",
-            }
-            path {
-                d: "M15 15h.01",
-            }
+            path { d: "m15 9-6 6" }
+            path { d: "M9 9h.01" }
+            path { d: "M15 15h.01" }
         }
     }
 }

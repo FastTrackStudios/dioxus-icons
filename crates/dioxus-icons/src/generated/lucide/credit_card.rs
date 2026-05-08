@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CreditCard()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CreditCardProps {
     /// SVG width and height in pixels.

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareCheckBig()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareCheckBigProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn SquareCheckBig(props: SquareCheckBigProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344",
-            }
-            path {
-                d: "m9 11 3 3L22 4",
-            }
+            path { d: "M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344" }
+            path { d: "m9 11 3 3L22 4" }
         }
     }
 }

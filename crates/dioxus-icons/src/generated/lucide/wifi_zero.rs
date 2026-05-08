@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`WifiZero()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WifiZeroProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn WifiZero(props: WifiZeroProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 20h.01",
-            }
+            path { d: "M12 20h.01" }
         }
     }
 }

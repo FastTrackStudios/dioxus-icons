@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListFilter()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListFilterProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn ListFilter(props: ListFilterProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 5h20",
-            }
-            path {
-                d: "M6 12h12",
-            }
-            path {
-                d: "M9 19h6",
-            }
+            path { d: "M2 5h20" }
+            path { d: "M6 12h12" }
+            path { d: "M9 19h6" }
         }
     }
 }

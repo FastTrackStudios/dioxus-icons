@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`IndianRupee()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct IndianRupeeProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn IndianRupee(props: IndianRupeeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 3h12",
-            }
-            path {
-                d: "M6 8h12",
-            }
-            path {
-                d: "m6 13 8.5 8",
-            }
-            path {
-                d: "M6 13h3",
-            }
-            path {
-                d: "M9 13c6.667 0 6.667-10 0-10",
-            }
+            path { d: "M6 3h12" }
+            path { d: "M6 8h12" }
+            path { d: "m6 13 8.5 8" }
+            path { d: "M6 13h3" }
+            path { d: "M9 13c6.667 0 6.667-10 0-10" }
         }
     }
 }

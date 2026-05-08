@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelTopBottomDashed()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelTopBottomDashedProps {
     /// SVG width and height in pixels.
@@ -86,30 +87,14 @@ pub fn PanelTopBottomDashed(props: PanelTopBottomDashedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 15h1",
-            }
-            path {
-                d: "M14 9h1",
-            }
-            path {
-                d: "M19 15h2",
-            }
-            path {
-                d: "M19 9h2",
-            }
-            path {
-                d: "M3 15h2",
-            }
-            path {
-                d: "M3 9h2",
-            }
-            path {
-                d: "M9 15h1",
-            }
-            path {
-                d: "M9 9h1",
-            }
+            path { d: "M14 15h1" }
+            path { d: "M14 9h1" }
+            path { d: "M19 15h2" }
+            path { d: "M19 9h2" }
+            path { d: "M3 15h2" }
+            path { d: "M3 9h2" }
+            path { d: "M9 15h1" }
+            path { d: "M9 9h1" }
             rect {
                 height: "18",
                 rx: "2",

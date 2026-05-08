@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ArrowDownToLine()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ArrowDownToLineProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn ArrowDownToLine(props: ArrowDownToLineProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 17V3",
-            }
-            path {
-                d: "m6 11 6 6 6-6",
-            }
-            path {
-                d: "M19 21H5",
-            }
+            path { d: "M12 17V3" }
+            path { d: "m6 11 6 6 6-6" }
+            path { d: "M19 21H5" }
         }
     }
 }

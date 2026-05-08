@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`HardDriveUpload()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HardDriveUploadProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn HardDriveUpload(props: HardDriveUploadProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m16 6-4-4-4 4",
-            }
-            path {
-                d: "M12 2v8",
-            }
+            path { d: "m16 6-4-4-4 4" }
+            path { d: "M12 2v8" }
             rect {
                 height: "8",
                 rx: "2",
@@ -99,12 +96,8 @@ pub fn HardDriveUpload(props: HardDriveUploadProps) -> Element {
                 x: "2",
                 y: "14",
             }
-            path {
-                d: "M6 18h.01",
-            }
-            path {
-                d: "M10 18h.01",
-            }
+            path { d: "M6 18h.01" }
+            path { d: "M10 18h.01" }
         }
     }
 }

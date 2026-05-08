@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Undo()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UndoProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Undo(props: UndoProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 7v6h6",
-            }
-            path {
-                d: "M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13",
-            }
+            path { d: "M3 7v6h6" }
+            path { d: "M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13" }
         }
     }
 }

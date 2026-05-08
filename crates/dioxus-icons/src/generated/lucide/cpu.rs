@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Cpu()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CpuProps {
     /// SVG width and height in pixels.
@@ -86,42 +87,18 @@ pub fn Cpu(props: CpuProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 20v2",
-            }
-            path {
-                d: "M12 2v2",
-            }
-            path {
-                d: "M17 20v2",
-            }
-            path {
-                d: "M17 2v2",
-            }
-            path {
-                d: "M2 12h2",
-            }
-            path {
-                d: "M2 17h2",
-            }
-            path {
-                d: "M2 7h2",
-            }
-            path {
-                d: "M20 12h2",
-            }
-            path {
-                d: "M20 17h2",
-            }
-            path {
-                d: "M20 7h2",
-            }
-            path {
-                d: "M7 20v2",
-            }
-            path {
-                d: "M7 2v2",
-            }
+            path { d: "M12 20v2" }
+            path { d: "M12 2v2" }
+            path { d: "M17 20v2" }
+            path { d: "M17 2v2" }
+            path { d: "M2 12h2" }
+            path { d: "M2 17h2" }
+            path { d: "M2 7h2" }
+            path { d: "M20 12h2" }
+            path { d: "M20 17h2" }
+            path { d: "M20 7h2" }
+            path { d: "M7 20v2" }
+            path { d: "M7 2v2" }
             rect {
                 height: "16",
                 rx: "2",

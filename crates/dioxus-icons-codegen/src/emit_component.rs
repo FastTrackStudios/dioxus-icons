@@ -1,7 +1,10 @@
 use crate::fetch::{LUCIDE_COMMIT, LUCIDE_VERSION};
-use crate::parse::{Icon, SvgElement};
+use crate::parse::Icon;
 
 use crate::emit_docs::{preview_img, related_icon_links, widget_container};
+
+use dioxus_rsx::{Attribute, AttributeName, AttributeValue, BodyNode, HotLiteral, PartialExpr};
+use proc_macro2::{Ident, Span};
 
 pub fn emit_component(icon: &Icon, related_icons: &[&Icon]) -> String {
     let mut output = String::new();
@@ -16,6 +19,7 @@ pub fn emit_component(icon: &Icon, related_icons: &[&Icon]) -> String {
     let props_name = format!("{}Props", icon.component);
 
     output.push_str(&format!("/// Props for [`{}()`].\n", icon.component));
+    output.push_str("#[doc(hidden)]\n");
     output.push_str("#[derive(Clone, PartialEq, Props)]\n");
     output.push_str(&format!("pub struct {props_name} {{\n"));
     output.push_str("    /// SVG width and height in pixels.\n");
@@ -50,25 +54,7 @@ pub fn emit_component(icon: &Icon, related_icons: &[&Icon]) -> String {
         "    let {props_name} {{\n        size,\n        color,\n        stroke_width,\n        stroke_linecap,\n        stroke_linejoin,\n        class,\n    }} = props;\n\n"
     ));
     output.push_str("    rsx! {\n");
-    output.push_str("        svg {\n");
-    output.push_str("            xmlns: \"http://www.w3.org/2000/svg\",\n");
-    output.push_str("            width: \"{size}\",\n");
-    output.push_str("            height: \"{size}\",\n");
-    output.push_str("            view_box: \"0 0 24 24\",\n");
-    output.push_str("            fill: \"none\",\n");
-    output.push_str("            stroke: \"{color}\",\n");
-    output.push_str("            stroke_width: \"{stroke_width}\",\n");
-    output.push_str("            stroke_linecap: \"{stroke_linecap}\",\n");
-    output.push_str("            stroke_linejoin: \"{stroke_linejoin}\",\n");
-    output.push_str(
-        "            class: if class.is_empty() { None } else { Some(class.as_ref()) },\n",
-    );
-
-    for element in &icon.elements {
-        push_rsx_element(&mut output, element);
-    }
-
-    output.push_str("        }\n");
+    push_svg_rsx(&mut output, icon);
     output.push_str("    }\n");
     output.push_str("}\n");
 
@@ -140,26 +126,36 @@ fn push_doc_comment(output: &mut String, icon: &Icon, related_icons: &[&Icon]) {
     }
 }
 
-fn push_rsx_element(output: &mut String, element: &SvgElement) {
-    output.push_str("            ");
-    output.push_str(&element.tag);
-    output.push_str(" {\n");
+fn push_svg_rsx(output: &mut String, icon: &Icon) {
+    let dom =
+        dioxus_rsx_rosetta::Dom::parse(&icon.svg).expect("parsing SVG through dioxus-rsx-rosetta");
+    let mut call_body = dioxus_rsx_rosetta::rsx_from_html(&dom);
+    let svg = call_body
+        .body
+        .roots
+        .iter_mut()
+        .find_map(|node| match node {
+            BodyNode::Element(element) => Some(element),
+            _ => None,
+        })
+        .expect("rosetta SVG output should contain an element root");
 
-    for (name, value) in &element.attrs {
-        output.push_str("                ");
-        output.push_str(&dioxus_attr_name(name));
-        output.push_str(": ");
-        output.push_str(&rust_string(value));
-        output.push_str(",\n");
-    }
+    svg.raw_attributes = root_svg_attrs(&icon.view_box);
+    svg.merged_attributes = svg.raw_attributes.clone();
+    svg.spreads.clear();
 
-    output.push_str("            }\n");
-}
-
-fn dioxus_attr_name(name: &str) -> String {
-    match name {
-        "viewBox" => "view_box".to_owned(),
-        _ => name.replace('-', "_"),
+    let rsx = dioxus_autofmt::write_block_out(&call_body).expect("formatting rosetta SVG as RSX");
+    let rsx = rsx.trim_matches(['\r', '\n']);
+    let base_indent = rsx
+        .lines()
+        .filter(|line| !line.trim().is_empty())
+        .map(|line| line.len() - line.trim_start().len())
+        .min()
+        .unwrap_or_default();
+    for line in rsx.lines() {
+        output.push_str("        ");
+        output.push_str(line.get(base_indent..).unwrap_or(line));
+        output.push('\n');
     }
 }
 
@@ -175,8 +171,46 @@ fn join_or_dash(values: &[String]) -> String {
     }
 }
 
-fn rust_string(value: &str) -> String {
-    serde_json::to_string(value).expect("serializing string literal")
+fn root_svg_attrs(view_box: &str) -> Vec<Attribute> {
+    vec![
+        rsx_lit_attr("xmlns", "http://www.w3.org/2000/svg"),
+        rsx_lit_attr("width", "{size}"),
+        rsx_lit_attr("height", "{size}"),
+        rsx_lit_attr("view_box", view_box),
+        rsx_lit_attr("fill", "none"),
+        rsx_lit_attr("stroke", "{color}"),
+        rsx_lit_attr("stroke_width", "{stroke_width}"),
+        rsx_lit_attr("stroke_linecap", "{stroke_linecap}"),
+        rsx_lit_attr("stroke_linejoin", "{stroke_linejoin}"),
+        rsx_expr_attr(
+            "class",
+            "if class.is_empty() { None } else { Some(class.as_ref()) }",
+        ),
+    ]
+}
+
+fn rsx_lit_attr(name: &str, value: &str) -> Attribute {
+    rsx_attr(
+        name,
+        AttributeValue::AttrLiteral(HotLiteral::from_raw_text(value)),
+    )
+}
+
+fn rsx_expr_attr(name: &str, value: &str) -> Attribute {
+    rsx_attr(
+        name,
+        AttributeValue::AttrExpr(PartialExpr {
+            brace: None,
+            expr: value.parse().expect("parsing generated RSX expression"),
+        }),
+    )
+}
+
+fn rsx_attr(name: &str, value: AttributeValue) -> Attribute {
+    Attribute::from_raw(
+        AttributeName::BuiltIn(Ident::new(name, Span::call_site())),
+        value,
+    )
 }
 
 fn markdown_text(value: &str) -> String {

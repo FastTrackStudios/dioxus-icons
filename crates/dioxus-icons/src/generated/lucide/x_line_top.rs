@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`XLineTop()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct XLineTopProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn XLineTop(props: XLineTopProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M18 4H6",
-            }
-            path {
-                d: "M18 8 6 20",
-            }
-            path {
-                d: "m6 8 12 12",
-            }
+            path { d: "M18 4H6" }
+            path { d: "M18 8 6 20" }
+            path { d: "m6 8 12 12" }
         }
     }
 }

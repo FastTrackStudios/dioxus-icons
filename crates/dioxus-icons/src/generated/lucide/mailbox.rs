@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Mailbox()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MailboxProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Mailbox(props: MailboxProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z",
-            }
-            polyline {
-                points: "15,9 18,9 18,11",
-            }
-            path {
-                d: "M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2",
-            }
+            path { d: "M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z" }
+            polyline { points: "15,9 18,9 18,11" }
+            path { d: "M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2" }
             line {
                 x1: "6",
                 x2: "7",

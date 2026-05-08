@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Form()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FormProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Form(props: FormProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 14h6",
-            }
-            path {
-                d: "M4 2h10",
-            }
+            path { d: "M4 14h6" }
+            path { d: "M4 2h10" }
             rect {
                 height: "4",
                 rx: "1",

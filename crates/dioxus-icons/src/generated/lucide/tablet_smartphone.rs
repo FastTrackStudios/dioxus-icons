@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TabletSmartphone()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TabletSmartphoneProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn TabletSmartphone(props: TabletSmartphoneProps) -> Element {
                 x: "3",
                 y: "8",
             }
-            path {
-                d: "M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4",
-            }
-            path {
-                d: "M8 18h.01",
-            }
+            path { d: "M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4" }
+            path { d: "M8 18h.01" }
         }
     }
 }

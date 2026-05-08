@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Wind()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WindProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Wind(props: WindProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12.8 19.6A2 2 0 1 0 14 16H2",
-            }
-            path {
-                d: "M17.5 8a2.5 2.5 0 1 1 2 4H2",
-            }
-            path {
-                d: "M9.8 4.4A2 2 0 1 1 11 8H2",
-            }
+            path { d: "M12.8 19.6A2 2 0 1 0 14 16H2" }
+            path { d: "M17.5 8a2.5 2.5 0 1 1 2 4H2" }
+            path { d: "M9.8 4.4A2 2 0 1 1 11 8H2" }
         }
     }
 }

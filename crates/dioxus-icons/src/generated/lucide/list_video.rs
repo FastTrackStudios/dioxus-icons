@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListVideo()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListVideoProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn ListVideo(props: ListVideoProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 5H3",
-            }
-            path {
-                d: "M10 12H3",
-            }
-            path {
-                d: "M10 19H3",
-            }
-            path {
-                d: "M15 12.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z",
-            }
+            path { d: "M21 5H3" }
+            path { d: "M10 12H3" }
+            path { d: "M10 19H3" }
+            path { d: "M15 12.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997a1 1 0 0 1-1.517-.86z" }
         }
     }
 }

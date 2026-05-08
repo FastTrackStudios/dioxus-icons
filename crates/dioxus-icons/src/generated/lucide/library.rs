@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Library()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LibraryProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Library(props: LibraryProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m16 6 4 14",
-            }
-            path {
-                d: "M12 6v14",
-            }
-            path {
-                d: "M8 8v12",
-            }
-            path {
-                d: "M4 4v16",
-            }
+            path { d: "m16 6 4 14" }
+            path { d: "M12 6v14" }
+            path { d: "M8 8v12" }
+            path { d: "M4 4v16" }
         }
     }
 }

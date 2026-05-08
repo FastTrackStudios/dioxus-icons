@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TextAlignJustify()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TextAlignJustifyProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn TextAlignJustify(props: TextAlignJustifyProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 5h18",
-            }
-            path {
-                d: "M3 12h18",
-            }
-            path {
-                d: "M3 19h18",
-            }
+            path { d: "M3 5h18" }
+            path { d: "M3 12h18" }
+            path { d: "M3 19h18" }
         }
     }
 }

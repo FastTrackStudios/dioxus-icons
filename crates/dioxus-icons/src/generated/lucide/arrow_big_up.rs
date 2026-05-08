@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ArrowBigUp()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ArrowBigUpProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn ArrowBigUp(props: ArrowBigUpProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M9 19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-6a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-7.086-7.086a1 1 0 0 0-1.414 0l-7.086 7.086a.707.707 0 0 0 .5 1.207H8a1 1 0 0 1 1 1z",
-            }
+            path { d: "M9 19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-6a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-7.086-7.086a1 1 0 0 0-1.414 0l-7.086 7.086a.707.707 0 0 0 .5 1.207H8a1 1 0 0 1 1 1z" }
         }
     }
 }

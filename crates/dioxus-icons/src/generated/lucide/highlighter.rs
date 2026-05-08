@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Highlighter()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HighlighterProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Highlighter(props: HighlighterProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m9 11-6 6v3h9l3-3",
-            }
-            path {
-                d: "m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4",
-            }
+            path { d: "m9 11-6 6v3h9l3-3" }
+            path { d: "m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4" }
         }
     }
 }

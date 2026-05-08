@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Blinds()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BlindsProps {
     /// SVG width and height in pixels.
@@ -86,29 +87,13 @@ pub fn Blinds(props: BlindsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 3h18",
-            }
-            path {
-                d: "M20 7H8",
-            }
-            path {
-                d: "M20 11H8",
-            }
-            path {
-                d: "M10 19h10",
-            }
-            path {
-                d: "M8 15h12",
-            }
-            path {
-                d: "M4 3v14",
-            }
-            circle {
-                cx: "4",
-                cy: "19",
-                r: "2",
-            }
+            path { d: "M3 3h18" }
+            path { d: "M20 7H8" }
+            path { d: "M20 11H8" }
+            path { d: "M10 19h10" }
+            path { d: "M8 15h12" }
+            path { d: "M4 3v14" }
+            circle { cx: "4", cy: "19", r: "2" }
         }
     }
 }

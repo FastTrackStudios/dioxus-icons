@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ShoppingBasket()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ShoppingBasketProps {
     /// SVG width and height in pixels.
@@ -86,27 +87,13 @@ pub fn ShoppingBasket(props: ShoppingBasketProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m15 11-1 9",
-            }
-            path {
-                d: "m19 11-4-7",
-            }
-            path {
-                d: "M2 11h20",
-            }
-            path {
-                d: "m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4",
-            }
-            path {
-                d: "M4.5 15.5h15",
-            }
-            path {
-                d: "m5 11 4-7",
-            }
-            path {
-                d: "m9 11 1 9",
-            }
+            path { d: "m15 11-1 9" }
+            path { d: "m19 11-4-7" }
+            path { d: "M2 11h20" }
+            path { d: "m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4" }
+            path { d: "M4.5 15.5h15" }
+            path { d: "m5 11 4-7" }
+            path { d: "m9 11 1 9" }
         }
     }
 }

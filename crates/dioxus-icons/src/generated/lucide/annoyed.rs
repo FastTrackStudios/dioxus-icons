@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Annoyed()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AnnoyedProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn Annoyed(props: AnnoyedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M8 15h8",
-            }
-            path {
-                d: "M8 9h2",
-            }
-            path {
-                d: "M14 9h2",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M8 15h8" }
+            path { d: "M8 9h2" }
+            path { d: "M14 9h2" }
         }
     }
 }

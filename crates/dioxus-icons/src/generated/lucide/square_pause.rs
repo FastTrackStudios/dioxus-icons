@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquarePause()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquarePauseProps {
     /// SVG width and height in pixels.

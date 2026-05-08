@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Fence()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FenceProps {
     /// SVG width and height in pixels.
@@ -86,27 +87,13 @@ pub fn Fence(props: FenceProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z",
-            }
-            path {
-                d: "M6 8h4",
-            }
-            path {
-                d: "M6 18h4",
-            }
-            path {
-                d: "m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z",
-            }
-            path {
-                d: "M14 8h4",
-            }
-            path {
-                d: "M14 18h4",
-            }
-            path {
-                d: "m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z",
-            }
+            path { d: "M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }
+            path { d: "M6 8h4" }
+            path { d: "M6 18h4" }
+            path { d: "m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }
+            path { d: "M14 8h4" }
+            path { d: "M14 18h4" }
+            path { d: "m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" }
         }
     }
 }

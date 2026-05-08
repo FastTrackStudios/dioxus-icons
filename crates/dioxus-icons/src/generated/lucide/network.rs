@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Network()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct NetworkProps {
     /// SVG width and height in pixels.
@@ -107,12 +108,8 @@ pub fn Network(props: NetworkProps) -> Element {
                 x: "9",
                 y: "2",
             }
-            path {
-                d: "M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3",
-            }
-            path {
-                d: "M12 12V8",
-            }
+            path { d: "M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" }
+            path { d: "M12 12V8" }
         }
     }
 }

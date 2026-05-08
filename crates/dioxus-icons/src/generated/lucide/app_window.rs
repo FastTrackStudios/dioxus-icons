@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AppWindow()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AppWindowProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn AppWindow(props: AppWindowProps) -> Element {
                 x: "2",
                 y: "4",
             }
-            path {
-                d: "M10 4v4",
-            }
-            path {
-                d: "M2 8h20",
-            }
-            path {
-                d: "M6 4v4",
-            }
+            path { d: "M10 4v4" }
+            path { d: "M2 8h20" }
+            path { d: "M6 4v4" }
         }
     }
 }

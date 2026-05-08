@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GitMerge()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GitMergeProps {
     /// SVG width and height in pixels.
@@ -86,19 +87,9 @@ pub fn GitMerge(props: GitMergeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "18",
-                cy: "18",
-                r: "3",
-            }
-            circle {
-                cx: "6",
-                cy: "6",
-                r: "3",
-            }
-            path {
-                d: "M6 21V9a9 9 0 0 0 9 9",
-            }
+            circle { cx: "18", cy: "18", r: "3" }
+            circle { cx: "6", cy: "6", r: "3" }
+            path { d: "M6 21V9a9 9 0 0 0 9 9" }
         }
     }
 }

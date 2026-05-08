@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleEqual()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleEqualProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn CircleEqual(props: CircleEqualProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M7 10h10",
-            }
-            path {
-                d: "M7 14h10",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M7 10h10" }
+            path { d: "M7 14h10" }
         }
     }
 }

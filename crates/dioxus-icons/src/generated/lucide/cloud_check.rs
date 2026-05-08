@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CloudCheck()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CloudCheckProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn CloudCheck(props: CloudCheckProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m17 15-5.5 5.5L9 18",
-            }
-            path {
-                d: "M5.516 16.07A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 3.501 7.327",
-            }
+            path { d: "m17 15-5.5 5.5L9 18" }
+            path { d: "M5.516 16.07A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 3.501 7.327" }
         }
     }
 }

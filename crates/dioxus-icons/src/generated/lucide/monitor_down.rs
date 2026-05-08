@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MonitorDown()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MonitorDownProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn MonitorDown(props: MonitorDownProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 13V7",
-            }
-            path {
-                d: "m15 10-3 3-3-3",
-            }
+            path { d: "M12 13V7" }
+            path { d: "m15 10-3 3-3-3" }
             rect {
                 height: "14",
                 rx: "2",
@@ -99,12 +96,8 @@ pub fn MonitorDown(props: MonitorDownProps) -> Element {
                 x: "2",
                 y: "3",
             }
-            path {
-                d: "M12 17v4",
-            }
-            path {
-                d: "M8 21h8",
-            }
+            path { d: "M12 17v4" }
+            path { d: "M8 21h8" }
         }
     }
 }

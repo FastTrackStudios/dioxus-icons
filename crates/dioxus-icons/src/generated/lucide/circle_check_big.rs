@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleCheckBig()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleCheckBigProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn CircleCheckBig(props: CircleCheckBigProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21.801 10A10 10 0 1 1 17 3.335",
-            }
-            path {
-                d: "m9 11 3 3L22 4",
-            }
+            path { d: "M21.801 10A10 10 0 1 1 17 3.335" }
+            path { d: "m9 11 3 3L22 4" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquarePlay()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquarePlayProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn SquarePlay(props: SquarePlayProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z",
-            }
+            path { d: "M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z" }
         }
     }
 }

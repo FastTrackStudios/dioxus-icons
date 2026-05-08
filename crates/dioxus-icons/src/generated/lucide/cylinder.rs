@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Cylinder()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CylinderProps {
     /// SVG width and height in pixels.
@@ -92,9 +93,7 @@ pub fn Cylinder(props: CylinderProps) -> Element {
                 rx: "9",
                 ry: "3",
             }
-            path {
-                d: "M3 5v14a9 3 0 0 0 18 0V5",
-            }
+            path { d: "M3 5v14a9 3 0 0 0 18 0V5" }
         }
     }
 }

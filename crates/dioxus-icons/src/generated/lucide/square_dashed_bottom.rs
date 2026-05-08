@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareDashedBottom()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareDashedBottomProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn SquareDashedBottom(props: SquareDashedBottomProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 21a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2",
-            }
-            path {
-                d: "M9 21h1",
-            }
-            path {
-                d: "M14 21h1",
-            }
+            path { d: "M5 21a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2" }
+            path { d: "M9 21h1" }
+            path { d: "M14 21h1" }
         }
     }
 }

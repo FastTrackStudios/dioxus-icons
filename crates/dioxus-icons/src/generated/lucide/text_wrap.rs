@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TextWrap()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TextWrapProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn TextWrap(props: TextWrapProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m16 16-3 3 3 3",
-            }
-            path {
-                d: "M3 12h14.5a1 1 0 0 1 0 7H13",
-            }
-            path {
-                d: "M3 19h6",
-            }
-            path {
-                d: "M3 5h18",
-            }
+            path { d: "m16 16-3 3 3 3" }
+            path { d: "M3 12h14.5a1 1 0 0 1 0 7H13" }
+            path { d: "M3 19h6" }
+            path { d: "M3 5h18" }
         }
     }
 }

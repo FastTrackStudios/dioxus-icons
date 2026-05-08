@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BetweenVerticalEnd()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BetweenVerticalEndProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn BetweenVerticalEnd(props: BetweenVerticalEndProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "m9 22 3-3 3 3",
-            }
+            path { d: "m9 22 3-3 3 3" }
             rect {
                 height: "13",
                 rx: "1",

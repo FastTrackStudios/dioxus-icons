@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Cloudy()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CloudyProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Cloudy(props: CloudyProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M17.5 12a1 1 0 1 1 0 9H9.006a7 7 0 1 1 6.702-9z",
-            }
-            path {
-                d: "M21.832 9A3 3 0 0 0 19 7h-2.207a5.5 5.5 0 0 0-10.72.61",
-            }
+            path { d: "M17.5 12a1 1 0 1 1 0 9H9.006a7 7 0 1 1 6.702-9z" }
+            path { d: "M21.832 9A3 3 0 0 0 19 7h-2.207a5.5 5.5 0 0 0-10.72.61" }
         }
     }
 }

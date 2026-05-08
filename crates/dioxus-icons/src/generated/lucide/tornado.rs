@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Tornado()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TornadoProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn Tornado(props: TornadoProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 4H3",
-            }
-            path {
-                d: "M18 8H6",
-            }
-            path {
-                d: "M19 12H9",
-            }
-            path {
-                d: "M16 16h-6",
-            }
-            path {
-                d: "M11 20H9",
-            }
+            path { d: "M21 4H3" }
+            path { d: "M18 8H6" }
+            path { d: "M19 12H9" }
+            path { d: "M16 16h-6" }
+            path { d: "M11 20H9" }
         }
     }
 }

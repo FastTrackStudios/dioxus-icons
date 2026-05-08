@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MoveDiagonal2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MoveDiagonal2Props {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn MoveDiagonal2(props: MoveDiagonal2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M19 13v6h-6",
-            }
-            path {
-                d: "M5 11V5h6",
-            }
-            path {
-                d: "m5 5 14 14",
-            }
+            path { d: "M19 13v6h-6" }
+            path { d: "M5 11V5h6" }
+            path { d: "m5 5 14 14" }
         }
     }
 }

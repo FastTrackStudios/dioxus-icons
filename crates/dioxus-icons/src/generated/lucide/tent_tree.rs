@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TentTree()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TentTreeProps {
     /// SVG width and height in pixels.
@@ -86,29 +87,13 @@ pub fn TentTree(props: TentTreeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "4",
-                cy: "4",
-                r: "2",
-            }
-            path {
-                d: "m14 5 3-3 3 3",
-            }
-            path {
-                d: "m14 10 3-3 3 3",
-            }
-            path {
-                d: "M17 14V2",
-            }
-            path {
-                d: "M17 14H7l-5 8h20Z",
-            }
-            path {
-                d: "M8 14v8",
-            }
-            path {
-                d: "m9 14 5 8",
-            }
+            circle { cx: "4", cy: "4", r: "2" }
+            path { d: "m14 5 3-3 3 3" }
+            path { d: "m14 10 3-3 3 3" }
+            path { d: "M17 14V2" }
+            path { d: "M17 14H7l-5 8h20Z" }
+            path { d: "M8 14v8" }
+            path { d: "m9 14 5 8" }
         }
     }
 }

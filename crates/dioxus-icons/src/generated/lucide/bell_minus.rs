@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BellMinus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BellMinusProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn BellMinus(props: BellMinusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10.268 21a2 2 0 0 0 3.464 0",
-            }
-            path {
-                d: "M15 8h6",
-            }
-            path {
-                d: "M16.243 3.757A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673A9.4 9.4 0 0 1 18.667 12",
-            }
+            path { d: "M10.268 21a2 2 0 0 0 3.464 0" }
+            path { d: "M15 8h6" }
+            path { d: "M16.243 3.757A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673A9.4 9.4 0 0 1 18.667 12" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Beaker()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BeakerProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Beaker(props: BeakerProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4.5 3h15",
-            }
-            path {
-                d: "M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3",
-            }
-            path {
-                d: "M6 14h12",
-            }
+            path { d: "M4.5 3h15" }
+            path { d: "M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3" }
+            path { d: "M6 14h12" }
         }
     }
 }

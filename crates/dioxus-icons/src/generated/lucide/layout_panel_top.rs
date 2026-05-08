@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LayoutPanelTop()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LayoutPanelTopProps {
     /// SVG width and height in pixels.

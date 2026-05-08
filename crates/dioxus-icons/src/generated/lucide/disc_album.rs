@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`DiscAlbum()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DiscAlbumProps {
     /// SVG width and height in pixels.
@@ -93,14 +94,8 @@ pub fn DiscAlbum(props: DiscAlbumProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "5",
-            }
-            path {
-                d: "M12 12h.01",
-            }
+            circle { cx: "12", cy: "12", r: "5" }
+            path { d: "M12 12h.01" }
         }
     }
 }

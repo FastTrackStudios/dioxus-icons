@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareCode()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareCodeProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn SquareCode(props: SquareCodeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m10 9-3 3 3 3",
-            }
-            path {
-                d: "m14 15 3-3-3-3",
-            }
+            path { d: "m10 9-3 3 3 3" }
+            path { d: "m14 15 3-3-3-3" }
             rect {
                 height: "18",
                 rx: "2",

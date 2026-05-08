@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareTerminal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareTerminalProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn SquareTerminal(props: SquareTerminalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m7 11 2-2-2-2",
-            }
-            path {
-                d: "M11 13h4",
-            }
+            path { d: "m7 11 2-2-2-2" }
+            path { d: "M11 13h4" }
             rect {
                 height: "18",
                 rx: "2",

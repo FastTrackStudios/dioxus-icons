@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Thermometer()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ThermometerProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Thermometer(props: ThermometerProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z",
-            }
+            path { d: "M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Monitor()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MonitorProps {
     /// SVG width and height in pixels.

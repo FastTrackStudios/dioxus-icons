@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Newspaper()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct NewspaperProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Newspaper(props: NewspaperProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 18h-5",
-            }
-            path {
-                d: "M18 14h-8",
-            }
-            path {
-                d: "M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2",
-            }
+            path { d: "M15 18h-5" }
+            path { d: "M18 14h-8" }
+            path { d: "M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2" }
             rect {
                 height: "4",
                 rx: "1",

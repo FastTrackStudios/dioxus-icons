@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`WifiSync()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WifiSyncProps {
     /// SVG width and height in pixels.
@@ -86,27 +87,13 @@ pub fn WifiSync(props: WifiSyncProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M11.965 10.105v4L13.5 12.5a5 5 0 0 1 8 1.5",
-            }
-            path {
-                d: "M11.965 14.105h4",
-            }
-            path {
-                d: "M17.965 18.105h4L20.43 19.71a5 5 0 0 1-8-1.5",
-            }
-            path {
-                d: "M2 8.82a15 15 0 0 1 20 0",
-            }
-            path {
-                d: "M21.965 22.105v-4",
-            }
-            path {
-                d: "M5 12.86a10 10 0 0 1 3-2.032",
-            }
-            path {
-                d: "M8.5 16.429h.01",
-            }
+            path { d: "M11.965 10.105v4L13.5 12.5a5 5 0 0 1 8 1.5" }
+            path { d: "M11.965 14.105h4" }
+            path { d: "M17.965 18.105h4L20.43 19.71a5 5 0 0 1-8-1.5" }
+            path { d: "M2 8.82a15 15 0 0 1 20 0" }
+            path { d: "M21.965 22.105v-4" }
+            path { d: "M5 12.86a10 10 0 0 1 3-2.032" }
+            path { d: "M8.5 16.429h.01" }
         }
     }
 }

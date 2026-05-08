@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Activity()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ActivityProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Activity(props: ActivityProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2",
-            }
+            path { d: "M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" }
         }
     }
 }

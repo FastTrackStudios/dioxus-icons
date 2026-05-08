@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Timer()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TimerProps {
     /// SVG width and height in pixels.
@@ -98,11 +99,7 @@ pub fn Timer(props: TimerProps) -> Element {
                 y1: "14",
                 y2: "11",
             }
-            circle {
-                cx: "12",
-                cy: "14",
-                r: "8",
-            }
+            circle { cx: "12", cy: "14", r: "8" }
         }
     }
 }

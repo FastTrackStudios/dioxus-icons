@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`WifiHigh()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WifiHighProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn WifiHigh(props: WifiHighProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 20h.01",
-            }
-            path {
-                d: "M5 12.859a10 10 0 0 1 14 0",
-            }
-            path {
-                d: "M8.5 16.429a5 5 0 0 1 7 0",
-            }
+            path { d: "M12 20h.01" }
+            path { d: "M5 12.859a10 10 0 0 1 14 0" }
+            path { d: "M8.5 16.429a5 5 0 0 1 7 0" }
         }
     }
 }

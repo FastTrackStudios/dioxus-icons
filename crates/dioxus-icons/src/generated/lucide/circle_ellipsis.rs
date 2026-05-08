@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleEllipsis()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleEllipsisProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn CircleEllipsis(props: CircleEllipsisProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M17 12h.01",
-            }
-            path {
-                d: "M12 12h.01",
-            }
-            path {
-                d: "M7 12h.01",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M17 12h.01" }
+            path { d: "M12 12h.01" }
+            path { d: "M7 12h.01" }
         }
     }
 }

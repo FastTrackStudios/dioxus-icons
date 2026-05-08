@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Baseline()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BaselineProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Baseline(props: BaselineProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 20h16",
-            }
-            path {
-                d: "m6 16 6-12 6 12",
-            }
-            path {
-                d: "M8 12h8",
-            }
+            path { d: "M4 20h16" }
+            path { d: "m6 16 6-12 6 12" }
+            path { d: "M8 12h8" }
         }
     }
 }

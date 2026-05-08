@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AudioWaveform()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AudioWaveformProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn AudioWaveform(props: AudioWaveformProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2",
-            }
+            path { d: "M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2" }
         }
     }
 }

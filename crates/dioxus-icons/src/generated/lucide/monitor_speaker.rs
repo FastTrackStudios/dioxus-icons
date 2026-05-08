@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MonitorSpeaker()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MonitorSpeakerProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn MonitorSpeaker(props: MonitorSpeakerProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5.5 20H8",
-            }
-            path {
-                d: "M17 9h.01",
-            }
+            path { d: "M5.5 20H8" }
+            path { d: "M17 9h.01" }
             rect {
                 height: "16",
                 rx: "2",
@@ -99,14 +96,8 @@ pub fn MonitorSpeaker(props: MonitorSpeakerProps) -> Element {
                 x: "12",
                 y: "4",
             }
-            path {
-                d: "M8 6H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4",
-            }
-            circle {
-                cx: "17",
-                cy: "15",
-                r: "1",
-            }
+            path { d: "M8 6H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4" }
+            circle { cx: "17", cy: "15", r: "1" }
         }
     }
 }

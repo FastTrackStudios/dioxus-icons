@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`UtilityPole()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UtilityPoleProps {
     /// SVG width and height in pixels.
@@ -86,27 +87,13 @@ pub fn UtilityPole(props: UtilityPoleProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 2v20",
-            }
-            path {
-                d: "M2 5h20",
-            }
-            path {
-                d: "M3 3v2",
-            }
-            path {
-                d: "M7 3v2",
-            }
-            path {
-                d: "M17 3v2",
-            }
-            path {
-                d: "M21 3v2",
-            }
-            path {
-                d: "m19 5-7 7-7-7",
-            }
+            path { d: "M12 2v20" }
+            path { d: "M2 5h20" }
+            path { d: "M3 3v2" }
+            path { d: "M7 3v2" }
+            path { d: "M17 3v2" }
+            path { d: "M21 3v2" }
+            path { d: "m19 5-7 7-7-7" }
         }
     }
 }

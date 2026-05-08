@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Joystick()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct JoystickProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn Joystick(props: JoystickProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 17a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2Z",
-            }
-            path {
-                d: "M6 15v-2",
-            }
-            path {
-                d: "M12 15V9",
-            }
-            circle {
-                cx: "12",
-                cy: "6",
-                r: "3",
-            }
+            path { d: "M21 17a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2Z" }
+            path { d: "M6 15v-2" }
+            path { d: "M12 15V9" }
+            circle { cx: "12", cy: "6", r: "3" }
         }
     }
 }

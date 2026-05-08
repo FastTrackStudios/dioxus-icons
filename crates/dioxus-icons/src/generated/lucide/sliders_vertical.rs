@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SlidersVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SlidersVerticalProps {
     /// SVG width and height in pixels.
@@ -86,33 +87,15 @@ pub fn SlidersVertical(props: SlidersVerticalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 8h4",
-            }
-            path {
-                d: "M12 21v-9",
-            }
-            path {
-                d: "M12 8V3",
-            }
-            path {
-                d: "M17 16h4",
-            }
-            path {
-                d: "M19 12V3",
-            }
-            path {
-                d: "M19 21v-5",
-            }
-            path {
-                d: "M3 14h4",
-            }
-            path {
-                d: "M5 10V3",
-            }
-            path {
-                d: "M5 21v-7",
-            }
+            path { d: "M10 8h4" }
+            path { d: "M12 21v-9" }
+            path { d: "M12 8V3" }
+            path { d: "M17 16h4" }
+            path { d: "M19 12V3" }
+            path { d: "M19 21v-5" }
+            path { d: "M3 14h4" }
+            path { d: "M5 10V3" }
+            path { d: "M5 21v-7" }
         }
     }
 }

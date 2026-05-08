@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-package_args=(-p dioxus-icons)
-if [ "${ALLOW_DIRTY:-}" = "1" ]; then
-  package_args+=(--allow-dirty)
-fi
-
-cargo package "${package_args[@]}"
+cargo package -p dioxus-icons
 
 crate_file="$(find target/package -maxdepth 1 -name 'dioxus-icons-[0-9]*.crate' | sort | tail -n 1)"
 if [ -z "$crate_file" ]; then

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MoveUpRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MoveUpRightProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn MoveUpRight(props: MoveUpRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M13 5H19V11",
-            }
-            path {
-                d: "M19 5L5 19",
-            }
+            path { d: "M13 5H19V11" }
+            path { d: "M19 5L5 19" }
         }
     }
 }

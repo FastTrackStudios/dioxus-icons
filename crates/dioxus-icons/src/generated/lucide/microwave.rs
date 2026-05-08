@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Microwave()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MicrowaveProps {
     /// SVG width and height in pixels.
@@ -100,15 +101,9 @@ pub fn Microwave(props: MicrowaveProps) -> Element {
                 x: "6",
                 y: "8",
             }
-            path {
-                d: "M18 8v7",
-            }
-            path {
-                d: "M6 19v2",
-            }
-            path {
-                d: "M18 19v2",
-            }
+            path { d: "M18 8v7" }
+            path { d: "M6 19v2" }
+            path { d: "M18 19v2" }
         }
     }
 }

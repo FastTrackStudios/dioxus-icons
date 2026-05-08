@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Type()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TypeProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Type(props: TypeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 4v16",
-            }
-            path {
-                d: "M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2",
-            }
-            path {
-                d: "M9 20h6",
-            }
+            path { d: "M12 4v16" }
+            path { d: "M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2" }
+            path { d: "M9 20h6" }
         }
     }
 }

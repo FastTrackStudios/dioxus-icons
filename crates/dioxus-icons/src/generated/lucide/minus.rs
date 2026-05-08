@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Minus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MinusProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Minus(props: MinusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 12h14",
-            }
+            path { d: "M5 12h14" }
         }
     }
 }

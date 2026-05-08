@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ClosedCaption()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ClosedCaptionProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn ClosedCaption(props: ClosedCaptionProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 9.17a3 3 0 1 0 0 5.66",
-            }
-            path {
-                d: "M17 9.17a3 3 0 1 0 0 5.66",
-            }
+            path { d: "M10 9.17a3 3 0 1 0 0 5.66" }
+            path { d: "M17 9.17a3 3 0 1 0 0 5.66" }
             rect {
                 height: "14",
                 rx: "2",

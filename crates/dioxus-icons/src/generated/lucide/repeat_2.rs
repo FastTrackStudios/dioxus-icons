@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Repeat2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Repeat2Props {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Repeat2(props: Repeat2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m2 9 3-3 3 3",
-            }
-            path {
-                d: "M13 18H7a2 2 0 0 1-2-2V6",
-            }
-            path {
-                d: "m22 15-3 3-3-3",
-            }
-            path {
-                d: "M11 6h6a2 2 0 0 1 2 2v10",
-            }
+            path { d: "m2 9 3-3 3 3" }
+            path { d: "M13 18H7a2 2 0 0 1-2-2V6" }
+            path { d: "m22 15-3 3-3-3" }
+            path { d: "M11 6h6a2 2 0 0 1 2 2v10" }
         }
     }
 }

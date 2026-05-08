@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TextCursor()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TextCursorProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn TextCursor(props: TextCursorProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1",
-            }
-            path {
-                d: "M7 22h1a4 4 0 0 0 4-4v-1",
-            }
-            path {
-                d: "M7 2h1a4 4 0 0 1 4 4v1",
-            }
+            path { d: "M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1" }
+            path { d: "M7 22h1a4 4 0 0 0 4-4v-1" }
+            path { d: "M7 2h1a4 4 0 0 1 4 4v1" }
         }
     }
 }

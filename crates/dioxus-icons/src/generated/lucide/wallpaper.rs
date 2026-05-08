@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Wallpaper()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WallpaperProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn Wallpaper(props: WallpaperProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 17v4",
-            }
-            path {
-                d: "M8 21h8",
-            }
-            path {
-                d: "m9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15",
-            }
-            circle {
-                cx: "8",
-                cy: "9",
-                r: "2",
-            }
+            path { d: "M12 17v4" }
+            path { d: "M8 21h8" }
+            path { d: "m9 17 6.1-6.1a2 2 0 0 1 2.81.01L22 15" }
+            circle { cx: "8", cy: "9", r: "2" }
             rect {
                 height: "14",
                 rx: "2",

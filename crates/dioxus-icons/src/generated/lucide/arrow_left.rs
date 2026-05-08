@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ArrowLeft()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ArrowLeftProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn ArrowLeft(props: ArrowLeftProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m12 19-7-7 7-7",
-            }
-            path {
-                d: "M19 12H5",
-            }
+            path { d: "m12 19-7-7 7-7" }
+            path { d: "M19 12H5" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Contact()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ContactProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn Contact(props: ContactProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 2v2",
-            }
-            path {
-                d: "M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2",
-            }
-            path {
-                d: "M8 2v2",
-            }
-            circle {
-                cx: "12",
-                cy: "11",
-                r: "3",
-            }
+            path { d: "M16 2v2" }
+            path { d: "M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" }
+            path { d: "M8 2v2" }
+            circle { cx: "12", cy: "11", r: "3" }
             rect {
                 height: "18",
                 rx: "2",

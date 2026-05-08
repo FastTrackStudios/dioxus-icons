@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Computer()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ComputerProps {
     /// SVG width and height in pixels.
@@ -100,12 +101,8 @@ pub fn Computer(props: ComputerProps) -> Element {
                 x: "2",
                 y: "14",
             }
-            path {
-                d: "M6 18h2",
-            }
-            path {
-                d: "M12 18h6",
-            }
+            path { d: "M6 18h2" }
+            path { d: "M12 18h6" }
         }
     }
 }

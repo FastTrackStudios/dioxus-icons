@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Glasses()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GlassesProps {
     /// SVG width and height in pixels.
@@ -86,25 +87,11 @@ pub fn Glasses(props: GlassesProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "6",
-                cy: "15",
-                r: "4",
-            }
-            circle {
-                cx: "18",
-                cy: "15",
-                r: "4",
-            }
-            path {
-                d: "M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2",
-            }
-            path {
-                d: "M2.5 13 5 7c.7-1.3 1.4-2 3-2",
-            }
-            path {
-                d: "M21.5 13 19 7c-.7-1.3-1.5-2-3-2",
-            }
+            circle { cx: "6", cy: "15", r: "4" }
+            circle { cx: "18", cy: "15", r: "4" }
+            path { d: "M14 15a2 2 0 0 0-2-2 2 2 0 0 0-2 2" }
+            path { d: "M2.5 13 5 7c.7-1.3 1.4-2 3-2" }
+            path { d: "M21.5 13 19 7c-.7-1.3-1.5-2-3-2" }
         }
     }
 }

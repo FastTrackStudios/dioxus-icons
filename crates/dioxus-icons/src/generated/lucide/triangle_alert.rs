@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TriangleAlert()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TriangleAlertProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn TriangleAlert(props: TriangleAlertProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",
-            }
-            path {
-                d: "M12 9v4",
-            }
-            path {
-                d: "M12 17h.01",
-            }
+            path { d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" }
+            path { d: "M12 9v4" }
+            path { d: "M12 17h.01" }
         }
     }
 }

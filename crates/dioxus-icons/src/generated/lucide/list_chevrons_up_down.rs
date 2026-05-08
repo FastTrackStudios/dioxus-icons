@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListChevronsUpDown()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListChevronsUpDownProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn ListChevronsUpDown(props: ListChevronsUpDownProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 5h8",
-            }
-            path {
-                d: "M3 12h8",
-            }
-            path {
-                d: "M3 19h8",
-            }
-            path {
-                d: "m15 8 3-3 3 3",
-            }
-            path {
-                d: "m15 16 3 3 3-3",
-            }
+            path { d: "M3 5h8" }
+            path { d: "M3 12h8" }
+            path { d: "M3 19h8" }
+            path { d: "m15 8 3-3 3 3" }
+            path { d: "m15 16 3 3 3-3" }
         }
     }
 }

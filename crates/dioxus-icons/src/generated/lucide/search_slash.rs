@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SearchSlash()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SearchSlashProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn SearchSlash(props: SearchSlashProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m13.5 8.5-5 5",
-            }
-            circle {
-                cx: "11",
-                cy: "11",
-                r: "8",
-            }
-            path {
-                d: "m21 21-4.3-4.3",
-            }
+            path { d: "m13.5 8.5-5 5" }
+            circle { cx: "11", cy: "11", r: "8" }
+            path { d: "m21 21-4.3-4.3" }
         }
     }
 }

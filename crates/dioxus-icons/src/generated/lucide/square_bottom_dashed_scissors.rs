@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareBottomDashedScissors()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareBottomDashedScissorsProps {
     /// SVG width and height in pixels.
@@ -116,23 +117,11 @@ pub fn SquareBottomDashedScissors(props: SquareBottomDashedScissorsProps) -> Ele
                 y1: "21",
                 y2: "21",
             }
-            path {
-                d: "M 3 5 A2 2 0 0 1 5 3",
-            }
-            path {
-                d: "M 19 3 A2 2 0 0 1 21 5",
-            }
-            path {
-                d: "M 5 21 A2 2 0 0 1 3 19",
-            }
-            path {
-                d: "M 21 19 A2 2 0 0 1 19 21",
-            }
-            circle {
-                cx: "8.5",
-                cy: "8.5",
-                r: "1.5",
-            }
+            path { d: "M 3 5 A2 2 0 0 1 5 3" }
+            path { d: "M 19 3 A2 2 0 0 1 21 5" }
+            path { d: "M 5 21 A2 2 0 0 1 3 19" }
+            path { d: "M 21 19 A2 2 0 0 1 19 21" }
+            circle { cx: "8.5", cy: "8.5", r: "1.5" }
             line {
                 x1: "9.56066",
                 x2: "12",
@@ -145,11 +134,7 @@ pub fn SquareBottomDashedScissors(props: SquareBottomDashedScissorsProps) -> Ele
                 y1: "17",
                 y2: "14.82",
             }
-            circle {
-                cx: "8.5",
-                cy: "15.5",
-                r: "1.5",
-            }
+            circle { cx: "8.5", cy: "15.5", r: "1.5" }
             line {
                 x1: "9.56066",
                 x2: "17",

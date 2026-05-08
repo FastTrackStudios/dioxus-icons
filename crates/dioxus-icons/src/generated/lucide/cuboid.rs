@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Cuboid()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CuboidProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Cuboid(props: CuboidProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 22v-8",
-            }
-            path {
-                d: "M2.336 8.89 10 14l11.715-7.029",
-            }
-            path {
-                d: "M22 14a2 2 0 0 1-.971 1.715l-10 6a2 2 0 0 1-2.138-.05l-6-4A2 2 0 0 1 2 16v-6a2 2 0 0 1 .971-1.715l10-6a2 2 0 0 1 2.138.05l6 4A2 2 0 0 1 22 8z",
-            }
+            path { d: "M10 22v-8" }
+            path { d: "M2.336 8.89 10 14l11.715-7.029" }
+            path { d: "M22 14a2 2 0 0 1-.971 1.715l-10 6a2 2 0 0 1-2.138-.05l-6-4A2 2 0 0 1 2 16v-6a2 2 0 0 1 .971-1.715l10-6a2 2 0 0 1 2.138.05l6 4A2 2 0 0 1 22 8z" }
         }
     }
 }

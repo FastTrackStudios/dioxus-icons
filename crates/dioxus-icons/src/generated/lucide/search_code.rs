@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SearchCode()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SearchCodeProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn SearchCode(props: SearchCodeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m13 13.5 2-2.5-2-2.5",
-            }
-            path {
-                d: "m21 21-4.3-4.3",
-            }
-            path {
-                d: "M9 8.5 7 11l2 2.5",
-            }
-            circle {
-                cx: "11",
-                cy: "11",
-                r: "8",
-            }
+            path { d: "m13 13.5 2-2.5-2-2.5" }
+            path { d: "m21 21-4.3-4.3" }
+            path { d: "M9 8.5 7 11l2 2.5" }
+            circle { cx: "11", cy: "11", r: "8" }
         }
     }
 }

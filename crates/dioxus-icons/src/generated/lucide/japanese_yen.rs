@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`JapaneseYen()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct JapaneseYenProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn JapaneseYen(props: JapaneseYenProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 9.5V21m0-11.5L6 3m6 6.5L18 3",
-            }
-            path {
-                d: "M6 15h12",
-            }
-            path {
-                d: "M6 11h12",
-            }
+            path { d: "M12 9.5V21m0-11.5L6 3m6 6.5L18 3" }
+            path { d: "M6 15h12" }
+            path { d: "M6 11h12" }
         }
     }
 }

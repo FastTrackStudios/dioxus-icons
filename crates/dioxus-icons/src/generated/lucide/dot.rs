@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Dot()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DotProps {
     /// SVG width and height in pixels.
@@ -86,11 +87,7 @@ pub fn Dot(props: DotProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12.1",
-                cy: "12.1",
-                r: "1",
-            }
+            circle { cx: "12.1", cy: "12.1", r: "1" }
         }
     }
 }

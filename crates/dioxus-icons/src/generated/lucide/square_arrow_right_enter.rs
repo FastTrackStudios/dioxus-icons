@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareArrowRightEnter()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareArrowRightEnterProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn SquareArrowRightEnter(props: SquareArrowRightEnterProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m10 16 4-4-4-4",
-            }
-            path {
-                d: "M3 12h11",
-            }
-            path {
-                d: "M3 8V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3",
-            }
+            path { d: "m10 16 4-4-4-4" }
+            path { d: "M3 12h11" }
+            path { d: "M3 8V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3" }
         }
     }
 }

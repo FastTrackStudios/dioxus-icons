@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Scaling()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ScalingProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Scaling(props: ScalingProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7",
-            }
-            path {
-                d: "M14 15H9v-5",
-            }
-            path {
-                d: "M16 3h5v5",
-            }
-            path {
-                d: "M21 3 9 15",
-            }
+            path { d: "M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" }
+            path { d: "M14 15H9v-5" }
+            path { d: "M16 3h5v5" }
+            path { d: "M21 3 9 15" }
         }
     }
 }

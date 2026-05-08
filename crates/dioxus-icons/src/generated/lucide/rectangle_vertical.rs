@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RectangleVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RectangleVerticalProps {
     /// SVG width and height in pixels.

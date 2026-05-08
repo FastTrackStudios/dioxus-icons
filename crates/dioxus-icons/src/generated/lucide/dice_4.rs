@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Dice4()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Dice4Props {
     /// SVG width and height in pixels.
@@ -94,18 +95,10 @@ pub fn Dice4(props: Dice4Props) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M16 8h.01",
-            }
-            path {
-                d: "M8 8h.01",
-            }
-            path {
-                d: "M8 16h.01",
-            }
-            path {
-                d: "M16 16h.01",
-            }
+            path { d: "M16 8h.01" }
+            path { d: "M8 8h.01" }
+            path { d: "M8 16h.01" }
+            path { d: "M16 16h.01" }
         }
     }
 }

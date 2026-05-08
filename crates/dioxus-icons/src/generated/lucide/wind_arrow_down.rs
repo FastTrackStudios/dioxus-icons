@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`WindArrowDown()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WindArrowDownProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn WindArrowDown(props: WindArrowDownProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 2v8",
-            }
-            path {
-                d: "M12.8 21.6A2 2 0 1 0 14 18H2",
-            }
-            path {
-                d: "M17.5 10a2.5 2.5 0 1 1 2 4H2",
-            }
-            path {
-                d: "m6 6 4 4 4-4",
-            }
+            path { d: "M10 2v8" }
+            path { d: "M12.8 21.6A2 2 0 1 0 14 18H2" }
+            path { d: "M17.5 10a2.5 2.5 0 1 1 2 4H2" }
+            path { d: "m6 6 4 4 4-4" }
         }
     }
 }

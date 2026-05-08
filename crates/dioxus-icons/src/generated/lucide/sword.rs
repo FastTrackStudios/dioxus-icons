@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Sword()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SwordProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Sword(props: SwordProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m11 19-6-6",
-            }
-            path {
-                d: "m5 21-2-2",
-            }
-            path {
-                d: "m8 16-4 4",
-            }
-            path {
-                d: "M9.5 17.5 21 6V3h-3L6.5 14.5",
-            }
+            path { d: "m11 19-6-6" }
+            path { d: "m5 21-2-2" }
+            path { d: "m8 16-4 4" }
+            path { d: "M9.5 17.5 21 6V3h-3L6.5 14.5" }
         }
     }
 }

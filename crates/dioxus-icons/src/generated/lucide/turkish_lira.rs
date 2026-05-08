@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TurkishLira()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TurkishLiraProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn TurkishLira(props: TurkishLiraProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 4 5 9",
-            }
-            path {
-                d: "m15 8.5-10 5",
-            }
-            path {
-                d: "M18 12a9 9 0 0 1-9 9V3",
-            }
+            path { d: "M15 4 5 9" }
+            path { d: "m15 8.5-10 5" }
+            path { d: "M18 12a9 9 0 0 1-9 9V3" }
         }
     }
 }

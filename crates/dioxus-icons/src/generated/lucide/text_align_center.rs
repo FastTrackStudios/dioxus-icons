@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TextAlignCenter()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TextAlignCenterProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn TextAlignCenter(props: TextAlignCenterProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 5H3",
-            }
-            path {
-                d: "M17 12H7",
-            }
-            path {
-                d: "M19 19H5",
-            }
+            path { d: "M21 5H3" }
+            path { d: "M17 12H7" }
+            path { d: "M19 19H5" }
         }
     }
 }

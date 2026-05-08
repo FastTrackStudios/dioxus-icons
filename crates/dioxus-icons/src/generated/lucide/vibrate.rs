@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Vibrate()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct VibrateProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Vibrate(props: VibrateProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m2 8 2 2-2 2 2 2-2 2",
-            }
-            path {
-                d: "m22 8-2 2 2 2-2 2 2 2",
-            }
+            path { d: "m2 8 2 2-2 2 2 2-2 2" }
+            path { d: "m22 8-2 2 2 2-2 2 2 2" }
             rect {
                 height: "14",
                 rx: "1",

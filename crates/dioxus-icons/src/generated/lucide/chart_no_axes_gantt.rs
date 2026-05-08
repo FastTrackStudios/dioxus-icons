@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChartNoAxesGantt()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChartNoAxesGanttProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn ChartNoAxesGantt(props: ChartNoAxesGanttProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 5h12",
-            }
-            path {
-                d: "M4 12h10",
-            }
-            path {
-                d: "M12 19h8",
-            }
+            path { d: "M6 5h12" }
+            path { d: "M4 12h10" }
+            path { d: "M12 19h8" }
         }
     }
 }

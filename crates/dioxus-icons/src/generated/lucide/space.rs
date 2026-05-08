@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Space()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SpaceProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Space(props: SpaceProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1",
-            }
+            path { d: "M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" }
         }
     }
 }

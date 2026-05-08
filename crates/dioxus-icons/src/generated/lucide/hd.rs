@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Hd()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HdProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Hd(props: HdProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 12H6",
-            }
-            path {
-                d: "M10 15V9",
-            }
-            path {
-                d: "M14 14.5a.5.5 0 0 0 .5.5h1a2.5 2.5 0 0 0 2.5-2.5v-1A2.5 2.5 0 0 0 15.5 9h-1a.5.5 0 0 0-.5.5z",
-            }
-            path {
-                d: "M6 15V9",
-            }
+            path { d: "M10 12H6" }
+            path { d: "M10 15V9" }
+            path { d: "M14 14.5a.5.5 0 0 0 .5.5h1a2.5 2.5 0 0 0 2.5-2.5v-1A2.5 2.5 0 0 0 15.5 9h-1a.5.5 0 0 0-.5.5z" }
+            path { d: "M6 15V9" }
             rect {
                 height: "14",
                 rx: "2",

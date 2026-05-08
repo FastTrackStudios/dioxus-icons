@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`WavesHorizontal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WavesHorizontalProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn WavesHorizontal(props: WavesHorizontalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 12q2.5 2 5 0t5 0 5 0 5 0",
-            }
-            path {
-                d: "M2 19q2.5 2 5 0t5 0 5 0 5 0",
-            }
-            path {
-                d: "M2 5q2.5 2 5 0t5 0 5 0 5 0",
-            }
+            path { d: "M2 12q2.5 2 5 0t5 0 5 0 5 0" }
+            path { d: "M2 19q2.5 2 5 0t5 0 5 0 5 0" }
+            path { d: "M2 5q2.5 2 5 0t5 0 5 0 5 0" }
         }
     }
 }

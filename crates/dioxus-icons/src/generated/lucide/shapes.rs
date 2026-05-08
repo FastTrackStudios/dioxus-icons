@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Shapes()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ShapesProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Shapes(props: ShapesProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z",
-            }
+            path { d: "M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" }
             rect {
                 height: "7",
                 rx: "1",
@@ -96,11 +95,7 @@ pub fn Shapes(props: ShapesProps) -> Element {
                 x: "3",
                 y: "14",
             }
-            circle {
-                cx: "17.5",
-                cy: "17.5",
-                r: "3.5",
-            }
+            circle { cx: "17.5", cy: "17.5", r: "3.5" }
         }
     }
 }

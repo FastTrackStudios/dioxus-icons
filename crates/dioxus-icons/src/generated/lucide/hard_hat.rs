@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`HardHat()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HardHatProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn HardHat(props: HardHatProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5",
-            }
-            path {
-                d: "M14 6a6 6 0 0 1 6 6v3",
-            }
-            path {
-                d: "M4 15v-3a6 6 0 0 1 6-6",
-            }
+            path { d: "M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5" }
+            path { d: "M14 6a6 6 0 0 1 6 6v3" }
+            path { d: "M4 15v-3a6 6 0 0 1 6-6" }
             rect {
                 height: "4",
                 rx: "1",

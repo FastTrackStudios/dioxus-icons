@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Equal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct EqualProps {
     /// SVG width and height in pixels.

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FoldHorizontal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FoldHorizontalProps {
     /// SVG width and height in pixels.
@@ -86,30 +87,14 @@ pub fn FoldHorizontal(props: FoldHorizontalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 12h6",
-            }
-            path {
-                d: "M22 12h-6",
-            }
-            path {
-                d: "M12 2v2",
-            }
-            path {
-                d: "M12 8v2",
-            }
-            path {
-                d: "M12 14v2",
-            }
-            path {
-                d: "M12 20v2",
-            }
-            path {
-                d: "m19 9-3 3 3 3",
-            }
-            path {
-                d: "m5 15 3-3-3-3",
-            }
+            path { d: "M2 12h6" }
+            path { d: "M22 12h-6" }
+            path { d: "M12 2v2" }
+            path { d: "M12 8v2" }
+            path { d: "M12 14v2" }
+            path { d: "M12 20v2" }
+            path { d: "m19 9-3 3 3 3" }
+            path { d: "m5 15 3-3-3-3" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LogOut()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LogOutProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn LogOut(props: LogOutProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m16 17 5-5-5-5",
-            }
-            path {
-                d: "M21 12H9",
-            }
-            path {
-                d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4",
-            }
+            path { d: "m16 17 5-5-5-5" }
+            path { d: "M21 12H9" }
+            path { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" }
         }
     }
 }

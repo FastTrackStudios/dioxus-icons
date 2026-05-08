@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GripHorizontal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GripHorizontalProps {
     /// SVG width and height in pixels.
@@ -86,36 +87,12 @@ pub fn GripHorizontal(props: GripHorizontalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "9",
-                r: "1",
-            }
-            circle {
-                cx: "19",
-                cy: "9",
-                r: "1",
-            }
-            circle {
-                cx: "5",
-                cy: "9",
-                r: "1",
-            }
-            circle {
-                cx: "12",
-                cy: "15",
-                r: "1",
-            }
-            circle {
-                cx: "19",
-                cy: "15",
-                r: "1",
-            }
-            circle {
-                cx: "5",
-                cy: "15",
-                r: "1",
-            }
+            circle { cx: "12", cy: "9", r: "1" }
+            circle { cx: "19", cy: "9", r: "1" }
+            circle { cx: "5", cy: "9", r: "1" }
+            circle { cx: "12", cy: "15", r: "1" }
+            circle { cx: "19", cy: "15", r: "1" }
+            circle { cx: "5", cy: "15", r: "1" }
         }
     }
 }

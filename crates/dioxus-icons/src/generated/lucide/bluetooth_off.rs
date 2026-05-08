@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BluetoothOff()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BluetoothOffProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn BluetoothOff(props: BluetoothOffProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m17 17-5 5V12l-5 5",
-            }
-            path {
-                d: "m2 2 20 20",
-            }
-            path {
-                d: "M14.5 9.5 17 7l-5-5v4.5",
-            }
+            path { d: "m17 17-5 5V12l-5 5" }
+            path { d: "m2 2 20 20" }
+            path { d: "M14.5 9.5 17 7l-5-5v4.5" }
         }
     }
 }

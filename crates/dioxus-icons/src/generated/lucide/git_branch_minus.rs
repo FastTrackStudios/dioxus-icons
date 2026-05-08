@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GitBranchMinus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GitBranchMinusProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn GitBranchMinus(props: GitBranchMinusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 6a9 9 0 0 0-9 9V3",
-            }
-            path {
-                d: "M21 18h-6",
-            }
-            circle {
-                cx: "18",
-                cy: "6",
-                r: "3",
-            }
-            circle {
-                cx: "6",
-                cy: "18",
-                r: "3",
-            }
+            path { d: "M15 6a9 9 0 0 0-9 9V3" }
+            path { d: "M21 18h-6" }
+            circle { cx: "18", cy: "6", r: "3" }
+            circle { cx: "6", cy: "18", r: "3" }
         }
     }
 }

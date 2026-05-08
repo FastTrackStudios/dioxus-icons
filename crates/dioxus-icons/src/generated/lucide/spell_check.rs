@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SpellCheck()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SpellCheckProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn SpellCheck(props: SpellCheckProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m6 16 6-12 6 12",
-            }
-            path {
-                d: "M8 12h8",
-            }
-            path {
-                d: "m16 20 2 2 4-4",
-            }
+            path { d: "m6 16 6-12 6 12" }
+            path { d: "M8 12h8" }
+            path { d: "m16 20 2 2 4-4" }
         }
     }
 }

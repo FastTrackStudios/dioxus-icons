@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListOrdered()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListOrderedProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,12 @@ pub fn ListOrdered(props: ListOrderedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M11 5h10",
-            }
-            path {
-                d: "M11 12h10",
-            }
-            path {
-                d: "M11 19h10",
-            }
-            path {
-                d: "M4 4h1v5",
-            }
-            path {
-                d: "M4 9h2",
-            }
-            path {
-                d: "M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02",
-            }
+            path { d: "M11 5h10" }
+            path { d: "M11 12h10" }
+            path { d: "M11 19h10" }
+            path { d: "M4 4h1v5" }
+            path { d: "M4 9h2" }
+            path { d: "M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02" }
         }
     }
 }

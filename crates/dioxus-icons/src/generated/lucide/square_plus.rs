@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquarePlus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquarePlusProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn SquarePlus(props: SquarePlusProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M8 12h8",
-            }
-            path {
-                d: "M12 8v8",
-            }
+            path { d: "M8 12h8" }
+            path { d: "M12 8v8" }
         }
     }
 }

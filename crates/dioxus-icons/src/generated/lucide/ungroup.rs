@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Ungroup()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UngroupProps {
     /// SVG width and height in pixels.

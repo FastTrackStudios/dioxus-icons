@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CalendarMinus2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CalendarMinus2Props {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn CalendarMinus2(props: CalendarMinus2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M8 2v4",
-            }
-            path {
-                d: "M16 2v4",
-            }
+            path { d: "M8 2v4" }
+            path { d: "M16 2v4" }
             rect {
                 height: "18",
                 rx: "2",
@@ -99,12 +96,8 @@ pub fn CalendarMinus2(props: CalendarMinus2Props) -> Element {
                 x: "3",
                 y: "4",
             }
-            path {
-                d: "M3 10h18",
-            }
-            path {
-                d: "M10 16h4",
-            }
+            path { d: "M3 10h18" }
+            path { d: "M10 16h4" }
         }
     }
 }

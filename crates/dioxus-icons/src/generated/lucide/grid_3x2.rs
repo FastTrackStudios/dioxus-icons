@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Grid3x2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Grid3x2Props {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Grid3x2(props: Grid3x2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 3v18",
-            }
-            path {
-                d: "M3 12h18",
-            }
-            path {
-                d: "M9 3v18",
-            }
+            path { d: "M15 3v18" }
+            path { d: "M3 12h18" }
+            path { d: "M9 3v18" }
             rect {
                 height: "18",
                 rx: "2",

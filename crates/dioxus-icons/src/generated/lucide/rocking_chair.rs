@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RockingChair()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RockingChairProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn RockingChair(props: RockingChairProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m15 13 3.708 7.416",
-            }
-            path {
-                d: "M3 19a15 15 0 0 0 18 0",
-            }
-            path {
-                d: "m3 2 3.21 9.633A2 2 0 0 0 8.109 13H18",
-            }
-            path {
-                d: "m9 13-3.708 7.416",
-            }
+            path { d: "m15 13 3.708 7.416" }
+            path { d: "M3 19a15 15 0 0 0 18 0" }
+            path { d: "m3 2 3.21 9.633A2 2 0 0 0 8.109 13H18" }
+            path { d: "m9 13-3.708 7.416" }
         }
     }
 }

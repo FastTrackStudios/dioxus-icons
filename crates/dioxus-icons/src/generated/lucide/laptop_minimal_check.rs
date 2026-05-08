@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LaptopMinimalCheck()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LaptopMinimalCheckProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn LaptopMinimalCheck(props: LaptopMinimalCheckProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 20h20",
-            }
-            path {
-                d: "m9 10 2 2 4-4",
-            }
+            path { d: "M2 20h20" }
+            path { d: "m9 10 2 2 4-4" }
             rect {
                 height: "12",
                 rx: "2",

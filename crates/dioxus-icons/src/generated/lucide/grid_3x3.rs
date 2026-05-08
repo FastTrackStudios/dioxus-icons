@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Grid3x3()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Grid3x3Props {
     /// SVG width and height in pixels.
@@ -93,18 +94,10 @@ pub fn Grid3x3(props: Grid3x3Props) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M3 9h18",
-            }
-            path {
-                d: "M3 15h18",
-            }
-            path {
-                d: "M9 3v18",
-            }
-            path {
-                d: "M15 3v18",
-            }
+            path { d: "M3 9h18" }
+            path { d: "M3 15h18" }
+            path { d: "M9 3v18" }
+            path { d: "M15 3v18" }
         }
     }
 }

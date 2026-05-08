@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Anchor()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AnchorProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn Anchor(props: AnchorProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 6v16",
-            }
-            path {
-                d: "m19 13 2-1a9 9 0 0 1-18 0l2 1",
-            }
-            path {
-                d: "M9 11h6",
-            }
-            circle {
-                cx: "12",
-                cy: "4",
-                r: "2",
-            }
+            path { d: "M12 6v16" }
+            path { d: "m19 13 2-1a9 9 0 0 1-18 0l2 1" }
+            path { d: "M9 11h6" }
+            circle { cx: "12", cy: "4", r: "2" }
         }
     }
 }

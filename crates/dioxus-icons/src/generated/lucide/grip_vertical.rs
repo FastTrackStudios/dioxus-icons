@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GripVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GripVerticalProps {
     /// SVG width and height in pixels.
@@ -86,36 +87,12 @@ pub fn GripVertical(props: GripVerticalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "9",
-                cy: "12",
-                r: "1",
-            }
-            circle {
-                cx: "9",
-                cy: "5",
-                r: "1",
-            }
-            circle {
-                cx: "9",
-                cy: "19",
-                r: "1",
-            }
-            circle {
-                cx: "15",
-                cy: "12",
-                r: "1",
-            }
-            circle {
-                cx: "15",
-                cy: "5",
-                r: "1",
-            }
-            circle {
-                cx: "15",
-                cy: "19",
-                r: "1",
-            }
+            circle { cx: "9", cy: "12", r: "1" }
+            circle { cx: "9", cy: "5", r: "1" }
+            circle { cx: "9", cy: "19", r: "1" }
+            circle { cx: "15", cy: "12", r: "1" }
+            circle { cx: "15", cy: "5", r: "1" }
+            circle { cx: "15", cy: "19", r: "1" }
         }
     }
 }

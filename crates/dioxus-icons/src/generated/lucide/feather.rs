@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Feather()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FeatherProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Feather(props: FeatherProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z",
-            }
-            path {
-                d: "M16 8 2 22",
-            }
-            path {
-                d: "M17.5 15H9",
-            }
+            path { d: "M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z" }
+            path { d: "M16 8 2 22" }
+            path { d: "M17.5 15H9" }
         }
     }
 }

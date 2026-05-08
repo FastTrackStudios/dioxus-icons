@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Captions()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CaptionsProps {
     /// SVG width and height in pixels.
@@ -94,9 +95,7 @@ pub fn Captions(props: CaptionsProps) -> Element {
                 x: "3",
                 y: "5",
             }
-            path {
-                d: "M7 15h4M15 15h2M7 11h2M13 11h4",
-            }
+            path { d: "M7 15h4M15 15h2M7 11h2M13 11h4" }
         }
     }
 }

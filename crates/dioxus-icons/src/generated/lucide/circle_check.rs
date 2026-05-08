@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleCheck()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleCheckProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn CircleCheck(props: CircleCheckProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "m9 12 2 2 4-4",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "m9 12 2 2 4-4" }
         }
     }
 }

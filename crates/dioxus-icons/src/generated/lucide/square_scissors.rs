@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareScissors()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareScissorsProps {
     /// SVG width and height in pixels.
@@ -93,11 +94,7 @@ pub fn SquareScissors(props: SquareScissorsProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            circle {
-                cx: "8.5",
-                cy: "8.5",
-                r: "1.5",
-            }
+            circle { cx: "8.5", cy: "8.5", r: "1.5" }
             line {
                 x1: "9.56066",
                 x2: "12",
@@ -110,11 +107,7 @@ pub fn SquareScissors(props: SquareScissorsProps) -> Element {
                 y1: "17",
                 y2: "14.82",
             }
-            circle {
-                cx: "8.5",
-                cy: "15.5",
-                r: "1.5",
-            }
+            circle { cx: "8.5", cy: "15.5", r: "1.5" }
             line {
                 x1: "9.56066",
                 x2: "17",

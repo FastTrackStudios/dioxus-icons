@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Squircle()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquircleProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Squircle(props: SquircleProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 3c7.2 0 9 1.8 9 9s-1.8 9-9 9-9-1.8-9-9 1.8-9 9-9",
-            }
+            path { d: "M12 3c7.2 0 9 1.8 9 9s-1.8 9-9 9-9-1.8-9-9 1.8-9 9-9" }
         }
     }
 }

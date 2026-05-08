@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Axis3d()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Axis3dProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Axis3d(props: Axis3dProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M13.5 10.5 15 9",
-            }
-            path {
-                d: "M4 4v15a1 1 0 0 0 1 1h15",
-            }
-            path {
-                d: "M4.293 19.707 6 18",
-            }
-            path {
-                d: "m9 15 1.5-1.5",
-            }
+            path { d: "M13.5 10.5 15 9" }
+            path { d: "M4 4v15a1 1 0 0 0 1 1h15" }
+            path { d: "M4.293 19.707 6 18" }
+            path { d: "m9 15 1.5-1.5" }
         }
     }
 }

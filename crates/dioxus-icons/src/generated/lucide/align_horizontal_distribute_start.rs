@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignHorizontalDistributeStart()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignHorizontalDistributeStartProps {
     /// SVG width and height in pixels.
@@ -100,12 +101,8 @@ pub fn AlignHorizontalDistributeStart(props: AlignHorizontalDistributeStartProps
                 x: "14",
                 y: "7",
             }
-            path {
-                d: "M4 2v20",
-            }
-            path {
-                d: "M14 2v20",
-            }
+            path { d: "M4 2v20" }
+            path { d: "M14 2v20" }
         }
     }
 }

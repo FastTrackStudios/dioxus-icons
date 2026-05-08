@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Tablets()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TabletsProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn Tablets(props: TabletsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "7",
-                cy: "7",
-                r: "5",
-            }
-            circle {
-                cx: "17",
-                cy: "17",
-                r: "5",
-            }
-            path {
-                d: "M12 17h10",
-            }
-            path {
-                d: "m3.46 10.54 7.08-7.08",
-            }
+            circle { cx: "7", cy: "7", r: "5" }
+            circle { cx: "17", cy: "17", r: "5" }
+            path { d: "M12 17h10" }
+            path { d: "m3.46 10.54 7.08-7.08" }
         }
     }
 }

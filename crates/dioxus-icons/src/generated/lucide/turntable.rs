@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Turntable()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TurntableProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn Turntable(props: TurntableProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 12.01h.01",
-            }
-            path {
-                d: "M18 8v4a8 8 0 0 1-1.07 4",
-            }
-            circle {
-                cx: "10",
-                cy: "12",
-                r: "4",
-            }
+            path { d: "M10 12.01h.01" }
+            path { d: "M18 8v4a8 8 0 0 1-1.07 4" }
+            circle { cx: "10", cy: "12", r: "4" }
             rect {
                 height: "16",
                 rx: "2",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Mountain()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MountainProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Mountain(props: MountainProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m8 3 4 8 5-5 5 15H2L8 3z",
-            }
+            path { d: "m8 3 4 8 5-5 5 15H2L8 3z" }
         }
     }
 }

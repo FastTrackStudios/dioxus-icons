@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`NotebookText()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct NotebookTextProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn NotebookText(props: NotebookTextProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 6h4",
-            }
-            path {
-                d: "M2 10h4",
-            }
-            path {
-                d: "M2 14h4",
-            }
-            path {
-                d: "M2 18h4",
-            }
+            path { d: "M2 6h4" }
+            path { d: "M2 10h4" }
+            path { d: "M2 14h4" }
+            path { d: "M2 18h4" }
             rect {
                 height: "20",
                 rx: "2",
@@ -105,15 +98,9 @@ pub fn NotebookText(props: NotebookTextProps) -> Element {
                 x: "4",
                 y: "2",
             }
-            path {
-                d: "M9.5 8h5",
-            }
-            path {
-                d: "M9.5 12H16",
-            }
-            path {
-                d: "M9.5 16H14",
-            }
+            path { d: "M9.5 8h5" }
+            path { d: "M9.5 12H16" }
+            path { d: "M9.5 16H14" }
         }
     }
 }

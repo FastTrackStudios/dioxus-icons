@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Frown()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FrownProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn Frown(props: FrownProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M16 16s-1.5-2-4-2-4 2-4 2",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M16 16s-1.5-2-4-2-4 2-4 2" }
             line {
                 x1: "9",
                 x2: "9.01",

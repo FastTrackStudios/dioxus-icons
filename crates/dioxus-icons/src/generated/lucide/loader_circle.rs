@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LoaderCircle()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LoaderCircleProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn LoaderCircle(props: LoaderCircleProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 12a9 9 0 1 1-6.219-8.56",
-            }
+            path { d: "M21 12a9 9 0 1 1-6.219-8.56" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MouseLeft()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MouseLeftProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn MouseLeft(props: MouseLeftProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 7.318V10",
-            }
-            path {
-                d: "M5 10v5a7 7 0 0 0 14 0V9c0-3.527-2.608-6.515-6-7",
-            }
-            circle {
-                cx: "7",
-                cy: "4",
-                r: "2",
-            }
+            path { d: "M12 7.318V10" }
+            path { d: "M5 10v5a7 7 0 0 0 14 0V9c0-3.527-2.608-6.515-6-7" }
+            circle { cx: "7", cy: "4", r: "2" }
         }
     }
 }

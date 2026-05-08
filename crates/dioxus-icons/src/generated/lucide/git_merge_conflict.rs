@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GitMergeConflict()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GitMergeConflictProps {
     /// SVG width and height in pixels.
@@ -86,23 +87,11 @@ pub fn GitMergeConflict(props: GitMergeConflictProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 6h4a2 2 0 0 1 2 2v7",
-            }
-            path {
-                d: "M6 12v9",
-            }
-            path {
-                d: "M9 3 3 9",
-            }
-            path {
-                d: "M9 9 3 3",
-            }
-            circle {
-                cx: "18",
-                cy: "18",
-                r: "3",
-            }
+            path { d: "M12 6h4a2 2 0 0 1 2 2v7" }
+            path { d: "M6 12v9" }
+            path { d: "M9 3 3 9" }
+            path { d: "M9 9 3 3" }
+            circle { cx: "18", cy: "18", r: "3" }
         }
     }
 }

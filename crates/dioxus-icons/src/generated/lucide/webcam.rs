@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Webcam()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WebcamProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn Webcam(props: WebcamProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "10",
-                r: "8",
-            }
-            circle {
-                cx: "12",
-                cy: "10",
-                r: "3",
-            }
-            path {
-                d: "M7 22h10",
-            }
-            path {
-                d: "M12 22v-4",
-            }
+            circle { cx: "12", cy: "10", r: "8" }
+            circle { cx: "12", cy: "10", r: "3" }
+            path { d: "M7 22h10" }
+            path { d: "M12 22v-4" }
         }
     }
 }

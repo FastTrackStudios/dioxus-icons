@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`IceCreamCone()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct IceCreamConeProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn IceCreamCone(props: IceCreamConeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11",
-            }
-            path {
-                d: "M17 7A5 5 0 0 0 7 7",
-            }
-            path {
-                d: "M17 7a2 2 0 0 1 0 4H7a2 2 0 0 1 0-4",
-            }
+            path { d: "m7 11 4.08 10.35a1 1 0 0 0 1.84 0L17 11" }
+            path { d: "M17 7A5 5 0 0 0 7 7" }
+            path { d: "M17 7a2 2 0 0 1 0 4H7a2 2 0 0 1 0-4" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Bandage()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BandageProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,12 @@ pub fn Bandage(props: BandageProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 10.01h.01",
-            }
-            path {
-                d: "M10 14.01h.01",
-            }
-            path {
-                d: "M14 10.01h.01",
-            }
-            path {
-                d: "M14 14.01h.01",
-            }
-            path {
-                d: "M18 6v12",
-            }
-            path {
-                d: "M6 6v12",
-            }
+            path { d: "M10 10.01h.01" }
+            path { d: "M10 14.01h.01" }
+            path { d: "M14 10.01h.01" }
+            path { d: "M14 14.01h.01" }
+            path { d: "M18 6v12" }
+            path { d: "M6 6v12" }
             rect {
                 height: "12",
                 rx: "2",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareSigma()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareSigmaProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn SquareSigma(props: SquareSigmaProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M16 8.9V7H8l4 5-4 5h8v-1.9",
-            }
+            path { d: "M16 8.9V7H8l4 5-4 5h8v-1.9" }
         }
     }
 }

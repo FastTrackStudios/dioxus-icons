@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ClipboardPen()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ClipboardPenProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn ClipboardPen(props: ClipboardPenProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 4h2a2 2 0 0 1 2 2v2",
-            }
-            path {
-                d: "M21.34 15.664a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z",
-            }
-            path {
-                d: "M8 22H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2",
-            }
+            path { d: "M16 4h2a2 2 0 0 1 2 2v2" }
+            path { d: "M21.34 15.664a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" }
+            path { d: "M8 22H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" }
             rect {
                 height: "4",
                 rx: "1",

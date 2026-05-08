@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Meh()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MehProps {
     /// SVG width and height in pixels.
@@ -86,11 +87,7 @@ pub fn Meh(props: MehProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
             line {
                 x1: "8",
                 x2: "16",

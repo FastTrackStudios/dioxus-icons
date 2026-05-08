@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Citrus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CitrusProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Citrus(props: CitrusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21.66 17.67a1.08 1.08 0 0 1-.04 1.6A12 12 0 0 1 4.73 2.38a1.1 1.1 0 0 1 1.61-.04z",
-            }
-            path {
-                d: "M19.65 15.66A8 8 0 0 1 8.35 4.34",
-            }
-            path {
-                d: "m14 10-5.5 5.5",
-            }
-            path {
-                d: "M14 17.85V10H6.15",
-            }
+            path { d: "M21.66 17.67a1.08 1.08 0 0 1-.04 1.6A12 12 0 0 1 4.73 2.38a1.1 1.1 0 0 1 1.61-.04z" }
+            path { d: "M19.65 15.66A8 8 0 0 1 8.35 4.34" }
+            path { d: "m14 10-5.5 5.5" }
+            path { d: "M14 17.85V10H6.15" }
         }
     }
 }

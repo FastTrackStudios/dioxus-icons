@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Settings2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Settings2Props {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn Settings2(props: Settings2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 17H5",
-            }
-            path {
-                d: "M19 7h-9",
-            }
-            circle {
-                cx: "17",
-                cy: "17",
-                r: "3",
-            }
-            circle {
-                cx: "7",
-                cy: "7",
-                r: "3",
-            }
+            path { d: "M14 17H5" }
+            path { d: "M19 7h-9" }
+            circle { cx: "17", cy: "17", r: "3" }
+            circle { cx: "7", cy: "7", r: "3" }
         }
     }
 }

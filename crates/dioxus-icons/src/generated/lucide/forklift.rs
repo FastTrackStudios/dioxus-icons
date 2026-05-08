@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Forklift()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ForkliftProps {
     /// SVG width and height in pixels.
@@ -86,31 +87,13 @@ pub fn Forklift(props: ForkliftProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 12H5a2 2 0 0 0-2 2v5",
-            }
-            path {
-                d: "M15 19h7",
-            }
-            path {
-                d: "M16 19V2",
-            }
-            path {
-                d: "M6 12V7a2 2 0 0 1 2-2h2.172a2 2 0 0 1 1.414.586l3.828 3.828A2 2 0 0 1 16 10.828",
-            }
-            path {
-                d: "M7 19h4",
-            }
-            circle {
-                cx: "13",
-                cy: "19",
-                r: "2",
-            }
-            circle {
-                cx: "5",
-                cy: "19",
-                r: "2",
-            }
+            path { d: "M12 12H5a2 2 0 0 0-2 2v5" }
+            path { d: "M15 19h7" }
+            path { d: "M16 19V2" }
+            path { d: "M6 12V7a2 2 0 0 1 2-2h2.172a2 2 0 0 1 1.414.586l3.828 3.828A2 2 0 0 1 16 10.828" }
+            path { d: "M7 19h4" }
+            circle { cx: "13", cy: "19", r: "2" }
+            circle { cx: "5", cy: "19", r: "2" }
         }
     }
 }

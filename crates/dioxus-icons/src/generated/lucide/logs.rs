@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Logs()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LogsProps {
     /// SVG width and height in pixels.
@@ -86,33 +87,15 @@ pub fn Logs(props: LogsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 5h1",
-            }
-            path {
-                d: "M3 12h1",
-            }
-            path {
-                d: "M3 19h1",
-            }
-            path {
-                d: "M8 5h1",
-            }
-            path {
-                d: "M8 12h1",
-            }
-            path {
-                d: "M8 19h1",
-            }
-            path {
-                d: "M13 5h8",
-            }
-            path {
-                d: "M13 12h8",
-            }
-            path {
-                d: "M13 19h8",
-            }
+            path { d: "M3 5h1" }
+            path { d: "M3 12h1" }
+            path { d: "M3 19h1" }
+            path { d: "M8 5h1" }
+            path { d: "M8 12h1" }
+            path { d: "M8 19h1" }
+            path { d: "M13 5h8" }
+            path { d: "M13 12h8" }
+            path { d: "M13 19h8" }
         }
     }
 }

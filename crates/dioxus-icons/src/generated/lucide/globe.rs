@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Globe()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GlobeProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn Globe(props: GlobeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20",
-            }
-            path {
-                d: "M2 12h20",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" }
+            path { d: "M2 12h20" }
         }
     }
 }

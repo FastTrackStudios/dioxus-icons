@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Blend()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BlendProps {
     /// SVG width and height in pixels.
@@ -86,16 +87,8 @@ pub fn Blend(props: BlendProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "9",
-                cy: "9",
-                r: "7",
-            }
-            circle {
-                cx: "15",
-                cy: "15",
-                r: "7",
-            }
+            circle { cx: "9", cy: "9", r: "7" }
+            circle { cx: "15", cy: "15", r: "7" }
         }
     }
 }

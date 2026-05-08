@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RussianRuble()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RussianRubleProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn RussianRuble(props: RussianRubleProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 11h8a4 4 0 0 0 0-8H9v18",
-            }
-            path {
-                d: "M6 15h8",
-            }
+            path { d: "M6 11h8a4 4 0 0 0 0-8H9v18" }
+            path { d: "M6 15h8" }
         }
     }
 }

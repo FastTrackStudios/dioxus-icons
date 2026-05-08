@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`DatabaseZap()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DatabaseZapProps {
     /// SVG width and height in pixels.
@@ -92,18 +93,10 @@ pub fn DatabaseZap(props: DatabaseZapProps) -> Element {
                 rx: "9",
                 ry: "3",
             }
-            path {
-                d: "M3 5V19A9 3 0 0 0 15 21.84",
-            }
-            path {
-                d: "M21 5V8",
-            }
-            path {
-                d: "M21 12L18 17H22L19 22",
-            }
-            path {
-                d: "M3 12A9 3 0 0 0 14.59 14.87",
-            }
+            path { d: "M3 5V19A9 3 0 0 0 15 21.84" }
+            path { d: "M21 5V8" }
+            path { d: "M21 12L18 17H22L19 22" }
+            path { d: "M3 12A9 3 0 0 0 14.59 14.87" }
         }
     }
 }

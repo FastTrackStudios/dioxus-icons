@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ReplaceAll()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ReplaceAllProps {
     /// SVG width and height in pixels.
@@ -86,30 +87,14 @@ pub fn ReplaceAll(props: ReplaceAllProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 14a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1",
-            }
-            path {
-                d: "M14 4a1 1 0 0 1 1-1",
-            }
-            path {
-                d: "M15 10a1 1 0 0 1-1-1",
-            }
-            path {
-                d: "M19 14a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1",
-            }
-            path {
-                d: "M21 4a1 1 0 0 0-1-1",
-            }
-            path {
-                d: "M21 9a1 1 0 0 1-1 1",
-            }
-            path {
-                d: "m3 7 3 3 3-3",
-            }
-            path {
-                d: "M6 10V5a2 2 0 0 1 2-2h2",
-            }
+            path { d: "M14 14a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1" }
+            path { d: "M14 4a1 1 0 0 1 1-1" }
+            path { d: "M15 10a1 1 0 0 1-1-1" }
+            path { d: "M19 14a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1" }
+            path { d: "M21 4a1 1 0 0 0-1-1" }
+            path { d: "M21 9a1 1 0 0 1-1 1" }
+            path { d: "m3 7 3 3 3-3" }
+            path { d: "M6 10V5a2 2 0 0 1 2-2h2" }
             rect {
                 height: "7",
                 rx: "1",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MarsStroke()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MarsStrokeProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn MarsStroke(props: MarsStrokeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m14 6 4 4",
-            }
-            path {
-                d: "M17 3h4v4",
-            }
-            path {
-                d: "m21 3-7.75 7.75",
-            }
-            circle {
-                cx: "9",
-                cy: "15",
-                r: "6",
-            }
+            path { d: "m14 6 4 4" }
+            path { d: "M17 3h4v4" }
+            path { d: "m21 3-7.75 7.75" }
+            circle { cx: "9", cy: "15", r: "6" }
         }
     }
 }

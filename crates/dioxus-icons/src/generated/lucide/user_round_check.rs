@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`UserRoundCheck()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UserRoundCheckProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn UserRoundCheck(props: UserRoundCheckProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 21a8 8 0 0 1 13.292-6",
-            }
-            circle {
-                cx: "10",
-                cy: "8",
-                r: "5",
-            }
-            path {
-                d: "m16 19 2 2 4-4",
-            }
+            path { d: "M2 21a8 8 0 0 1 13.292-6" }
+            circle { cx: "10", cy: "8", r: "5" }
+            path { d: "m16 19 2 2 4-4" }
         }
     }
 }

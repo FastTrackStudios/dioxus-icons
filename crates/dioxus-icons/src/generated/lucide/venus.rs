@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Venus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct VenusProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn Venus(props: VenusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 15v7",
-            }
-            path {
-                d: "M9 19h6",
-            }
-            circle {
-                cx: "12",
-                cy: "9",
-                r: "6",
-            }
+            path { d: "M12 15v7" }
+            path { d: "M9 19h6" }
+            circle { cx: "12", cy: "9", r: "6" }
         }
     }
 }

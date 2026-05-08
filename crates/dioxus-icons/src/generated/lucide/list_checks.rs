@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListChecks()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListChecksProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn ListChecks(props: ListChecksProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M13 5h8",
-            }
-            path {
-                d: "M13 12h8",
-            }
-            path {
-                d: "M13 19h8",
-            }
-            path {
-                d: "m3 17 2 2 4-4",
-            }
-            path {
-                d: "m3 7 2 2 4-4",
-            }
+            path { d: "M13 5h8" }
+            path { d: "M13 12h8" }
+            path { d: "M13 19h8" }
+            path { d: "m3 17 2 2 4-4" }
+            path { d: "m3 7 2 2 4-4" }
         }
     }
 }

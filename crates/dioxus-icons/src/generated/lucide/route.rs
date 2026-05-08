@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Route()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RouteProps {
     /// SVG width and height in pixels.
@@ -86,19 +87,9 @@ pub fn Route(props: RouteProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "6",
-                cy: "19",
-                r: "3",
-            }
-            path {
-                d: "M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15",
-            }
-            circle {
-                cx: "18",
-                cy: "5",
-                r: "3",
-            }
+            circle { cx: "6", cy: "19", r: "3" }
+            path { d: "M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" }
+            circle { cx: "18", cy: "5", r: "3" }
         }
     }
 }

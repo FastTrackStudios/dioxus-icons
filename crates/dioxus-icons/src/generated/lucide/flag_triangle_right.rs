@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FlagTriangleRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FlagTriangleRightProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn FlagTriangleRight(props: FlagTriangleRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 22V2.8a.8.8 0 0 1 1.17-.71l11.38 5.69a.8.8 0 0 1 0 1.44L6 15.5",
-            }
+            path { d: "M6 22V2.8a.8.8 0 0 1 1.17-.71l11.38 5.69a.8.8 0 0 1 0 1.44L6 15.5" }
         }
     }
 }

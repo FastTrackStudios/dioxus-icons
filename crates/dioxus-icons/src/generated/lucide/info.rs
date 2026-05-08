@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Info()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct InfoProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn Info(props: InfoProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M12 16v-4",
-            }
-            path {
-                d: "M12 8h.01",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M12 16v-4" }
+            path { d: "M12 8h.01" }
         }
     }
 }

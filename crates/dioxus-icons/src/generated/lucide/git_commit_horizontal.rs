@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GitCommitHorizontal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GitCommitHorizontalProps {
     /// SVG width and height in pixels.
@@ -86,11 +87,7 @@ pub fn GitCommitHorizontal(props: GitCommitHorizontalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "3",
-            }
+            circle { cx: "12", cy: "12", r: "3" }
             line {
                 x1: "3",
                 x2: "9",

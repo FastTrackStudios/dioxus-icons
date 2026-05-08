@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareActivity()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareActivityProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn SquareActivity(props: SquareActivityProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M17 12h-2l-2 5-2-10-2 5H7",
-            }
+            path { d: "M17 12h-2l-2 5-2-10-2 5H7" }
         }
     }
 }

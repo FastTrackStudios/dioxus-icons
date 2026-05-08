@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Sheet()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SheetProps {
     /// SVG width and height in pixels.

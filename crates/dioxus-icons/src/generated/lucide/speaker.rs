@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Speaker()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SpeakerProps {
     /// SVG width and height in pixels.
@@ -93,17 +94,9 @@ pub fn Speaker(props: SpeakerProps) -> Element {
                 x: "4",
                 y: "2",
             }
-            path {
-                d: "M12 6h.01",
-            }
-            circle {
-                cx: "12",
-                cy: "14",
-                r: "4",
-            }
-            path {
-                d: "M12 14h.01",
-            }
+            path { d: "M12 6h.01" }
+            circle { cx: "12", cy: "14", r: "4" }
+            path { d: "M12 14h.01" }
         }
     }
 }

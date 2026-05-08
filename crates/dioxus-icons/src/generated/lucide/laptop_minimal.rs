@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LaptopMinimal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LaptopMinimalProps {
     /// SVG width and height in pixels.

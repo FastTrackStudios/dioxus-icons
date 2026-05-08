@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareEqual()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareEqualProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn SquareEqual(props: SquareEqualProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M7 10h10",
-            }
-            path {
-                d: "M7 14h10",
-            }
+            path { d: "M7 10h10" }
+            path { d: "M7 14h10" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AtSign()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AtSignProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn AtSign(props: AtSignProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "4",
-            }
-            path {
-                d: "M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8",
-            }
+            circle { cx: "12", cy: "12", r: "4" }
+            path { d: "M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" }
         }
     }
 }

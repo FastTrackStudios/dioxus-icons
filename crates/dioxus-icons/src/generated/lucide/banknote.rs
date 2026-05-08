@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Banknote()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BanknoteProps {
     /// SVG width and height in pixels.
@@ -93,14 +94,8 @@ pub fn Banknote(props: BanknoteProps) -> Element {
                 x: "2",
                 y: "6",
             }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "2",
-            }
-            path {
-                d: "M6 12h.01M18 12h.01",
-            }
+            circle { cx: "12", cy: "12", r: "2" }
+            path { d: "M6 12h.01M18 12h.01" }
         }
     }
 }

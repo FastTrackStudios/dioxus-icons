@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelTop()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelTopProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn PanelTop(props: PanelTopProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M3 9h18",
-            }
+            path { d: "M3 9h18" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareLibrary()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareLibraryProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn SquareLibrary(props: SquareLibraryProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M7 7v10",
-            }
-            path {
-                d: "M11 7v10",
-            }
-            path {
-                d: "m15 7 2 10",
-            }
+            path { d: "M7 7v10" }
+            path { d: "M11 7v10" }
+            path { d: "m15 7 2 10" }
         }
     }
 }

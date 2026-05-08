@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PhilippinePeso()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PhilippinePesoProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn PhilippinePeso(props: PhilippinePesoProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M20 11H4",
-            }
-            path {
-                d: "M20 7H4",
-            }
-            path {
-                d: "M7 21V4a1 1 0 0 1 1-1h4a1 1 0 0 1 0 12H7",
-            }
+            path { d: "M20 11H4" }
+            path { d: "M20 7H4" }
+            path { d: "M7 21V4a1 1 0 0 1 1-1h4a1 1 0 0 1 0 12H7" }
         }
     }
 }

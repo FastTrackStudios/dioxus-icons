@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Minimize2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Minimize2Props {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Minimize2(props: Minimize2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m14 10 7-7",
-            }
-            path {
-                d: "M20 10h-6V4",
-            }
-            path {
-                d: "m3 21 7-7",
-            }
-            path {
-                d: "M4 14h6v6",
-            }
+            path { d: "m14 10 7-7" }
+            path { d: "M20 10h-6V4" }
+            path { d: "m3 21 7-7" }
+            path { d: "M4 14h6v6" }
         }
     }
 }

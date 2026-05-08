@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MirrorRectangular()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MirrorRectangularProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn MirrorRectangular(props: MirrorRectangularProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M11 6 8 9",
-            }
-            path {
-                d: "m16 7-8 8",
-            }
+            path { d: "M11 6 8 9" }
+            path { d: "m16 7-8 8" }
             rect {
                 height: "20",
                 rx: "2",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MonitorCheck()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MonitorCheckProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn MonitorCheck(props: MonitorCheckProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m9 10 2 2 4-4",
-            }
+            path { d: "m9 10 2 2 4-4" }
             rect {
                 height: "14",
                 rx: "2",
@@ -96,12 +95,8 @@ pub fn MonitorCheck(props: MonitorCheckProps) -> Element {
                 x: "2",
                 y: "3",
             }
-            path {
-                d: "M12 17v4",
-            }
-            path {
-                d: "M8 21h8",
-            }
+            path { d: "M12 17v4" }
+            path { d: "M8 21h8" }
         }
     }
 }

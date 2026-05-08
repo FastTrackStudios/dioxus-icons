@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareMenu()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareMenuProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn SquareMenu(props: SquareMenuProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M7 8h10",
-            }
-            path {
-                d: "M7 12h10",
-            }
-            path {
-                d: "M7 16h10",
-            }
+            path { d: "M7 8h10" }
+            path { d: "M7 12h10" }
+            path { d: "M7 16h10" }
         }
     }
 }

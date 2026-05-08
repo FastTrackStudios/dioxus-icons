@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignHorizontalJustifyCenter()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignHorizontalJustifyCenterProps {
     /// SVG width and height in pixels.
@@ -100,9 +101,7 @@ pub fn AlignHorizontalJustifyCenter(props: AlignHorizontalJustifyCenterProps) ->
                 x: "16",
                 y: "7",
             }
-            path {
-                d: "M12 2v20",
-            }
+            path { d: "M12 2v20" }
         }
     }
 }

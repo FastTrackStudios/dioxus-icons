@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Copyright()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CopyrightProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn Copyright(props: CopyrightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M14.83 14.83a4 4 0 1 1 0-5.66",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M14.83 14.83a4 4 0 1 1 0-5.66" }
         }
     }
 }

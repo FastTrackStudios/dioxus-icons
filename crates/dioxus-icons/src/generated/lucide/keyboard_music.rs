@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`KeyboardMusic()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct KeyboardMusicProps {
     /// SVG width and height in pixels.
@@ -93,30 +94,14 @@ pub fn KeyboardMusic(props: KeyboardMusicProps) -> Element {
                 x: "2",
                 y: "4",
             }
-            path {
-                d: "M6 8h4",
-            }
-            path {
-                d: "M14 8h.01",
-            }
-            path {
-                d: "M18 8h.01",
-            }
-            path {
-                d: "M2 12h20",
-            }
-            path {
-                d: "M6 12v4",
-            }
-            path {
-                d: "M10 12v4",
-            }
-            path {
-                d: "M14 12v4",
-            }
-            path {
-                d: "M18 12v4",
-            }
+            path { d: "M6 8h4" }
+            path { d: "M14 8h.01" }
+            path { d: "M18 8h.01" }
+            path { d: "M2 12h20" }
+            path { d: "M6 12v4" }
+            path { d: "M10 12v4" }
+            path { d: "M14 12v4" }
+            path { d: "M18 12v4" }
         }
     }
 }

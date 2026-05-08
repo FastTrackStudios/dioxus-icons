@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Asterisk()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AsteriskProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Asterisk(props: AsteriskProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 6v12",
-            }
-            path {
-                d: "M17.196 9 6.804 15",
-            }
-            path {
-                d: "m6.804 9 10.392 6",
-            }
+            path { d: "M12 6v12" }
+            path { d: "M17.196 9 6.804 15" }
+            path { d: "m6.804 9 10.392 6" }
         }
     }
 }

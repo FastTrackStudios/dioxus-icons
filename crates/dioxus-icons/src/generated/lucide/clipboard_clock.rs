@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ClipboardClock()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ClipboardClockProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn ClipboardClock(props: ClipboardClockProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 14v2.2l1.6 1",
-            }
-            path {
-                d: "M16 4h2a2 2 0 0 1 2 2v.832",
-            }
-            path {
-                d: "M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2",
-            }
-            circle {
-                cx: "16",
-                cy: "16",
-                r: "6",
-            }
+            path { d: "M16 14v2.2l1.6 1" }
+            path { d: "M16 4h2a2 2 0 0 1 2 2v.832" }
+            path { d: "M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2" }
+            circle { cx: "16", cy: "16", r: "6" }
             rect {
                 height: "4",
                 rx: "1",

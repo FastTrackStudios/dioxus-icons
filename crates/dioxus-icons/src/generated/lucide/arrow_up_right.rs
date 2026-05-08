@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ArrowUpRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ArrowUpRightProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn ArrowUpRight(props: ArrowUpRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M7 7h10v10",
-            }
-            path {
-                d: "M7 17 17 7",
-            }
+            path { d: "M7 7h10v10" }
+            path { d: "M7 17 17 7" }
         }
     }
 }

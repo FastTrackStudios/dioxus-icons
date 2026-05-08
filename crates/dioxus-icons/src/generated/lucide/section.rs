@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Section()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SectionProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Section(props: SectionProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 5a4 3 0 0 0-8 0c0 4 8 3 8 7a4 3 0 0 1-8 0",
-            }
-            path {
-                d: "M8 19a4 3 0 0 0 8 0c0-4-8-3-8-7a4 3 0 0 1 8 0",
-            }
+            path { d: "M16 5a4 3 0 0 0-8 0c0 4 8 3 8 7a4 3 0 0 1-8 0" }
+            path { d: "M8 19a4 3 0 0 0 8 0c0-4-8-3-8-7a4 3 0 0 1 8 0" }
         }
     }
 }

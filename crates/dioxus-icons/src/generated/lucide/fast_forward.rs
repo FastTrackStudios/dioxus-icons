@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FastForward()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FastForwardProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn FastForward(props: FastForwardProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 12 18z",
-            }
-            path {
-                d: "M2 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 2 18z",
-            }
+            path { d: "M12 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 12 18z" }
+            path { d: "M2 6a2 2 0 0 1 3.414-1.414l6 6a2 2 0 0 1 0 2.828l-6 6A2 2 0 0 1 2 18z" }
         }
     }
 }

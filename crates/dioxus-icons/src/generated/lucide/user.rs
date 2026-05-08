@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`User()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UserProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn User(props: UserProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2",
-            }
-            circle {
-                cx: "12",
-                cy: "7",
-                r: "4",
-            }
+            path { d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" }
+            circle { cx: "12", cy: "7", r: "4" }
         }
     }
 }

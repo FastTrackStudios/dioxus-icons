@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Redo2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Redo2Props {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Redo2(props: Redo2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m15 14 5-5-5-5",
-            }
-            path {
-                d: "M20 9H9.5A5.5 5.5 0 0 0 4 14.5A5.5 5.5 0 0 0 9.5 20H13",
-            }
+            path { d: "m15 14 5-5-5-5" }
+            path { d: "M20 9H9.5A5.5 5.5 0 0 0 4 14.5A5.5 5.5 0 0 0 9.5 20H13" }
         }
     }
 }

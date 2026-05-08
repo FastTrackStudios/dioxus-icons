@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignVerticalSpaceBetween()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignVerticalSpaceBetweenProps {
     /// SVG width and height in pixels.
@@ -100,12 +101,8 @@ pub fn AlignVerticalSpaceBetween(props: AlignVerticalSpaceBetweenProps) -> Eleme
                 x: "7",
                 y: "3",
             }
-            path {
-                d: "M2 21h20",
-            }
-            path {
-                d: "M2 3h20",
-            }
+            path { d: "M2 21h20" }
+            path { d: "M2 3h20" }
         }
     }
 }

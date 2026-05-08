@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FlipVertical2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FlipVertical2Props {
     /// SVG width and height in pixels.
@@ -86,24 +87,12 @@ pub fn FlipVertical2(props: FlipVertical2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m17 3-5 5-5-5h10",
-            }
-            path {
-                d: "m17 21-5-5-5 5h10",
-            }
-            path {
-                d: "M4 12H2",
-            }
-            path {
-                d: "M10 12H8",
-            }
-            path {
-                d: "M16 12h-2",
-            }
-            path {
-                d: "M22 12h-2",
-            }
+            path { d: "m17 3-5 5-5-5h10" }
+            path { d: "m17 21-5-5-5 5h10" }
+            path { d: "M4 12H2" }
+            path { d: "M10 12H8" }
+            path { d: "M16 12h-2" }
+            path { d: "M22 12h-2" }
         }
     }
 }

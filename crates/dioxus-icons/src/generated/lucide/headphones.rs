@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Headphones()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HeadphonesProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Headphones(props: HeadphonesProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3",
-            }
+            path { d: "M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" }
         }
     }
 }

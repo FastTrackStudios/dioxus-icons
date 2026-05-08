@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Gamepad()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GamepadProps {
     /// SVG width and height in pixels.

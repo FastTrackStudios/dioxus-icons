@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`HatGlasses()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HatGlassesProps {
     /// SVG width and height in pixels.
@@ -86,25 +87,11 @@ pub fn HatGlasses(props: HatGlassesProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 18a2 2 0 0 0-4 0",
-            }
-            path {
-                d: "m19 11-2.11-6.657a2 2 0 0 0-2.752-1.148l-1.276.61A2 2 0 0 1 12 4H8.5a2 2 0 0 0-1.925 1.456L5 11",
-            }
-            path {
-                d: "M2 11h20",
-            }
-            circle {
-                cx: "17",
-                cy: "18",
-                r: "3",
-            }
-            circle {
-                cx: "7",
-                cy: "18",
-                r: "3",
-            }
+            path { d: "M14 18a2 2 0 0 0-4 0" }
+            path { d: "m19 11-2.11-6.657a2 2 0 0 0-2.752-1.148l-1.276.61A2 2 0 0 1 12 4H8.5a2 2 0 0 0-1.925 1.456L5 11" }
+            path { d: "M2 11h20" }
+            circle { cx: "17", cy: "18", r: "3" }
+            circle { cx: "7", cy: "18", r: "3" }
         }
     }
 }

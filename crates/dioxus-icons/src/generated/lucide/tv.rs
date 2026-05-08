@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Tv()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TvProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Tv(props: TvProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m17 2-5 5-5-5",
-            }
+            path { d: "m17 2-5 5-5-5" }
             rect {
                 height: "15",
                 rx: "2",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChevronsLeftRightEllipsis()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChevronsLeftRightEllipsisProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn ChevronsLeftRightEllipsis(props: ChevronsLeftRightEllipsisProps) -> Eleme
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 12h.01",
-            }
-            path {
-                d: "M16 12h.01",
-            }
-            path {
-                d: "m17 7 5 5-5 5",
-            }
-            path {
-                d: "m7 7-5 5 5 5",
-            }
-            path {
-                d: "M8 12h.01",
-            }
+            path { d: "M12 12h.01" }
+            path { d: "M16 12h.01" }
+            path { d: "m17 7 5 5-5 5" }
+            path { d: "m7 7-5 5 5 5" }
+            path { d: "M8 12h.01" }
         }
     }
 }

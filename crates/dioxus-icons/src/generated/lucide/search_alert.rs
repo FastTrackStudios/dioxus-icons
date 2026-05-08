@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SearchAlert()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SearchAlertProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn SearchAlert(props: SearchAlertProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "11",
-                cy: "11",
-                r: "8",
-            }
-            path {
-                d: "m21 21-4.3-4.3",
-            }
-            path {
-                d: "M11 7v4",
-            }
-            path {
-                d: "M11 15h.01",
-            }
+            circle { cx: "11", cy: "11", r: "8" }
+            path { d: "m21 21-4.3-4.3" }
+            path { d: "M11 7v4" }
+            path { d: "M11 15h.01" }
         }
     }
 }

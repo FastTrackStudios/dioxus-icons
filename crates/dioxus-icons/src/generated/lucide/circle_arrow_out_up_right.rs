@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleArrowOutUpRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleArrowOutUpRightProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn CircleArrowOutUpRight(props: CircleArrowOutUpRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M22 12A10 10 0 1 1 12 2",
-            }
-            path {
-                d: "M22 2 12 12",
-            }
-            path {
-                d: "M16 2h6v6",
-            }
+            path { d: "M22 12A10 10 0 1 1 12 2" }
+            path { d: "M22 2 12 12" }
+            path { d: "M16 2h6v6" }
         }
     }
 }

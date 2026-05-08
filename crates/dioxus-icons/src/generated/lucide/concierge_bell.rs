@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ConciergeBell()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ConciergeBellProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn ConciergeBell(props: ConciergeBellProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 20a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1Z",
-            }
-            path {
-                d: "M20 16a8 8 0 1 0-16 0",
-            }
-            path {
-                d: "M12 4v4",
-            }
-            path {
-                d: "M10 4h4",
-            }
+            path { d: "M3 20a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1Z" }
+            path { d: "M20 16a8 8 0 1 0-16 0" }
+            path { d: "M12 4v4" }
+            path { d: "M10 4h4" }
         }
     }
 }

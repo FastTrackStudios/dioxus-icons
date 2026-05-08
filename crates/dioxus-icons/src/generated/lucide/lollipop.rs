@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Lollipop()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LollipopProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn Lollipop(props: LollipopProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "11",
-                cy: "11",
-                r: "8",
-            }
-            path {
-                d: "m21 21-4.3-4.3",
-            }
-            path {
-                d: "M11 11a2 2 0 0 0 4 0 4 4 0 0 0-8 0 6 6 0 0 0 12 0",
-            }
+            circle { cx: "11", cy: "11", r: "8" }
+            path { d: "m21 21-4.3-4.3" }
+            path { d: "M11 11a2 2 0 0 0 4 0 4 4 0 0 0-8 0 6 6 0 0 0 12 0" }
         }
     }
 }

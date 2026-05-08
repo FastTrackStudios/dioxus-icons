@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MoveLeft()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MoveLeftProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn MoveLeft(props: MoveLeftProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 8L2 12L6 16",
-            }
-            path {
-                d: "M2 12H22",
-            }
+            path { d: "M6 8L2 12L6 16" }
+            path { d: "M2 12H22" }
         }
     }
 }

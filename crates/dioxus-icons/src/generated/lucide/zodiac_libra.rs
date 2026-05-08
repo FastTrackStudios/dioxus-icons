@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ZodiacLibra()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ZodiacLibraProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn ZodiacLibra(props: ZodiacLibraProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 16h6.857c.162-.012.19-.323.038-.38a6 6 0 1 1 4.212 0c-.153.057-.125.368.038.38H21",
-            }
-            path {
-                d: "M3 20h18",
-            }
+            path { d: "M3 16h6.857c.162-.012.19-.323.038-.38a6 6 0 1 1 4.212 0c-.153.057-.125.368.038.38H21" }
+            path { d: "M3 20h18" }
         }
     }
 }

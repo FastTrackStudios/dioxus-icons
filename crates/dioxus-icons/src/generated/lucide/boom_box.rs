@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BoomBox()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BoomBoxProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn BoomBox(props: BoomBoxProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 9V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4",
-            }
-            path {
-                d: "M8 8v1",
-            }
-            path {
-                d: "M12 8v1",
-            }
-            path {
-                d: "M16 8v1",
-            }
+            path { d: "M4 9V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" }
+            path { d: "M8 8v1" }
+            path { d: "M12 8v1" }
+            path { d: "M16 8v1" }
             rect {
                 height: "12",
                 rx: "2",
@@ -105,16 +98,8 @@ pub fn BoomBox(props: BoomBoxProps) -> Element {
                 x: "2",
                 y: "9",
             }
-            circle {
-                cx: "8",
-                cy: "15",
-                r: "2",
-            }
-            circle {
-                cx: "16",
-                cy: "15",
-                r: "2",
-            }
+            circle { cx: "8", cy: "15", r: "2" }
+            circle { cx: "16", cy: "15", r: "2" }
         }
     }
 }

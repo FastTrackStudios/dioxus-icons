@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BadgeQuestionMark()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BadgeQuestionMarkProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn BadgeQuestionMark(props: BadgeQuestionMarkProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z",
-            }
-            path {
-                d: "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3",
-            }
+            path { d: "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" }
+            path { d: "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" }
             line {
                 x1: "12",
                 x2: "12.01",

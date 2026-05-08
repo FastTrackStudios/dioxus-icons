@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Scale3d()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Scale3dProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn Scale3d(props: Scale3dProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 7v11a1 1 0 0 0 1 1h11",
-            }
-            path {
-                d: "M5.293 18.707 11 13",
-            }
-            circle {
-                cx: "19",
-                cy: "19",
-                r: "2",
-            }
-            circle {
-                cx: "5",
-                cy: "5",
-                r: "2",
-            }
+            path { d: "M5 7v11a1 1 0 0 0 1 1h11" }
+            path { d: "M5.293 18.707 11 13" }
+            circle { cx: "19", cy: "19", r: "2" }
+            circle { cx: "5", cy: "5", r: "2" }
         }
     }
 }

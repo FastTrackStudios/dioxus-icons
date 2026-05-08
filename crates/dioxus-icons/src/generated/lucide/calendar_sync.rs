@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CalendarSync()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CalendarSyncProps {
     /// SVG width and height in pixels.
@@ -86,30 +87,14 @@ pub fn CalendarSync(props: CalendarSyncProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M11 10v4h4",
-            }
-            path {
-                d: "m11 14 1.535-1.605a5 5 0 0 1 8 1.5",
-            }
-            path {
-                d: "M16 2v4",
-            }
-            path {
-                d: "m21 18-1.535 1.605a5 5 0 0 1-8-1.5",
-            }
-            path {
-                d: "M21 22v-4h-4",
-            }
-            path {
-                d: "M21 8.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4.3",
-            }
-            path {
-                d: "M3 10h4",
-            }
-            path {
-                d: "M8 2v4",
-            }
+            path { d: "M11 10v4h4" }
+            path { d: "m11 14 1.535-1.605a5 5 0 0 1 8 1.5" }
+            path { d: "M16 2v4" }
+            path { d: "m21 18-1.535 1.605a5 5 0 0 1-8-1.5" }
+            path { d: "M21 22v-4h-4" }
+            path { d: "M21 8.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4.3" }
+            path { d: "M3 10h4" }
+            path { d: "M8 2v4" }
         }
     }
 }

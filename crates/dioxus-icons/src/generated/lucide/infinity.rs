@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Infinity()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct InfinityProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Infinity(props: InfinityProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8",
-            }
+            path { d: "M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8" }
         }
     }
 }

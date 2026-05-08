@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Ghost()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GhostProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Ghost(props: GhostProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M9 10h.01",
-            }
-            path {
-                d: "M15 10h.01",
-            }
-            path {
-                d: "M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z",
-            }
+            path { d: "M9 10h.01" }
+            path { d: "M15 10h.01" }
+            path { d: "M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z" }
         }
     }
 }

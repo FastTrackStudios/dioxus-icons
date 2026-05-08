@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SmartphoneCharging()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SmartphoneChargingProps {
     /// SVG width and height in pixels.
@@ -94,9 +95,7 @@ pub fn SmartphoneCharging(props: SmartphoneChargingProps) -> Element {
                 x: "5",
                 y: "2",
             }
-            path {
-                d: "M12.667 8 10 12h4l-2.667 4",
-            }
+            path { d: "M12.667 8 10 12h4l-2.667 4" }
         }
     }
 }

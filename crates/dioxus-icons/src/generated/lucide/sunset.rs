@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Sunset()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SunsetProps {
     /// SVG width and height in pixels.
@@ -86,30 +87,14 @@ pub fn Sunset(props: SunsetProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 10V2",
-            }
-            path {
-                d: "m4.93 10.93 1.41 1.41",
-            }
-            path {
-                d: "M2 18h2",
-            }
-            path {
-                d: "M20 18h2",
-            }
-            path {
-                d: "m19.07 10.93-1.41 1.41",
-            }
-            path {
-                d: "M22 22H2",
-            }
-            path {
-                d: "m16 6-4 4-4-4",
-            }
-            path {
-                d: "M16 18a4 4 0 0 0-8 0",
-            }
+            path { d: "M12 10V2" }
+            path { d: "m4.93 10.93 1.41 1.41" }
+            path { d: "M2 18h2" }
+            path { d: "M20 18h2" }
+            path { d: "m19.07 10.93-1.41 1.41" }
+            path { d: "M22 22H2" }
+            path { d: "m16 6-4 4-4-4" }
+            path { d: "M16 18a4 4 0 0 0-8 0" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GeorgianLari()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GeorgianLariProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn GeorgianLari(props: GeorgianLariProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M11.5 21a7.5 7.5 0 1 1 7.35-9",
-            }
-            path {
-                d: "M13 12V3",
-            }
-            path {
-                d: "M4 21h16",
-            }
-            path {
-                d: "M9 12V3",
-            }
+            path { d: "M11.5 21a7.5 7.5 0 1 1 7.35-9" }
+            path { d: "M13 12V3" }
+            path { d: "M4 21h16" }
+            path { d: "M9 12V3" }
         }
     }
 }

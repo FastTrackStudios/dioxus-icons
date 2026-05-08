@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Bot()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BotProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Bot(props: BotProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 8V4H8",
-            }
+            path { d: "M12 8V4H8" }
             rect {
                 height: "12",
                 rx: "2",
@@ -96,18 +95,10 @@ pub fn Bot(props: BotProps) -> Element {
                 x: "4",
                 y: "8",
             }
-            path {
-                d: "M2 14h2",
-            }
-            path {
-                d: "M20 14h2",
-            }
-            path {
-                d: "M15 13v2",
-            }
-            path {
-                d: "M9 13v2",
-            }
+            path { d: "M2 14h2" }
+            path { d: "M20 14h2" }
+            path { d: "M15 13v2" }
+            path { d: "M9 13v2" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Shrink()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ShrinkProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Shrink(props: ShrinkProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m15 15 6 6m-6-6v4.8m0-4.8h4.8",
-            }
-            path {
-                d: "M9 19.8V15m0 0H4.2M9 15l-6 6",
-            }
-            path {
-                d: "M15 4.2V9m0 0h4.8M15 9l6-6",
-            }
-            path {
-                d: "M9 4.2V9m0 0H4.2M9 9 3 3",
-            }
+            path { d: "m15 15 6 6m-6-6v4.8m0-4.8h4.8" }
+            path { d: "M9 19.8V15m0 0H4.2M9 15l-6 6" }
+            path { d: "M15 4.2V9m0 0h4.8M15 9l6-6" }
+            path { d: "M9 4.2V9m0 0H4.2M9 9 3 3" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PictureInPicture()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PictureInPictureProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn PictureInPicture(props: PictureInPictureProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 10h6V4",
-            }
-            path {
-                d: "m2 4 6 6",
-            }
-            path {
-                d: "M21 10V7a2 2 0 0 0-2-2h-7",
-            }
-            path {
-                d: "M3 14v2a2 2 0 0 0 2 2h3",
-            }
+            path { d: "M2 10h6V4" }
+            path { d: "m2 4 6 6" }
+            path { d: "M21 10V7a2 2 0 0 0-2-2h-7" }
+            path { d: "M3 14v2a2 2 0 0 0 2 2h3" }
             rect {
                 height: "7",
                 rx: "1",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Aperture()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ApertureProps {
     /// SVG width and height in pixels.
@@ -86,29 +87,13 @@ pub fn Aperture(props: ApertureProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "m14.31 8 5.74 9.94",
-            }
-            path {
-                d: "M9.69 8h11.48",
-            }
-            path {
-                d: "m7.38 12 5.74-9.94",
-            }
-            path {
-                d: "M9.69 16 3.95 6.06",
-            }
-            path {
-                d: "M14.31 16H2.83",
-            }
-            path {
-                d: "m16.62 12-5.74 9.94",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "m14.31 8 5.74 9.94" }
+            path { d: "M9.69 8h11.48" }
+            path { d: "m7.38 12 5.74-9.94" }
+            path { d: "M9.69 16 3.95 6.06" }
+            path { d: "M14.31 16H2.83" }
+            path { d: "m16.62 12-5.74 9.94" }
         }
     }
 }

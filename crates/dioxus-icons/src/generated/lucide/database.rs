@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Database()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DatabaseProps {
     /// SVG width and height in pixels.
@@ -92,12 +93,8 @@ pub fn Database(props: DatabaseProps) -> Element {
                 rx: "9",
                 ry: "3",
             }
-            path {
-                d: "M3 5V19A9 3 0 0 0 21 19V5",
-            }
-            path {
-                d: "M3 12A9 3 0 0 0 21 12",
-            }
+            path { d: "M3 5V19A9 3 0 0 0 21 19V5" }
+            path { d: "M3 12A9 3 0 0 0 21 12" }
         }
     }
 }

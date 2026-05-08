@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SeparatorHorizontal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SeparatorHorizontalProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn SeparatorHorizontal(props: SeparatorHorizontalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m16 16-4 4-4-4",
-            }
-            path {
-                d: "M3 12h18",
-            }
-            path {
-                d: "m8 8 4-4 4 4",
-            }
+            path { d: "m16 16-4 4-4-4" }
+            path { d: "M3 12h18" }
+            path { d: "m8 8 4-4 4 4" }
         }
     }
 }

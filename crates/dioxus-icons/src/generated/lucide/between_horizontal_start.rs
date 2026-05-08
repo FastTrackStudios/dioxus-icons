@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BetweenHorizontalStart()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BetweenHorizontalStartProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn BetweenHorizontalStart(props: BetweenHorizontalStartProps) -> Element {
                 x: "8",
                 y: "3",
             }
-            path {
-                d: "m2 9 3 3-3 3",
-            }
+            path { d: "m2 9 3 3-3 3" }
             rect {
                 height: "7",
                 rx: "1",

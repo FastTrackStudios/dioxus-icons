@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AppWindowMac()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AppWindowMacProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn AppWindowMac(props: AppWindowMacProps) -> Element {
                 x: "2",
                 y: "4",
             }
-            path {
-                d: "M6 8h.01",
-            }
-            path {
-                d: "M10 8h.01",
-            }
-            path {
-                d: "M14 8h.01",
-            }
+            path { d: "M6 8h.01" }
+            path { d: "M10 8h.01" }
+            path { d: "M14 8h.01" }
         }
     }
 }

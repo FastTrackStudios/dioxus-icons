@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Power()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PowerProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Power(props: PowerProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 2v10",
-            }
-            path {
-                d: "M18.4 6.6a9 9 0 1 1-12.77.04",
-            }
+            path { d: "M12 2v10" }
+            path { d: "M18.4 6.6a9 9 0 1 1-12.77.04" }
         }
     }
 }

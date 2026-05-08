@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`StepForward()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct StepForwardProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn StepForward(props: StepForwardProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10.029 4.285A2 2 0 0 0 7 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z",
-            }
-            path {
-                d: "M3 4v16",
-            }
+            path { d: "M10.029 4.285A2 2 0 0 0 7 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z" }
+            path { d: "M3 4v16" }
         }
     }
 }

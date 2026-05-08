@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`UserSearch()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UserSearchProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn UserSearch(props: UserSearchProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "10",
-                cy: "7",
-                r: "4",
-            }
-            path {
-                d: "M10.3 15H7a4 4 0 0 0-4 4v2",
-            }
-            circle {
-                cx: "17",
-                cy: "17",
-                r: "3",
-            }
-            path {
-                d: "m21 21-1.9-1.9",
-            }
+            circle { cx: "10", cy: "7", r: "4" }
+            path { d: "M10.3 15H7a4 4 0 0 0-4 4v2" }
+            circle { cx: "17", cy: "17", r: "3" }
+            path { d: "m21 21-1.9-1.9" }
         }
     }
 }

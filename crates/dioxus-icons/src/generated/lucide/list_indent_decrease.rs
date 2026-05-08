@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListIndentDecrease()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListIndentDecreaseProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn ListIndentDecrease(props: ListIndentDecreaseProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 5H11",
-            }
-            path {
-                d: "M21 12H11",
-            }
-            path {
-                d: "M21 19H11",
-            }
-            path {
-                d: "m7 8-4 4 4 4",
-            }
+            path { d: "M21 5H11" }
+            path { d: "M21 12H11" }
+            path { d: "M21 19H11" }
+            path { d: "m7 8-4 4 4 4" }
         }
     }
 }

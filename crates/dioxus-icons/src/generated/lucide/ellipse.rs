@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Ellipse()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct EllipseProps {
     /// SVG width and height in pixels.

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Tent()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TentProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Tent(props: TentProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3.5 21 14 3",
-            }
-            path {
-                d: "M20.5 21 10 3",
-            }
-            path {
-                d: "M15.5 21 12 15l-3.5 6",
-            }
-            path {
-                d: "M2 21h20",
-            }
+            path { d: "M3.5 21 14 3" }
+            path { d: "M20.5 21 10 3" }
+            path { d: "M15.5 21 12 15l-3.5 6" }
+            path { d: "M2 21h20" }
         }
     }
 }

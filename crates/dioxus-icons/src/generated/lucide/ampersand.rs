@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Ampersand()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AmpersandProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Ampersand(props: AmpersandProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 12h3",
-            }
-            path {
-                d: "M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13",
-            }
+            path { d: "M16 12h3" }
+            path { d: "M17.5 12a8 8 0 0 1-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13" }
         }
     }
 }

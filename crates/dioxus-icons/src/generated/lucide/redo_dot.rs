@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RedoDot()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RedoDotProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn RedoDot(props: RedoDotProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "17",
-                r: "1",
-            }
-            path {
-                d: "M21 7v6h-6",
-            }
-            path {
-                d: "M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7",
-            }
+            circle { cx: "12", cy: "17", r: "1" }
+            path { d: "M21 7v6h-6" }
+            path { d: "M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7" }
         }
     }
 }

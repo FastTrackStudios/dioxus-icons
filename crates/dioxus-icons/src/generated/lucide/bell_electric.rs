@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BellElectric()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BellElectricProps {
     /// SVG width and height in pixels.
@@ -86,25 +87,11 @@ pub fn BellElectric(props: BellElectricProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M18.518 17.347A7 7 0 0 1 14 19",
-            }
-            path {
-                d: "M18.8 4A11 11 0 0 1 20 9",
-            }
-            path {
-                d: "M9 9h.01",
-            }
-            circle {
-                cx: "20",
-                cy: "16",
-                r: "2",
-            }
-            circle {
-                cx: "9",
-                cy: "9",
-                r: "7",
-            }
+            path { d: "M18.518 17.347A7 7 0 0 1 14 19" }
+            path { d: "M18.8 4A11 11 0 0 1 20 9" }
+            path { d: "M9 9h.01" }
+            circle { cx: "20", cy: "16", r: "2" }
+            circle { cx: "9", cy: "9", r: "7" }
             rect {
                 height: "6",
                 rx: "2",

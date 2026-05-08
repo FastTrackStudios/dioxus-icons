@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ZodiacTaurus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ZodiacTaurusProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn ZodiacTaurus(props: ZodiacTaurusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "15",
-                r: "6",
-            }
-            path {
-                d: "M18 3A6 6 0 0 1 6 3",
-            }
+            circle { cx: "12", cy: "15", r: "6" }
+            path { d: "M18 3A6 6 0 0 1 6 3" }
         }
     }
 }

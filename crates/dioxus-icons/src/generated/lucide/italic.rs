@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Italic()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ItalicProps {
     /// SVG width and height in pixels.

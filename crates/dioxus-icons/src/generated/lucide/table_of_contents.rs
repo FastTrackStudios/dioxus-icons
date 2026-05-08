@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TableOfContents()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TableOfContentsProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,12 @@ pub fn TableOfContents(props: TableOfContentsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 5H3",
-            }
-            path {
-                d: "M16 12H3",
-            }
-            path {
-                d: "M16 19H3",
-            }
-            path {
-                d: "M21 5h.01",
-            }
-            path {
-                d: "M21 12h.01",
-            }
-            path {
-                d: "M21 19h.01",
-            }
+            path { d: "M16 5H3" }
+            path { d: "M16 12H3" }
+            path { d: "M16 19H3" }
+            path { d: "M21 5h.01" }
+            path { d: "M21 12h.01" }
+            path { d: "M21 19h.01" }
         }
     }
 }

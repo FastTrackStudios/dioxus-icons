@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelLeftRightDashed()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelLeftRightDashedProps {
     /// SVG width and height in pixels.
@@ -86,30 +87,14 @@ pub fn PanelLeftRightDashed(props: PanelLeftRightDashedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 10V9",
-            }
-            path {
-                d: "M15 15v-1",
-            }
-            path {
-                d: "M15 21v-2",
-            }
-            path {
-                d: "M15 5V3",
-            }
-            path {
-                d: "M9 10V9",
-            }
-            path {
-                d: "M9 15v-1",
-            }
-            path {
-                d: "M9 21v-2",
-            }
-            path {
-                d: "M9 5V3",
-            }
+            path { d: "M15 10V9" }
+            path { d: "M15 15v-1" }
+            path { d: "M15 21v-2" }
+            path { d: "M15 5V3" }
+            path { d: "M9 10V9" }
+            path { d: "M9 15v-1" }
+            path { d: "M9 21v-2" }
+            path { d: "M9 5V3" }
             rect {
                 height: "18",
                 rx: "2",

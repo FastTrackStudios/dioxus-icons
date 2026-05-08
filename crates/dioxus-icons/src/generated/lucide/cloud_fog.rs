@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CloudFog()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CloudFogProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn CloudFog(props: CloudFogProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242",
-            }
-            path {
-                d: "M16 17H7",
-            }
-            path {
-                d: "M17 21H9",
-            }
+            path { d: "M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" }
+            path { d: "M16 17H7" }
+            path { d: "M17 21H9" }
         }
     }
 }

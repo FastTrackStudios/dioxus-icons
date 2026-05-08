@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PcCase()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PcCaseProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn PcCase(props: PcCaseProps) -> Element {
                 x: "5",
                 y: "2",
             }
-            path {
-                d: "M15 14h.01",
-            }
-            path {
-                d: "M9 6h6",
-            }
-            path {
-                d: "M9 10h6",
-            }
+            path { d: "M15 14h.01" }
+            path { d: "M9 6h6" }
+            path { d: "M9 10h6" }
         }
     }
 }

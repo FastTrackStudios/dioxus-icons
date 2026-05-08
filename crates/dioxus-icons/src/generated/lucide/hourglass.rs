@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Hourglass()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HourglassProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Hourglass(props: HourglassProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 22h14",
-            }
-            path {
-                d: "M5 2h14",
-            }
-            path {
-                d: "M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22",
-            }
-            path {
-                d: "M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2",
-            }
+            path { d: "M5 22h14" }
+            path { d: "M5 2h14" }
+            path { d: "M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" }
+            path { d: "M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" }
         }
     }
 }

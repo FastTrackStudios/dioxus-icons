@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChartNoAxesColumn()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChartNoAxesColumnProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn ChartNoAxesColumn(props: ChartNoAxesColumnProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 21v-6",
-            }
-            path {
-                d: "M12 21V3",
-            }
-            path {
-                d: "M19 21V9",
-            }
+            path { d: "M5 21v-6" }
+            path { d: "M12 21V3" }
+            path { d: "M19 21V9" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TextQuote()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TextQuoteProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn TextQuote(props: TextQuoteProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M17 5H3",
-            }
-            path {
-                d: "M21 12H8",
-            }
-            path {
-                d: "M21 19H8",
-            }
-            path {
-                d: "M3 12v7",
-            }
+            path { d: "M17 5H3" }
+            path { d: "M21 12H8" }
+            path { d: "M21 19H8" }
+            path { d: "M3 12v7" }
         }
     }
 }

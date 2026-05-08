@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Handbag()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HandbagProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Handbag(props: HandbagProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z",
-            }
-            path {
-                d: "M8 11V6a4 4 0 0 1 8 0v5",
-            }
+            path { d: "M2.048 18.566A2 2 0 0 0 4 21h16a2 2 0 0 0 1.952-2.434l-2-9A2 2 0 0 0 18 8H6a2 2 0 0 0-1.952 1.566z" }
+            path { d: "M8 11V6a4 4 0 0 1 8 0v5" }
         }
     }
 }

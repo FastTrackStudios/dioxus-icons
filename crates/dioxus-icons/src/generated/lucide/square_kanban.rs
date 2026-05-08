@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareKanban()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareKanbanProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn SquareKanban(props: SquareKanbanProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M8 7v7",
-            }
-            path {
-                d: "M12 7v4",
-            }
-            path {
-                d: "M16 7v9",
-            }
+            path { d: "M8 7v7" }
+            path { d: "M12 7v4" }
+            path { d: "M16 7v9" }
         }
     }
 }

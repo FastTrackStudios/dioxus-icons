@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CreativeCommons()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CreativeCommonsProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn CreativeCommons(props: CreativeCommonsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M10 9.3a2.8 2.8 0 0 0-3.5 1 3.1 3.1 0 0 0 0 3.4 2.7 2.7 0 0 0 3.5 1",
-            }
-            path {
-                d: "M17 9.3a2.8 2.8 0 0 0-3.5 1 3.1 3.1 0 0 0 0 3.4 2.7 2.7 0 0 0 3.5 1",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M10 9.3a2.8 2.8 0 0 0-3.5 1 3.1 3.1 0 0 0 0 3.4 2.7 2.7 0 0 0 3.5 1" }
+            path { d: "M17 9.3a2.8 2.8 0 0 0-3.5 1 3.1 3.1 0 0 0 0 3.4 2.7 2.7 0 0 0 3.5 1" }
         }
     }
 }

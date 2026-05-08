@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Download()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DownloadProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Download(props: DownloadProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 15V3",
-            }
-            path {
-                d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",
-            }
-            path {
-                d: "m7 10 5 5 5-5",
-            }
+            path { d: "M12 15V3" }
+            path { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }
+            path { d: "m7 10 5 5 5-5" }
         }
     }
 }

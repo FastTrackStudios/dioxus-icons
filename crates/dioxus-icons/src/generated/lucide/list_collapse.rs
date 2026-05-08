@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListCollapse()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListCollapseProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn ListCollapse(props: ListCollapseProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 5h11",
-            }
-            path {
-                d: "M10 12h11",
-            }
-            path {
-                d: "M10 19h11",
-            }
-            path {
-                d: "m3 10 3-3-3-3",
-            }
-            path {
-                d: "m3 20 3-3-3-3",
-            }
+            path { d: "M10 5h11" }
+            path { d: "M10 12h11" }
+            path { d: "M10 19h11" }
+            path { d: "m3 10 3-3-3-3" }
+            path { d: "m3 20 3-3-3-3" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Heading()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HeadingProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Heading(props: HeadingProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 12h12",
-            }
-            path {
-                d: "M6 20V4",
-            }
-            path {
-                d: "M18 20V4",
-            }
+            path { d: "M6 12h12" }
+            path { d: "M6 20V4" }
+            path { d: "M18 20V4" }
         }
     }
 }

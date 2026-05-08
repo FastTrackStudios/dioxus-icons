@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RotateCcwSquare()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RotateCcwSquareProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn RotateCcwSquare(props: RotateCcwSquareProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M20 9V7a2 2 0 0 0-2-2h-6",
-            }
-            path {
-                d: "m15 2-3 3 3 3",
-            }
-            path {
-                d: "M20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2",
-            }
+            path { d: "M20 9V7a2 2 0 0 0-2-2h-6" }
+            path { d: "m15 2-3 3 3 3" }
+            path { d: "M20 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2" }
         }
     }
 }

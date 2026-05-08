@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Bed()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BedProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Bed(props: BedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 4v16",
-            }
-            path {
-                d: "M2 8h18a2 2 0 0 1 2 2v10",
-            }
-            path {
-                d: "M2 17h20",
-            }
-            path {
-                d: "M6 8v9",
-            }
+            path { d: "M2 4v16" }
+            path { d: "M2 8h18a2 2 0 0 1 2 2v10" }
+            path { d: "M2 17h20" }
+            path { d: "M6 8v9" }
         }
     }
 }

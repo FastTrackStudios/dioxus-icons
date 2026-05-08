@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Rainbow()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RainbowProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Rainbow(props: RainbowProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M22 17a10 10 0 0 0-20 0",
-            }
-            path {
-                d: "M6 17a6 6 0 0 1 12 0",
-            }
-            path {
-                d: "M10 17a2 2 0 0 1 4 0",
-            }
+            path { d: "M22 17a10 10 0 0 0-20 0" }
+            path { d: "M6 17a6 6 0 0 1 12 0" }
+            path { d: "M10 17a2 2 0 0 1 4 0" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`HousePlug()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HousePlugProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn HousePlug(props: HousePlugProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 12V8.964",
-            }
-            path {
-                d: "M14 12V8.964",
-            }
-            path {
-                d: "M15 12a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2a1 1 0 0 1 1-1z",
-            }
-            path {
-                d: "M8.5 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-2",
-            }
+            path { d: "M10 12V8.964" }
+            path { d: "M14 12V8.964" }
+            path { d: "M15 12a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2a1 1 0 0 1 1-1z" }
+            path { d: "M8.5 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-2" }
         }
     }
 }

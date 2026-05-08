@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ToggleLeft()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ToggleLeftProps {
     /// SVG width and height in pixels.
@@ -86,11 +87,7 @@ pub fn ToggleLeft(props: ToggleLeftProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "9",
-                cy: "12",
-                r: "3",
-            }
+            circle { cx: "9", cy: "12", r: "3" }
             rect {
                 height: "14",
                 rx: "7",

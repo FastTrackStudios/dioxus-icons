@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Pause()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PauseProps {
     /// SVG width and height in pixels.

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`UserLock()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UserLockProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn UserLock(props: UserLockProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M19 16v-2a2 2 0 0 0-4 0v2",
-            }
-            path {
-                d: "M9.5 15H7a4 4 0 0 0-4 4v2",
-            }
-            circle {
-                cx: "10",
-                cy: "7",
-                r: "4",
-            }
+            path { d: "M19 16v-2a2 2 0 0 0-4 0v2" }
+            path { d: "M9.5 15H7a4 4 0 0 0-4 4v2" }
+            circle { cx: "10", cy: "7", r: "4" }
             rect {
                 height: "5",
                 rx: ".899",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelsRightBottom()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelsRightBottomProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn PanelsRightBottom(props: PanelsRightBottomProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M3 15h12",
-            }
-            path {
-                d: "M15 3v18",
-            }
+            path { d: "M3 15h12" }
+            path { d: "M15 3v18" }
         }
     }
 }

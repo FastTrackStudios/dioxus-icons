@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ZodiacOphiuchus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ZodiacOphiuchusProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn ZodiacOphiuchus(props: ZodiacOphiuchusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 10A6.06 6.06 0 0 1 12 10 A6.06 6.06 0 0 0 21 10",
-            }
-            path {
-                d: "M6 3v12a6 6 0 0 0 12 0V3",
-            }
+            path { d: "M3 10A6.06 6.06 0 0 1 12 10 A6.06 6.06 0 0 0 21 10" }
+            path { d: "M6 3v12a6 6 0 0 0 12 0V3" }
         }
     }
 }

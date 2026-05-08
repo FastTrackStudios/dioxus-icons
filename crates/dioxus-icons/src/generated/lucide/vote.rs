@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Vote()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct VoteProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Vote(props: VoteProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m9 12 2 2 4-4",
-            }
-            path {
-                d: "M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z",
-            }
-            path {
-                d: "M22 19H2",
-            }
+            path { d: "m9 12 2 2 4-4" }
+            path { d: "M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z" }
+            path { d: "M22 19H2" }
         }
     }
 }

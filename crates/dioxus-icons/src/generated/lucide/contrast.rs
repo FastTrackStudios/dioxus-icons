@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Contrast()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ContrastProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn Contrast(props: ContrastProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M12 18a6 6 0 0 0 0-12v12z",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M12 18a6 6 0 0 0 0-12v12z" }
         }
     }
 }

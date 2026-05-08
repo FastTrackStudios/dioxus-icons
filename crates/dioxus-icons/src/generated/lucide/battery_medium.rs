@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BatteryMedium()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BatteryMediumProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn BatteryMedium(props: BatteryMediumProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 14v-4",
-            }
-            path {
-                d: "M22 14v-4",
-            }
-            path {
-                d: "M6 14v-4",
-            }
+            path { d: "M10 14v-4" }
+            path { d: "M22 14v-4" }
+            path { d: "M6 14v-4" }
             rect {
                 height: "12",
                 rx: "2",

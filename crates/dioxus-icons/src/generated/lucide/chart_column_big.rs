@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChartColumnBig()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChartColumnBigProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn ChartColumnBig(props: ChartColumnBigProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 3v16a2 2 0 0 0 2 2h16",
-            }
+            path { d: "M3 3v16a2 2 0 0 0 2 2h16" }
             rect {
                 height: "12",
                 rx: "1",

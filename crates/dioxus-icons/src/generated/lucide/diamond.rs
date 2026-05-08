@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Diamond()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DiamondProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Diamond(props: DiamondProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z",
-            }
+            path { d: "M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z" }
         }
     }
 }

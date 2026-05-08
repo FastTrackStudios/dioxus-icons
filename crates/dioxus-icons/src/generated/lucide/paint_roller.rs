@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PaintRoller()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PaintRollerProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn PaintRoller(props: PaintRollerProps) -> Element {
                 x: "2",
                 y: "2",
             }
-            path {
-                d: "M10 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2",
-            }
+            path { d: "M10 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" }
             rect {
                 height: "6",
                 rx: "1",

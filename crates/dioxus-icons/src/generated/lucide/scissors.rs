@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Scissors()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ScissorsProps {
     /// SVG width and height in pixels.
@@ -86,25 +87,11 @@ pub fn Scissors(props: ScissorsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "6",
-                cy: "6",
-                r: "3",
-            }
-            path {
-                d: "M8.12 8.12 12 12",
-            }
-            path {
-                d: "M20 4 8.12 15.88",
-            }
-            circle {
-                cx: "6",
-                cy: "18",
-                r: "3",
-            }
-            path {
-                d: "M14.8 14.8 20 20",
-            }
+            circle { cx: "6", cy: "6", r: "3" }
+            path { d: "M8.12 8.12 12 12" }
+            path { d: "M20 4 8.12 15.88" }
+            circle { cx: "6", cy: "18", r: "3" }
+            path { d: "M14.8 14.8 20 20" }
         }
     }
 }

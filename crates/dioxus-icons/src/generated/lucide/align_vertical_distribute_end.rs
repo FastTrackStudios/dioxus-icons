@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignVerticalDistributeEnd()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignVerticalDistributeEndProps {
     /// SVG width and height in pixels.
@@ -100,12 +101,8 @@ pub fn AlignVerticalDistributeEnd(props: AlignVerticalDistributeEndProps) -> Ele
                 x: "7",
                 y: "4",
             }
-            path {
-                d: "M2 20h20",
-            }
-            path {
-                d: "M2 10h20",
-            }
+            path { d: "M2 20h20" }
+            path { d: "M2 10h20" }
         }
     }
 }

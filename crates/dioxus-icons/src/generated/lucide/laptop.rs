@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Laptop()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LaptopProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Laptop(props: LaptopProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z",
-            }
-            path {
-                d: "M20.054 15.987H3.946",
-            }
+            path { d: "M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z" }
+            path { d: "M20.054 15.987H3.946" }
         }
     }
 }

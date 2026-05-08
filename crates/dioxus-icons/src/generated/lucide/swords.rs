@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Swords()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SwordsProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Swords(props: SwordsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            polyline {
-                points: "14.5 17.5 3 6 3 3 6 3 17.5 14.5",
-            }
+            polyline { points: "14.5 17.5 3 6 3 3 6 3 17.5 14.5" }
             line {
                 x1: "13",
                 x2: "19",
@@ -107,9 +106,7 @@ pub fn Swords(props: SwordsProps) -> Element {
                 y1: "21",
                 y2: "19",
             }
-            polyline {
-                points: "14.5 6.5 18 3 21 3 21 6 17.5 9.5",
-            }
+            polyline { points: "14.5 6.5 18 3 21 3 21 6 17.5 9.5" }
             line {
                 x1: "5",
                 x2: "9",

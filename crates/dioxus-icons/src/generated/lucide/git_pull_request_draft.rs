@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GitPullRequestDraft()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GitPullRequestDraftProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn GitPullRequestDraft(props: GitPullRequestDraftProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "18",
-                cy: "18",
-                r: "3",
-            }
-            circle {
-                cx: "6",
-                cy: "6",
-                r: "3",
-            }
-            path {
-                d: "M18 6V5",
-            }
-            path {
-                d: "M18 11v-1",
-            }
+            circle { cx: "18", cy: "18", r: "3" }
+            circle { cx: "6", cy: "6", r: "3" }
+            path { d: "M18 6V5" }
+            path { d: "M18 11v-1" }
             line {
                 x1: "6",
                 x2: "6",

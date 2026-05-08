@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TableCellsMerge()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TableCellsMergeProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn TableCellsMerge(props: TableCellsMergeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 21v-6",
-            }
-            path {
-                d: "M12 9V3",
-            }
-            path {
-                d: "M3 15h18",
-            }
-            path {
-                d: "M3 9h18",
-            }
+            path { d: "M12 21v-6" }
+            path { d: "M12 9V3" }
+            path { d: "M3 15h18" }
+            path { d: "M3 9h18" }
             rect {
                 height: "18",
                 rx: "2",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Pi()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PiProps {
     /// SVG width and height in pixels.
@@ -92,12 +93,8 @@ pub fn Pi(props: PiProps) -> Element {
                 y1: "4",
                 y2: "20",
             }
-            path {
-                d: "M4 7c0-1.7 1.3-3 3-3h13",
-            }
-            path {
-                d: "M18 20c-1.7 0-3-1.3-3-3V4",
-            }
+            path { d: "M4 7c0-1.7 1.3-3 3-3h13" }
+            path { d: "M18 20c-1.7 0-3-1.3-3-3V4" }
         }
     }
 }

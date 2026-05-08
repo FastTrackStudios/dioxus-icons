@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Shell()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ShellProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Shell(props: ShellProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44",
-            }
+            path { d: "M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44" }
         }
     }
 }

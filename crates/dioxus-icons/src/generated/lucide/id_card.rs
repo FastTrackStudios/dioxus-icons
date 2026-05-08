@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`IdCard()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct IdCardProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn IdCard(props: IdCardProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 10h2",
-            }
-            path {
-                d: "M16 14h2",
-            }
-            path {
-                d: "M6.17 15a3 3 0 0 1 5.66 0",
-            }
-            circle {
-                cx: "9",
-                cy: "11",
-                r: "2",
-            }
+            path { d: "M16 10h2" }
+            path { d: "M16 14h2" }
+            path { d: "M6.17 15a3 3 0 0 1 5.66 0" }
+            circle { cx: "9", cy: "11", r: "2" }
             rect {
                 height: "14",
                 rx: "2",

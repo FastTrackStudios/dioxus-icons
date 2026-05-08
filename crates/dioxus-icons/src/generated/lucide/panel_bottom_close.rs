@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelBottomClose()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelBottomCloseProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn PanelBottomClose(props: PanelBottomCloseProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M3 15h18",
-            }
-            path {
-                d: "m15 8-3 3-3-3",
-            }
+            path { d: "M3 15h18" }
+            path { d: "m15 8-3 3-3-3" }
         }
     }
 }

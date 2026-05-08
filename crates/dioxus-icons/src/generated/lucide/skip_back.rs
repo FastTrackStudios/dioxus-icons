@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SkipBack()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SkipBackProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn SkipBack(props: SkipBackProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z",
-            }
-            path {
-                d: "M3 20V4",
-            }
+            path { d: "M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z" }
+            path { d: "M3 20V4" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MonitorSmartphone()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MonitorSmartphoneProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn MonitorSmartphone(props: MonitorSmartphoneProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8",
-            }
-            path {
-                d: "M10 19v-3.96 3.15",
-            }
-            path {
-                d: "M7 19h5",
-            }
+            path { d: "M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" }
+            path { d: "M10 19v-3.96 3.15" }
+            path { d: "M7 19h5" }
             rect {
                 height: "10",
                 rx: "2",

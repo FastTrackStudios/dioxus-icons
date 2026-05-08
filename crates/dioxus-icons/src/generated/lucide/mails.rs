@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Mails()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MailsProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Mails(props: MailsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M17 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 1-1.732",
-            }
-            path {
-                d: "m22 5.5-6.419 4.179a2 2 0 0 1-2.162 0L7 5.5",
-            }
+            path { d: "M17 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 1-1.732" }
+            path { d: "m22 5.5-6.419 4.179a2 2 0 0 1-2.162 0L7 5.5" }
             rect {
                 height: "12",
                 rx: "2",

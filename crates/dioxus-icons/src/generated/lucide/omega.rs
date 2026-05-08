@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Omega()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct OmegaProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Omega(props: OmegaProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 20h4.5a.5.5 0 0 0 .5-.5v-.282a.52.52 0 0 0-.247-.437 8 8 0 1 1 8.494-.001.52.52 0 0 0-.247.438v.282a.5.5 0 0 0 .5.5H21",
-            }
+            path { d: "M3 20h4.5a.5.5 0 0 0 .5-.5v-.282a.52.52 0 0 0-.247-.437 8 8 0 1 1 8.494-.001.52.52 0 0 0-.247.438v.282a.5.5 0 0 0 .5.5H21" }
         }
     }
 }

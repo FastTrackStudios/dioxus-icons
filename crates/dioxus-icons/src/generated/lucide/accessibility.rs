@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Accessibility()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AccessibilityProps {
     /// SVG width and height in pixels.
@@ -86,23 +87,11 @@ pub fn Accessibility(props: AccessibilityProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "16",
-                cy: "4",
-                r: "1",
-            }
-            path {
-                d: "m18 19 1-7-6 1",
-            }
-            path {
-                d: "m5 8 3-3 5.5 3-2.36 3.5",
-            }
-            path {
-                d: "M4.24 14.5a5 5 0 0 0 6.88 6",
-            }
-            path {
-                d: "M13.76 17.5a5 5 0 0 0-6.88-6",
-            }
+            circle { cx: "16", cy: "4", r: "1" }
+            path { d: "m18 19 1-7-6 1" }
+            path { d: "m5 8 3-3 5.5 3-2.36 3.5" }
+            path { d: "M4.24 14.5a5 5 0 0 0 6.88 6" }
+            path { d: "M13.76 17.5a5 5 0 0 0-6.88-6" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleGauge()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleGaugeProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn CircleGauge(props: CircleGaugeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15.6 2.7a10 10 0 1 0 5.7 5.7",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "2",
-            }
-            path {
-                d: "M13.4 10.6 19 5",
-            }
+            path { d: "M15.6 2.7a10 10 0 1 0 5.7 5.7" }
+            circle { cx: "12", cy: "12", r: "2" }
+            path { d: "M13.4 10.6 19 5" }
         }
     }
 }

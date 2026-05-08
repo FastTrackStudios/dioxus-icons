@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`X()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct XProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn X(props: XProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M18 6 6 18",
-            }
-            path {
-                d: "m6 6 12 12",
-            }
+            path { d: "M18 6 6 18" }
+            path { d: "m6 6 12 12" }
         }
     }
 }

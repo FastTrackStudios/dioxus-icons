@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Airplay()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AirplayProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Airplay(props: AirplayProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1",
-            }
-            path {
-                d: "m12 15 5 6H7Z",
-            }
+            path { d: "M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" }
+            path { d: "m12 15 5 6H7Z" }
         }
     }
 }

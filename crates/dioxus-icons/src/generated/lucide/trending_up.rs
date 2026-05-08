@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TrendingUp()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TrendingUpProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn TrendingUp(props: TrendingUpProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 7h6v6",
-            }
-            path {
-                d: "m22 7-8.5 8.5-5-5L2 17",
-            }
+            path { d: "M16 7h6v6" }
+            path { d: "m22 7-8.5 8.5-5-5L2 17" }
         }
     }
 }

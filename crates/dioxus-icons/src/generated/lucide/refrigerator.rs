@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Refrigerator()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RefrigeratorProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Refrigerator(props: RefrigeratorProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 6a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6Z",
-            }
-            path {
-                d: "M5 10h14",
-            }
-            path {
-                d: "M15 7v6",
-            }
+            path { d: "M5 6a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6Z" }
+            path { d: "M5 10h14" }
+            path { d: "M15 7v6" }
         }
     }
 }

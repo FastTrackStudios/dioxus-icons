@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Touchpad()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TouchpadProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn Touchpad(props: TouchpadProps) -> Element {
                 x: "2",
                 y: "4",
             }
-            path {
-                d: "M2 14h20",
-            }
-            path {
-                d: "M12 20v-6",
-            }
+            path { d: "M2 14h20" }
+            path { d: "M12 20v-6" }
         }
     }
 }

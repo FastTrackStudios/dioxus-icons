@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ScanBarcode()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ScanBarcodeProps {
     /// SVG width and height in pixels.
@@ -86,27 +87,13 @@ pub fn ScanBarcode(props: ScanBarcodeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 7V5a2 2 0 0 1 2-2h2",
-            }
-            path {
-                d: "M17 3h2a2 2 0 0 1 2 2v2",
-            }
-            path {
-                d: "M21 17v2a2 2 0 0 1-2 2h-2",
-            }
-            path {
-                d: "M7 21H5a2 2 0 0 1-2-2v-2",
-            }
-            path {
-                d: "M8 7v10",
-            }
-            path {
-                d: "M12 7v10",
-            }
-            path {
-                d: "M17 7v10",
-            }
+            path { d: "M3 7V5a2 2 0 0 1 2-2h2" }
+            path { d: "M17 3h2a2 2 0 0 1 2 2v2" }
+            path { d: "M21 17v2a2 2 0 0 1-2 2h-2" }
+            path { d: "M7 21H5a2 2 0 0 1-2-2v-2" }
+            path { d: "M8 7v10" }
+            path { d: "M12 7v10" }
+            path { d: "M17 7v10" }
         }
     }
 }

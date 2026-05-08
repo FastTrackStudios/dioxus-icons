@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Proportions()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ProportionsProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn Proportions(props: ProportionsProps) -> Element {
                 x: "2",
                 y: "4",
             }
-            path {
-                d: "M12 9v11",
-            }
-            path {
-                d: "M2 9h13a2 2 0 0 1 2 2v9",
-            }
+            path { d: "M12 9v11" }
+            path { d: "M2 9h13a2 2 0 0 1 2 2v9" }
         }
     }
 }

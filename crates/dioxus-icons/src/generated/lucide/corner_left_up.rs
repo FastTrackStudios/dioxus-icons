@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CornerLeftUp()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CornerLeftUpProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn CornerLeftUp(props: CornerLeftUpProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 9 9 4 4 9",
-            }
-            path {
-                d: "M20 20h-7a4 4 0 0 1-4-4V4",
-            }
+            path { d: "M14 9 9 4 4 9" }
+            path { d: "M20 20h-7a4 4 0 0 1-4-4V4" }
         }
     }
 }

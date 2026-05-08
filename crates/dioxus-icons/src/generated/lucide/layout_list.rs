@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LayoutList()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LayoutListProps {
     /// SVG width and height in pixels.
@@ -100,18 +101,10 @@ pub fn LayoutList(props: LayoutListProps) -> Element {
                 x: "3",
                 y: "14",
             }
-            path {
-                d: "M14 4h7",
-            }
-            path {
-                d: "M14 9h7",
-            }
-            path {
-                d: "M14 15h7",
-            }
-            path {
-                d: "M14 20h7",
-            }
+            path { d: "M14 4h7" }
+            path { d: "M14 9h7" }
+            path { d: "M14 15h7" }
+            path { d: "M14 20h7" }
         }
     }
 }

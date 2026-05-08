@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`WashingMachine()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WashingMachineProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn WashingMachine(props: WashingMachineProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 6h3",
-            }
-            path {
-                d: "M17 6h.01",
-            }
+            path { d: "M3 6h3" }
+            path { d: "M17 6h.01" }
             rect {
                 height: "20",
                 rx: "2",
@@ -99,14 +96,8 @@ pub fn WashingMachine(props: WashingMachineProps) -> Element {
                 x: "3",
                 y: "2",
             }
-            circle {
-                cx: "12",
-                cy: "13",
-                r: "5",
-            }
-            path {
-                d: "M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5",
-            }
+            circle { cx: "12", cy: "13", r: "5" }
+            path { d: "M12 18a2.5 2.5 0 0 0 0-5 2.5 2.5 0 0 1 0-5" }
         }
     }
 }

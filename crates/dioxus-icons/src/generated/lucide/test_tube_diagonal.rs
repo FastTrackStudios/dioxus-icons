@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TestTubeDiagonal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TestTubeDiagonalProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn TestTubeDiagonal(props: TestTubeDiagonalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01a2.83 2.83 0 0 1 0-4L17 3",
-            }
-            path {
-                d: "m16 2 6 6",
-            }
-            path {
-                d: "M12 16H4",
-            }
+            path { d: "M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01a2.83 2.83 0 0 1 0-4L17 3" }
+            path { d: "m16 2 6 6" }
+            path { d: "M12 16H4" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChartCandlestick()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChartCandlestickProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn ChartCandlestick(props: ChartCandlestickProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M9 5v4",
-            }
+            path { d: "M9 5v4" }
             rect {
                 height: "6",
                 rx: "1",
@@ -96,12 +95,8 @@ pub fn ChartCandlestick(props: ChartCandlestickProps) -> Element {
                 x: "7",
                 y: "9",
             }
-            path {
-                d: "M9 15v2",
-            }
-            path {
-                d: "M17 3v2",
-            }
+            path { d: "M9 15v2" }
+            path { d: "M17 3v2" }
             rect {
                 height: "8",
                 rx: "1",
@@ -109,12 +104,8 @@ pub fn ChartCandlestick(props: ChartCandlestickProps) -> Element {
                 x: "15",
                 y: "5",
             }
-            path {
-                d: "M17 13v3",
-            }
-            path {
-                d: "M3 3v16a2 2 0 0 0 2 2h16",
-            }
+            path { d: "M17 13v3" }
+            path { d: "M3 3v16a2 2 0 0 0 2 2h16" }
         }
     }
 }

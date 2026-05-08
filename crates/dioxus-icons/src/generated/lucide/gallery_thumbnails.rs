@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GalleryThumbnails()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GalleryThumbnailsProps {
     /// SVG width and height in pixels.
@@ -93,18 +94,10 @@ pub fn GalleryThumbnails(props: GalleryThumbnailsProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M4 21h1",
-            }
-            path {
-                d: "M9 21h1",
-            }
-            path {
-                d: "M14 21h1",
-            }
-            path {
-                d: "M19 21h1",
-            }
+            path { d: "M4 21h1" }
+            path { d: "M9 21h1" }
+            path { d: "M14 21h1" }
+            path { d: "M19 21h1" }
         }
     }
 }

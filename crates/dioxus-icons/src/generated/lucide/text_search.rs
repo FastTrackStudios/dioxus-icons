@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TextSearch()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TextSearchProps {
     /// SVG width and height in pixels.
@@ -86,23 +87,11 @@ pub fn TextSearch(props: TextSearchProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 5H3",
-            }
-            path {
-                d: "M10 12H3",
-            }
-            path {
-                d: "M10 19H3",
-            }
-            circle {
-                cx: "17",
-                cy: "15",
-                r: "3",
-            }
-            path {
-                d: "m21 19-1.9-1.9",
-            }
+            path { d: "M21 5H3" }
+            path { d: "M10 12H3" }
+            path { d: "M10 19H3" }
+            circle { cx: "17", cy: "15", r: "3" }
+            path { d: "m21 19-1.9-1.9" }
         }
     }
 }

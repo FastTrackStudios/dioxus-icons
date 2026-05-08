@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignHorizontalSpaceAround()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignHorizontalSpaceAroundProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn AlignHorizontalSpaceAround(props: AlignHorizontalSpaceAroundProps) -> Ele
                 x: "9",
                 y: "7",
             }
-            path {
-                d: "M4 22V2",
-            }
-            path {
-                d: "M20 22V2",
-            }
+            path { d: "M4 22V2" }
+            path { d: "M20 22V2" }
         }
     }
 }

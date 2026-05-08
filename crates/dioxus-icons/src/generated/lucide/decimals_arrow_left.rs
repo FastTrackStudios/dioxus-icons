@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`DecimalsArrowLeft()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DecimalsArrowLeftProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn DecimalsArrowLeft(props: DecimalsArrowLeftProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m13 21-3-3 3-3",
-            }
-            path {
-                d: "M20 18H10",
-            }
-            path {
-                d: "M3 11h.01",
-            }
+            path { d: "m13 21-3-3 3-3" }
+            path { d: "M20 18H10" }
+            path { d: "M3 11h.01" }
             rect {
                 height: "8",
                 rx: "2.5",

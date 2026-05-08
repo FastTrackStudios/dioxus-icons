@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LensConvex()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LensConvexProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn LensConvex(props: LensConvexProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M13.433 2a1 1 0 0 1 .824.448 18 18 0 0 1 0 19.104 1 1 0 0 1-.824.448h-2.866a1 1 0 0 1-.824-.448 18 18 0 0 1 0-19.104A1 1 0 0 1 10.567 2z",
-            }
+            path { d: "M13.433 2a1 1 0 0 1 .824.448 18 18 0 0 1 0 19.104 1 1 0 0 1-.824.448h-2.866a1 1 0 0 1-.824-.448 18 18 0 0 1 0-19.104A1 1 0 0 1 10.567 2z" }
         }
     }
 }

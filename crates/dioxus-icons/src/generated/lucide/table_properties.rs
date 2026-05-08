@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TableProperties()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TablePropertiesProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn TableProperties(props: TablePropertiesProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 3v18",
-            }
+            path { d: "M15 3v18" }
             rect {
                 height: "18",
                 rx: "2",
@@ -96,12 +95,8 @@ pub fn TableProperties(props: TablePropertiesProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M21 9H3",
-            }
-            path {
-                d: "M21 15H3",
-            }
+            path { d: "M21 9H3" }
+            path { d: "M21 15H3" }
         }
     }
 }

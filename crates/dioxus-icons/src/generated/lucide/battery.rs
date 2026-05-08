@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Battery()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BatteryProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Battery(props: BatteryProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M 22 14 L 22 10",
-            }
+            path { d: "M 22 14 L 22 10" }
             rect {
                 height: "12",
                 rx: "2",

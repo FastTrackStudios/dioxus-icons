@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Group()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GroupProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Group(props: GroupProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 7V5c0-1.1.9-2 2-2h2",
-            }
-            path {
-                d: "M17 3h2c1.1 0 2 .9 2 2v2",
-            }
-            path {
-                d: "M21 17v2c0 1.1-.9 2-2 2h-2",
-            }
-            path {
-                d: "M7 21H5c-1.1 0-2-.9-2-2v-2",
-            }
+            path { d: "M3 7V5c0-1.1.9-2 2-2h2" }
+            path { d: "M17 3h2c1.1 0 2 .9 2 2v2" }
+            path { d: "M21 17v2c0 1.1-.9 2-2 2h-2" }
+            path { d: "M7 21H5c-1.1 0-2-.9-2-2v-2" }
             rect {
                 height: "5",
                 rx: "1",

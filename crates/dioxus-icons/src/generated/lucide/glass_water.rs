@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GlassWater()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GlassWaterProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn GlassWater(props: GlassWaterProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5.116 4.104A1 1 0 0 1 6.11 3h11.78a1 1 0 0 1 .994 1.105L17.19 20.21A2 2 0 0 1 15.2 22H8.8a2 2 0 0 1-2-1.79z",
-            }
-            path {
-                d: "M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0",
-            }
+            path { d: "M5.116 4.104A1 1 0 0 1 6.11 3h11.78a1 1 0 0 1 .994 1.105L17.19 20.21A2 2 0 0 1 15.2 22H8.8a2 2 0 0 1-2-1.79z" }
+            path { d: "M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0" }
         }
     }
 }

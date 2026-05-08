@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ZodiacCapricorn()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ZodiacCapricornProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn ZodiacCapricorn(props: ZodiacCapricornProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M11 21a3 3 0 0 0 3-3V6.5a1 1 0 0 0-7 0",
-            }
-            path {
-                d: "M7 19V6a3 3 0 0 0-3-3h0",
-            }
-            circle {
-                cx: "17",
-                cy: "17",
-                r: "3",
-            }
+            path { d: "M11 21a3 3 0 0 0 3-3V6.5a1 1 0 0 0-7 0" }
+            path { d: "M7 19V6a3 3 0 0 0-3-3h0" }
+            circle { cx: "17", cy: "17", r: "3" }
         }
     }
 }

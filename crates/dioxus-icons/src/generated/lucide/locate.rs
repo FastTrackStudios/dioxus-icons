@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Locate()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LocateProps {
     /// SVG width and height in pixels.
@@ -110,11 +111,7 @@ pub fn Locate(props: LocateProps) -> Element {
                 y1: "19",
                 y2: "22",
             }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "7",
-            }
+            circle { cx: "12", cy: "12", r: "7" }
         }
     }
 }

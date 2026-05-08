@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Reply()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ReplyProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Reply(props: ReplyProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M20 18v-2a4 4 0 0 0-4-4H4",
-            }
-            path {
-                d: "m9 17-5-5 5-5",
-            }
+            path { d: "M20 18v-2a4 4 0 0 0-4-4H4" }
+            path { d: "m9 17-5-5 5-5" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleDollarSign()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleDollarSignProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn CircleDollarSign(props: CircleDollarSignProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8",
-            }
-            path {
-                d: "M12 18V6",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" }
+            path { d: "M12 18V6" }
         }
     }
 }

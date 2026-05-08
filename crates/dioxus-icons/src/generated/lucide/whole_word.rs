@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`WholeWord()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WholeWordProps {
     /// SVG width and height in pixels.
@@ -86,25 +87,11 @@ pub fn WholeWord(props: WholeWordProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "7",
-                cy: "12",
-                r: "3",
-            }
-            path {
-                d: "M10 9v6",
-            }
-            circle {
-                cx: "17",
-                cy: "12",
-                r: "3",
-            }
-            path {
-                d: "M14 7v8",
-            }
-            path {
-                d: "M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1",
-            }
+            circle { cx: "7", cy: "12", r: "3" }
+            path { d: "M10 9v6" }
+            circle { cx: "17", cy: "12", r: "3" }
+            path { d: "M14 7v8" }
+            path { d: "M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1" }
         }
     }
 }

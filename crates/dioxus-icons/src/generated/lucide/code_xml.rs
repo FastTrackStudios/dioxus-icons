@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CodeXml()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CodeXmlProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn CodeXml(props: CodeXmlProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m18 16 4-4-4-4",
-            }
-            path {
-                d: "m6 8-4 4 4 4",
-            }
-            path {
-                d: "m14.5 4-5 16",
-            }
+            path { d: "m18 16 4-4-4-4" }
+            path { d: "m6 8-4 4 4 4" }
+            path { d: "m14.5 4-5 16" }
         }
     }
 }

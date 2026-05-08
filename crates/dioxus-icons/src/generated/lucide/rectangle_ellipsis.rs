@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`RectangleEllipsis()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RectangleEllipsisProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn RectangleEllipsis(props: RectangleEllipsisProps) -> Element {
                 x: "2",
                 y: "6",
             }
-            path {
-                d: "M12 12h.01",
-            }
-            path {
-                d: "M17 12h.01",
-            }
-            path {
-                d: "M7 12h.01",
-            }
+            path { d: "M12 12h.01" }
+            path { d: "M17 12h.01" }
+            path { d: "M7 12h.01" }
         }
     }
 }

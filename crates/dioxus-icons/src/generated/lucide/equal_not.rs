@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`EqualNot()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct EqualNotProps {
     /// SVG width and height in pixels.

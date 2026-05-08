@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Microchip()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MicrochipProps {
     /// SVG width and height in pixels.
@@ -86,33 +87,15 @@ pub fn Microchip(props: MicrochipProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 12h4",
-            }
-            path {
-                d: "M10 17h4",
-            }
-            path {
-                d: "M10 7h4",
-            }
-            path {
-                d: "M18 12h2",
-            }
-            path {
-                d: "M18 18h2",
-            }
-            path {
-                d: "M18 6h2",
-            }
-            path {
-                d: "M4 12h2",
-            }
-            path {
-                d: "M4 18h2",
-            }
-            path {
-                d: "M4 6h2",
-            }
+            path { d: "M10 12h4" }
+            path { d: "M10 17h4" }
+            path { d: "M10 7h4" }
+            path { d: "M18 12h2" }
+            path { d: "M18 18h2" }
+            path { d: "M18 6h2" }
+            path { d: "M4 12h2" }
+            path { d: "M4 18h2" }
+            path { d: "M4 6h2" }
             rect {
                 height: "20",
                 rx: "2",

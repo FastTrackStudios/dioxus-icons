@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FlaskRound()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FlaskRoundProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn FlaskRound(props: FlaskRoundProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 2v6.292a7 7 0 1 0 4 0V2",
-            }
-            path {
-                d: "M5 15h14",
-            }
-            path {
-                d: "M8.5 2h7",
-            }
+            path { d: "M10 2v6.292a7 7 0 1 0 4 0V2" }
+            path { d: "M5 15h14" }
+            path { d: "M8.5 2h7" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ZodiacGemini()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ZodiacGeminiProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn ZodiacGemini(props: ZodiacGeminiProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 4.525v14.948",
-            }
-            path {
-                d: "M20 3A17 17 0 0 1 4 3",
-            }
-            path {
-                d: "M4 21a17 17 0 0 1 16 0",
-            }
-            path {
-                d: "M8 4.525v14.948",
-            }
+            path { d: "M16 4.525v14.948" }
+            path { d: "M20 3A17 17 0 0 1 4 3" }
+            path { d: "M4 21a17 17 0 0 1 16 0" }
+            path { d: "M8 4.525v14.948" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Tangent()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TangentProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn Tangent(props: TangentProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "17",
-                cy: "4",
-                r: "2",
-            }
-            path {
-                d: "M15.59 5.41 5.41 15.59",
-            }
-            circle {
-                cx: "4",
-                cy: "17",
-                r: "2",
-            }
-            path {
-                d: "M12 22s-4-9-1.5-11.5S22 12 22 12",
-            }
+            circle { cx: "17", cy: "4", r: "2" }
+            path { d: "M15.59 5.41 5.41 15.59" }
+            circle { cx: "4", cy: "17", r: "2" }
+            path { d: "M12 22s-4-9-1.5-11.5S22 12 22 12" }
         }
     }
 }

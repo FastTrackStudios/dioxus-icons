@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SearchCheck()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SearchCheckProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn SearchCheck(props: SearchCheckProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m8 11 2 2 4-4",
-            }
-            circle {
-                cx: "11",
-                cy: "11",
-                r: "8",
-            }
-            path {
-                d: "m21 21-4.3-4.3",
-            }
+            path { d: "m8 11 2 2 4-4" }
+            circle { cx: "11", cy: "11", r: "8" }
+            path { d: "m21 21-4.3-4.3" }
         }
     }
 }

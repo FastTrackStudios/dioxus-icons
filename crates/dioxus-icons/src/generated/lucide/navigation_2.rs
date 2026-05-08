@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Navigation2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Navigation2Props {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Navigation2(props: Navigation2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            polygon {
-                points: "12 2 19 21 12 17 5 21 12 2",
-            }
+            polygon { points: "12 2 19 21 12 17 5 21 12 2" }
         }
     }
 }

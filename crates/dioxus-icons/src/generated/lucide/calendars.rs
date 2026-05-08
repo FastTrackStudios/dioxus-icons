@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Calendars()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CalendarsProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn Calendars(props: CalendarsProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 2v2",
-            }
-            path {
-                d: "M15.726 21.01A2 2 0 0 1 14 22H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2",
-            }
-            path {
-                d: "M18 2v2",
-            }
-            path {
-                d: "M2 13h2",
-            }
-            path {
-                d: "M8 8h14",
-            }
+            path { d: "M12 2v2" }
+            path { d: "M15.726 21.01A2 2 0 0 1 14 22H4a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2" }
+            path { d: "M18 2v2" }
+            path { d: "M2 13h2" }
+            path { d: "M8 8h14" }
             rect {
                 height: "14",
                 rx: "2",

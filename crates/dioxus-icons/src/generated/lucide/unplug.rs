@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Unplug()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UnplugProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,12 @@ pub fn Unplug(props: UnplugProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m19 5 3-3",
-            }
-            path {
-                d: "m2 22 3-3",
-            }
-            path {
-                d: "M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z",
-            }
-            path {
-                d: "M7.5 13.5 10 11",
-            }
-            path {
-                d: "M10.5 16.5 13 14",
-            }
-            path {
-                d: "m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z",
-            }
+            path { d: "m19 5 3-3" }
+            path { d: "m2 22 3-3" }
+            path { d: "M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z" }
+            path { d: "M7.5 13.5 10 11" }
+            path { d: "M10.5 16.5 13 14" }
+            path { d: "m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z" }
         }
     }
 }

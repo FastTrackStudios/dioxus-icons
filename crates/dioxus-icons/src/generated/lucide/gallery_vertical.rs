@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GalleryVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GalleryVerticalProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn GalleryVertical(props: GalleryVerticalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 2h18",
-            }
+            path { d: "M3 2h18" }
             rect {
                 height: "12",
                 rx: "2",
@@ -96,9 +95,7 @@ pub fn GalleryVertical(props: GalleryVerticalProps) -> Element {
                 x: "3",
                 y: "6",
             }
-            path {
-                d: "M3 22h18",
-            }
+            path { d: "M3 22h18" }
         }
     }
 }

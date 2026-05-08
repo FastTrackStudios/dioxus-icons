@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Dock()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DockProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Dock(props: DockProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 8h20",
-            }
+            path { d: "M2 8h20" }
             rect {
                 height: "16",
                 rx: "2",
@@ -96,9 +95,7 @@ pub fn Dock(props: DockProps) -> Element {
                 x: "2",
                 y: "4",
             }
-            path {
-                d: "M6 16h12",
-            }
+            path { d: "M6 16h12" }
         }
     }
 }

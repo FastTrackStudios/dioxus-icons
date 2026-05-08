@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleUser()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleUserProps {
     /// SVG width and height in pixels.
@@ -86,19 +87,9 @@ pub fn CircleUser(props: CircleUserProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            circle {
-                cx: "12",
-                cy: "10",
-                r: "3",
-            }
-            path {
-                d: "M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            circle { cx: "12", cy: "10", r: "3" }
+            path { d: "M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" }
         }
     }
 }

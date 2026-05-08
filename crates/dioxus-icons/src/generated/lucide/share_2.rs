@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Share2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Share2Props {
     /// SVG width and height in pixels.
@@ -86,21 +87,9 @@ pub fn Share2(props: Share2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "18",
-                cy: "5",
-                r: "3",
-            }
-            circle {
-                cx: "6",
-                cy: "12",
-                r: "3",
-            }
-            circle {
-                cx: "18",
-                cy: "19",
-                r: "3",
-            }
+            circle { cx: "18", cy: "5", r: "3" }
+            circle { cx: "6", cy: "12", r: "3" }
+            circle { cx: "18", cy: "19", r: "3" }
             line {
                 x1: "8.59",
                 x2: "15.42",

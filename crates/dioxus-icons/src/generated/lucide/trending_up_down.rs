@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TrendingUpDown()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TrendingUpDownProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn TrendingUpDown(props: TrendingUpDownProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14.828 14.828 21 21",
-            }
-            path {
-                d: "M21 16v5h-5",
-            }
-            path {
-                d: "m21 3-9 9-4-4-6 6",
-            }
-            path {
-                d: "M21 8V3h-5",
-            }
+            path { d: "M14.828 14.828 21 21" }
+            path { d: "M21 16v5h-5" }
+            path { d: "m21 3-9 9-4-4-6 6" }
+            path { d: "M21 8V3h-5" }
         }
     }
 }

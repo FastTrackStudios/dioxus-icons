@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Combine()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CombineProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Combine(props: CombineProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1",
-            }
-            path {
-                d: "M19 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1",
-            }
-            path {
-                d: "m7 15 3 3",
-            }
-            path {
-                d: "m7 21 3-3H5a2 2 0 0 1-2-2v-2",
-            }
+            path { d: "M14 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1" }
+            path { d: "M19 3a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1" }
+            path { d: "m7 15 3 3" }
+            path { d: "m7 21 3-3H5a2 2 0 0 1-2-2v-2" }
             rect {
                 height: "7",
                 rx: "1",

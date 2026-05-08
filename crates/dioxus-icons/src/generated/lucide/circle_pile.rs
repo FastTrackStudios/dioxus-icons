@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CirclePile()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CirclePileProps {
     /// SVG width and height in pixels.
@@ -86,36 +87,12 @@ pub fn CirclePile(props: CirclePileProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "19",
-                r: "2",
-            }
-            circle {
-                cx: "12",
-                cy: "5",
-                r: "2",
-            }
-            circle {
-                cx: "16",
-                cy: "12",
-                r: "2",
-            }
-            circle {
-                cx: "20",
-                cy: "19",
-                r: "2",
-            }
-            circle {
-                cx: "4",
-                cy: "19",
-                r: "2",
-            }
-            circle {
-                cx: "8",
-                cy: "12",
-                r: "2",
-            }
+            circle { cx: "12", cy: "19", r: "2" }
+            circle { cx: "12", cy: "5", r: "2" }
+            circle { cx: "16", cy: "12", r: "2" }
+            circle { cx: "20", cy: "19", r: "2" }
+            circle { cx: "4", cy: "19", r: "2" }
+            circle { cx: "8", cy: "12", r: "2" }
         }
     }
 }

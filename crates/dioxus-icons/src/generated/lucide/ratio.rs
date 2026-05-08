@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Ratio()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RatioProps {
     /// SVG width and height in pixels.

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Luggage()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LuggageProps {
     /// SVG width and height in pixels.
@@ -86,25 +87,11 @@ pub fn Luggage(props: LuggageProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 20a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2",
-            }
-            path {
-                d: "M8 18V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v14",
-            }
-            path {
-                d: "M10 20h4",
-            }
-            circle {
-                cx: "16",
-                cy: "20",
-                r: "2",
-            }
-            circle {
-                cx: "8",
-                cy: "20",
-                r: "2",
-            }
+            path { d: "M6 20a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2" }
+            path { d: "M8 18V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v14" }
+            path { d: "M10 20h4" }
+            circle { cx: "16", cy: "20", r: "2" }
+            circle { cx: "8", cy: "20", r: "2" }
         }
     }
 }

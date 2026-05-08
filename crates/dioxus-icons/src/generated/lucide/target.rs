@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Target()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TargetProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,9 @@ pub fn Target(props: TargetProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "6",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "2",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            circle { cx: "12", cy: "12", r: "6" }
+            circle { cx: "12", cy: "12", r: "2" }
         }
     }
 }

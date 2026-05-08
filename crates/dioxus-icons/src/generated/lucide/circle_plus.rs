@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CirclePlus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CirclePlusProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn CirclePlus(props: CirclePlusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M8 12h8",
-            }
-            path {
-                d: "M12 8v8",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M8 12h8" }
+            path { d: "M12 8v8" }
         }
     }
 }

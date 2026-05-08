@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Radius()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RadiusProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn Radius(props: RadiusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M20.34 17.52a10 10 0 1 0-2.82 2.82",
-            }
-            circle {
-                cx: "19",
-                cy: "19",
-                r: "2",
-            }
-            path {
-                d: "m13.41 13.41 4.18 4.18",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "2",
-            }
+            path { d: "M20.34 17.52a10 10 0 1 0-2.82 2.82" }
+            circle { cx: "19", cy: "19", r: "2" }
+            path { d: "m13.41 13.41 4.18 4.18" }
+            circle { cx: "12", cy: "12", r: "2" }
         }
     }
 }

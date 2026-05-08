@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TableCellsSplit()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TableCellsSplitProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn TableCellsSplit(props: TableCellsSplitProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 15V9",
-            }
-            path {
-                d: "M3 15h18",
-            }
-            path {
-                d: "M3 9h18",
-            }
+            path { d: "M12 15V9" }
+            path { d: "M3 15h18" }
+            path { d: "M3 9h18" }
             rect {
                 height: "18",
                 rx: "2",

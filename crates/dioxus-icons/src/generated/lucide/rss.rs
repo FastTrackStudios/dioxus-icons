@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Rss()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct RssProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn Rss(props: RssProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 11a9 9 0 0 1 9 9",
-            }
-            path {
-                d: "M4 4a16 16 0 0 1 16 16",
-            }
-            circle {
-                cx: "5",
-                cy: "19",
-                r: "1",
-            }
+            path { d: "M4 11a9 9 0 0 1 9 9" }
+            path { d: "M4 4a16 16 0 0 1 16 16" }
+            circle { cx: "5", cy: "19", r: "1" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Notebook()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct NotebookProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Notebook(props: NotebookProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 6h4",
-            }
-            path {
-                d: "M2 10h4",
-            }
-            path {
-                d: "M2 14h4",
-            }
-            path {
-                d: "M2 18h4",
-            }
+            path { d: "M2 6h4" }
+            path { d: "M2 10h4" }
+            path { d: "M2 14h4" }
+            path { d: "M2 18h4" }
             rect {
                 height: "20",
                 rx: "2",
@@ -105,9 +98,7 @@ pub fn Notebook(props: NotebookProps) -> Element {
                 x: "4",
                 y: "2",
             }
-            path {
-                d: "M16 2v20",
-            }
+            path { d: "M16 2v20" }
         }
     }
 }

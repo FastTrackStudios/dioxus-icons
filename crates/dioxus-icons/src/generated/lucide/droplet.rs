@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Droplet()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DropletProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Droplet(props: DropletProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z",
-            }
+            path { d: "M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" }
         }
     }
 }

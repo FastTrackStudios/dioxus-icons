@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListMusic()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListMusicProps {
     /// SVG width and height in pixels.
@@ -86,23 +87,11 @@ pub fn ListMusic(props: ListMusicProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 5H3",
-            }
-            path {
-                d: "M11 12H3",
-            }
-            path {
-                d: "M11 19H3",
-            }
-            path {
-                d: "M21 16V5",
-            }
-            circle {
-                cx: "18",
-                cy: "16",
-                r: "3",
-            }
+            path { d: "M16 5H3" }
+            path { d: "M11 12H3" }
+            path { d: "M11 19H3" }
+            path { d: "M21 16V5" }
+            circle { cx: "18", cy: "16", r: "3" }
         }
     }
 }

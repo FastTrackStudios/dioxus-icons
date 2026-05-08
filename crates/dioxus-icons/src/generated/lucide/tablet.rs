@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Tablet()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TabletProps {
     /// SVG width and height in pixels.

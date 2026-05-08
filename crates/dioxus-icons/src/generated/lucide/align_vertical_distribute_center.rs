@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignVerticalDistributeCenter()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignVerticalDistributeCenterProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn AlignVerticalDistributeCenter(props: AlignVerticalDistributeCenterProps) 
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M22 17h-3",
-            }
-            path {
-                d: "M22 7h-5",
-            }
-            path {
-                d: "M5 17H2",
-            }
-            path {
-                d: "M7 7H2",
-            }
+            path { d: "M22 17h-3" }
+            path { d: "M22 7h-5" }
+            path { d: "M5 17H2" }
+            path { d: "M7 7H2" }
             rect {
                 height: "6",
                 rx: "2",

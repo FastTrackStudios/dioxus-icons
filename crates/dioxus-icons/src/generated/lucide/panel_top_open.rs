@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelTopOpen()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelTopOpenProps {
     /// SVG width and height in pixels.
@@ -93,12 +94,8 @@ pub fn PanelTopOpen(props: PanelTopOpenProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M3 9h18",
-            }
-            path {
-                d: "m15 14-3 3-3-3",
-            }
+            path { d: "M3 9h18" }
+            path { d: "m15 14-3 3-3-3" }
         }
     }
 }

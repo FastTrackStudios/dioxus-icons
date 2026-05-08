@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TriangleRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TriangleRightProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn TriangleRight(props: TriangleRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M22 18a2 2 0 0 1-2 2H3c-1.1 0-1.3-.6-.4-1.3L20.4 4.3c.9-.7 1.6-.4 1.6.7Z",
-            }
+            path { d: "M22 18a2 2 0 0 1-2 2H3c-1.1 0-1.3-.6-.4-1.3L20.4 4.3c.9-.7 1.6-.4 1.6.7Z" }
         }
     }
 }

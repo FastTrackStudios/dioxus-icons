@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MessageSquareOff()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MessageSquareOffProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn MessageSquareOff(props: MessageSquareOffProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M19 19H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.7.7 0 0 1 2 21.286V5a2 2 0 0 1 1.184-1.826",
-            }
-            path {
-                d: "m2 2 20 20",
-            }
-            path {
-                d: "M8.656 3H20a2 2 0 0 1 2 2v11.344",
-            }
+            path { d: "M19 19H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.7.7 0 0 1 2 21.286V5a2 2 0 0 1 1.184-1.826" }
+            path { d: "m2 2 20 20" }
+            path { d: "M8.656 3H20a2 2 0 0 1 2 2v11.344" }
         }
     }
 }

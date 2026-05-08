@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FileHeadphone()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FileHeadphoneProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn FileHeadphone(props: FileHeadphoneProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 6.835V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-.343",
-            }
-            path {
-                d: "M14 2v5a1 1 0 0 0 1 1h5",
-            }
-            path {
-                d: "M2 19a2 2 0 0 1 4 0v1a2 2 0 0 1-4 0v-4a6 6 0 0 1 12 0v4a2 2 0 0 1-4 0v-1a2 2 0 0 1 4 0",
-            }
+            path { d: "M4 6.835V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2h-.343" }
+            path { d: "M14 2v5a1 1 0 0 0 1 1h5" }
+            path { d: "M2 19a2 2 0 0 1 4 0v1a2 2 0 0 1-4 0v-4a6 6 0 0 1 12 0v4a2 2 0 0 1-4 0v-1a2 2 0 0 1 4 0" }
         }
     }
 }

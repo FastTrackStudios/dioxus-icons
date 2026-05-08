@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CloudLightning()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CloudLightningProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn CloudLightning(props: CloudLightningProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973",
-            }
-            path {
-                d: "m13 12-3 5h4l-3 5",
-            }
+            path { d: "M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973" }
+            path { d: "m13 12-3 5h4l-3 5" }
         }
     }
 }

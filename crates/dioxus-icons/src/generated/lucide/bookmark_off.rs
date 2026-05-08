@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`BookmarkOff()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BookmarkOffProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn BookmarkOff(props: BookmarkOffProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M19 19v1a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5",
-            }
-            path {
-                d: "m2 2 20 20",
-            }
-            path {
-                d: "M8.656 3H17a2 2 0 0 1 2 2v8.344",
-            }
+            path { d: "M19 19v1a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5" }
+            path { d: "m2 2 20 20" }
+            path { d: "M8.656 3H17a2 2 0 0 1 2 2v8.344" }
         }
     }
 }

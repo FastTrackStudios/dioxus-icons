@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareArrowOutDownRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareArrowOutDownRightProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn SquareArrowOutDownRight(props: SquareArrowOutDownRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6",
-            }
-            path {
-                d: "m21 21-9-9",
-            }
-            path {
-                d: "M21 15v6h-6",
-            }
+            path { d: "M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" }
+            path { d: "m21 21-9-9" }
+            path { d: "M21 15v6h-6" }
         }
     }
 }

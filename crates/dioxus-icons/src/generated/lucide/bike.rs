@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Bike()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BikeProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,10 @@ pub fn Bike(props: BikeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "18.5",
-                cy: "17.5",
-                r: "3.5",
-            }
-            circle {
-                cx: "5.5",
-                cy: "17.5",
-                r: "3.5",
-            }
-            circle {
-                cx: "15",
-                cy: "5",
-                r: "1",
-            }
-            path {
-                d: "M12 17.5V14l-3-3 4-3 2 3h2",
-            }
+            circle { cx: "18.5", cy: "17.5", r: "3.5" }
+            circle { cx: "5.5", cy: "17.5", r: "3.5" }
+            circle { cx: "15", cy: "5", r: "1" }
+            path { d: "M12 17.5V14l-3-3 4-3 2 3h2" }
         }
     }
 }

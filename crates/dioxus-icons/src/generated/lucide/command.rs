@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Command()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CommandProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Command(props: CommandProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3",
-            }
+            path { d: "M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" }
         }
     }
 }

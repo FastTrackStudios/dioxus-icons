@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListEnd()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListEndProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn ListEnd(props: ListEndProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 5H3",
-            }
-            path {
-                d: "M16 12H3",
-            }
-            path {
-                d: "M9 19H3",
-            }
-            path {
-                d: "m16 16-3 3 3 3",
-            }
-            path {
-                d: "M21 5v12a2 2 0 0 1-2 2h-6",
-            }
+            path { d: "M16 5H3" }
+            path { d: "M16 12H3" }
+            path { d: "M9 19H3" }
+            path { d: "m16 16-3 3 3 3" }
+            path { d: "M21 5v12a2 2 0 0 1-2 2h-6" }
         }
     }
 }

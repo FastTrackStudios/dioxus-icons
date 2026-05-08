@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignVerticalJustifyStart()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignVerticalJustifyStartProps {
     /// SVG width and height in pixels.
@@ -100,9 +101,7 @@ pub fn AlignVerticalJustifyStart(props: AlignVerticalJustifyStartProps) -> Eleme
                 x: "7",
                 y: "6",
             }
-            path {
-                d: "M2 2h20",
-            }
+            path { d: "M2 2h20" }
         }
     }
 }

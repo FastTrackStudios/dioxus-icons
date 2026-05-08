@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareAsterisk()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareAsteriskProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn SquareAsterisk(props: SquareAsteriskProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M12 8v8",
-            }
-            path {
-                d: "m8.5 14 7-4",
-            }
-            path {
-                d: "m8.5 10 7 4",
-            }
+            path { d: "M12 8v8" }
+            path { d: "m8.5 14 7-4" }
+            path { d: "m8.5 10 7 4" }
         }
     }
 }

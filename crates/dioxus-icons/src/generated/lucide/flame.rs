@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Flame()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FlameProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Flame(props: FlameProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4",
-            }
+            path { d: "M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" }
         }
     }
 }

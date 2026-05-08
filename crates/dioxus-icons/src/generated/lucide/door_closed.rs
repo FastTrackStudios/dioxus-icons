@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`DoorClosed()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DoorClosedProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn DoorClosed(props: DoorClosedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 12h.01",
-            }
-            path {
-                d: "M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14",
-            }
-            path {
-                d: "M2 20h20",
-            }
+            path { d: "M10 12h.01" }
+            path { d: "M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14" }
+            path { d: "M2 20h20" }
         }
     }
 }

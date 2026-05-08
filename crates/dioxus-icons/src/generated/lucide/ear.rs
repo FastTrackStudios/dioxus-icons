@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Ear()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct EarProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Ear(props: EarProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0",
-            }
-            path {
-                d: "M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4",
-            }
+            path { d: "M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0" }
+            path { d: "M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CaseLower()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CaseLowerProps {
     /// SVG width and height in pixels.
@@ -86,22 +87,10 @@ pub fn CaseLower(props: CaseLowerProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 9v7",
-            }
-            path {
-                d: "M14 6v10",
-            }
-            circle {
-                cx: "17.5",
-                cy: "12.5",
-                r: "3.5",
-            }
-            circle {
-                cx: "6.5",
-                cy: "12.5",
-                r: "3.5",
-            }
+            path { d: "M10 9v7" }
+            path { d: "M14 6v10" }
+            circle { cx: "17.5", cy: "12.5", r: "3.5" }
+            circle { cx: "6.5", cy: "12.5", r: "3.5" }
         }
     }
 }

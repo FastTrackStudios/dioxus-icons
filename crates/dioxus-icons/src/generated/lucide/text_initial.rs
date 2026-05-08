@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TextInitial()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TextInitialProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn TextInitial(props: TextInitialProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 5h6",
-            }
-            path {
-                d: "M15 12h6",
-            }
-            path {
-                d: "M3 19h18",
-            }
-            path {
-                d: "m3 12 3.553-7.724a.5.5 0 0 1 .894 0L11 12",
-            }
-            path {
-                d: "M3.92 10h6.16",
-            }
+            path { d: "M15 5h6" }
+            path { d: "M15 12h6" }
+            path { d: "M3 19h18" }
+            path { d: "m3 12 3.553-7.724a.5.5 0 0 1 .894 0L11 12" }
+            path { d: "M3.92 10h6.16" }
         }
     }
 }

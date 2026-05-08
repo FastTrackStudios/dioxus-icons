@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SunSnow()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SunSnowProps {
     /// SVG width and height in pixels.
@@ -86,39 +87,17 @@ pub fn SunSnow(props: SunSnowProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 21v-1",
-            }
-            path {
-                d: "M10 4V3",
-            }
-            path {
-                d: "M10 9a3 3 0 0 0 0 6",
-            }
-            path {
-                d: "m14 20 1.25-2.5L18 18",
-            }
-            path {
-                d: "m14 4 1.25 2.5L18 6",
-            }
-            path {
-                d: "m17 21-3-6 1.5-3H22",
-            }
-            path {
-                d: "m17 3-3 6 1.5 3",
-            }
-            path {
-                d: "M2 12h1",
-            }
-            path {
-                d: "m20 10-1.5 2 1.5 2",
-            }
-            path {
-                d: "m3.64 18.36.7-.7",
-            }
-            path {
-                d: "m4.34 6.34-.7-.7",
-            }
+            path { d: "M10 21v-1" }
+            path { d: "M10 4V3" }
+            path { d: "M10 9a3 3 0 0 0 0 6" }
+            path { d: "m14 20 1.25-2.5L18 18" }
+            path { d: "m14 4 1.25 2.5L18 6" }
+            path { d: "m17 21-3-6 1.5-3H22" }
+            path { d: "m17 3-3 6 1.5 3" }
+            path { d: "M2 12h1" }
+            path { d: "m20 10-1.5 2 1.5 2" }
+            path { d: "m3.64 18.36.7-.7" }
+            path { d: "m4.34 6.34-.7-.7" }
         }
     }
 }

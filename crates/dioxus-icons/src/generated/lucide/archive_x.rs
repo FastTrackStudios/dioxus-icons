@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ArchiveX()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ArchiveXProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn ArchiveX(props: ArchiveXProps) -> Element {
                 x: "2",
                 y: "3",
             }
-            path {
-                d: "M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8",
-            }
-            path {
-                d: "m9.5 17 5-5",
-            }
-            path {
-                d: "m9.5 12 5 5",
-            }
+            path { d: "M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" }
+            path { d: "m9.5 17 5-5" }
+            path { d: "m9.5 12 5 5" }
         }
     }
 }

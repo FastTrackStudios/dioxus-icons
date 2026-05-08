@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ArrowUpNarrowWide()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ArrowUpNarrowWideProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn ArrowUpNarrowWide(props: ArrowUpNarrowWideProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m3 8 4-4 4 4",
-            }
-            path {
-                d: "M7 4v16",
-            }
-            path {
-                d: "M11 12h4",
-            }
-            path {
-                d: "M11 16h7",
-            }
-            path {
-                d: "M11 20h10",
-            }
+            path { d: "m3 8 4-4 4 4" }
+            path { d: "M7 4v16" }
+            path { d: "M11 12h4" }
+            path { d: "M11 16h7" }
+            path { d: "M11 20h10" }
         }
     }
 }

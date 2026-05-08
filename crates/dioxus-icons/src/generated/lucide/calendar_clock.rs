@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CalendarClock()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CalendarClockProps {
     /// SVG width and height in pixels.
@@ -86,26 +87,12 @@ pub fn CalendarClock(props: CalendarClockProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 14v2.2l1.6 1",
-            }
-            path {
-                d: "M16 2v4",
-            }
-            path {
-                d: "M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5",
-            }
-            path {
-                d: "M3 10h5",
-            }
-            path {
-                d: "M8 2v4",
-            }
-            circle {
-                cx: "16",
-                cy: "16",
-                r: "6",
-            }
+            path { d: "M16 14v2.2l1.6 1" }
+            path { d: "M16 2v4" }
+            path { d: "M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" }
+            path { d: "M3 10h5" }
+            path { d: "M8 2v4" }
+            circle { cx: "16", cy: "16", r: "6" }
         }
     }
 }

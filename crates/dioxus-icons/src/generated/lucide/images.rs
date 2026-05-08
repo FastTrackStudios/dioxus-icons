@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Images()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ImagesProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Images(props: ImagesProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16",
-            }
-            path {
-                d: "M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2",
-            }
+            path { d: "m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16" }
+            path { d: "M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2" }
             circle {
                 cx: "13",
                 cy: "7",

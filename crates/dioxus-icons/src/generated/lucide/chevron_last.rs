@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChevronLast()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChevronLastProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn ChevronLast(props: ChevronLastProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m7 18 6-6-6-6",
-            }
-            path {
-                d: "M17 6v12",
-            }
+            path { d: "m7 18 6-6-6-6" }
+            path { d: "M17 6v12" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Save()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SaveProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Save(props: SaveProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z",
-            }
-            path {
-                d: "M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7",
-            }
-            path {
-                d: "M7 3v4a1 1 0 0 0 1 1h7",
-            }
+            path { d: "M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" }
+            path { d: "M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7" }
+            path { d: "M7 3v4a1 1 0 0 0 1 1h7" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Fuel()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FuelProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn Fuel(props: FuelProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5",
-            }
-            path {
-                d: "M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16",
-            }
-            path {
-                d: "M2 21h13",
-            }
-            path {
-                d: "M3 9h11",
-            }
+            path { d: "M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 4 0v-6.998a2 2 0 0 0-.59-1.42L18 5" }
+            path { d: "M14 21V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16" }
+            path { d: "M2 21h13" }
+            path { d: "M3 9h11" }
         }
     }
 }

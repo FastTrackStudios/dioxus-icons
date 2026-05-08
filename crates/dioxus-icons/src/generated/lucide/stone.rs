@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Stone()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct StoneProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Stone(props: StoneProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M11.264 2.205A4 4 0 0 0 6.42 4.211l-4 8a4 4 0 0 0 1.359 5.117l6 4a4 4 0 0 0 4.438 0l6-4a4 4 0 0 0 1.576-4.592l-2-6a4 4 0 0 0-2.53-2.53z",
-            }
-            path {
-                d: "M11.99 22 14 12l7.822 3.184",
-            }
-            path {
-                d: "M14 12 8.47 2.302",
-            }
+            path { d: "M11.264 2.205A4 4 0 0 0 6.42 4.211l-4 8a4 4 0 0 0 1.359 5.117l6 4a4 4 0 0 0 4.438 0l6-4a4 4 0 0 0 1.576-4.592l-2-6a4 4 0 0 0-2.53-2.53z" }
+            path { d: "M11.99 22 14 12l7.822 3.184" }
+            path { d: "M14 12 8.47 2.302" }
         }
     }
 }

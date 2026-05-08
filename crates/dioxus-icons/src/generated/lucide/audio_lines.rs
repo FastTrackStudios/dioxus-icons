@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AudioLines()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AudioLinesProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,12 @@ pub fn AudioLines(props: AudioLinesProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 10v3",
-            }
-            path {
-                d: "M6 6v11",
-            }
-            path {
-                d: "M10 3v18",
-            }
-            path {
-                d: "M14 8v7",
-            }
-            path {
-                d: "M18 5v13",
-            }
-            path {
-                d: "M22 10v3",
-            }
+            path { d: "M2 10v3" }
+            path { d: "M6 6v11" }
+            path { d: "M10 3v18" }
+            path { d: "M14 8v7" }
+            path { d: "M18 5v13" }
+            path { d: "M22 10v3" }
         }
     }
 }

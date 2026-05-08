@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Focus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FocusProps {
     /// SVG width and height in pixels.
@@ -86,23 +87,11 @@ pub fn Focus(props: FocusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "3",
-            }
-            path {
-                d: "M3 7V5a2 2 0 0 1 2-2h2",
-            }
-            path {
-                d: "M17 3h2a2 2 0 0 1 2 2v2",
-            }
-            path {
-                d: "M21 17v2a2 2 0 0 1-2 2h-2",
-            }
-            path {
-                d: "M7 21H5a2 2 0 0 1-2-2v-2",
-            }
+            circle { cx: "12", cy: "12", r: "3" }
+            path { d: "M3 7V5a2 2 0 0 1 2-2h2" }
+            path { d: "M17 3h2a2 2 0 0 1 2 2v2" }
+            path { d: "M21 17v2a2 2 0 0 1-2 2h-2" }
+            path { d: "M7 21H5a2 2 0 0 1-2-2v-2" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`DollarSign()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct DollarSignProps {
     /// SVG width and height in pixels.
@@ -92,9 +93,7 @@ pub fn DollarSign(props: DollarSignProps) -> Element {
                 y1: "2",
                 y2: "22",
             }
-            path {
-                d: "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6",
-            }
+            path { d: "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" }
         }
     }
 }

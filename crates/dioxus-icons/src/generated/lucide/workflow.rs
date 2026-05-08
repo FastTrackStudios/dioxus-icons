@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Workflow()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WorkflowProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn Workflow(props: WorkflowProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M7 11v4a2 2 0 0 0 2 2h4",
-            }
+            path { d: "M7 11v4a2 2 0 0 0 2 2h4" }
             rect {
                 height: "8",
                 rx: "2",

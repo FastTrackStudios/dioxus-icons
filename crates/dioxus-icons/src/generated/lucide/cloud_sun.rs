@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CloudSun()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CloudSunProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,12 @@ pub fn CloudSun(props: CloudSunProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 2v2",
-            }
-            path {
-                d: "m4.93 4.93 1.41 1.41",
-            }
-            path {
-                d: "M20 12h2",
-            }
-            path {
-                d: "m19.07 4.93-1.41 1.41",
-            }
-            path {
-                d: "M15.947 12.65a4 4 0 0 0-5.925-4.128",
-            }
-            path {
-                d: "M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z",
-            }
+            path { d: "M12 2v2" }
+            path { d: "m4.93 4.93 1.41 1.41" }
+            path { d: "M20 12h2" }
+            path { d: "m19.07 4.93-1.41 1.41" }
+            path { d: "M15.947 12.65a4 4 0 0 0-5.925-4.128" }
+            path { d: "M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignVerticalDistributeStart()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignVerticalDistributeStartProps {
     /// SVG width and height in pixels.
@@ -100,12 +101,8 @@ pub fn AlignVerticalDistributeStart(props: AlignVerticalDistributeStartProps) ->
                 x: "7",
                 y: "4",
             }
-            path {
-                d: "M2 14h20",
-            }
-            path {
-                d: "M2 4h20",
-            }
+            path { d: "M2 14h20" }
+            path { d: "M2 4h20" }
         }
     }
 }

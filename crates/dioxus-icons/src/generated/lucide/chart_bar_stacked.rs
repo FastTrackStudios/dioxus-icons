@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChartBarStacked()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChartBarStackedProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn ChartBarStacked(props: ChartBarStackedProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M11 13v4",
-            }
-            path {
-                d: "M15 5v4",
-            }
-            path {
-                d: "M3 3v16a2 2 0 0 0 2 2h16",
-            }
+            path { d: "M11 13v4" }
+            path { d: "M15 5v4" }
+            path { d: "M3 3v16a2 2 0 0 0 2 2h16" }
             rect {
                 height: "4",
                 rx: "1",

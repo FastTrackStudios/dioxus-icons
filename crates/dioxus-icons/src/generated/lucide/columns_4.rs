@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Columns4()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Columns4Props {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn Columns4(props: Columns4Props) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M7.5 3v18",
-            }
-            path {
-                d: "M12 3v18",
-            }
-            path {
-                d: "M16.5 3v18",
-            }
+            path { d: "M7.5 3v18" }
+            path { d: "M12 3v18" }
+            path { d: "M16.5 3v18" }
         }
     }
 }

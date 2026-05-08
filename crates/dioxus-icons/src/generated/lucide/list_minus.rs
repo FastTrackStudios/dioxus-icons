@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListMinus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListMinusProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn ListMinus(props: ListMinusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M16 5H3",
-            }
-            path {
-                d: "M11 12H3",
-            }
-            path {
-                d: "M16 19H3",
-            }
-            path {
-                d: "M21 12h-6",
-            }
+            path { d: "M16 5H3" }
+            path { d: "M11 12H3" }
+            path { d: "M16 19H3" }
+            path { d: "M21 12h-6" }
         }
     }
 }

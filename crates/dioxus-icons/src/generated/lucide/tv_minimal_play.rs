@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TvMinimalPlay()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TvMinimalPlayProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn TvMinimalPlay(props: TvMinimalPlayProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z",
-            }
-            path {
-                d: "M7 21h10",
-            }
+            path { d: "M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z" }
+            path { d: "M7 21h10" }
             rect {
                 height: "14",
                 rx: "2",

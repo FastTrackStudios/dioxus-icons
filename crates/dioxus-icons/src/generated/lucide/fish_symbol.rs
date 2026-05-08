@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FishSymbol()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FishSymbolProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn FishSymbol(props: FishSymbolProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 16s9-15 20-4C11 23 2 8 2 8",
-            }
+            path { d: "M2 16s9-15 20-4C11 23 2 8 2 8" }
         }
     }
 }

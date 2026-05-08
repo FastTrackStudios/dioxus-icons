@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PilcrowRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PilcrowRightProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn PilcrowRight(props: PilcrowRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 3v11",
-            }
-            path {
-                d: "M10 9H7a1 1 0 0 1 0-6h8",
-            }
-            path {
-                d: "M14 3v11",
-            }
-            path {
-                d: "m18 14 4 4H2",
-            }
-            path {
-                d: "m22 18-4 4",
-            }
+            path { d: "M10 3v11" }
+            path { d: "M10 9H7a1 1 0 0 1 0-6h8" }
+            path { d: "M14 3v11" }
+            path { d: "m18 14 4 4H2" }
+            path { d: "m22 18-4 4" }
         }
     }
 }

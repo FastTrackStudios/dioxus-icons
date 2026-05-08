@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Navigation2Off()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Navigation2OffProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Navigation2Off(props: Navigation2OffProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M9.31 9.31 5 21l7-4 7 4-1.17-3.17",
-            }
-            path {
-                d: "M14.53 8.88 12 2l-1.17 3.17",
-            }
+            path { d: "M9.31 9.31 5 21l7-4 7 4-1.17-3.17" }
+            path { d: "M14.53 8.88 12 2l-1.17 3.17" }
             line {
                 x1: "2",
                 x2: "22",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleChevronUp()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleChevronUpProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn CircleChevronUp(props: CircleChevronUpProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "m8 14 4-4 4 4",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "m8 14 4-4 4 4" }
         }
     }
 }

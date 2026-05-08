@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CircleX()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CircleXProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn CircleX(props: CircleXProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "m15 9-6 6",
-            }
-            path {
-                d: "m9 9 6 6",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "m15 9-6 6" }
+            path { d: "m9 9 6 6" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`EqualApproximately()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct EqualApproximatelyProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn EqualApproximately(props: EqualApproximatelyProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M5 15a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0",
-            }
-            path {
-                d: "M5 9a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0",
-            }
+            path { d: "M5 15a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0" }
+            path { d: "M5 9a6.5 6.5 0 0 1 7 0 6.5 6.5 0 0 0 7 0" }
         }
     }
 }

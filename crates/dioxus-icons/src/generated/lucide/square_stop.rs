@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareStop()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareStopProps {
     /// SVG width and height in pixels.

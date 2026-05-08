@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ClockPlus()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ClockPlusProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn ClockPlus(props: ClockPlusProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 6v6l3.644 1.822",
-            }
-            path {
-                d: "M16 19h6",
-            }
-            path {
-                d: "M19 16v6",
-            }
-            path {
-                d: "M21.92 13.267a10 10 0 1 0-8.653 8.653",
-            }
+            path { d: "M12 6v6l3.644 1.822" }
+            path { d: "M16 19h6" }
+            path { d: "M19 16v6" }
+            path { d: "M21.92 13.267a10 10 0 1 0-8.653 8.653" }
         }
     }
 }

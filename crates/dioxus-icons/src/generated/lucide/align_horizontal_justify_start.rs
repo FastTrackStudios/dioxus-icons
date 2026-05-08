@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`AlignHorizontalJustifyStart()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlignHorizontalJustifyStartProps {
     /// SVG width and height in pixels.
@@ -100,9 +101,7 @@ pub fn AlignHorizontalJustifyStart(props: AlignHorizontalJustifyStartProps) -> E
                 x: "16",
                 y: "7",
             }
-            path {
-                d: "M2 2v20",
-            }
+            path { d: "M2 2v20" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Headset()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HeadsetProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Headset(props: HeadsetProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z",
-            }
-            path {
-                d: "M21 16v2a4 4 0 0 1-4 4h-5",
-            }
+            path { d: "M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" }
+            path { d: "M21 16v2a4 4 0 0 1-4 4h-5" }
         }
     }
 }

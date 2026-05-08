@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TvMinimal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TvMinimalProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn TvMinimal(props: TvMinimalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M7 21h10",
-            }
+            path { d: "M7 21h10" }
             rect {
                 height: "14",
                 rx: "2",

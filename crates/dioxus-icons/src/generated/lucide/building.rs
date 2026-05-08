@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Building()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BuildingProps {
     /// SVG width and height in pixels.
@@ -86,36 +87,16 @@ pub fn Building(props: BuildingProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 10h.01",
-            }
-            path {
-                d: "M12 14h.01",
-            }
-            path {
-                d: "M12 6h.01",
-            }
-            path {
-                d: "M16 10h.01",
-            }
-            path {
-                d: "M16 14h.01",
-            }
-            path {
-                d: "M16 6h.01",
-            }
-            path {
-                d: "M8 10h.01",
-            }
-            path {
-                d: "M8 14h.01",
-            }
-            path {
-                d: "M8 6h.01",
-            }
-            path {
-                d: "M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3",
-            }
+            path { d: "M12 10h.01" }
+            path { d: "M12 14h.01" }
+            path { d: "M12 6h.01" }
+            path { d: "M16 10h.01" }
+            path { d: "M16 14h.01" }
+            path { d: "M16 6h.01" }
+            path { d: "M8 10h.01" }
+            path { d: "M8 14h.01" }
+            path { d: "M8 6h.01" }
+            path { d: "M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" }
             rect {
                 height: "20",
                 rx: "2",

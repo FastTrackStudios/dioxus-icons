@@ -21,10 +21,13 @@ base64 = "0.22.1"
 # compatible 0.7.x line. Keep default features off so the library does not
 # select an app renderer for consumers.
 dioxus = { version = "0.7.7", default-features = false, features = ["html", "macro"] }
+dioxus-autofmt = "=0.7.7"
+dioxus-rsx = "=0.7.7"
+dioxus-rsx-rosetta = "=0.7.7"
 # Required as a normal dependency by generated Dioxus props and RSX expansion.
 dioxus-signals = "0.7.7"
 lazy-js-bundle = "0.7.7"
-roxmltree = "0.21.1"
+proc-macro2 = "1.0.103"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.145"
 sha2 = "0.10.9"

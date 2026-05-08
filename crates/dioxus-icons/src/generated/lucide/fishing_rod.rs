@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FishingRod()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FishingRodProps {
     /// SVG width and height in pixels.
@@ -86,17 +87,9 @@ pub fn FishingRod(props: FishingRodProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 11h1",
-            }
-            path {
-                d: "M8 15a2 2 0 0 1-4 0V3a1 1 0 0 1 1-1h.5C14 2 20 9 20 18v4",
-            }
-            circle {
-                cx: "18",
-                cy: "18",
-                r: "2",
-            }
+            path { d: "M4 11h1" }
+            path { d: "M8 15a2 2 0 0 1-4 0V3a1 1 0 0 1 1-1h.5C14 2 20 9 20 18v4" }
+            circle { cx: "18", cy: "18", r: "2" }
         }
     }
 }

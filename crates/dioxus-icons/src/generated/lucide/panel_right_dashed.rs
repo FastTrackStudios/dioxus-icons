@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`PanelRightDashed()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PanelRightDashedProps {
     /// SVG width and height in pixels.
@@ -93,18 +94,10 @@ pub fn PanelRightDashed(props: PanelRightDashedProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M15 14v1",
-            }
-            path {
-                d: "M15 19v2",
-            }
-            path {
-                d: "M15 3v2",
-            }
-            path {
-                d: "M15 9v1",
-            }
+            path { d: "M15 14v1" }
+            path { d: "M15 19v2" }
+            path { d: "M15 3v2" }
+            path { d: "M15 9v1" }
         }
     }
 }

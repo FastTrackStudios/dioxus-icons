@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Watch()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WatchProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn Watch(props: WatchProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 10v2.2l1.6 1",
-            }
-            path {
-                d: "m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05",
-            }
-            path {
-                d: "m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "6",
-            }
+            path { d: "M12 10v2.2l1.6 1" }
+            path { d: "m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05" }
+            path { d: "m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05" }
+            circle { cx: "12", cy: "12", r: "6" }
         }
     }
 }

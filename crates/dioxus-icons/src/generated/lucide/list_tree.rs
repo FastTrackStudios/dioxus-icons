@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListTree()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListTreeProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn ListTree(props: ListTreeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M8 5h13",
-            }
-            path {
-                d: "M13 12h8",
-            }
-            path {
-                d: "M13 19h8",
-            }
-            path {
-                d: "M3 10a2 2 0 0 0 2 2h3",
-            }
-            path {
-                d: "M3 5v12a2 2 0 0 0 2 2h3",
-            }
+            path { d: "M8 5h13" }
+            path { d: "M13 12h8" }
+            path { d: "M13 19h8" }
+            path { d: "M3 10a2 2 0 0 0 2 2h3" }
+            path { d: "M3 5v12a2 2 0 0 0 2 2h3" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CirclePlay()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CirclePlayProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn CirclePlay(props: CirclePlayProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
+            path { d: "M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z" }
+            circle { cx: "12", cy: "12", r: "10" }
         }
     }
 }

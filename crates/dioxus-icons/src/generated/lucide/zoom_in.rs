@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ZoomIn()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ZoomInProps {
     /// SVG width and height in pixels.
@@ -86,11 +87,7 @@ pub fn ZoomIn(props: ZoomInProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "11",
-                cy: "11",
-                r: "8",
-            }
+            circle { cx: "11", cy: "11", r: "8" }
             line {
                 x1: "21",
                 x2: "16.65",

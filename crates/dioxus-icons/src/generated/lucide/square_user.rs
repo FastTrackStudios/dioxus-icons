@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareUser()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareUserProps {
     /// SVG width and height in pixels.
@@ -93,14 +94,8 @@ pub fn SquareUser(props: SquareUserProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            circle {
-                cx: "12",
-                cy: "10",
-                r: "3",
-            }
-            path {
-                d: "M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2",
-            }
+            circle { cx: "12", cy: "10", r: "3" }
+            path { d: "M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" }
         }
     }
 }

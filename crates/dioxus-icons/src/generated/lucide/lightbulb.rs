@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Lightbulb()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LightbulbProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Lightbulb(props: LightbulbProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5",
-            }
-            path {
-                d: "M9 18h6",
-            }
-            path {
-                d: "M10 22h4",
-            }
+            path { d: "M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" }
+            path { d: "M9 18h6" }
+            path { d: "M10 22h4" }
         }
     }
 }

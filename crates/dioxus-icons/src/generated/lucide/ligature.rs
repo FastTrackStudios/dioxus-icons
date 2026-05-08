@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Ligature()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LigatureProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn Ligature(props: LigatureProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M14 12h2v8",
-            }
-            path {
-                d: "M14 20h4",
-            }
-            path {
-                d: "M6 12h4",
-            }
-            path {
-                d: "M6 20h4",
-            }
-            path {
-                d: "M8 20V8a4 4 0 0 1 7.464-2",
-            }
+            path { d: "M14 12h2v8" }
+            path { d: "M14 20h4" }
+            path { d: "M6 12h4" }
+            path { d: "M6 20h4" }
+            path { d: "M8 20V8a4 4 0 0 1 7.464-2" }
         }
     }
 }

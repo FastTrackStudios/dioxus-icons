@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareChevronLeft()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareChevronLeftProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn SquareChevronLeft(props: SquareChevronLeftProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "m14 16-4-4 4-4",
-            }
+            path { d: "m14 16-4-4 4-4" }
         }
     }
 }

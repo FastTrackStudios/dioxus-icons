@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChevronRight()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChevronRightProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn ChevronRight(props: ChevronRightProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m9 18 6-6-6-6",
-            }
+            path { d: "m9 18 6-6-6-6" }
         }
     }
 }

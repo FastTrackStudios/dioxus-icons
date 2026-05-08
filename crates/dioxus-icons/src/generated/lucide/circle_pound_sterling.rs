@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`CirclePoundSterling()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct CirclePoundSterlingProps {
     /// SVG width and height in pixels.
@@ -86,20 +87,10 @@ pub fn CirclePoundSterling(props: CirclePoundSterlingProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            path {
-                d: "M10 16V9.5a1 1 0 0 1 5 0",
-            }
-            path {
-                d: "M8 12h4",
-            }
-            path {
-                d: "M8 16h7",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            path { d: "M10 16V9.5a1 1 0 0 1 5 0" }
+            path { d: "M8 12h4" }
+            path { d: "M8 16h7" }
         }
     }
 }

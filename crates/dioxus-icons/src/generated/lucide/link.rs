@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Link()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LinkProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Link(props: LinkProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71",
-            }
-            path {
-                d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71",
-            }
+            path { d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" }
+            path { d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" }
         }
     }
 }

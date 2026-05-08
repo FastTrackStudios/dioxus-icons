@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Import()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ImportProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Import(props: ImportProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 3v12",
-            }
-            path {
-                d: "m8 11 4 4 4-4",
-            }
-            path {
-                d: "M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4",
-            }
+            path { d: "M12 3v12" }
+            path { d: "m8 11 4 4 4-4" }
+            path { d: "M8 5H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4" }
         }
     }
 }

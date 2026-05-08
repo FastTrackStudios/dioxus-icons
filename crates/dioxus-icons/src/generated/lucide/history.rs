@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`History()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HistoryProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn History(props: HistoryProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8",
-            }
-            path {
-                d: "M3 3v5h5",
-            }
-            path {
-                d: "M12 7v5l4 2",
-            }
+            path { d: "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" }
+            path { d: "M3 3v5h5" }
+            path { d: "M12 7v5l4 2" }
         }
     }
 }

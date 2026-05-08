@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Plug2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Plug2Props {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn Plug2(props: Plug2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M9 2v6",
-            }
-            path {
-                d: "M15 2v6",
-            }
-            path {
-                d: "M12 17v5",
-            }
-            path {
-                d: "M5 8h14",
-            }
-            path {
-                d: "M6 11V8h12v3a6 6 0 1 1-12 0Z",
-            }
+            path { d: "M9 2v6" }
+            path { d: "M15 2v6" }
+            path { d: "M12 17v5" }
+            path { d: "M5 8h14" }
+            path { d: "M6 11V8h12v3a6 6 0 1 1-12 0Z" }
         }
     }
 }

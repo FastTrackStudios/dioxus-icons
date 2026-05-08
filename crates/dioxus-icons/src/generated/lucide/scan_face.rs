@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ScanFace()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ScanFaceProps {
     /// SVG width and height in pixels.
@@ -86,27 +87,13 @@ pub fn ScanFace(props: ScanFaceProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 7V5a2 2 0 0 1 2-2h2",
-            }
-            path {
-                d: "M17 3h2a2 2 0 0 1 2 2v2",
-            }
-            path {
-                d: "M21 17v2a2 2 0 0 1-2 2h-2",
-            }
-            path {
-                d: "M7 21H5a2 2 0 0 1-2-2v-2",
-            }
-            path {
-                d: "M8 14s1.5 2 4 2 4-2 4-2",
-            }
-            path {
-                d: "M9 9h.01",
-            }
-            path {
-                d: "M15 9h.01",
-            }
+            path { d: "M3 7V5a2 2 0 0 1 2-2h2" }
+            path { d: "M17 3h2a2 2 0 0 1 2 2v2" }
+            path { d: "M21 17v2a2 2 0 0 1-2 2h-2" }
+            path { d: "M7 21H5a2 2 0 0 1-2-2v-2" }
+            path { d: "M8 14s1.5 2 4 2 4-2 4-2" }
+            path { d: "M9 9h.01" }
+            path { d: "M15 9h.01" }
         }
     }
 }

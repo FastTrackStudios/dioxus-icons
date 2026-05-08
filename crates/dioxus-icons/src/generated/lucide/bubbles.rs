@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Bubbles()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BubblesProps {
     /// SVG width and height in pixels.
@@ -86,24 +87,10 @@ pub fn Bubbles(props: BubblesProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M7.001 15.085A1.5 1.5 0 0 1 9 16.5",
-            }
-            circle {
-                cx: "18.5",
-                cy: "8.5",
-                r: "3.5",
-            }
-            circle {
-                cx: "7.5",
-                cy: "16.5",
-                r: "5.5",
-            }
-            circle {
-                cx: "7.5",
-                cy: "4.5",
-                r: "2.5",
-            }
+            path { d: "M7.001 15.085A1.5 1.5 0 0 1 9 16.5" }
+            circle { cx: "18.5", cy: "8.5", r: "3.5" }
+            circle { cx: "7.5", cy: "16.5", r: "5.5" }
+            circle { cx: "7.5", cy: "4.5", r: "2.5" }
         }
     }
 }

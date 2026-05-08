@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Hexagon()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct HexagonProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Hexagon(props: HexagonProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z",
-            }
+            path { d: "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" }
         }
     }
 }

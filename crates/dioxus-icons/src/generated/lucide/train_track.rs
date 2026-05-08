@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TrainTrack()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TrainTrackProps {
     /// SVG width and height in pixels.
@@ -86,27 +87,13 @@ pub fn TrainTrack(props: TrainTrackProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 17 17 2",
-            }
-            path {
-                d: "m2 14 8 8",
-            }
-            path {
-                d: "m5 11 8 8",
-            }
-            path {
-                d: "m8 8 8 8",
-            }
-            path {
-                d: "m11 5 8 8",
-            }
-            path {
-                d: "m14 2 8 8",
-            }
-            path {
-                d: "M7 22 22 7",
-            }
+            path { d: "M2 17 17 2" }
+            path { d: "m2 14 8 8" }
+            path { d: "m5 11 8 8" }
+            path { d: "m8 8 8 8" }
+            path { d: "m11 5 8 8" }
+            path { d: "m14 2 8 8" }
+            path { d: "M7 22 22 7" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SignalZero()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SignalZeroProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn SignalZero(props: SignalZeroProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 20h.01",
-            }
+            path { d: "M2 20h.01" }
         }
     }
 }

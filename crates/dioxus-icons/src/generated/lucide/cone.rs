@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Cone()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ConeProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Cone(props: ConeProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m20.9 18.55-8-15.98a1 1 0 0 0-1.8 0l-8 15.98",
-            }
+            path { d: "m20.9 18.55-8-15.98a1 1 0 0 0-1.8 0l-8 15.98" }
             ellipse {
                 cx: "12",
                 cy: "19",

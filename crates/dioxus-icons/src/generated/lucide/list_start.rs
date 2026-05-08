@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ListStart()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ListStartProps {
     /// SVG width and height in pixels.
@@ -86,21 +87,11 @@ pub fn ListStart(props: ListStartProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 5h6",
-            }
-            path {
-                d: "M3 12h13",
-            }
-            path {
-                d: "M3 19h13",
-            }
-            path {
-                d: "m16 8-3-3 3-3",
-            }
-            path {
-                d: "M21 19V7a2 2 0 0 0-2-2h-6",
-            }
+            path { d: "M3 5h6" }
+            path { d: "M3 12h13" }
+            path { d: "M3 19h13" }
+            path { d: "m16 8-3-3 3-3" }
+            path { d: "M21 19V7a2 2 0 0 0-2-2h-6" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`VibrateOff()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct VibrateOffProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn VibrateOff(props: VibrateOffProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m2 8 2 2-2 2 2 2-2 2",
-            }
-            path {
-                d: "m22 8-2 2 2 2-2 2 2 2",
-            }
-            path {
-                d: "M8 8v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2",
-            }
-            path {
-                d: "M16 10.34V6c0-.55-.45-1-1-1h-4.34",
-            }
+            path { d: "m2 8 2 2-2 2 2 2-2 2" }
+            path { d: "m22 8-2 2 2 2-2 2 2 2" }
+            path { d: "M8 8v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2" }
+            path { d: "M16 10.34V6c0-.55-.45-1-1-1h-4.34" }
             line {
                 x1: "2",
                 x2: "22",

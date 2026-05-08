@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LockOpen()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LockOpenProps {
     /// SVG width and height in pixels.
@@ -94,9 +95,7 @@ pub fn LockOpen(props: LockOpenProps) -> Element {
                 x: "3",
                 y: "11",
             }
-            path {
-                d: "M7 11V7a5 5 0 0 1 9.9-1",
-            }
+            path { d: "M7 11V7a5 5 0 0 1 9.9-1" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Album()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct AlbumProps {
     /// SVG width and height in pixels.
@@ -94,9 +95,7 @@ pub fn Album(props: AlbumProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            polyline {
-                points: "11 3 11 11 14 8 17 11 17 3",
-            }
+            polyline { points: "11 3 11 11 14 8 17 11 17 3" }
         }
     }
 }

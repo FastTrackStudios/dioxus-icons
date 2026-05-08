@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Link2Off()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Link2OffProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Link2Off(props: Link2OffProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M9 17H7A5 5 0 0 1 7 7",
-            }
-            path {
-                d: "M15 7h2a5 5 0 0 1 4 8",
-            }
+            path { d: "M9 17H7A5 5 0 0 1 7 7" }
+            path { d: "M15 7h2a5 5 0 0 1 4 8" }
             line {
                 x1: "8",
                 x2: "12",

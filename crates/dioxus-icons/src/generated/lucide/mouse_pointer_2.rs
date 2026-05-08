@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MousePointer2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MousePointer2Props {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn MousePointer2(props: MousePointer2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z",
-            }
+            path { d: "M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Menu()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MenuProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Menu(props: MenuProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M4 5h16",
-            }
-            path {
-                d: "M4 12h16",
-            }
-            path {
-                d: "M4 19h16",
-            }
+            path { d: "M4 5h16" }
+            path { d: "M4 12h16" }
+            path { d: "M4 19h16" }
         }
     }
 }

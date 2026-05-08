@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SeparatorVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SeparatorVerticalProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn SeparatorVertical(props: SeparatorVerticalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 3v18",
-            }
-            path {
-                d: "m16 16 4-4-4-4",
-            }
-            path {
-                d: "m8 8-4 4 4 4",
-            }
+            path { d: "M12 3v18" }
+            path { d: "m16 16 4-4-4-4" }
+            path { d: "m8 8-4 4 4 4" }
         }
     }
 }

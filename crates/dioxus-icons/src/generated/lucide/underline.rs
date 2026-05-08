@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Underline()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UnderlineProps {
     /// SVG width and height in pixels.
@@ -86,9 +87,7 @@ pub fn Underline(props: UnderlineProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M6 4v6a6 6 0 0 0 12 0V4",
-            }
+            path { d: "M6 4v6a6 6 0 0 0 12 0V4" }
             line {
                 x1: "4",
                 x2: "20",

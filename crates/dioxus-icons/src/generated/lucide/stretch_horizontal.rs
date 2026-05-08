@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`StretchHorizontal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct StretchHorizontalProps {
     /// SVG width and height in pixels.

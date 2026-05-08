@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Club()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ClubProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Club(props: ClubProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M17.28 9.05a5.5 5.5 0 1 0-10.56 0A5.5 5.5 0 1 0 12 17.66a5.5 5.5 0 1 0 5.28-8.6Z",
-            }
-            path {
-                d: "M12 17.66L12 22",
-            }
+            path { d: "M17.28 9.05a5.5 5.5 0 1 0-10.56 0A5.5 5.5 0 1 0 12 17.66a5.5 5.5 0 1 0 5.28-8.6Z" }
+            path { d: "M12 17.66L12 22" }
         }
     }
 }

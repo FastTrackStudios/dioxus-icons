@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`ChartBarIncreasing()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct ChartBarIncreasingProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn ChartBarIncreasing(props: ChartBarIncreasingProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M3 3v16a2 2 0 0 0 2 2h16",
-            }
-            path {
-                d: "M7 11h8",
-            }
-            path {
-                d: "M7 16h12",
-            }
-            path {
-                d: "M7 6h3",
-            }
+            path { d: "M3 3v16a2 2 0 0 0 2 2h16" }
+            path { d: "M7 11h8" }
+            path { d: "M7 16h12" }
+            path { d: "M7 6h3" }
         }
     }
 }

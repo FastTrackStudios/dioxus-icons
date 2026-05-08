@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Mouse()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MouseProps {
     /// SVG width and height in pixels.
@@ -93,9 +94,7 @@ pub fn Mouse(props: MouseProps) -> Element {
                 x: "5",
                 y: "2",
             }
-            path {
-                d: "M12 6v4",
-            }
+            path { d: "M12 6v4" }
         }
     }
 }

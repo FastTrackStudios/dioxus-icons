@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GalleryHorizontalEnd()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GalleryHorizontalEndProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn GalleryHorizontalEnd(props: GalleryHorizontalEndProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 7v10",
-            }
-            path {
-                d: "M6 5v14",
-            }
+            path { d: "M2 7v10" }
+            path { d: "M6 5v14" }
             rect {
                 height: "18",
                 rx: "2",

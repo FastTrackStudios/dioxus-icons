@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MoveVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MoveVerticalProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn MoveVertical(props: MoveVerticalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 2v20",
-            }
-            path {
-                d: "m8 18 4 4 4-4",
-            }
-            path {
-                d: "m8 6 4-4 4 4",
-            }
+            path { d: "M12 2v20" }
+            path { d: "m8 18 4 4 4-4" }
+            path { d: "m8 6 4-4 4 4" }
         }
     }
 }

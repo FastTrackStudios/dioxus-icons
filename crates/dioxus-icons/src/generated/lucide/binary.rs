@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Binary()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct BinaryProps {
     /// SVG width and height in pixels.
@@ -100,18 +101,10 @@ pub fn Binary(props: BinaryProps) -> Element {
                 x: "6",
                 y: "4",
             }
-            path {
-                d: "M6 20h4",
-            }
-            path {
-                d: "M14 10h4",
-            }
-            path {
-                d: "M6 14h2v6",
-            }
-            path {
-                d: "M14 4h2v6",
-            }
+            path { d: "M6 20h4" }
+            path { d: "M14 10h4" }
+            path { d: "M6 14h2v6" }
+            path { d: "M14 4h2v6" }
         }
     }
 }

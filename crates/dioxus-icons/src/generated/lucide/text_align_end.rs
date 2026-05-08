@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`TextAlignEnd()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct TextAlignEndProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn TextAlignEnd(props: TextAlignEndProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M21 5H3",
-            }
-            path {
-                d: "M21 12H9",
-            }
-            path {
-                d: "M21 19H7",
-            }
+            path { d: "M21 5H3" }
+            path { d: "M21 12H9" }
+            path { d: "M21 19H7" }
         }
     }
 }

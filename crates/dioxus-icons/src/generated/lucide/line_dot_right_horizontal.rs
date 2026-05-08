@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`LineDotRightHorizontal()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct LineDotRightHorizontalProps {
     /// SVG width and height in pixels.
@@ -86,14 +87,8 @@ pub fn LineDotRightHorizontal(props: LineDotRightHorizontalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M 3 12 L 15 12",
-            }
-            circle {
-                cx: "18",
-                cy: "12",
-                r: "3",
-            }
+            path { d: "M 3 12 L 15 12" }
+            circle { cx: "18", cy: "12", r: "3" }
         }
     }
 }

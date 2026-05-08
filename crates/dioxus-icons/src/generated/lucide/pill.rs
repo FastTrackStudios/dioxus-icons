@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Pill()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct PillProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn Pill(props: PillProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z",
-            }
-            path {
-                d: "m8.5 8.5 7 7",
-            }
+            path { d: "m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" }
+            path { d: "m8.5 8.5 7 7" }
         }
     }
 }

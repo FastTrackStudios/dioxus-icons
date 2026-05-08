@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Disc2()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct Disc2Props {
     /// SVG width and height in pixels.
@@ -86,19 +87,9 @@ pub fn Disc2(props: Disc2Props) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "10",
-            }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "4",
-            }
-            path {
-                d: "M12 12h.01",
-            }
+            circle { cx: "12", cy: "12", r: "10" }
+            circle { cx: "12", cy: "12", r: "4" }
+            path { d: "M12 12h.01" }
         }
     }
 }

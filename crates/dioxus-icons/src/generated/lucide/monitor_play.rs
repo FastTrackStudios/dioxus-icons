@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`MonitorPlay()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MonitorPlayProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn MonitorPlay(props: MonitorPlayProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z",
-            }
-            path {
-                d: "M12 17v4",
-            }
-            path {
-                d: "M8 21h8",
-            }
+            path { d: "M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z" }
+            path { d: "M12 17v4" }
+            path { d: "M8 21h8" }
             rect {
                 height: "14",
                 rx: "2",

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`UnfoldVertical()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct UnfoldVerticalProps {
     /// SVG width and height in pixels.
@@ -86,30 +87,14 @@ pub fn UnfoldVertical(props: UnfoldVerticalProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 22v-6",
-            }
-            path {
-                d: "M12 8V2",
-            }
-            path {
-                d: "M4 12H2",
-            }
-            path {
-                d: "M10 12H8",
-            }
-            path {
-                d: "M16 12h-2",
-            }
-            path {
-                d: "M22 12h-2",
-            }
-            path {
-                d: "m15 19-3 3-3-3",
-            }
-            path {
-                d: "m15 5-3-3-3 3",
-            }
+            path { d: "M12 22v-6" }
+            path { d: "M12 8V2" }
+            path { d: "M4 12H2" }
+            path { d: "M10 12H8" }
+            path { d: "M16 12h-2" }
+            path { d: "M22 12h-2" }
+            path { d: "m15 19-3 3-3-3" }
+            path { d: "m15 5-3-3-3 3" }
         }
     }
 }

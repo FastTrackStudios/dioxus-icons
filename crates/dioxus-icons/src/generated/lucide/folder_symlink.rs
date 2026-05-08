@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`FolderSymlink()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct FolderSymlinkProps {
     /// SVG width and height in pixels.
@@ -86,12 +87,8 @@ pub fn FolderSymlink(props: FolderSymlinkProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M2 9.35V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7",
-            }
-            path {
-                d: "m8 16 3-3-3-3",
-            }
+            path { d: "M2 9.35V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7" }
+            path { d: "m8 16 3-3-3-3" }
         }
     }
 }

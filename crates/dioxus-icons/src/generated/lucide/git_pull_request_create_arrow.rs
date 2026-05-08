@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`GitPullRequestCreateArrow()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct GitPullRequestCreateArrowProps {
     /// SVG width and height in pixels.
@@ -86,26 +87,12 @@ pub fn GitPullRequestCreateArrow(props: GitPullRequestCreateArrowProps) -> Eleme
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            circle {
-                cx: "5",
-                cy: "6",
-                r: "3",
-            }
-            path {
-                d: "M5 9v12",
-            }
-            path {
-                d: "m15 9-3-3 3-3",
-            }
-            path {
-                d: "M12 6h5a2 2 0 0 1 2 2v3",
-            }
-            path {
-                d: "M19 15v6",
-            }
-            path {
-                d: "M22 18h-6",
-            }
+            circle { cx: "5", cy: "6", r: "3" }
+            path { d: "M5 9v12" }
+            path { d: "m15 9-3-3 3-3" }
+            path { d: "M12 6h5a2 2 0 0 1 2 2v3" }
+            path { d: "M19 15v6" }
+            path { d: "M22 18h-6" }
         }
     }
 }

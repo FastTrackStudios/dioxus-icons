@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquarePi()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquarePiProps {
     /// SVG width and height in pixels.
@@ -93,15 +94,9 @@ pub fn SquarePi(props: SquarePiProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M7 7h10",
-            }
-            path {
-                d: "M10 7v10",
-            }
-            path {
-                d: "M16 17a2 2 0 0 1-2-2V7",
-            }
+            path { d: "M7 7h10" }
+            path { d: "M10 7v10" }
+            path { d: "M16 17a2 2 0 0 1-2-2V7" }
         }
     }
 }

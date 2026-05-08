@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareDot()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareDotProps {
     /// SVG width and height in pixels.
@@ -93,11 +94,7 @@ pub fn SquareDot(props: SquareDotProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            circle {
-                cx: "12",
-                cy: "12",
-                r: "1",
-            }
+            circle { cx: "12", cy: "12", r: "1" }
         }
     }
 }

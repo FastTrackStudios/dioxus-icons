@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`Martini()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct MartiniProps {
     /// SVG width and height in pixels.
@@ -86,15 +87,9 @@ pub fn Martini(props: MartiniProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M8 22h8",
-            }
-            path {
-                d: "M12 11v11",
-            }
-            path {
-                d: "m19 3-7 8-7-8Z",
-            }
+            path { d: "M8 22h8" }
+            path { d: "M12 11v11" }
+            path { d: "m19 3-7 8-7-8Z" }
         }
     }
 }

@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`SquareDivide()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct SquareDivideProps {
     /// SVG width and height in pixels.

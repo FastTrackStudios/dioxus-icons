@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`WavesArrowUp()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct WavesArrowUpProps {
     /// SVG width and height in pixels.
@@ -86,18 +87,10 @@ pub fn WavesArrowUp(props: WavesArrowUpProps) -> Element {
             stroke_linecap: "{stroke_linecap}",
             stroke_linejoin: "{stroke_linejoin}",
             class: if class.is_empty() { None } else { Some(class.as_ref()) },
-            path {
-                d: "M12 2v8",
-            }
-            path {
-                d: "M2 15c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
-            }
-            path {
-                d: "M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1",
-            }
-            path {
-                d: "m8 6 4-4 4 4",
-            }
+            path { d: "M12 2v8" }
+            path { d: "M2 15c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" }
+            path { d: "M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" }
+            path { d: "m8 6 4-4 4 4" }
         }
     }
 }

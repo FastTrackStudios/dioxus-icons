@@ -4,6 +4,7 @@
 use dioxus::prelude::*;
 
 /// Props for [`InspectionPanel()`].
+#[doc(hidden)]
 #[derive(Clone, PartialEq, Props)]
 pub struct InspectionPanelProps {
     /// SVG width and height in pixels.
@@ -93,18 +94,10 @@ pub fn InspectionPanel(props: InspectionPanelProps) -> Element {
                 x: "3",
                 y: "3",
             }
-            path {
-                d: "M7 7h.01",
-            }
-            path {
-                d: "M17 7h.01",
-            }
-            path {
-                d: "M7 17h.01",
-            }
-            path {
-                d: "M17 17h.01",
-            }
+            path { d: "M7 7h.01" }
+            path { d: "M17 7h.01" }
+            path { d: "M7 17h.01" }
+            path { d: "M17 17h.01" }
         }
     }
 }
