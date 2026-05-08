@@ -87,6 +87,7 @@ cargo run -p dioxus-icons --example basic
 
 ## Licensing
 
-This crate is MIT licensed under `LICENSE`. Generated icon data comes from
+The crate code is MIT licensed under `LICENSE`. Generated icon data comes from
 Lucide and is covered by `LICENSE-LUCIDE`, which includes the upstream ISC
-notice and the Feather-derived icon notice.
+notice and the Feather-derived MIT icon notice. The published crate therefore
+uses the SPDX expression `MIT AND ISC`.

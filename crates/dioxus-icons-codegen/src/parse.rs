@@ -2,8 +2,7 @@ use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
 
-use anyhow::{Context, Result};
-use dioxus_rsx_rosetta::Node;
+use anyhow::{Context, Result, bail};
 use serde::{Deserialize, Serialize};
 
 use crate::naming::IconNames;
@@ -63,50 +62,8 @@ pub fn parse_icon(svg_path: &Path, json_path: &Path, names: IconNames) -> Result
         .context("SVG file stem is not valid UTF-8")?
         .to_owned();
     let svg = compact_svg(&svg);
-    let dom = dioxus_rsx_rosetta::Dom::parse(&svg).with_context(|| {
-        format!(
-            "parsing SVG {} through dioxus-rsx-rosetta",
-            svg_path.display()
-        )
-    })?;
-
-    let root = dom
-        .children
-        .iter()
-        .find_map(|node| match node {
-            Node::Element(element) => Some(element),
-            _ => None,
-        })
-        .with_context(|| format!("finding SVG root in {}", svg_path.display()))?;
-    let view_box = root
-        .attributes
-        .get("viewBox")
-        .and_then(|value| value.as_deref())
-        .unwrap_or_default()
-        .to_owned();
-    let elements = root
-        .children
-        .iter()
-        .filter_map(|node| match node {
-            Node::Element(element) => {
-                let attrs = element
-                    .attributes
-                    .iter()
-                    .filter_map(|(name, value)| {
-                        value
-                            .as_deref()
-                            .map(|value| (name.to_owned(), value.to_owned()))
-                    })
-                    .collect::<BTreeMap<_, _>>();
-
-                Some(SvgElement {
-                    tag: element.name.clone(),
-                    attrs,
-                })
-            }
-            _ => None,
-        })
-        .collect();
+    let (view_box, elements) =
+        parse_svg(&svg, svg_path).with_context(|| format!("parsing SVG {}", svg_path.display()))?;
 
     Ok(Icon {
         source_name,
@@ -144,4 +101,123 @@ fn compact_svg(svg: &str) -> String {
         .filter(|line| !line.is_empty())
         .collect::<Vec<_>>()
         .join(" ")
+}
+
+fn parse_svg(svg: &str, svg_path: &Path) -> Result<(String, Vec<SvgElement>)> {
+    let root_start = svg.find("<svg").context("finding opening <svg> tag")?;
+    let root_end = svg[root_start..]
+        .find('>')
+        .map(|offset| root_start + offset)
+        .context("finding closing > for <svg> tag")?;
+    let root = &svg[root_start + 1..root_end];
+    let (root_tag, root_attrs) = parse_tag(root)?;
+    if root_tag != "svg" {
+        bail!("expected root <svg>, found <{root_tag}>");
+    }
+
+    for attr in root_attrs.keys() {
+        if !matches!(
+            attr.as_str(),
+            "xmlns"
+                | "width"
+                | "height"
+                | "viewBox"
+                | "fill"
+                | "stroke"
+                | "stroke-width"
+                | "stroke-linecap"
+                | "stroke-linejoin"
+        ) {
+            bail!(
+                "unsupported root SVG attribute `{attr}` in {}",
+                svg_path.display()
+            );
+        }
+    }
+
+    let view_box = root_attrs
+        .get("viewBox")
+        .cloned()
+        .context("SVG root is missing viewBox")?;
+    let close_svg = svg.rfind("</svg>").context("finding closing </svg> tag")?;
+    if close_svg < root_end {
+        bail!("closing </svg> appears before opening <svg>");
+    }
+    let body = &svg[root_end + 1..close_svg];
+    let mut elements = Vec::new();
+    let mut offset = 0;
+
+    while let Some(relative_start) = body[offset..].find('<') {
+        let start = offset + relative_start;
+        if body[start + 1..].starts_with('/') {
+            break;
+        }
+
+        let end = body[start..]
+            .find('>')
+            .map(|relative_end| start + relative_end)
+            .context("finding closing > for child SVG tag")?;
+        let mut raw = body[start + 1..end].trim();
+        let self_closing = raw.ends_with('/');
+        if self_closing {
+            raw = raw[..raw.len() - 1].trim_end();
+        }
+
+        let (tag, attrs) = parse_tag(raw)?;
+        elements.push(SvgElement { tag, attrs });
+
+        offset = end + 1;
+        if !self_closing {
+            let close = format!("</{}>", elements.last().unwrap().tag);
+            let close_start = body[offset..]
+                .find(&close)
+                .map(|relative_close| offset + relative_close)
+                .with_context(|| format!("finding closing {close}"))?;
+            offset = close_start + close.len();
+        }
+    }
+
+    Ok((view_box, elements))
+}
+
+fn parse_tag(raw: &str) -> Result<(String, BTreeMap<String, String>)> {
+    let raw = raw.trim();
+    let tag_end = raw.find(char::is_whitespace).unwrap_or(raw.len());
+    let tag = raw[..tag_end].to_owned();
+    if tag.is_empty() {
+        bail!("empty SVG tag");
+    }
+
+    let mut attrs = BTreeMap::new();
+    let mut rest = &raw[tag_end..];
+    loop {
+        rest = rest.trim_start();
+        if rest.is_empty() {
+            break;
+        }
+
+        let name_end = rest
+            .find(|ch: char| ch == '=' || ch.is_whitespace())
+            .unwrap_or(rest.len());
+        let name = &rest[..name_end];
+        if name.is_empty() {
+            bail!("empty SVG attribute name in <{tag}>");
+        }
+        rest = rest[name_end..].trim_start();
+        if !rest.starts_with('=') {
+            bail!("SVG attribute `{name}` in <{tag}> is missing `=`");
+        }
+        rest = rest[1..].trim_start();
+        if !rest.starts_with('"') {
+            bail!("SVG attribute `{name}` in <{tag}> is missing opening quote");
+        }
+        rest = &rest[1..];
+        let value_end = rest.find('"').with_context(|| {
+            format!("SVG attribute `{name}` in <{tag}> is missing closing quote")
+        })?;
+        attrs.insert(name.to_owned(), rest[..value_end].to_owned());
+        rest = &rest[value_end + 1..];
+    }
+
+    Ok((tag, attrs))
 }

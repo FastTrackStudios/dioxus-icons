@@ -5,9 +5,10 @@ categories.workspace = true
 edition.workspace = true
 homepage.workspace = true
 keywords.workspace = true
-license.workspace = true
+license = "MIT AND ISC"
 readme = "../../README.md"
 repository.workspace = true
+rust-version.workspace = true
 version.workspace = true
 
 [lib]
@@ -16,20 +17,23 @@ name = "dioxus_icons"
 [package.metadata.docs.rs]
 rustdoc-args = ["--cfg", "docsrs"]
 
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ["cfg(rust_analyzer)"] }
+
 [features]
 # The generated Lucide component surface is always available. App crates choose
 # renderer features.
 default = []
 
 [dependencies]
-# The published crate intentionally uses only Dioxus' RSX and HTML/SVG surface.
+# The published crate intentionally uses only Dioxus core and HTML/SVG surface.
 dioxus.workspace = true
-# Required by generated Dioxus props and RSX expansion in icon components.
+# Required by Dioxus props.
 dioxus-signals.workspace = true
 
 [build-dependencies]
 lazy-js-bundle.workspace = true
 
 [dev-dependencies]
-dioxus = { workspace = true, features = ["launch"] }
+dioxus = { workspace = true, features = ["launch", "lib", "server"] }
 serde_json.workspace = true

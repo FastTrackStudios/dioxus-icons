@@ -81,4 +81,5 @@ review the generated manifest and component diff before publishing.
 ## Licensing
 
 The crate code is MIT licensed. Generated Lucide icon data is covered by
-`LICENSE-LUCIDE`.
+`LICENSE-LUCIDE`, including the upstream ISC notice and Feather-derived MIT
+icon notice.

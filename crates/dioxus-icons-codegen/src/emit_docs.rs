@@ -136,12 +136,7 @@ pub fn widget_container(icon: &Icon) -> String {
 }
 
 pub fn rsx_snippet(component: &str, size: &str, color: &str, stroke: &str) -> String {
-    let block =
-        format!("{component} {{ size: {size}, color: \"{color}\", stroke_width: {stroke} }}");
-    dioxus_autofmt::fmt_block(&block, 0, Default::default())
-        .expect("formatting tweak widget RSX snippet")
-        .trim()
-        .to_owned()
+    format!("{component} {{ size: {size}, color: \"{color}\", stroke_width: {stroke} }}")
 }
 
 fn highlighted_rsx_snippet(component: &str, size: &str, color: &str, stroke: &str) -> String {

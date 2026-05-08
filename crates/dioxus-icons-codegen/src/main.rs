@@ -14,7 +14,7 @@ use std::process::Command;
 
 use anyhow::{Context, Result, bail};
 
-use crate::emit_component::emit_component;
+use crate::emit_component::{emit_component, emit_component_docs};
 use crate::emit_docs::{emit_lucide_docs_header, emit_static_picker};
 use crate::emit_manifest::emit_manifest;
 use crate::fetch::{LUCIDE_VERSION, ensure_lucide};
@@ -38,13 +38,18 @@ fn main() -> Result<()> {
 
     let generated_dir = workspace_root.join("crates/dioxus-icons/src/generated");
     let lucide_dir = generated_dir.join("lucide");
+    let docs_dir = lucide_dir.join("docs");
     reset_dir(&lucide_dir)?;
+    fs::create_dir_all(&docs_dir).with_context(|| format!("creating {}", docs_dir.display()))?;
 
     for icon in &icons {
         let component_path = lucide_dir.join(format!("{}.rs", icon.module));
+        let docs_path = docs_dir.join(format!("{}.md", icon.module));
         let related = related_icons.for_icon(icon, &icons_by_source_name)?;
-        fs::write(&component_path, emit_component(icon, &related))
+        fs::write(&component_path, emit_component(icon)?)
             .with_context(|| format!("writing {}", component_path.display()))?;
+        fs::write(&docs_path, emit_component_docs(icon, &related))
+            .with_context(|| format!("writing {}", docs_path.display()))?;
     }
 
     fs::write(generated_dir.join("mod.rs"), emit_generated_mod())?;
@@ -230,16 +235,37 @@ mod tests {
         assert!(lucide_mod.contains("pub use circle_1::Circle1;"));
         assert!(lucide_mod.contains("pub use r#box::Box;"));
 
-        let component = emit_component(&icons[0], &[&icons[1]]);
-        assert!(component.contains("pub struct Circle1Props"));
-        assert!(component.contains("pub fn Circle1(props: Circle1Props) -> Element"));
-        assert!(component.contains("use dioxus_icons::lucide::Circle1;"));
-        assert!(component.contains("dxc-system-light-github-light"));
-        assert!(component.contains("Circle1</span><span> </span><span class=\"a-p\">{</span>"));
-        assert!(component.contains("<span class=\"a-pr\">stroke_width</span>"));
-        assert!(component.contains("circle {"));
-        assert!(component.contains("cx: \"12\""));
-        assert!(component.contains("href=\"fn.Box.html\""));
+        let component = emit_component(&icons[0]).expect("emitting component");
+        assert!(!component.contains("pub struct Circle1Props"));
+        assert!(component.contains("pub fn Circle1(props: IconProps) -> Element"));
+        assert!(!component.contains("rsx! {"));
+        assert!(component.contains("static TEMPLATE_ROOTS: &[TemplateNode]"));
+        assert!(!component.contains("TemplateAttribute"));
+        assert!(!component.contains("static SVG_ATTRS"));
+        assert!(component.contains("svg(&["));
+        assert!(component.contains("circle(&["));
+        assert!(component.contains("attr(\"cx\", \"12\")"));
+        assert!(component.contains("static TEMPLATE: Template = icon_template(TEMPLATE_ROOTS);"));
+        assert!(component.contains("icon_element(TEMPLATE, props)"));
+        assert!(!component.contains("dynamic_attributes"));
+        assert!(!component.contains("render_lucide_icon"));
+
+        let mut non_default_view_box = icons[0].clone();
+        non_default_view_box.view_box = "0 0 16 16".to_owned();
+        let non_default_component =
+            emit_component(&non_default_view_box).expect("emitting non-default viewBox component");
+        assert!(non_default_component.contains("TemplateAttribute"));
+        assert!(non_default_component.contains("svg_attrs(\"0 0 16 16\")"));
+        assert!(non_default_component.contains("svg_with_attrs(&SVG_ATTRS"));
+
+        let component_docs = emit_component_docs(&icons[0], &[&icons[1]]);
+        assert!(component_docs.contains("use dioxus_icons::lucide::Circle1;"));
+        assert!(component_docs.contains("dxc-system-light-github-light"));
+        assert!(
+            component_docs.contains("Circle1</span><span> </span><span class=\"a-p\">{</span>")
+        );
+        assert!(component_docs.contains("<span class=\"a-pr\">stroke_width</span>"));
+        assert!(component_docs.contains("href=\"fn.Box.html\""));
 
         assert_eq!(
             crate::emit_docs::rsx_snippet("Trash", "24", "#000000", "2"),

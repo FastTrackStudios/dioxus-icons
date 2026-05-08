@@ -5,15 +5,12 @@ edition.workspace = true
 license.workspace = true
 publish = false
 repository.workspace = true
+rust-version.workspace = true
 version.workspace = true
 
 [dependencies]
 anyhow.workspace = true
 base64.workspace = true
-dioxus-autofmt.workspace = true
-dioxus-rsx.workspace = true
-dioxus-rsx-rosetta.workspace = true
-proc-macro2.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 sha2.workspace = true
