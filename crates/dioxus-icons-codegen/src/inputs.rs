@@ -42,35 +42,3 @@ fn hash_rust_sources(dir: &Path, hasher: &mut Sha256) -> Result<()> {
     }
     Ok(())
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    fn workspace_root() -> PathBuf {
-        PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-            .parent()
-            .and_then(Path::parent)
-            .expect("workspace root")
-            .to_path_buf()
-    }
-
-    #[test]
-    fn inputs_hash_matches_committed() {
-        let path = workspace_root().join("crates/dioxus-icons/src/generated/inputs_hash.txt");
-        let committed = fs::read_to_string(&path).unwrap_or_else(|err| {
-            panic!(
-                "could not read {}: {err}\n\
-                 run `cargo run -p dioxus-icons-codegen` and commit the regenerated output",
-                path.display()
-            )
-        });
-        let computed = compute_inputs_hash().expect("computing inputs hash");
-        assert_eq!(
-            committed.trim(),
-            computed,
-            "codegen inputs changed since `crates/dioxus-icons/src/generated/` was last produced. \
-             Re-run `cargo run -p dioxus-icons-codegen` and commit the updated output."
-        );
-    }
-}

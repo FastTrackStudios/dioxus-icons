@@ -420,6 +420,11 @@ test.describe("per-icon docs pages", () => {
       'Trash { size: 32, color: "#ff0000", stroke_width: 3 }';
 
     await expect(widget).toBeVisible();
+    await expect(widget.locator("pre[data-language='rust']")).toHaveClass(
+      /dxc-system-light-github-light/,
+    );
+    await expect(code.locator(".a-t")).toHaveText("Trash");
+    await expect(code.locator(".a-s")).toHaveText('"#000000"');
     await expect(code).toHaveText(
       'Trash { size: 24, color: "#000000", stroke_width: 2 }',
     );

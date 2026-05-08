@@ -8,9 +8,8 @@
 
 Lucide icons for Dioxus, generated as one component per icon.
 
-```toml
-[dependencies]
-dioxus-icons = "0.0.1"
+```sh
+cargo add dioxus-icons
 ```
 
 ```rust
@@ -32,41 +31,34 @@ The public API is deliberately flat and component-first:
 | Item | Notes |
 | --- | --- |
 | Import path | Import each icon from `dioxus_icons::lucide`, for example `use dioxus_icons::lucide::Trash;`. |
-| Component usage | Render one component per icon, for example `rsx! { Trash { size: 16 } }`. There is no generic `Icon` component or string icon name. |
-| `size` | Sets both SVG `width` and `height`. |
-| `color` | Sets the SVG `stroke`. It defaults to `currentColor`; it does not set `fill`. |
-| `stroke_width` | Sets SVG `stroke-width`. |
-| `stroke_linecap` | Sets SVG `stroke-linecap`. |
-| `stroke_linejoin` | Sets SVG `stroke-linejoin`. |
-| `class` | Passed to the root SVG when set. It defaults to an empty string and is the right place for Tailwind classes. |
+| Component usage | Render icon components directly, for example `rsx! { Trash { size: 16 } }`. |
+| `size` | Uses one value for SVG `width` and `height`. |
+| `color` | Sets the stroke color for Lucide's line icons; defaults to `currentColor`. |
+| `stroke_width`, `stroke_linecap`, `stroke_linejoin` | Forwarded to the matching SVG stroke attributes. |
+| `class` | Passed to the root SVG for CSS or Tailwind classes. |
 
 docs.rs includes a tag-driven picker backed by Lucide's upstream tags and categories.
-
-Generated sources are committed under `crates/dioxus-icons/src/generated/`.
-The hand-run generator lives in `crates/dioxus-icons-codegen/` and fetches the pinned Lucide release into the gitignored `vendor/` cache when needed.
-Per-icon related links are backed by `crates/dioxus-icons-codegen/data/`, generated with Google SigLIP2 image/text score fusion over Lucide icons only.
-
-The workspace version is currently `0.0.1`, which is the intended first publish
-candidate unless it is intentionally changed before `cargo publish`.
 
 ## Dependency And Feature Policy
 
 `dioxus-icons` supports Dioxus `0.7.x` starting at `0.7.7` (`>=0.7.7, <0.8.0`).
-The published library disables Dioxus default features and enables only `html`
-and `macro`, so it provides RSX/SVG components without choosing a web, desktop,
-mobile, server, or fullstack renderer for your app.
+The published library enables Dioxus `html` and `macro` for RSX/SVG components.
+Choose renderer features such as `web`, `desktop`, `mobile`, `server`, or
+`fullstack` in your application crate.
 
 `dioxus-signals` stays a normal dependency because generated Dioxus props and
-RSX expansion rely on Dioxus' signal-compatible prop machinery. The crate has no
-optional public features for the first publish; renderer selection belongs in
-the application crate, and the docs.rs picker/widgets are part of the published
-docs surface.
+RSX expansion rely on Dioxus' signal-compatible prop machinery. The docs.rs
+picker/widgets are part of the published docs surface.
 
 ## Regenerate Icons
 
 ```sh
 cargo run -p dioxus-icons-codegen
 ```
+
+Generated Rust sources are committed under `crates/dioxus-icons/src/generated/`.
+The generator uses the pinned Lucide release and related-icon sidecar under
+`crates/dioxus-icons-codegen/data/`.
 
 When the Lucide version changes, regenerate the related-icon sidecar before running the Rust generator:
 
@@ -79,21 +71,19 @@ cargo run -p dioxus-icons-codegen
 ```
 
 The SigLIP2 sidecar script requires `rsvg-convert`, `torch`, `transformers`, and `Pillow`.
-Generated output is deterministic. CI runs `ci/verify_codegen.sh` to make sure regeneration does not change the committed generated output.
+Generated output is deterministic; regenerate after codegen input changes and review the generated diff.
 
 ## Examples
+
+Examples live under `crates/dioxus-icons/examples/`.
 
 ```sh
 cargo build -p dioxus-icons --examples
 ```
 
-The examples are intentionally small, copyable Dioxus apps that use
-`dioxus::launch(App)`.
-
-- `basic` shows one icon in a button.
-- `navbar` shows several icons in app chrome.
-- `tailwind` shows the `class` prop, which defaults to an empty class.
-- `stateful_button` shows conditional icon rendering.
+```sh
+cargo run -p dioxus-icons --example basic
+```
 
 ## Licensing
 

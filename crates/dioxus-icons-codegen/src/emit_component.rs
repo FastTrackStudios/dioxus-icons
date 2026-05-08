@@ -18,26 +18,19 @@ pub fn emit_component(icon: &Icon, related_icons: &[&Icon]) -> String {
 
     let props_name = format!("{}Props", icon.component);
 
-    output.push_str(&format!("/// Props for [`{}()`].\n", icon.component));
     output.push_str("#[doc(hidden)]\n");
     output.push_str("#[derive(Clone, PartialEq, Props)]\n");
     output.push_str(&format!("pub struct {props_name} {{\n"));
-    output.push_str("    /// SVG width and height in pixels.\n");
     output.push_str("    #[props(default = 24)]\n");
     output.push_str("    pub size: u32,\n");
-    output.push_str("    /// SVG stroke color. Defaults to `currentColor`.\n");
     output.push_str("    #[props(into, default = \"currentColor\")]\n");
     output.push_str("    pub color: std::borrow::Cow<'static, str>,\n");
-    output.push_str("    /// SVG stroke width.\n");
     output.push_str("    #[props(default = 2)]\n");
     output.push_str("    pub stroke_width: u32,\n");
-    output.push_str("    /// SVG stroke linecap.\n");
     output.push_str("    #[props(into, default = \"round\")]\n");
     output.push_str("    pub stroke_linecap: std::borrow::Cow<'static, str>,\n");
-    output.push_str("    /// SVG stroke linejoin.\n");
     output.push_str("    #[props(into, default = \"round\")]\n");
     output.push_str("    pub stroke_linejoin: std::borrow::Cow<'static, str>,\n");
-    output.push_str("    /// CSS class for the root SVG. Empty by default.\n");
     output.push_str("    #[props(into, default = \"\")]\n");
     output.push_str("    pub class: std::borrow::Cow<'static, str>,\n");
     output.push_str("}\n\n");
@@ -68,19 +61,8 @@ fn push_doc_comment(output: &mut String, icon: &Icon, related_icons: &[&Icon]) {
     output.push_str(&preview_img(icon, 48));
     output.push('\n');
     output.push_str("///\n");
-    output.push_str("/// ## Tweak\n");
-    output.push_str("///\n");
     output.push_str("/// ");
     output.push_str(&widget_container(icon));
-    output.push('\n');
-    output.push_str("///\n");
-    output.push_str("/// ## Sizes\n");
-    output.push_str("/// ");
-    output.push_str(&preview_img(icon, 16));
-    output.push(' ');
-    output.push_str(&preview_img(icon, 24));
-    output.push(' ');
-    output.push_str(&preview_img(icon, 32));
     output.push('\n');
     output.push_str("///\n");
     output.push_str("/// ## Tags\n");

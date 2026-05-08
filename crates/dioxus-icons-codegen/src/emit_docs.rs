@@ -66,7 +66,7 @@ pub fn emit_static_picker(icons: &[Icon]) -> String {
         "<section id=\"dioxus-icons-static-picker\" class=\"dioxus-icons-static-picker\">\n",
     );
     output.push_str("<h2>Icon Index</h2>\n");
-    output.push_str("<p>Search by icon name, Lucide tags, or category. This static index works without JavaScript; the interactive picker replaces it when scripts are available.</p>\n");
+    output.push_str("<p>Browse by icon name, Lucide tags, or category.</p>\n");
 
     let mut current_group = '\0';
     for icon in icons {
@@ -111,6 +111,7 @@ pub fn emit_lucide_docs_header() -> String {
 pub fn widget_container(icon: &Icon) -> String {
     let default_preview = preview_img(icon, 24);
     let data_svg = html_attr(&preview_svg(icon, 24));
+    let code = highlighted_rsx_snippet(&icon.component, "24", "#000000", "2");
     format!(
         "<div class=\"dioxus-icons-widget\" data-icon-name=\"{name}\" data-svg=\"{svg}\" data-size=\"24\" data-color=\"#000000\" data-stroke=\"2\">\
 <div class=\"dioxus-icons-widget-header\">\
@@ -122,7 +123,7 @@ pub fn widget_container(icon: &Icon) -> String {
 </div>\
 </div>\
 <div class=\"dioxus-icons-widget-output\">\
-<pre><code data-di-code=\"true\">{text} {{ size: 24 }}</code></pre>\
+{code}\
 <button type=\"button\" class=\"dioxus-icons-widget-copy\" data-di-copy=\"true\" aria-label=\"Copy RSX snippet\"><span data-di-copy-icon=\"true\"></span><span data-di-copy-label=\"true\">Copy RSX</span></button>\
 </div>\
 </div>",
@@ -130,7 +131,43 @@ pub fn widget_container(icon: &Icon) -> String {
         svg = data_svg,
         label = html_attr(&icon.component),
         preview = default_preview,
-        text = html_text(&icon.component)
+        code = code
+    )
+}
+
+pub fn rsx_snippet(component: &str, size: &str, color: &str, stroke: &str) -> String {
+    let block =
+        format!("{component} {{ size: {size}, color: \"{color}\", stroke_width: {stroke} }}");
+    dioxus_autofmt::fmt_block(&block, 0, Default::default())
+        .expect("formatting tweak widget RSX snippet")
+        .trim()
+        .to_owned()
+}
+
+fn highlighted_rsx_snippet(component: &str, size: &str, color: &str, stroke: &str) -> String {
+    let snippet = rsx_snippet(component, size, color, stroke);
+    let expected =
+        format!("{component} {{ size: {size}, color: \"{color}\", stroke_width: {stroke} }}");
+    debug_assert_eq!(snippet, expected);
+
+    format!(
+        "<pre class=\"dioxus-icons-widget-code dxc dxc-system dxc-system-light-github-light dxc-system-dark-github-dark\" data-language=\"rust\"><code data-di-code=\"true\">{tokens}</code></pre>",
+        tokens = highlighted_rsx_snippet_tokens(component, size, color, stroke)
+    )
+}
+
+fn highlighted_rsx_snippet_tokens(
+    component: &str,
+    size: &str,
+    color: &str,
+    stroke: &str,
+) -> String {
+    format!(
+        "<span class=\"a-t\">{component}</span><span> </span><span class=\"a-p\">{{</span><span> </span><span class=\"a-pr\">size</span><span class=\"a-p\">:</span><span> </span><span class=\"a-co\">{size}</span><span class=\"a-p\">,</span><span> </span><span class=\"a-pr\">color</span><span class=\"a-p\">:</span><span> </span><span class=\"a-s\">&quot;{color}&quot;</span><span class=\"a-p\">,</span><span> </span><span class=\"a-pr\">stroke_width</span><span class=\"a-p\">:</span><span> </span><span class=\"a-co\">{stroke}</span><span> </span><span class=\"a-p\">}}</span>",
+        component = html_text(component),
+        size = html_text(size),
+        color = html_text(color),
+        stroke = html_text(stroke)
     )
 }
 

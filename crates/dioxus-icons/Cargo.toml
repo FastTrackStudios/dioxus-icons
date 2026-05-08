@@ -17,8 +17,8 @@ name = "dioxus_icons"
 rustdoc-args = ["--cfg", "docsrs"]
 
 [features]
-# No optional public features for the first publish. The library always exposes
-# the generated Lucide component surface and leaves renderer selection to apps.
+# The generated Lucide component surface is always available. App crates choose
+# renderer features.
 default = []
 
 [dependencies]

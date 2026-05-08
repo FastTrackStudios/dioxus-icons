@@ -234,9 +234,17 @@ mod tests {
         assert!(component.contains("pub struct Circle1Props"));
         assert!(component.contains("pub fn Circle1(props: Circle1Props) -> Element"));
         assert!(component.contains("use dioxus_icons::lucide::Circle1;"));
+        assert!(component.contains("dxc-system-light-github-light"));
+        assert!(component.contains("Circle1</span><span> </span><span class=\"a-p\">{</span>"));
+        assert!(component.contains("<span class=\"a-pr\">stroke_width</span>"));
         assert!(component.contains("circle {"));
         assert!(component.contains("cx: \"12\""));
         assert!(component.contains("href=\"fn.Box.html\""));
+
+        assert_eq!(
+            crate::emit_docs::rsx_snippet("Trash", "24", "#000000", "2"),
+            "Trash { size: 24, color: \"#000000\", stroke_width: 2 }"
+        );
     }
 
     fn fixture_icons_dir() -> PathBuf {

@@ -2,9 +2,8 @@
 
 Add the crate to your Dioxus app:
 
-```toml
-[dependencies]
-dioxus-icons = "0.0.1"
+```sh
+cargo add dioxus-icons
 ```
 
 ```rust
@@ -39,35 +38,23 @@ let _ = rsx! {
 
 | Prop | SVG mapping |
 | --- | --- |
-| `size` | Sets both `width` and `height`. |
-| `color` | Sets `stroke`; defaults to `currentColor`. |
-| `stroke_width` | Sets `stroke-width`. |
-| `stroke_linecap` | Sets `stroke-linecap`. |
-| `stroke_linejoin` | Sets `stroke-linejoin`. |
-| `class` | Passed to the root SVG when set. |
-
-There is no generic `Icon` component and no string icon name API.
+| `size` | Uses one value for `width` and `height`. |
+| `color` | Sets the stroke color for Lucide's line icons; defaults to `currentColor`. |
+| `stroke_width`, `stroke_linecap`, `stroke_linejoin` | Forwarded to the matching SVG stroke attributes. |
+| `class` | Passed to the root SVG for CSS or Tailwind classes. |
 
 ## Dependency Surface
 
 `dioxus-icons` supports Dioxus `0.7.x` starting at `0.7.7` (`>=0.7.7, <0.8.0`).
-The published library enables only Dioxus `html` and `macro`; it does not enable
-or proxy renderer features such as `web` or `desktop`.
+The published library enables Dioxus `html` and `macro` for RSX/SVG components.
+Choose renderer features such as `web` or `desktop` in your application crate.
 
 `dioxus-signals` is a normal dependency because generated Dioxus props and RSX
-expansion rely on Dioxus' signal-compatible prop machinery. The crate has no
-optional public features for the first publish.
+expansion rely on Dioxus' signal-compatible prop machinery.
 
 ## Examples
 
-The crate includes small runnable examples:
-
-- `basic` shows one icon in a button.
-- `navbar` shows several icons in app chrome.
-- `tailwind` shows Tailwind classes passed through `class`.
-- `stateful_button` shows conditional icon rendering.
-
-Build them with:
+Examples live under `crates/dioxus-icons/examples/`. Build them with:
 
 ```sh
 cargo build -p dioxus-icons --examples
@@ -76,15 +63,12 @@ cargo build -p dioxus-icons --examples
 Run one with:
 
 ```sh
-cargo build -p dioxus-icons --examples
+cargo run -p dioxus-icons --example basic
 ```
-
-The examples use the standard `dioxus::launch(App)` entrypoint.
 
 ## Generated Icons
 
-Generated Rust sources live under `crates/dioxus-icons/src/generated/` and are
-not edited by hand. Regenerate them with:
+Regenerate committed Rust sources under `crates/dioxus-icons/src/generated/` with:
 
 ```sh
 cargo run -p dioxus-icons-codegen

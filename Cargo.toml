@@ -18,8 +18,7 @@ version = "0.0.1"
 anyhow = "1.0.100"
 base64 = "0.22.1"
 # Public `dioxus-icons` support starts at Dioxus 0.7.7 and follows the
-# compatible 0.7.x line. Keep default features off so the library does not
-# select an app renderer for consumers.
+# compatible 0.7.x line. Keep renderer feature selection in app crates.
 dioxus = { version = "0.7.7", default-features = false, features = ["html", "macro"] }
 dioxus-autofmt = "=0.7.7"
 dioxus-rsx = "=0.7.7"

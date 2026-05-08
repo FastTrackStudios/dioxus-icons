@@ -81,21 +81,71 @@
   padding-top: 12px;
   border-top: 1px solid var(--border-color, rgba(24, 24, 27, 0.10));
 }
-.dioxus-icons-widget pre {
+.dioxus-icons-widget .dxc-system {
+  --dxc-light-on: initial;
+  --dxc-dark-on: ;
+}
+@media (prefers-color-scheme: dark) {
+  .dioxus-icons-widget .dxc-system {
+    --dxc-light-on: ;
+    --dxc-dark-on: initial;
+  }
+}
+.dioxus-icons-widget .dxc-system-light-github-light {
+  --dxc-light-background: #ffffff;
+  --dxc-light-color: #1f2328;
+  --dxc-light-a-co-color: #0550ae;
+  --dxc-light-a-p-color: #1f2328;
+  --dxc-light-a-pr-color: #0550ae;
+  --dxc-light-a-s-color: #0a3069;
+  --dxc-light-a-t-color: #953800;
+}
+.dioxus-icons-widget .dxc-system-dark-github-dark {
+  --dxc-dark-background: #0d1117;
+  --dxc-dark-color: #e6edf3;
+  --dxc-dark-a-co-color: #79c0ff;
+  --dxc-dark-a-p-color: #e6edf3;
+  --dxc-dark-a-pr-color: #79c0ff;
+  --dxc-dark-a-s-color: #a5d6ff;
+  --dxc-dark-a-t-color: #ffa657;
+}
+.dioxus-icons-widget .dxc {
+  box-sizing: border-box;
   margin: 0;
   padding: 8px 10px;
   padding-right: 100px;
   border-radius: 4px;
-  background: var(--code-block-background-color, transparent);
+  background: var(--dxc-light-on, var(--dxc-light-background,)) var(--dxc-dark-on, var(--dxc-dark-background,));
   overflow-x: auto;
+  tab-size: 4;
+  font-family: var(--font-family-code, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
   font-size: 13px;
   line-height: 1.5;
-  color: var(--main-color, inherit);
+  color: var(--dxc-light-on, var(--dxc-light-color,)) var(--dxc-dark-on, var(--dxc-dark-color,));
 }
-.dioxus-icons-widget code {
+.dioxus-icons-widget .dxc code {
   font-family: var(--font-family-code, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
   background: transparent;
   padding: 0;
+}
+.dioxus-icons-widget .dxc span {
+  background: transparent;
+  padding: 0;
+}
+.dioxus-icons-widget .dxc .a-co {
+  color: var(--dxc-light-on, var(--dxc-light-a-co-color,)) var(--dxc-dark-on, var(--dxc-dark-a-co-color,));
+}
+.dioxus-icons-widget .dxc .a-p {
+  color: var(--dxc-light-on, var(--dxc-light-a-p-color,)) var(--dxc-dark-on, var(--dxc-dark-a-p-color,));
+}
+.dioxus-icons-widget .dxc .a-pr {
+  color: var(--dxc-light-on, var(--dxc-light-a-pr-color,)) var(--dxc-dark-on, var(--dxc-dark-a-pr-color,));
+}
+.dioxus-icons-widget .dxc .a-s {
+  color: var(--dxc-light-on, var(--dxc-light-a-s-color,)) var(--dxc-dark-on, var(--dxc-dark-a-s-color,));
+}
+.dioxus-icons-widget .dxc .a-t {
+  color: var(--dxc-light-on, var(--dxc-light-a-t-color,)) var(--dxc-dark-on, var(--dxc-dark-a-t-color,));
 }
 .dioxus-icons-widget-copy {
   position: absolute;
@@ -165,7 +215,7 @@
 
 @media (max-width: 640px) {
   .dioxus-icons-widget-controls { grid-template-columns: 1fr; min-width: 0; }
-  .dioxus-icons-widget pre { padding-right: 12px; }
+  .dioxus-icons-widget .dxc { padding-right: 12px; }
   .dioxus-icons-widget-copy {
     position: static;
     margin-top: 8px;
@@ -181,6 +231,8 @@ window.__dioxusIconsWidgetReady=true;
 var COPY_ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
 var CHECK_ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>';
 function text(value){return String(value==null?"":value);}
+function escapeHtml(value){return text(value).split("&").join("&amp;").split("<").join("&lt;").split(">").join("&gt;").split('"').join("&quot;");}
+function highlightedSnippet(name,size,color,stroke){return '<span class="a-t">'+escapeHtml(name)+'</span><span> </span><span class="a-p">{</span><span> </span><span class="a-pr">size</span><span class="a-p">:</span><span> </span><span class="a-co">'+escapeHtml(size)+'</span><span class="a-p">,</span><span> </span><span class="a-pr">color</span><span class="a-p">:</span><span> </span><span class="a-s">&quot;'+escapeHtml(color)+'&quot;</span><span class="a-p">,</span><span> </span><span class="a-pr">stroke_width</span><span class="a-p">:</span><span> </span><span class="a-co">'+escapeHtml(stroke)+'</span><span> </span><span class="a-p">}</span>';}
 function svgFor(container,size,color,stroke){var host=document.createElement("div");host.innerHTML=container.dataset.svg||"";var svg=host.firstElementChild;if(!svg){return "";}svg.setAttribute("width",size);svg.setAttribute("height",size);svg.setAttribute("stroke",color);svg.setAttribute("stroke-width",stroke);return svg.outerHTML;}
 function render(container){
 if(container.dataset.ready==="true"){return;}
@@ -194,7 +246,7 @@ var code=container.querySelector("[data-di-code]");
 var copy=container.querySelector("[data-di-copy]");
 var copyLabel=container.querySelector("[data-di-copy-label]");
 var copyIcon=container.querySelector("[data-di-copy-icon]");
-function update(){var size=text(sizeInput&&sizeInput.value||24);var color=text(colorInput&&colorInput.value||"currentColor");var stroke=text(strokeInput&&strokeInput.value||2);container.dataset.size=size;container.dataset.color=color;container.dataset.stroke=stroke;if(preview){preview.innerHTML=svgFor(container,size,color,stroke);}if(code){code.textContent=name+" { size: "+size+", color: \""+color+"\", stroke_width: "+stroke+" }";}}
+function update(){var size=text(sizeInput&&sizeInput.value||24);var color=text(colorInput&&colorInput.value||"currentColor");var stroke=text(strokeInput&&strokeInput.value||2);container.dataset.size=size;container.dataset.color=color;container.dataset.stroke=stroke;if(preview){preview.innerHTML=svgFor(container,size,color,stroke);}if(code){code.innerHTML=highlightedSnippet(name,size,color,stroke);}}
 [sizeInput,colorInput,strokeInput].forEach(function(input){if(input){input.addEventListener("input",update);}});
 var copyTimer=null;
 function showCopied(){if(copy){copy.dataset.copied="true";}if(copyLabel){copyLabel.textContent="Copied";}if(copyIcon){copyIcon.innerHTML=CHECK_ICON;}if(copyTimer){window.clearTimeout(copyTimer);}copyTimer=window.setTimeout(function(){if(copy){copy.dataset.copied="false";}if(copyLabel){copyLabel.textContent="Copy RSX";}if(copyIcon){copyIcon.innerHTML=COPY_ICON;}},1600);}
