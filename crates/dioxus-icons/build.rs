@@ -16,17 +16,28 @@ fn main() {
     // Split the workspace README at its `---` divider so the docs.rs landing
     // can render: header (title + badges) → icon picker → body. The picker
     // replaces the divider's visual role.
+    //
+    // The README lives at the WORKSPACE root (`readme = "../../README.md"`),
+    // which cargo does NOT copy into the vendored package tarball. So in a
+    // vendored/sandboxed build (Nix `dockerTools`, docs.rs, `cargo vendor`)
+    // neither path resolves. That's fine — the split only feeds the docs.rs
+    // landing page; the crate itself needs nothing from it. Degrade to empty
+    // header/body instead of panicking the whole build.
     let manifest_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let readme = [
         manifest_dir.join("../../README.md"),
         manifest_dir.join("README.md"),
     ]
     .into_iter()
-    .find_map(|path| path.canonicalize().ok())
-    .expect("workspace or package README.md");
-    println!("cargo:rerun-if-changed={}", readme.display());
+    .find_map(|path| path.canonicalize().ok());
 
-    let full = fs::read_to_string(&readme).expect("read README.md");
+    let full = match &readme {
+        Some(path) => {
+            println!("cargo:rerun-if-changed={}", path.display());
+            fs::read_to_string(path).unwrap_or_default()
+        }
+        None => String::new(),
+    };
     let (header, body) = full
         .split_once("\n---\n")
         .map(|(h, b)| (h.trim_end(), b.trim_start()))
