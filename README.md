@@ -85,7 +85,7 @@ nav { class: "flex items-center gap-3 text-slate-900",
 
 ## Dioxus compatibility
 
-Targets the Dioxus `0.7.x` line starting at `0.7.7`. Pick your renderer features (`web`, `desktop`, `mobile`, `server`, `fullstack`) in your application crate.
+This fork targets the Dioxus git rev architect pins (the `0.8.0-alpha.3` line). For the Dioxus `0.7.x` line (from `0.7.7`), use upstream `dioxus-icons` `0.1`. Pick your renderer features (`web`, `desktop`, `mobile`, `server`, `fullstack`) in your application crate.
 
 ## Examples
 
